@@ -46,11 +46,15 @@ public class Ball
             position.x = rightLimit;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
+            MainMenu.addTouch();
+            //Play sound effect
         }
         if (position.x <= radius) {
             position.x = radius;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
+            MainMenu.addTouch();
+            //Play sound effect
         }
         if (position.y >= bottomLimit) {
             position.y = bottomLimit;
@@ -58,12 +62,17 @@ public class Ball
             velocity.y *= -1;
 
             if(velocity.y < 1)
-                applyForce(new Vector2(-velocity.x / 30,0));
+                applyForce(new Vector2(-velocity.x / 30, 0));
+
+            //MainMenu.addTouch();
+            //Play sound effect
         }
         if (position.y <= radius) {
             position.y = radius;
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
+            MainMenu.addTouch();
+            //Play sound effect
         }
     }
 

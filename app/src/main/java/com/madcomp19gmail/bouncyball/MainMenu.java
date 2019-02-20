@@ -8,6 +8,8 @@ import android.view.WindowManager;
 
 public class MainMenu extends AppCompatActivity {
 
+    private static int touches;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +17,18 @@ public class MainMenu extends AppCompatActivity {
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        touches = 0;
+    }
+
+    public static void addTouch()
+    {
+        touches++;
+    }
+
+    public static int getTouches()
+    {
+        return touches;
     }
 
     public void playGame(View view)
