@@ -121,6 +121,13 @@ public class GameView extends View {
             ball.display(c);
         }
 
+        Paint p = new Paint();
+        p.setColor(Color.WHITE);
+        p.setTextAlign(Paint.Align.CENTER);
+        p.setTextSize(64);
+        c.drawText(MainMenu.getTouches() + "", width / 2, 50, p);
+
+
 
         postInvalidateDelayed(1000/90);
     }
