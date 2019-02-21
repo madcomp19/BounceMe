@@ -29,8 +29,8 @@ public class DailyChallenge extends AppCompatActivity {
 
     //sets the stars to the number of consecutive days
     private void setStarImages(int limit) {
-        //if (limit > 7 || limit < 1) return;
-        for (int i = 1; i <= 5; i++) {
+        if (limit > 7 || limit < 1) return;
+        for (int i = 1; i <= limit; i++) {
             //change the corresponding images
             id = getResources().getIdentifier("consecutive_day_" + i, "id", getPackageName());
             day_counter = findViewById(id);
