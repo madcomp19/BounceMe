@@ -2,8 +2,12 @@ package com.madcomp19gmail.bouncyball;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
@@ -42,8 +46,28 @@ public class GameView extends View
         p.setColor(Color.YELLOW);
         balls = new ArrayList<>();
 
+        Resources res = getResources();
+        Bitmap ball_img = BitmapFactory.decodeResource(res, R.drawable.smiley_ball);
+        ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
         BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
-        balls.add(new Ball(width / 2, height / 2, attributes, p));
+        balls.add(new Ball(width / 2, height / 2, attributes, null, ball_img));
+    }
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // CREATE A MATRIX FOR THE MANIPULATION
+        Matrix matrix = new Matrix();
+        // RESIZE THE BIT MAP
+        matrix.postScale(scaleWidth, scaleHeight);
+
+        // "RECREATE" THE NEW BITMAP
+        Bitmap resizedBitmap = Bitmap.createBitmap(
+                bm, 0, 0, width, height, matrix, false);
+        bm.recycle();
+        return resizedBitmap;
     }
 
     @Override
@@ -94,7 +118,14 @@ public class GameView extends View
 
     public void shake()
     {
-        Vector2 force = new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(-20, 20));
+        /*Vector2 force;
+        do
+        {
+            force = new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(-20, 20));
+        }
+        while(force.mag() < 10);*/
+
+        Vector2 force = new Vector2((float) randomWithRange(-1000, 1000), (float) randomWithRange(-1000, 1000));
         for(Ball ball : balls)
             ball.applyForce(force);
     }

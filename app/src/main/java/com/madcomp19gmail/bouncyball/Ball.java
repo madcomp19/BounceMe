@@ -1,4 +1,5 @@
 package com.madcomp19gmail.bouncyball;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
@@ -13,11 +14,12 @@ public class Ball
 
     float radius;
     Paint color;
+    Bitmap image;
 
     boolean dragged;
 
 
-    public Ball(float x, float y, BallAttributes ba, Paint aColor)
+    public Ball(float x, float y, BallAttributes ba, Paint aColor, Bitmap img)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
@@ -26,7 +28,12 @@ public class Ball
         attributes = ba;
 
         radius = attributes.radius;
-        color = aColor;
+
+        if(color != null)
+            color = aColor;
+        else if(img != null)
+            image = img;
+
 
         dragged = false;
     }
@@ -86,6 +93,9 @@ public class Ball
 
     public void display(Canvas canvas)
     {
-        canvas.drawCircle(position.x, position.y, radius, color);
+        if(color != null)
+            canvas.drawCircle(position.x, position.y, radius, color);
+        else if(image != null)
+            canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
     }
 }

@@ -47,6 +47,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         ShakeDetector sd = new ShakeDetector(this);
         sd.start(sensorManager);
+        sd.setSensitivity(10);
     }
 
     @Override public void hearShake()
