@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import java.util.Calendar;
@@ -21,6 +22,9 @@ public class DailyChallenge extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_challenge);
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         prefs = getSharedPreferences(getString(R.string.shared_prefs_filename), MODE_PRIVATE);
         consecutive_days = prefs.getInt(getString(R.string.consecutive_days_daily_challenge), 0);
