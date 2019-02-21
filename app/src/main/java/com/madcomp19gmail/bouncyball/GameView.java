@@ -89,7 +89,7 @@ public class GameView extends View {
                     dragEndLoc = touchPosition;
 
                     Vector2 force = Vector2.sub(dragEndLoc, dragStartLoc);
-                    ball.applyForce(force);
+                    //ball.applyForce(force);
                 }
             }
         }
@@ -97,8 +97,10 @@ public class GameView extends View {
         {
             for(Ball ball : balls)
             {
-                if(ball.dragged)
+                if(ball.dragged) {
+                    ball.velocity = Vector2.sub(touchPosition, ball.position);
                     ball.position = touchPosition;
+                }
             }
         }
 
