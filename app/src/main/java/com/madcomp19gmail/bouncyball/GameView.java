@@ -11,32 +11,20 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class GameView extends View {
-    //public    Paint c;
 
+public class GameView extends View
+{
     ArrayList<Ball> balls;
     float ball_radius;
 
-    public Paint p;
-
-    private static final int RADIUS = 46;
-
-    private int centerX;
-    private int centerY;
-    private int speedX = 500;
-    private int speedY = 400;
-    //private Paint paint;
 
     private DisplayMetrics displayMetrics = new DisplayMetrics();
     public static int width;
     public static int height;
 
 
-    private Vector2 dragStartLoc;
-    private Vector2 dragEndLoc;
-
-
-    public GameView(Context context) {
+    public GameView(Context context)
+    {
         super(context);
         setBackgroundColor(Color.parseColor("#000000"));
 
@@ -52,17 +40,15 @@ public class GameView extends View {
 
         Paint p = new Paint();
         p.setColor(Color.YELLOW);
-        balls = new ArrayList<Ball>();
+        balls = new ArrayList<>();
 
         BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
         balls.add(new Ball(width / 2, height / 2, attributes, p));
-
-        dragStartLoc = new Vector2(0, 0);
-        dragEndLoc = new Vector2(0, 0);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean onTouchEvent(MotionEvent event)
+    {
 
         Vector2 touchPosition = new Vector2(event.getX(), event.getY());
 
@@ -76,7 +62,6 @@ public class GameView extends View {
                 {
                     ball.dragged = true;
                     ball.position = touchPosition;
-                    dragStartLoc = touchPosition;
                 }
             }
         }
@@ -88,10 +73,6 @@ public class GameView extends View {
                 {
                     ball.dragged = false;
                     ball.position = touchPosition;
-                    dragEndLoc = touchPosition;
-
-                    Vector2 force = Vector2.sub(dragEndLoc, dragStartLoc);
-                    //ball.applyForce(force);
                 }
             }
         }
@@ -103,13 +84,25 @@ public class GameView extends View {
                 {
                     ball.velocity = Vector2.sub(touchPosition, ball.position);
                     ball.position = touchPosition;
-
                 }
             }
         }
 
 
         return true;
+    }
+
+    public void shake()
+    {
+        Vector2 force = new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(-20, 20));
+        for(Ball ball : balls)
+            ball.applyForce(force);
+    }
+
+    double randomWithRange(double min, double max)
+    {
+        double range = Math.abs(max - min);
+        return (Math.random() * range) + (min <= max ? min : max);
     }
 
     /*@Override

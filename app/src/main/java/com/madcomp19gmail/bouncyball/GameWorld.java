@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -16,9 +17,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.squareup.seismic.ShakeDetector;
+
 import java.util.HashMap;
 
-public class GameWorld extends AppCompatActivity {
+public class GameWorld extends AppCompatActivity implements ShakeDetector.Listener {
 
     GameView gameView;
     //public static MediaPlayer mediaPlayer;
@@ -40,6 +43,15 @@ public class GameWorld extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //mediaPlayer = MediaPlayer.create(this, R.raw.bubble);
+
+        SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        ShakeDetector sd = new ShakeDetector(this);
+        sd.start(sensorManager);
+    }
+
+    @Override public void hearShake()
+    {
+        gameView.shake();
     }
 
     /*public void playSound()
