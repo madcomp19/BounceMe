@@ -53,7 +53,9 @@ public class GameView extends View {
         Paint p = new Paint();
         p.setColor(Color.YELLOW);
         balls = new ArrayList<Ball>();
-        balls.add(new Ball(width / 2, height / 2, ball_radius, p));
+
+        BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
+        balls.add(new Ball(width / 2, height / 2, attributes, p));
 
         dragStartLoc = new Vector2(0, 0);
         dragEndLoc = new Vector2(0, 0);
@@ -89,7 +91,7 @@ public class GameView extends View {
                     dragEndLoc = touchPosition;
 
                     Vector2 force = Vector2.sub(dragEndLoc, dragStartLoc);
-                    ball.applyForce(force);
+                    //ball.applyForce(force);
                 }
             }
         }
@@ -98,7 +100,11 @@ public class GameView extends View {
             for(Ball ball : balls)
             {
                 if(ball.dragged)
+                {
+                    ball.velocity = Vector2.sub(touchPosition, ball.position);
                     ball.position = touchPosition;
+
+                }
             }
         }
 
