@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">Bouncy Ball</string>
-
     <string name="title_activity_splash_screen">SplashScreen</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="shared_prefs_filename">MyFile</string>
+    <string name="consecutive_days_daily_challenge">ConsecutiveDays</string>
+    <string name="last_daily_challenge_date">LastDailyDate</string>
+    <string name="main_title">Bouncy Ball</string>
+    <string name="play_button">Play</string>
+    <string name="daily_challenge_button">DailyChallenge</string>
+    <string name="shop_button">Shop</string>
+    <string name="daily_challenge_title">Daily Challenge</string>
+    <string name="success_dialog_message">You are one step closer to getting a prize!</string>
+    <string name="success_dialog_title">Correct!</string>
+    <string name="ok">Ok</string>
+    <string name="error_dialog_message">Oops! You failed and have to start over...</string>
+    <string name="error_dialog_title">Wrong!</string>
+    <string name="challenge_complete_dialog_title">Challenge Complete!</string>
+    <string name="challenge_complete_dialog_message">You have completed the challenge and received a reward!</string>
 </resources>
