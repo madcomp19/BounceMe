@@ -1,6 +1,7 @@
 package com.madcomp19gmail.bouncyball;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 
 public class Ball
@@ -10,6 +11,7 @@ public class Ball
     Vector2 velocity;
     Vector2 acceleration;
     //Vector2 gravity;
+    int angle;
     BallAttributes attributes;
 
     float radius;
@@ -25,6 +27,7 @@ public class Ball
         velocity = new Vector2(0, 0);
         acceleration = new Vector2(0, 0);
         //gravity = new Vector2(0, 9.8f);
+        angle = 0;
         attributes = ba;
 
         radius = attributes.radius;
@@ -46,6 +49,26 @@ public class Ball
         acceleration.add(attributes.gravity);
         velocity.add(acceleration);
         position.add(velocity);
+
+        if(angle - velocity.x > 360)
+        {
+            float a = 360 - angle;
+            float velX = velocity.x - a;
+            angle = (int) velX;
+        }
+        else if(angle - velocity.x < -360)
+        {
+            float a = -360 - angle;
+            float velX = -velocity.x - a;
+            angle = (int) velX;
+        }
+        /*else if(angle - velocity.x < 0)
+        {
+            float velX = velocity.x - angle;
+            angle = -velX;
+        }*/
+        else
+            angle -= (int) velocity.x;
 
         float rightLimit = GameView.width - radius;
         float bottomLimit = GameView.height - radius;
@@ -96,6 +119,28 @@ public class Ball
         if(color != null)
             canvas.drawCircle(position.x, position.y, radius, color);
         else if(image != null)
+        {
+            //canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
+
+            //canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
+            //canvas.rotate(10);
+            /*Matrix matrix = new Matrix();
+            matrix.postRotate(70);
+            image = Bitmap.createBitmap(image, 0, 0,
+                    image.getWidth(), image.getHeight(),
+                    matrix, true);*/
+
             canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
+
+            /*matrix = new Matrix();
+            matrix.postRotate(-1);
+            image = Bitmap.createBitmap(image, 0, 0,
+                    image.getWidth(), image.getHeight(),
+                    matrix, true);*/
+            //canvas.restore();
+            //canvas.rotate(-10);
+        }
     }
+
+
 }

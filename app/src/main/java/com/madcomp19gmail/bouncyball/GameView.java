@@ -82,7 +82,7 @@ public class GameView extends View
         {
             for(Ball ball : balls)
             {
-                if(Vector2.dist(touchPosition, ball.position) < ball.radius)
+                if(Vector2.dist(touchPosition, ball.position) < ball.radius + 100)
                 {
                     ball.dragged = true;
                     ball.position = touchPosition;
