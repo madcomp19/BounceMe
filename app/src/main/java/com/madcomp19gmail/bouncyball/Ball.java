@@ -8,21 +8,24 @@ public class Ball
     Vector2 position;
     Vector2 velocity;
     Vector2 acceleration;
-    Vector2 gravity;
+    //Vector2 gravity;
+    BallAttributes attributes;
 
     float radius;
     Paint color;
 
     boolean dragged;
 
-    public Ball(float x, float y, float aRadius, Paint aColor)
+
+    public Ball(float x, float y, BallAttributes ba, Paint aColor)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
         acceleration = new Vector2(0, 0);
-        gravity = new Vector2(0, 9.8f);
+        //gravity = new Vector2(0, 9.8f);
+        attributes = ba;
 
-        radius = aRadius;
+        radius = attributes.radius;
         color = aColor;
 
         dragged = false;
@@ -33,7 +36,7 @@ public class Ball
         if(dragged)
             return;
 
-        acceleration.add(gravity);
+        acceleration.add(attributes.gravity);
         velocity.add(acceleration);
         position.add(velocity);
 
