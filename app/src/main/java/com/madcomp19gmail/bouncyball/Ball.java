@@ -1,4 +1,5 @@
 package com.madcomp19gmail.bouncyball;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
@@ -76,6 +77,7 @@ public class Ball
             velocity.x *= -1;
             MainMenu.addTouch();
             //Play sound effect
+            playSound();
         }
         if (position.x <= radius) {
             position.x = radius;
@@ -83,6 +85,7 @@ public class Ball
             velocity.x *= -1;
             MainMenu.addTouch();
             //Play sound effect
+            playSound();
         }
         if (position.y >= bottomLimit) {
             position.y = bottomLimit;
@@ -94,6 +97,7 @@ public class Ball
 
             //MainMenu.addTouch();
             //Play sound effect
+            playSound();
         }
         if (position.y <= radius) {
             position.y = radius;
@@ -101,12 +105,19 @@ public class Ball
             velocity.y *= -1;
             MainMenu.addTouch();
             //Play sound effect
+            playSound();
         }
     }
 
     public void applyForce(Vector2 force)
     {
         acceleration.add(force);
+    }
+
+    private void playSound()
+    {
+        //SoundPoolManager.getInstance().playSound(R.raw.bubble);
+        SoundPoolManager.getInstance().playSound();
     }
 
     public void display(Canvas canvas)

@@ -23,6 +23,8 @@ public class MainMenu extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         touches = 0;
+
+        SoundPoolManager.initialize(this);
     }
 
     public static void addTouch() {
