@@ -63,4 +63,10 @@ public class MainMenu extends AppCompatActivity {
     public void resetStorage(View view){
         getSharedPreferences(getString(R.string.shared_prefs_filename), MODE_PRIVATE).edit().clear().apply();
     }
+
+    public void startShop(View view)
+    {
+        Intent intent = new Intent(this, ShopMenu.class);
+        startActivity(intent);
+    }
 }

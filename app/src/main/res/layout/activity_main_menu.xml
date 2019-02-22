@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/playButton"
-        android:layout_width="140dp"
+        android:layout_width="203dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -68,7 +68,7 @@
 
     <Button
         android:id="@+id/shopButton"
-        android:layout_width="140dp"
+        android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -77,6 +77,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_button2"
+        android:onClick="startShop"
         android:text="@string/shop_button"
         android:textColor="#FFFFFF"
         android:textSize="20sp"

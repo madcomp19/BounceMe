@@ -6,7 +6,7 @@
     <string name="last_daily_challenge_date">LastDailyDate</string>
     <string name="main_title">Bouncy Ball</string>
     <string name="play_button">Play</string>
-    <string name="daily_challenge_button">DailyChallenge</string>
+    <string name="daily_challenge_button">Daily Challenge</string>
     <string name="shop_button">Shop</string>
     <string name="daily_challenge_title">Daily Challenge</string>
     <string name="success_dialog_message">You are one step closer to getting a prize!</string>
