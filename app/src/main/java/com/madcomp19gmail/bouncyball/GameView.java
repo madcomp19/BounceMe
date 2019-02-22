@@ -118,13 +118,6 @@ public class GameView extends View
 
     public void shake()
     {
-        /*Vector2 force;
-        do
-        {
-            force = new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(-20, 20));
-        }
-        while(force.mag() < 10);*/
-
         Vector2 force = new Vector2((float) randomWithRange(-1000, 1000), (float) randomWithRange(-1000, 1000));
         for(Ball ball : balls)
             ball.applyForce(force);
