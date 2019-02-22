@@ -12,7 +12,6 @@ import android.graphics.Paint;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
-
 import java.util.ArrayList;
 
 
@@ -149,6 +148,7 @@ public class GameView extends View
         p.setTextAlign(Paint.Align.CENTER);
         p.setTextSize(64);
         c.drawText(MainMenu.getTouches() + "", width / 2, 50, p);
+        //c.drawText(balls.get(0).angle + "", width / 2, 120, p);
 
 
 

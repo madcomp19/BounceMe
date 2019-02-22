@@ -50,20 +50,20 @@ public class Ball
         velocity.add(acceleration);
         position.add(velocity);
 
-        if(angle - velocity.x > 360)
+        if(angle + velocity.x > 360)
         {
             float a = 360 - angle;
             float velX = velocity.x - a;
             angle = (int) velX;
         }
-        else if(angle - velocity.x < -360)
+        else if(angle + velocity.x < -360)
         {
             float a = -360 - angle;
-            float velX = -velocity.x - a;
+            float velX = velocity.x + a;
             angle = (int) velX;
         }
         else
-            angle -= (int) velocity.x;
+            angle += (int) velocity.x;
 
         float rightLimit = GameView.width - radius;
         float bottomLimit = GameView.height - radius;
@@ -117,8 +117,8 @@ public class Ball
         {
             //canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
 
-            //canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
-            //canvas.rotate(10);
+            canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
+            canvas.rotate(angle, position.x, position.y);
             /*Matrix matrix = new Matrix();
             matrix.postRotate(70);
             image = Bitmap.createBitmap(image, 0, 0,
@@ -132,7 +132,7 @@ public class Ball
             image = Bitmap.createBitmap(image, 0, 0,
                     image.getWidth(), image.getHeight(),
                     matrix, true);*/
-            //canvas.restore();
+            canvas.restore();
             //canvas.rotate(-10);
         }
     }
