@@ -11,7 +11,7 @@ public class Ball
     Vector2 velocity;
     Vector2 acceleration;
     //Vector2 gravity;
-    int angle;
+    float angle;
     BallAttributes attributes;
 
     float radius;
@@ -54,16 +54,16 @@ public class Ball
         {
             float a = 360 - angle;
             float velX = velocity.x - a;
-            angle = (int) velX;
+            angle = velX;
         }
         else if(angle + velocity.x < -360)
         {
             float a = -360 - angle;
             float velX = velocity.x + a;
-            angle = (int) velX;
+            angle = velX;
         }
         else
-            angle += (int) velocity.x;
+            angle += velocity.x;
 
         float rightLimit = GameView.width - radius;
         float bottomLimit = GameView.height - radius;
