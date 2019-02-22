@@ -62,11 +62,6 @@ public class Ball
             float velX = -velocity.x - a;
             angle = (int) velX;
         }
-        /*else if(angle - velocity.x < 0)
-        {
-            float velX = velocity.x - angle;
-            angle = -velX;
-        }*/
         else
             angle -= (int) velocity.x;
 
