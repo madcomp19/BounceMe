@@ -1,26 +1,11 @@
 package com.madcomp19gmail.bouncyball;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.hardware.SensorManager;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
-
 import com.squareup.seismic.ShakeDetector;
 
-import java.util.HashMap;
 
 public class GameWorld extends AppCompatActivity implements ShakeDetector.Listener {
 

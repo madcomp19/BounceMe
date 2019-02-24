@@ -14,7 +14,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import java.util.ArrayList;
 
-
 public class GameView extends View
 {
     ArrayList<Ball> balls;

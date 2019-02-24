@@ -1,18 +1,16 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import java.util.Calendar;
-
 public class MainMenu extends AppCompatActivity {
 
     private static int touches;
+    private StorageManager storage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +20,17 @@ public class MainMenu extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        touches = 0;
+        StorageManager.initialize(this);
+        storage = StorageManager.getInstance();
+        touches = StorageManager.getInstance().getTotalTouches();
 
         //SoundPoolManager.initialize(this);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        StorageManager.getInstance().setTotalTouches(touches);
     }
 
     public static void addTouch() {
@@ -41,17 +47,11 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void startChallengeActivity(View view) {
-        Calendar date = Calendar.getInstance();
-        String year = Integer.toString(date.get(Calendar.YEAR));
-        String month = Integer.toString(date.get(Calendar.MONTH));
-        String day = Integer.toString(date.get(Calendar.DAY_OF_MONTH));
-        String todays_date = day + month + year;
-
-        SharedPreferences prefs = getSharedPreferences(getString(R.string.shared_prefs_filename), MODE_PRIVATE);
-        String last_daily_date_string = prefs.getString(getString(R.string.last_daily_challenge_date), "");
+        String todays_date = storage.getTodayDateString();
+        String last_daily = storage.getLastDailyChallengeDateString();
 
         //if the player has played the daily challenge today
-        if (todays_date.equals(last_daily_date_string)) {
+        if (todays_date.equals(last_daily)) {
             Toast toast = Toast.makeText(getApplicationContext(), "Come back tomorrow!", Toast.LENGTH_SHORT);
             toast.show();
         } else {
@@ -61,7 +61,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void resetStorage(View view){
-        getSharedPreferences(getString(R.string.shared_prefs_filename), MODE_PRIVATE).edit().clear().apply();
+        storage.resetStorage();
     }
 
     public void startShop(View view)

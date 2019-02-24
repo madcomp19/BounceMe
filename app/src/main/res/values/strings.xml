@@ -12,8 +12,9 @@
     <string name="success_dialog_message">You are one step closer to getting a prize!</string>
     <string name="success_dialog_title">Correct!</string>
     <string name="ok">Ok</string>
-    <string name="error_dialog_message">Oops! You failed and have to start over...</string>
+    <string name="error_dialog_message">Oops! You failed and have to start over&#8230;</string>
     <string name="error_dialog_title">Wrong!</string>
     <string name="challenge_complete_dialog_title">Challenge Complete!</string>
     <string name="challenge_complete_dialog_message">You have completed the challenge and received a reward!</string>
+    <string name="total_touches">TotalTouches</string>
 </resources>

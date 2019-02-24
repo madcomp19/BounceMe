@@ -1,7 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,14 +8,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import java.util.Calendar;
-
 public class DailyChallenge extends AppCompatActivity {
 
     private ImageView day_counter;
     private int id;
     private int consecutive_days;
-    private SharedPreferences prefs;
+    private StorageManager prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +23,8 @@ public class DailyChallenge extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        prefs = getSharedPreferences(getString(R.string.shared_prefs_filename), MODE_PRIVATE);
-        consecutive_days = prefs.getInt(getString(R.string.consecutive_days_daily_challenge), 0);
+        prefs = StorageManager.getInstance();
+        consecutive_days = prefs.getConsecutiveDays();
         setStarImages(consecutive_days);
     }
 
@@ -46,22 +43,15 @@ public class DailyChallenge extends AppCompatActivity {
         //update the number of consecutive days in shared prefs
         setStarImages(++consecutive_days);
 
-        Calendar date = Calendar.getInstance();
-        String year = Integer.toString(date.get(Calendar.YEAR));
-        String month = Integer.toString(date.get(Calendar.MONTH));
-        String day = Integer.toString(date.get(Calendar.DAY_OF_MONTH));
-        String todays_date = day + month + year;
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(getString(R.string.last_daily_challenge_date), todays_date);
+        String todays_date = prefs.getTodayDateString();
+        prefs.setLastDailyChallengeDate(todays_date);
 
         if (consecutive_days == 7) {
-            editor.putInt(getString(R.string.consecutive_days_daily_challenge), 0);
-            editor.apply();
+            prefs.setConsecutiveDays(0);
             showChallengeCompleteDialog();
         }
         else{
-            editor.putInt(getString(R.string.consecutive_days_daily_challenge), consecutive_days);
-            editor.apply();
+            prefs.setConsecutiveDays(consecutive_days);
             showSuccessDialog();
         }
     }
@@ -72,15 +62,10 @@ public class DailyChallenge extends AppCompatActivity {
         consecutive_days = 0;
         clearStars();
 
-        Calendar date = Calendar.getInstance();
-        String year = Integer.toString(date.get(Calendar.YEAR));
-        String month = Integer.toString(date.get(Calendar.MONTH));
-        String day = Integer.toString(date.get(Calendar.DAY_OF_MONTH));
-        String todays_date = day + month + year;
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(getString(R.string.last_daily_challenge_date), todays_date);
-        editor.putInt(getString(R.string.consecutive_days_daily_challenge), 0);
-        editor.apply();
+        String todays_date = prefs.getTodayDateString();
+
+        prefs.setLastDailyChallengeDate(todays_date);
+        prefs.setConsecutiveDays(0);
 
         showErrorDialog();
     }
