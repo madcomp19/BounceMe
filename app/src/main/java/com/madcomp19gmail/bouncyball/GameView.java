@@ -45,7 +45,15 @@ public class GameView extends View
         balls = new ArrayList<>();
 
         Resources res = getResources();
-        Bitmap ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
+
+        int selected_skin = StorageManager.getInstance().getSelectedSkin();
+        Bitmap ball_img;
+
+        if(selected_skin != 0)
+            ball_img = BitmapFactory.decodeResource(res, selected_skin);
+        else
+            ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
+
         ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
         BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
         balls.add(new Ball(width / 2, height / 2, attributes, null, ball_img));
@@ -146,8 +154,7 @@ public class GameView extends View
         p.setColor(Color.WHITE);
         p.setTextAlign(Paint.Align.CENTER);
         p.setTextSize(64);
-        c.drawText(MainMenu.getTouches() + "", width / 2, 50, p);
-        //c.drawText(balls.get(0).angle + "", width / 2, 120, p);
+        c.drawText(GameWorld.getTouches() - MainMenu.getPrevTouches() + "", width / 2, 50, p);
 
 
 

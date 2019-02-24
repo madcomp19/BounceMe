@@ -3,7 +3,10 @@ package com.madcomp19gmail.bouncyball;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
+import android.widget.Toast;
+
 import com.squareup.seismic.ShakeDetector;
 
 
@@ -15,6 +18,9 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     HashMap<Integer, Integer> soundPoolMap;
     int soundID = 1;*/
 
+
+    private static StorageManager storageManager;
+    private static int touches;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,30 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         sd.setSensitivity(11);
 
         SoundPoolManager.initialize(this);
+        StorageManager.initialize(this);
+        storageManager = StorageManager.getInstance();
+        touches = storageManager.getTotalTouches();
+    }
+
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        storageManager.setTotalTouches(touches);
+
+
+
+
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        storageManager.setTotalTouches(touches);
+
+
+        MainMenu.prev_act_GameWorld = true;
     }
 
     @Override
@@ -44,6 +74,17 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onDestroy();
 
         SoundPoolManager.getInstance().release();
+        storageManager.setTotalTouches(touches);
+    }
+
+    public static void addTouch()
+    {
+        touches++;
+    }
+
+    public static int getTouches()
+    {
+        return touches;
     }
 
     @Override public void hearShake()

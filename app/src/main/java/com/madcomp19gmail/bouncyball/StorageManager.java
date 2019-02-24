@@ -3,7 +3,10 @@ package com.madcomp19gmail.bouncyball;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
 
 public class StorageManager {
 
@@ -68,6 +71,76 @@ public class StorageManager {
     public void setTotalTouches(int touches){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_touches), touches);
+        editor.apply();
+    }
+
+    public ArrayList<Integer> getOwnedSkins()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
+
+        ArrayList<Integer> owned_skins = new ArrayList<>();
+
+        for(String s : set)
+            owned_skins.add(Integer.parseInt(s));
+
+        return owned_skins;
+    }
+
+    public void addOwnedSkin(int skin)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
+
+        set.add(skin + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_skins), set);
+        editor.apply();
+    }
+
+    public ArrayList<Integer> getOwnedSkinsLabels()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins_labels), new HashSet<String>());
+
+        ArrayList<Integer> owned_skins_labels = new ArrayList<>();
+
+        for(String s : set)
+            owned_skins_labels.add(Integer.parseInt(s));
+
+        return owned_skins_labels;
+    }
+
+    public void addOwnedSkinLabel(int label)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins_labels), new HashSet<String>());
+
+        set.add(label + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_skins_labels), set);
+        editor.apply();
+    }
+
+    public int getSelectedLabel()
+    {
+        return prefs.getInt(context.getString(R.string.selected_label), 0);
+    }
+
+    public void setSelectedLabel(int label)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_label), label);
+        editor.apply();
+    }
+
+    public int getSelectedSkin()
+    {
+        return prefs.getInt(context.getString(R.string.selected_skin), 0);
+    }
+
+    public void setSelectedSkin(int skin)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_skin), skin);
         editor.apply();
     }
 }

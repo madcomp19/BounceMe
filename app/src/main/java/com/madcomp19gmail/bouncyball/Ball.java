@@ -75,7 +75,7 @@ public class Ball
             position.x = rightLimit;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
-            MainMenu.addTouch();
+            GameWorld.addTouch();
             //Play sound effect
             playSound();
         }
@@ -83,7 +83,7 @@ public class Ball
             position.x = radius;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
-            MainMenu.addTouch();
+            GameWorld.addTouch();
             //Play sound effect
             playSound();
         }
@@ -96,7 +96,7 @@ public class Ball
 
             if(Math.abs(prev_velY - velocity.y) > 50f)
             {
-                MainMenu.addTouch();
+                GameWorld.addTouch();
                 playSound();
             }
             else if(Math.abs(prev_velY - velocity.y) > 10f)
@@ -108,7 +108,7 @@ public class Ball
             position.y = radius;
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
-            MainMenu.addTouch();
+            GameWorld.addTouch();
             //Play sound effect
             playSound();
         }

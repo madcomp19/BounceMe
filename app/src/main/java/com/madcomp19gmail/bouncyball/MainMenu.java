@@ -1,6 +1,7 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +10,12 @@ import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
-    private static int touches;
+    //private static int touches;
     private StorageManager storage;
+
+
+    public static boolean prev_act_GameWorld = false;
+    private static int prev_touches;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +27,7 @@ public class MainMenu extends AppCompatActivity {
 
         StorageManager.initialize(this);
         storage = StorageManager.getInstance();
-        touches = StorageManager.getInstance().getTotalTouches();
+        //touches = StorageManager.getInstance().getTotalTouches();*/
 
         //SoundPoolManager.initialize(this);
     }
@@ -30,20 +35,40 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-        StorageManager.getInstance().setTotalTouches(touches);
+        //StorageManager.getInstance().setTotalTouches(touches);
+
+        if(prev_act_GameWorld)
+        {
+            int new_touches = Math.abs(StorageManager.getInstance().getTotalTouches() - prev_touches);
+
+            if(new_touches > 300)
+            {
+                Intent intent = new Intent(this, DoublePointsAlert.class);
+                startActivity(intent);
+            }
+
+            prev_act_GameWorld = false;
+        }
     }
 
-    public static void addTouch() {
+    public static int getPrevTouches()
+    {
+        return prev_touches;
+    }
+
+    /*public static void addTouch() {
         touches++;
+        storage.setTotalTouches(touches);
     }
 
     public static int getTouches() {
         return touches;
-    }
+    }*/
 
     public void playGame(View view) {
         Intent intent = new Intent(this, GameWorld.class);
         startActivity(intent);
+        prev_touches = StorageManager.getInstance().getTotalTouches();
     }
 
     public void startChallengeActivity(View view) {
