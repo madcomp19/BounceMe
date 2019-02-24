@@ -13,6 +13,7 @@ import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -48,6 +49,16 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         ShakeDetector sd = new ShakeDetector(this);
         sd.start(sensorManager);
         sd.setSensitivity(11);
+
+        SoundPoolManager.initialize(this);
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+
+        SoundPoolManager.getInstance().release();
     }
 
     @Override public void hearShake()

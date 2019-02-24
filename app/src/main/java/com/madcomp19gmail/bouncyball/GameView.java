@@ -46,7 +46,7 @@ public class GameView extends View
         balls = new ArrayList<>();
 
         Resources res = getResources();
-        Bitmap ball_img = BitmapFactory.decodeResource(res, R.drawable.smiley_ball);
+        Bitmap ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
         ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
         BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
         balls.add(new Ball(width / 2, height / 2, attributes, null, ball_img));

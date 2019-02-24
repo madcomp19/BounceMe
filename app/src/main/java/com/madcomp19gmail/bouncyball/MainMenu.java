@@ -24,7 +24,7 @@ public class MainMenu extends AppCompatActivity {
 
         touches = 0;
 
-        SoundPoolManager.initialize(this);
+        //SoundPoolManager.initialize(this);
     }
 
     public static void addTouch() {

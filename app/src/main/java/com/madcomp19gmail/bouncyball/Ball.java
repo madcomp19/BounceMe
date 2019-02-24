@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.util.Log;
 
 public class Ball
 {
@@ -47,6 +48,8 @@ public class Ball
         if(dragged)
             return;
 
+        float prev_velY = velocity.y;
+
         acceleration.add(attributes.gravity);
         velocity.add(acceleration);
         position.add(velocity);
@@ -87,17 +90,22 @@ public class Ball
             //Play sound effect
             playSound();
         }
-        if (position.y >= bottomLimit) {
+        if (position.y >= bottomLimit)
+        {
             position.y = bottomLimit;
+
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
 
-            if(velocity.y < 1)
+            if(Math.abs(prev_velY - velocity.y) > 50f)
+            {
+                MainMenu.addTouch();
+                playSound();
+            }
+            else if(Math.abs(prev_velY - velocity.y) > 10f)
+                playSound();
+            else if(Math.abs(prev_velY - velocity.y) < 1f)
                 applyForce(new Vector2(-velocity.x / 30, 0));
-
-            //MainMenu.addTouch();
-            //Play sound effect
-            playSound();
         }
         if (position.y <= radius) {
             position.y = radius;

@@ -14,6 +14,8 @@ public class SoundPoolManager
     private SoundPool soundPool;
     private int sound;
 
+    //public static int priority = 10;
+
     private SoundPoolManager()
     {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
@@ -30,7 +32,7 @@ public class SoundPoolManager
         }
         else
         {
-            soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+            soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
         }
     }
 
@@ -72,6 +74,19 @@ public class SoundPoolManager
 
     public void playSound()
     {
-        soundPool.play(sound, 1, 1, 0, 0, 1);
+        /*if(priority > 0)
+            priority--;
+        else
+            priority = 10;*/
+
+        soundPool.play(sound, 1f, 1f, 0, 0, 1);
+    }
+
+    public void release()
+    {
+        soundPool.release();
+        soundPool = null;
+
+        instance = null;
     }
 }
