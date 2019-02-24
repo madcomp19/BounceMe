@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SkinShop">
+
+    <ScrollView
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="395dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/eyeButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/rounded_button4"
+                android:src="@drawable/eye" />
+
+            <ImageButton
+                android:id="@+id/eyeButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/rounded_button4"
+                android:src="@drawable/eye" />
+
+            <ImageButton
+                android:id="@+id/eyeButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/rounded_button4"
+                android:src="@drawable/eye" />
+
+            <ImageButton
+                android:id="@+id/eyeButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/rounded_button4"
+                android:src="@drawable/eye" />
+
+            <ImageButton
+                android:id="@+id/eyeButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/rounded_button4"
+                android:src="@drawable/eye" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

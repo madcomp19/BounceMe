@@ -16,9 +16,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintEnd_toEndOf="@+id/skinsButton"
+        app:layout_constraintStart_toStartOf="@+id/skinsButton"
+        app:layout_constraintTop_toBottomOf="@+id/skinsButton" />
 
     <TextView
         android:id="@+id/textView4"
@@ -72,7 +72,8 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton22" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/skinsButton"
+        android:onClick="onShopMenuButtonClick"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
