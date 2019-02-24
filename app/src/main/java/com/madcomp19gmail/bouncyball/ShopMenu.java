@@ -14,7 +14,7 @@ public class ShopMenu extends AppCompatActivity {
         setContentView(R.layout.activity_shop_menu);
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); 
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public void onShopMenuButtonClick(View view)
