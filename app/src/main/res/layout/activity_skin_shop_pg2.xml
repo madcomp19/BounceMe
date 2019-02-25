@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    tools:context=".SkinShopPg1">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/emoji_1_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_1"
+            android:onClick="onClickSkin"
+            />
+
+        <ImageButton
+            android:id="@+id/emoji_2_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_2"
+            android:onClick="onClickSkin"
+            />
+
+        <ImageButton
+            android:id="@+id/emoji_3_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_3"
+            android:onClick="onClickSkin"
+            />
+
+        <ImageButton
+            android:id="@+id/emoji_4_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_4"
+            android:onClick="onClickSkin"
+            />
+
+        <ImageButton
+            android:id="@+id/emoji_5_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_5"
+            android:onClick="onClickSkin"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <TextView
+            android:id="@+id/emoji_1_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="80"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_2_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="100"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_3_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="120"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_4_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="140"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_5_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="160"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <ImageButton
+            android:id="@+id/emoji_6_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_6" />
+
+        <ImageButton
+            android:id="@+id/emoji_7_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_7" />
+
+        <ImageButton
+            android:id="@+id/emoji_8_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_8" />
+
+        <ImageButton
+            android:id="@+id/emoji_9_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_9" />
+
+        <ImageButton
+            android:id="@+id/emoji_10_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#424242"
+            android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_10" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/emoji_6_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="180"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_7_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="200"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_8_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="220"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_9_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="240"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/emoji_10_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSkin"
+            android:text="260"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

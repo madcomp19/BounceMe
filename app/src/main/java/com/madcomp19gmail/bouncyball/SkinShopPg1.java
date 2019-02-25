@@ -1,7 +1,9 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
@@ -11,6 +13,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class SkinShopPg1 extends AppCompatActivity {
+
+    float prevX;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -196,5 +200,38 @@ public class SkinShopPg1 extends AppCompatActivity {
             else
                 Toast.makeText(this, "You need " + (price - total_touches) + " more touches", Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        int action = event.getAction();
+
+        if(action == MotionEvent.ACTION_DOWN)
+        {
+            prevX = event.getX();
+        }
+        else if(action == MotionEvent.ACTION_UP)
+        {
+            if(event.getX() > prevX)
+                swipeRight();
+
+            else if(event.getX() < prevX)
+                swipeLeft();
+        }
+
+        return true;
+    }
+
+    private void swipeLeft()
+    {
+        Intent intent = new Intent(this, SkinShopPg2.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    private void swipeRight()
+    {
+        //
     }
 }
