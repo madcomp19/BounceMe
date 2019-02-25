@@ -47,7 +47,10 @@ public class GameView extends View
         Resources res = getResources();
 
         int selected_skin = StorageManager.getInstance().getSelectedSkin();
+        int selected_trail = StorageManager.getInstance().getSelectedTrail();
+
         Bitmap ball_img;
+        Bitmap trail_img;
 
         if(selected_skin != 0)
             ball_img = BitmapFactory.decodeResource(res, selected_skin);
@@ -55,8 +58,14 @@ public class GameView extends View
             ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
 
         ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
+
+        if(selected_trail != 0)
+            trail_img = BitmapFactory.decodeResource(res, selected_trail);
+        else
+            trail_img = null;
+
         BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
-        balls.add(new Ball(width / 2, height / 2, attributes, null, ball_img));
+        balls.add(new Ball(width / 2, height / 2, attributes, null, ball_img, trail_img));
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
@@ -92,6 +101,8 @@ public class GameView extends View
                 {
                     ball.dragged = true;
                     ball.position = touchPosition;
+                    ball.velocity.mult(0);
+                    ball.acceleration.mult(0);
                 }
             }
         }

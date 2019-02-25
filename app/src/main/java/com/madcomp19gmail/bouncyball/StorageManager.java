@@ -143,4 +143,16 @@ public class StorageManager {
         editor.putInt(context.getString(R.string.selected_skin), skin);
         editor.apply();
     }
+
+    public int getSelectedTrail()
+    {
+        return prefs.getInt(context.getString(R.string.selected_trail), 0);
+    }
+
+    public void setSelectedTrail(int trail)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_trail), trail);
+        editor.apply();
+    }
 }

@@ -1,7 +1,10 @@
 package com.madcomp19gmail.bouncyball;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.Paint;
+
+import java.util.ArrayList;
 
 public class Ball
 {
@@ -16,11 +19,14 @@ public class Ball
     float radius;
     Paint color;
     Bitmap image;
+    Bitmap trail;
+
+    ArrayList<Vector2> trailPositions;
 
     boolean dragged;
 
 
-    public Ball(float x, float y, BallAttributes ba, Paint aColor, Bitmap img)
+    public Ball(float x, float y, BallAttributes ba, Paint aColor, Bitmap img, Bitmap aTrail)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
@@ -36,6 +42,10 @@ public class Ball
         else if(img != null)
             image = img;
 
+        trail = aTrail;
+        if(trail != null)
+            trail = getResizedBitmap(trail, (int) radius, (int) radius);
+        trailPositions = new ArrayList<>();
 
         dragged = false;
     }
@@ -46,10 +56,13 @@ public class Ball
             return;
 
         float prev_velY = velocity.y;
+        float rightLimit = GameView.width - radius;
+        float bottomLimit = GameView.height - radius;
 
         acceleration.add(attributes.gravity);
         velocity.add(acceleration);
         position.add(velocity);
+
 
         if(angle + velocity.x > 360)
         {
@@ -66,10 +79,9 @@ public class Ball
         else
             angle += velocity.x;
 
-        float rightLimit = GameView.width - radius;
-        float bottomLimit = GameView.height - radius;
 
         acceleration.mult(0);
+
 
         if (position.x >= rightLimit) {
             position.x = rightLimit;
@@ -112,6 +124,20 @@ public class Ball
             //Play sound effect
             playSound();
         }
+
+        if(position.x <= radius && velocity.x < 1)
+            position.x = 0 + radius + 1;
+        else if(position.x >= rightLimit && velocity.x < 1)
+            position.x = rightLimit - 1;
+
+
+        if(trail == null)
+            return;
+
+        trailPositions.add(position);
+
+        if(trailPositions.size() > 1000)
+            trailPositions.remove(0);
     }
 
     public void applyForce(Vector2 force)
@@ -125,33 +151,47 @@ public class Ball
         SoundPoolManager.getInstance().playSound();
     }
 
+    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight)
+    {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // CREATE A MATRIX FOR THE MANIPULATION
+        Matrix matrix = new Matrix();
+        // RESIZE THE BIT MAP
+        matrix.postScale(scaleWidth, scaleHeight);
+
+        // "RECREATE" THE NEW BITMAP
+        Bitmap resizedBitmap = Bitmap.createBitmap(
+                bm, 0, 0, width, height, matrix, false);
+        bm.recycle();
+        return resizedBitmap;
+    }
+
     public void display(Canvas canvas)
     {
         if(color != null)
             canvas.drawCircle(position.x, position.y, radius, color);
         else if(image != null)
         {
-            //canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
+            /*if(trail != null)
+            {
+                for(int i = 0; i < trailPositions.size(); i++)
+                {
+                    //Bitmap trail_img = getResizedBitmap(trail, (int) radius - i * 2, (int) radius - i * 2);
+                    canvas.drawBitmap(trail, trailPositions.get(i).x - radius / 2, trailPositions.get(i).y - radius / 2, null);
+                }
+            }*/
+
 
             canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
+
             canvas.rotate(angle, position.x, position.y);
-            /*Matrix matrix = new Matrix();
-            matrix.postRotate(70);
-            image = Bitmap.createBitmap(image, 0, 0,
-                    image.getWidth(), image.getHeight(),
-                    matrix, true);*/
 
             canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
 
-            /*matrix = new Matrix();
-            matrix.postRotate(-1);
-            image = Bitmap.createBitmap(image, 0, 0,
-                    image.getWidth(), image.getHeight(),
-                    matrix, true);*/
             canvas.restore();
-            //canvas.rotate(-10);
         }
     }
-
-
 }
