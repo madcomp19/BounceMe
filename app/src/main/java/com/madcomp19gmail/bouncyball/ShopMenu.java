@@ -5,8 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 public class ShopMenu extends AppCompatActivity {
+
+    private StorageManager storage;
+    TextView coins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +19,16 @@ public class ShopMenu extends AppCompatActivity {
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        storage = StorageManager.getInstance();
+        coins = findViewById(R.id.coins);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        coins.setText(storage.getTotalTouches() + "");
     }
 
     public void onShopMenuButtonClick(View view)

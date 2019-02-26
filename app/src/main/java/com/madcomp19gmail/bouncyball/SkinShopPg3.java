@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 public class SkinShopPg3 extends AppCompatActivity {
 
     float prevX;
+    TextView coins;
+    private StorageManager storageManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,16 @@ public class SkinShopPg3 extends AppCompatActivity {
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        storageManager = StorageManager.getInstance();
+        coins = findViewById(R.id.coins);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        coins.setText(storageManager.getTotalTouches() + "");
     }
 
     @Override

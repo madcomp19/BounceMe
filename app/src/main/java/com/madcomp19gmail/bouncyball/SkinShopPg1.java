@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class SkinShopPg1 extends AppCompatActivity {
 
     float prevX;
+    TextView coins;
+    private StorageManager storageManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,7 +27,9 @@ public class SkinShopPg1 extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        StorageManager storageManager = StorageManager.getInstance();
+        storageManager = StorageManager.getInstance();
+
+        coins = findViewById(R.id.coins);
 
         ArrayList<Integer> label_ids = storageManager.getOwnedSkinsLabels();
 
@@ -54,6 +58,13 @@ public class SkinShopPg1 extends AppCompatActivity {
             if(storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
                 ((TextView) linearLayout.getChildAt(i)).setText("Selected");
         }
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        coins.setText(storageManager.getTotalTouches() + "");
     }
 
     public void onClickSkin(View view)
@@ -196,6 +207,7 @@ public class SkinShopPg1 extends AppCompatActivity {
 
                 label_text.setText("Selected");
                 Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                coins.setText(storageManager.getTotalTouches() + "");
             }
             else
                 Toast.makeText(this, "You need " + (price - total_touches) + " more touches", Toast.LENGTH_LONG).show();
