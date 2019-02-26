@@ -15,7 +15,6 @@ public class MainMenu extends AppCompatActivity {
     //private static int touches;
     private StorageManager storage;
 
-
     public static boolean prev_act_GameWorld = false;
     private static int prev_touches;
     TextView coins;
