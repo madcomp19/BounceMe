@@ -1,11 +1,13 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class MainMenu extends AppCompatActivity {
 
     public static boolean prev_act_GameWorld = false;
     private static int prev_touches;
+    TextView coins;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class MainMenu extends AppCompatActivity {
 
         StorageManager.initialize(this);
         storage = StorageManager.getInstance();
+        coins = findViewById(R.id.coins);
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
         //SoundPoolManager.initialize(this);
@@ -49,6 +53,8 @@ public class MainMenu extends AppCompatActivity {
 
             prev_act_GameWorld = false;
         }
+
+        coins.setText(storage.getTotalTouches() + "");
     }
 
     public static int getPrevTouches()
@@ -93,5 +99,11 @@ public class MainMenu extends AppCompatActivity {
     {
         Intent intent = new Intent(this, ShopMenu.class);
         startActivity(intent);
+    }
+
+    public void goFacebookPage(View view)
+    {
+        Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/francisco.teixeira.507"));
+        startActivity(goFacebook);
     }
 }
