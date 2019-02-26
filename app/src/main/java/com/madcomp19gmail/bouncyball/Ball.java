@@ -17,7 +17,6 @@ public class Ball
     BallAttributes attributes;
 
     float radius;
-    Paint color;
     Bitmap image;
     Bitmap trail;
 
@@ -26,7 +25,7 @@ public class Ball
     boolean dragged;
 
 
-    public Ball(float x, float y, BallAttributes ba, Paint aColor, Bitmap img, Bitmap aTrail)
+    public Ball(float x, float y, BallAttributes ba, Bitmap img, Bitmap aTrail)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
@@ -37,9 +36,7 @@ public class Ball
 
         radius = attributes.radius;
 
-        if(color != null)
-            color = aColor;
-        else if(img != null)
+        if(img != null)
             image = img;
 
         trail = aTrail;
@@ -131,13 +128,19 @@ public class Ball
             position.x = rightLimit - 1;
 
 
-        if(trail == null)
+        /*if(trail == null)
             return;
 
-        trailPositions.add(position);
+        if(iter == 5000)
+        {
+            iter = 0;
+            trailPositions.add(position);
+        }
+        else
+            iter++;
 
-        if(trailPositions.size() > 1000)
-            trailPositions.remove(0);
+        if(trailPositions.size() > 500)
+            trailPositions.remove(0);*/
     }
 
     public void applyForce(Vector2 force)
@@ -171,9 +174,7 @@ public class Ball
 
     public void display(Canvas canvas)
     {
-        if(color != null)
-            canvas.drawCircle(position.x, position.y, radius, color);
-        else if(image != null)
+        if(image != null)
         {
             /*if(trail != null)
             {
