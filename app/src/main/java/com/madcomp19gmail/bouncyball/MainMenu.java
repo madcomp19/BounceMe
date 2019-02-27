@@ -105,4 +105,10 @@ public class MainMenu extends AppCompatActivity {
         Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/francisco.teixeira.507"));
         startActivity(goFacebook);
     }
+
+    public void achievementButton(View view)
+    {
+        Intent goAchievements = new Intent(this, AchievementsMenu.class);
+        startActivity(goAchievements);
+    }
 }

@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AchievementsMenu"></activity>
         <activity
             android:name=".SkinShop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DoublePointsAlert"
-            android:theme="@style/AppTheme.DoublePointsAlert"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.DoublePointsAlert" />
         <activity
             android:name=".ShopMenu"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DailyChallenge"
             android:screenOrientation="portrait" />
