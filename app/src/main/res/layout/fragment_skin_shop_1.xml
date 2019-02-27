@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutSkins1"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_marginStart="8dp"
@@ -29,8 +29,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_1" />
 
         <ImageButton
@@ -39,8 +39,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_2" />
 
         <ImageButton
@@ -49,8 +49,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_3" />
 
         <ImageButton
@@ -59,8 +59,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_4" />
 
         <ImageButton
@@ -69,15 +69,15 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_5" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayoutLabels1"
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSkins1">
 
 
         <TextView
@@ -98,8 +98,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="80"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -107,8 +107,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="100"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -116,8 +116,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="120"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -125,8 +125,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="140"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -134,14 +134,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="160"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayoutSkins2"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:layout_marginStart="8dp"
@@ -155,7 +155,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLabels1">
 
         <ImageButton
             android:id="@+id/emoji_6_Button"
@@ -163,8 +163,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_6" />
 
         <ImageButton
@@ -173,8 +173,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_7" />
 
         <ImageButton
@@ -183,8 +183,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_8" />
 
         <ImageButton
@@ -193,8 +193,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_9" />
 
         <ImageButton
@@ -203,15 +203,15 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:onClick="onClickSkin"
             android:scaleType="fitCenter"
+            android:onClick="onClickSkin"
             android:src="@drawable/emoji_10" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayoutLabels2"
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
@@ -226,7 +226,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSkins2"
         app:layout_constraintVertical_bias="0.0">
 
 
@@ -235,8 +235,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="180"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -244,8 +244,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="200"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -253,8 +253,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="220"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -262,8 +262,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="240"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
         <TextView
@@ -271,8 +271,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickSkin"
             android:text="260"
+            android:onClick="onClickSkin"
             android:textAlignment="center" />
 
     </LinearLayout>

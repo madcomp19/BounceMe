@@ -13,8 +13,7 @@ import java.util.ArrayList;
 
 public class SkinShop extends FragmentActivity {
 
-    ViewPager viewPager;
-    TextView coins;
+    private TextView coins;
     private StorageManager storageManager;
 
     @Override
@@ -25,38 +24,14 @@ public class SkinShop extends FragmentActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        viewPager.setOffscreenPageLimit(1);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager.setOffscreenPageLimit(2);
         SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
         viewPager.setCurrentItem(0);
 
         storageManager = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
-
-        ArrayList<Integer> label_ids = storageManager.getOwnedSkinsLabels();
-
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linearLayout6);
-
-        /*for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }
-
-        linearLayout = (LinearLayout) findViewById(R.id.linearLayout4);
-
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }*/
     }
 
     @Override
