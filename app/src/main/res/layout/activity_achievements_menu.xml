@@ -42,7 +42,7 @@
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="56dp"
+                android:layout_width="70dp"
                 android:layout_height="35dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -69,7 +69,7 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="56dp"
+                android:layout_width="70dp"
                 android:layout_height="35dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
@@ -95,7 +95,7 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="56dp"
+                android:layout_width="70dp"
                 android:layout_height="35dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"

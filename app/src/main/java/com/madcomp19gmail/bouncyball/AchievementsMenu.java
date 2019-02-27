@@ -45,8 +45,8 @@ public class AchievementsMenu extends AppCompatActivity {
         bar2.setProgress(storage.getTotalTouches());
         bar3.setProgress(storage.getTotalTouches());
 
-        text1.setText(storage.getTotalTouches() + "/" + bar1.getMax() + " Bounces");
-        text2.setText(storage.getTotalTouches() + "/" + bar2.getMax() + " Bounces");
-        text3.setText(storage.getTotalTouches() + "/" + bar3.getMax() + " Bounces");
+        text1.setText(bar1.getProgress() + "/" + bar1.getMax() + " Bounces");
+        text2.setText(bar2.getProgress() + "/" + bar2.getMax() + " Bounces");
+        text3.setText(bar3.getProgress() + "/" + bar3.getMax() + " Bounces");
     }
 }
