@@ -41,8 +41,9 @@ public class Ball
 
         trail = aTrail;
         if(trail != null)
-            trail = getResizedBitmap(trail, (int) radius, (int) radius);
+            trail = getResizedBitmap(trail, (int) radius * 2, (int) radius * 2);
         trailPositions = new ArrayList<>();
+        trailPositions.add(new Vector2(position.x, position.y));
 
         dragged = false;
     }
@@ -128,19 +129,13 @@ public class Ball
             position.x = rightLimit - 1;
 
 
-        /*if(trail == null)
+        if(trail == null)
             return;
 
-        if(iter == 5000)
-        {
-            iter = 0;
-            trailPositions.add(position);
-        }
-        else
-            iter++;
+        trailPositions.add(new Vector2(position.x, position.y));
 
-        if(trailPositions.size() > 500)
-            trailPositions.remove(0);*/
+        if(trailPositions.size() > 20)
+            trailPositions.remove(0);
     }
 
     public void applyForce(Vector2 force)
@@ -176,14 +171,19 @@ public class Ball
     {
         if(image != null)
         {
-            /*if(trail != null)
+            if(trail != null)
             {
-                for(int i = 0; i < trailPositions.size(); i++)
+                int size = trailPositions.size();
+                for(int i = 0; i < size; i++)
                 {
-                    //Bitmap trail_img = getResizedBitmap(trail, (int) radius - i * 2, (int) radius - i * 2);
-                    canvas.drawBitmap(trail, trailPositions.get(i).x - radius / 2, trailPositions.get(i).y - radius / 2, null);
+                    //trail = getResizedBitmap(trail, (int) radius - i * 2, (int) radius - i * 2);
+                    Bitmap t = getResizedBitmap(trail.copy(trail.getConfig(), true), (int) radius * 2 - 2 * (size - i), (int) radius * 2 - 2 * (size - i));
+                    Paint p = new Paint();
+                    p.setAlpha(255 - (size - i) * 10);
+                    canvas.drawBitmap(t, trailPositions.get(i).x - radius, trailPositions.get(i).y - radius, p);
+                    t.recycle();
                 }
-            }*/
+            }
 
 
             canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
