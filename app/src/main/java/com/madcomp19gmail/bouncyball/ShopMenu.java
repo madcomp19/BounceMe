@@ -35,7 +35,7 @@ public class ShopMenu extends AppCompatActivity {
     {
         if(view.getId() == R.id.skinsButton)
         {
-            Intent intent = new Intent(this, SkinShopPg1.class);
+            Intent intent = new Intent(this, SkinShop.class);
             startActivity(intent);
         }
     }

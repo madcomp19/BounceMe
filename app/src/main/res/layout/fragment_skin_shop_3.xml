@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="#424242"
-    tools:context=".SkinShopPg1">
-
-    <TextView
-        android:id="@+id/coins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:text="1000"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/coin_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/coins"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coins"
-        app:layout_constraintTop_toTopOf="@+id/coins" />
-
-    <TextView
-        android:id="@+id/gems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/coins"
-        app:layout_constraintStart_toStartOf="@+id/coins"
-        app:layout_constraintTop_toBottomOf="@+id/coins" />
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -51,7 +13,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
@@ -68,10 +30,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
-            android:src="@drawable/emoji_1"
             android:onClick="onClickSkin"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_1" />
 
         <ImageButton
             android:id="@+id/emoji_2_Button"
@@ -79,10 +40,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
-            android:src="@drawable/emoji_2"
             android:onClick="onClickSkin"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_2" />
 
         <ImageButton
             android:id="@+id/emoji_3_Button"
@@ -90,10 +50,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
-            android:src="@drawable/emoji_3"
             android:onClick="onClickSkin"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_3" />
 
         <ImageButton
             android:id="@+id/emoji_4_Button"
@@ -101,10 +60,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
-            android:src="@drawable/emoji_4"
             android:onClick="onClickSkin"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_4" />
 
         <ImageButton
             android:id="@+id/emoji_5_Button"
@@ -112,10 +70,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
-            android:src="@drawable/emoji_5"
             android:onClick="onClickSkin"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/emoji_5" />
 
 
     </LinearLayout>
@@ -320,6 +277,5 @@
             android:textAlignment="center" />
 
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>
