@@ -21,6 +21,6 @@
     <string name="owned_skins_labels">OwnedSkinsLabels</string>
     <string name="selected_skin">SelectedSkin</string>
     <string name="selected_label">SelectedLabel</string>
-    <string name="selected_trail">SelectedLabel</string>
+    <string name="selected_trail">SelectedTrail</string>
     <string name="linearLayout">LinearLayout</string>
 </resources>

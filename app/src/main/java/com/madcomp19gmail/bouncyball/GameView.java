@@ -47,6 +47,7 @@ public class GameView extends View
         Resources res = getResources();
 
         int selected_skin = StorageManager.getInstance().getSelectedSkin();
+        StorageManager.getInstance().setSelectedTrail(R.drawable.colored_3);
         int selected_trail = StorageManager.getInstance().getSelectedTrail();
 
         Bitmap ball_img;
