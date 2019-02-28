@@ -42,7 +42,6 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/coins"
-        app:layout_constraintStart_toStartOf="@+id/coins"
         app:layout_constraintTop_toBottomOf="@+id/coins" />
 
 
@@ -56,7 +55,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/balls_icon"
+        android:background="#424242"
+        android:src="@drawable/balls_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
@@ -67,7 +67,6 @@
 
     <ImageButton
         android:id="@+id/skinsButton"
-        android:onClick="onShopMenuButtonClick"
         android:layout_width="110dp"
         android:layout_height="120dp"
         android:layout_marginStart="8dp"
@@ -76,7 +75,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/skins_icon"
+        android:background="#424242"
+        android:onClick="onShopMenuButtonClick"
+        android:src="@drawable/skins_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -94,7 +95,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/sounds_icon"
+        android:background="#424242"
+        android:src="@drawable/sounds_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
@@ -113,7 +115,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/background_icon"
+        android:background="#424242"
+        android:src="@drawable/background_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -132,7 +135,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/trails_icon"
+        android:background="#424242"
+        android:src="@drawable/trails_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
@@ -151,7 +155,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/multipliers_icon"
+        android:background="#424242"
+        android:src="@drawable/multipliers_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -169,12 +174,23 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/shop"
-        app:background="@drawable/shop"
+        android:background="#424242"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.016"
+        app:srcCompat="@drawable/shop" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/gem_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/gems"
+        app:layout_constraintStart_toEndOf="@+id/gems"
+        app:layout_constraintTop_toTopOf="@+id/gems" />
 
 </android.support.constraint.ConstraintLayout>

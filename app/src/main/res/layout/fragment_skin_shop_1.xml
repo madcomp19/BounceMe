@@ -29,8 +29,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_1" />
 
         <ImageButton
@@ -39,8 +39,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_2" />
 
         <ImageButton
@@ -49,8 +49,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_3" />
 
         <ImageButton
@@ -59,8 +59,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_4" />
 
         <ImageButton
@@ -69,8 +69,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_5" />
 
 
@@ -163,8 +163,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_6" />
 
         <ImageButton
@@ -173,8 +173,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_7" />
 
         <ImageButton
@@ -183,8 +183,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_8" />
 
         <ImageButton
@@ -193,8 +193,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_9" />
 
         <ImageButton
@@ -203,8 +203,8 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="#424242"
-            android:scaleType="fitCenter"
             android:onClick="onClickSkin"
+            android:scaleType="fitCenter"
             android:src="@drawable/emoji_10" />
 
 

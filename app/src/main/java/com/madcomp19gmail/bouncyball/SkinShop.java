@@ -1,15 +1,13 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class SkinShop extends FragmentActivity {
 
@@ -29,6 +27,9 @@ public class SkinShop extends FragmentActivity {
         SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
         viewPager.setCurrentItem(0);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(viewPager, true);
 
         storageManager = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
