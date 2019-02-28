@@ -1,6 +1,7 @@
 package com.madcomp19gmail.bouncyball;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 
@@ -167,21 +168,41 @@ public class Ball
         return resizedBitmap;
     }
 
+    int frameCount = 0;
+
     public void display(Canvas canvas)
     {
         if(image != null)
         {
             if(trail != null)
             {
+                if(frameCount > 360)
+                    frameCount = 0;
+                else
+                    frameCount += 5;
+
                 int size = trailPositions.size();
+
                 for(int i = 0; i < size; i++)
                 {
                     //trail = getResizedBitmap(trail, (int) radius - i * 2, (int) radius - i * 2);
-                    Bitmap t = getResizedBitmap(trail.copy(trail.getConfig(), true), (int) radius * 2 - 2 * (size - i), (int) radius * 2 - 2 * (size - i));
+                    //Bitmap t = getResizedBitmap(trail.copy(trail.getConfig(), true), (int) radius * 2 - 2 * (size - i), (int) radius * 2 - 2 * (size - i));
                     Paint p = new Paint();
-                    p.setAlpha(255 - (size - i) * 10);
-                    canvas.drawBitmap(t, trailPositions.get(i).x - radius, trailPositions.get(i).y - radius, p);
-                    t.recycle();
+                    //p.setARGB(255 - (size - i) * 10, 255 - i * 10, 255, 0);
+
+                    //int h = frameCount;//i * increment;
+                    int h = i * (360 / size);
+                    int s = 1;
+                    int v = 1;
+
+                    float[] values = {h, s, v};
+
+                    p.setColor(Color.HSVToColor(255 - (size - i) * 10, values));
+
+                    //p.setAlpha(255 - (size - i) * 10);
+                    canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, radius - 2 * (size - i), p);
+                    //canvas.drawBitmap(t, trailPositions.get(i).x - radius, trailPositions.get(i).y - radius, p);
+                    //t.recycle();
                 }
             }
 

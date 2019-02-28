@@ -98,13 +98,14 @@ public class GameView extends View
         {
             for(Ball ball : balls)
             {
-                if(Vector2.dist(touchPosition, ball.position) < ball.radius + 100)
-                {
+                //if(Vector2.dist(touchPosition, ball.position) < ball.radius + 100)
+                //{
                     ball.dragged = true;
+                    ball.trailPositions.clear();
                     ball.position = touchPosition;
                     ball.velocity.mult(0);
                     ball.acceleration.mult(0);
-                }
+                //}
             }
         }
         else if(action == MotionEvent.ACTION_UP)
@@ -115,6 +116,7 @@ public class GameView extends View
                 {
                     ball.dragged = false;
                     ball.position = touchPosition;
+                    ball.velocity.mult(1.3f);
                 }
             }
         }
