@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AchievementsMenu"></activity>
+        <activity android:name=".TrailShop"></activity>
+        <activity android:name=".AchievementsMenu" />
         <activity
             android:name=".SkinShop"
             android:screenOrientation="portrait" />
