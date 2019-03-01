@@ -99,6 +99,13 @@ public class AchievementsMenu extends AppCompatActivity {
         bar8.setProgress(storage.getTotalBouncesEver());
         bar9.setProgress(storage.getTotalBouncesEver());
 
+        bar10.setProgress(storage.getNumberOfOwnedSkins());
+        bar11.setProgress(storage.getNumberOfOwnedSkins());
+        bar12.setProgress(storage.getNumberOfOwnedSkins());
+        bar13.setProgress(storage.getNumberOfOwnedSkins());
+        bar14.setProgress(storage.getNumberOfOwnedSkins());
+        bar15.setProgress(storage.getNumberOfOwnedSkins());
+
         text1.setText(bar1.getProgress() + "/" + bar1.getMax() + " Bounces");
         text2.setText(bar2.getProgress() + "/" + bar2.getMax() + " Bounces");
         text3.setText(bar3.getProgress() + "/" + bar3.getMax() + " Bounces");
@@ -108,5 +115,11 @@ public class AchievementsMenu extends AppCompatActivity {
         text7.setText(bar7.getProgress() + "/" + bar7.getMax() + " Bounces");
         text8.setText(bar8.getProgress() + "/" + bar8.getMax() + " Bounces");
         text9.setText(bar9.getProgress() + "/" + bar9.getMax() + " Bounces");
+        text10.setText(bar10.getProgress() + "/" + bar10.getMax() + " Skins");
+        text11.setText(bar11.getProgress() + "/" + bar11.getMax() + " Skins");
+        text12.setText(bar12.getProgress() + "/" + bar12.getMax() + " Skins");
+        text13.setText(bar13.getProgress() + "/" + bar13.getMax() + " Skins");
+        text14.setText(bar14.getProgress() + "/" + bar14.getMax() + " Skins");
+        text15.setText(bar15.getProgress() + "/" + bar15.getMax() + " Skins");
     }
 }

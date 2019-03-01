@@ -96,6 +96,13 @@ public class StorageManager {
         return owned_skins;
     }
 
+    public int getNumberOfOwnedSkins()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
+
+        return set.size();
+    }
+
     public void addOwnedSkin(int skin)
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
