@@ -29,100 +29,48 @@ public class SkinFragment extends Fragment {
         switch (pageNumber) {
             case 1:
                 view = inflater.inflate(R.layout.fragment_skin_shop_1, container, false);
-                setOwnedSkinsPage1(view);
+                setOwnedSkinsPage(view);
                 break;
             case 2:
                 view = inflater.inflate(R.layout.fragment_skin_shop_2, container, false);
-                setOwnedSkinsPage2(view);
+                setOwnedSkinsPage(view);
                 break;
             case 3:
                 view = inflater.inflate(R.layout.fragment_skin_shop_3, container, false);
-                setOwnedSkinsPage3(view);
+                setOwnedSkinsPage(view);
                 break;
             default:
                 view = inflater.inflate(R.layout.fragment_skin_shop_1, container, false);
-                setOwnedSkinsPage1(view);
+                setOwnedSkinsPage(view);
                 break;
         }
 
         return view;
     }
 
-    private void setOwnedSkinsPage1(View view) {
+    private void setOwnedSkinsPage(View view)
+    {
+
         ArrayList<Integer> label_ids = storageManager.getOwnedSkinsLabels();
 
-        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.linearLayoutLabels1);
+        ViewGroup viewGroup = (ViewGroup) view;
 
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
+        int childCount = viewGroup.getChildCount();
 
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
+        for(int i = 0; i < childCount; i++)
+        {
+            View v = viewGroup.getChildAt(i);
+
+            if(v instanceof TextView)
+            {
+                if(label_ids.contains(v.getId()))
+                    ((TextView) v).setText("Owned");
+
+                if (storageManager.getSelectedLabel() == v.getId())
+                    ((TextView) v).setText("Selected");
             }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }
-
-        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayoutLabels2);
-
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }
-    }
-
-    private void setOwnedSkinsPage2(View view) {
-        ArrayList<Integer> label_ids = storageManager.getOwnedSkinsLabels();
-
-        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.linearLayoutLabels3);
-
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }
-
-        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayoutLabels4);
-
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }
-    }
-
-    private void setOwnedSkinsPage3(View view) {
-        ArrayList<Integer> label_ids = storageManager.getOwnedSkinsLabels();
-
-        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.linearLayoutLabels5);
-
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
-        }
-
-        linearLayout = (LinearLayout) view.findViewById(R.id.linearLayoutLabels6);
-
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-
-            if (linearLayout.getChildAt(i) instanceof TextView && label_ids.contains(linearLayout.getChildAt(i).getId())) {
-                ((TextView) linearLayout.getChildAt(i)).setText("Owned");
-            }
-            if (storageManager.getSelectedLabel() == linearLayout.getChildAt(i).getId())
-                ((TextView) linearLayout.getChildAt(i)).setText("Selected");
+            else if(v instanceof ViewGroup)
+                setOwnedSkinsPage(v);
         }
     }
 }
