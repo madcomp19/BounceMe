@@ -88,6 +88,7 @@ public class DailyChallenge extends AppCompatActivity {
                 finish();
             }
         });
+        builder.setCancelable(false);
 
         AlertDialog dialog = builder.create();
         dialog.show();
@@ -102,6 +103,7 @@ public class DailyChallenge extends AppCompatActivity {
                 finish();
             }
         });
+        builder.setCancelable(false);
 
         AlertDialog dialog = builder.create();
         dialog.show();
@@ -116,6 +118,7 @@ public class DailyChallenge extends AppCompatActivity {
                 finish();
             }
         });
+        builder.setCancelable(false);
 
         AlertDialog dialog = builder.create();
         dialog.show();
