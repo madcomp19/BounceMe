@@ -17,6 +17,7 @@
     <string name="challenge_complete_dialog_title">Challenge Complete!</string>
     <string name="challenge_complete_dialog_message">You have completed the challenge and received a reward!</string>
     <string name="total_touches">TotalTouches</string>
+    <string name="total_bounces_ever">TotalBouncesEver</string>
     <string name="owned_skins">OwnedSkins</string>
     <string name="owned_skins_labels">OwnedSkinsLabels</string>
     <string name="selected_skin">SelectedSkin</string>

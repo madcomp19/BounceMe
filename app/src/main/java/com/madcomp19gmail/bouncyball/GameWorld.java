@@ -21,6 +21,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
     private static StorageManager storageManager;
     private static int touches;
+    private static int total_bounces_ever;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         StorageManager.initialize(this);
         storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalTouches();
+        total_bounces_ever = storageManager.getTotalBouncesEver();
     }
 
     @Override
@@ -52,7 +54,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     {
         super.onStop();
         storageManager.setTotalTouches(touches);
-
+        storageManager.setTotalBouncesEver(total_bounces_ever);
 
 
 
@@ -63,6 +65,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     {
         super.onPause();
         storageManager.setTotalTouches(touches);
+        storageManager.setTotalBouncesEver(total_bounces_ever);
 
 
         MainMenu.prev_act_GameWorld = true;
@@ -75,11 +78,13 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
         SoundPoolManager.getInstance().release();
         storageManager.setTotalTouches(touches);
+        storageManager.setTotalBouncesEver(total_bounces_ever);
     }
 
     public static void addTouch()
     {
         touches++;
+        total_bounces_ever++;
     }
 
     public static int getTouches()

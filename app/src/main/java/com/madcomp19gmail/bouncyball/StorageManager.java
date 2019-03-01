@@ -74,6 +74,16 @@ public class StorageManager {
         editor.apply();
     }
 
+    public int getTotalBouncesEver(){
+        return prefs.getInt(context.getString(R.string.total_bounces_ever), 0);
+    }
+
+    public void setTotalBouncesEver(int touches){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.total_bounces_ever), touches);
+        editor.apply();
+    }
+
     public ArrayList<Integer> getOwnedSkins()
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());

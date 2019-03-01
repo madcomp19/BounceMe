@@ -47,7 +47,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins1"
+                android:id="@+id/linearLayoutAchievements1"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="8dp"
@@ -81,12 +81,12 @@
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
                         android:text="90/100 Bounces"
                         android:textAlignment="center"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
                 </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -108,11 +108,12 @@
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="90/1000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -134,18 +135,19 @@
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="90/5000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2"
+                android:id="@+id/linearLayoutAchievements2"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="8dp"
@@ -171,18 +173,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="100"
-                        android:progress="90"
+                        android:max="10000"
+                        android:progress="10000"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="25dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/100 Bounces"
+                        android:text="10000/10000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="10sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -198,18 +201,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="1000"
-                        android:progress="30"
+                        android:max="20000"
+                        android:progress="10000"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="25dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/1000 Bounces"
+                        android:text="10000/20000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="10sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -224,25 +228,26 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="5000"
-                        android:progress="300"
+                        android:max="50000"
+                        android:progress="10000"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="25dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/5000 Bounces"
+                        android:text="10000/50000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="10sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins3"
+                android:id="@+id/linearLayoutAchievements3"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="8dp"
@@ -268,18 +273,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="100"
-                        android:progress="90"
+                        android:max="100000"
+                        android:progress="100000"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView7"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="23dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/100 Bounces"
+                        android:text="100000/100000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="9sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -295,18 +301,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="1000"
-                        android:progress="30"
+                        android:max="500000"
+                        android:progress="250000"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="23dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/1000 Bounces"
+                        android:text="250000/500000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="9sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -321,25 +328,26 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="5000"
-                        android:progress="300"
+                        android:max="1000000"
+                        android:progress="1000000"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView9"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="22dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/5000 Bounces"
+                        android:text="1000000/1000000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="8.5sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins4"
+                android:id="@+id/linearLayoutAchievements4"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="8dp"
@@ -365,18 +373,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="100"
-                        android:progress="90"
+                        android:max="5"
+                        android:progress="1"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView10"
-                        android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_width="45dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/100 Bounces"
+                        android:text="1/5 Skins"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -392,18 +401,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="1000"
-                        android:progress="30"
+                        android:max="10"
+                        android:progress="6"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView11"
-                        android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/1000 Bounces"
+                        android:text="6/10 Skins"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -418,25 +428,26 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="5000"
-                        android:progress="300"
+                        android:max="25"
+                        android:progress="10"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView12"
-                        android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/5000 Bounces"
+                        android:text="10/25 Skins"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5"
+                android:id="@+id/linearLayoutAchievements5"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="8dp"
@@ -462,18 +473,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="100"
-                        android:progress="90"
+                        android:max="50"
+                        android:progress="35"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView13"
-                        android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/100 Bounces"
+                        android:text="35/50 Skins"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -489,18 +501,19 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="1000"
-                        android:progress="30"
+                        android:max="100"
+                        android:progress="70"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView14"
-                        android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/1000 Bounces"
+                        android:text="70/100 Skins"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -515,25 +528,26 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="5000"
-                        android:progress="300"
+                        android:max="250"
+                        android:progress="100"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView15"
-                        android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/5000 Bounces"
+                        android:text="100/250 Skins"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins6"
+                android:id="@+id/linearLayoutAchievements6"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="8dp"
@@ -566,11 +580,12 @@
                     <TextView
                         android:id="@+id/textView16"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="90/100 Bounces"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -593,11 +608,12 @@
                     <TextView
                         android:id="@+id/textView17"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="90/1000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
@@ -619,11 +635,12 @@
                     <TextView
                         android:id="@+id/textView18"
                         android:layout_width="70dp"
-                        android:layout_height="35dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="90/5000 Bounces"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         android:textColor="#FFFFFF" />
                 </RelativeLayout>
 
