@@ -115,7 +115,6 @@ public class MainMenu extends AppCompatActivity {
     {
         Intent goAchievements = new Intent(this, AchievementsMenu.class);
         startActivity(goAchievements);
-        storage.addGems(2);
     }
 
     public void goToSettings(View view)

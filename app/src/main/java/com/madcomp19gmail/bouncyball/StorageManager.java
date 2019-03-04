@@ -100,6 +100,29 @@ public class StorageManager {
         editor.apply();
     }
 
+    public void addCollectedAchievement(int achievement)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.collected_achievements), new HashSet<String>());
+
+        set.add(achievement + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_skins), set);
+        editor.apply();
+    }
+
+    public ArrayList<Integer> getCollectedAchievements()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.collected_achievements), new HashSet<String>());
+
+        ArrayList<Integer> collected_achievements = new ArrayList<>();
+
+        for(String s : set)
+            collected_achievements.add(Integer.parseInt(s));
+
+        return collected_achievements;
+    }
+
     public ArrayList<Integer> getOwnedSkins()
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
