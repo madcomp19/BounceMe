@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
@@ -40,8 +41,16 @@ public class GameView extends View
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
 
-        Paint p = new Paint();
-        p.setColor(Color.YELLOW);
+        // This stretches the image to fit
+        //setBackgroundResource(R.drawable.test_background);
+
+        // This crops the image to the screen size starting from the bottom left corner
+        Resources resources = getResources();
+        Bitmap bmp = BitmapFactory.decodeResource(resources, R.drawable.test_background);
+        BitmapDrawable background = new BitmapDrawable(resources, Bitmap.createBitmap(bmp, 0,bmp.getHeight() - height, width, height));
+        setBackgroundDrawable(background);
+        bmp.recycle();
+
         balls = new ArrayList<>();
 
         Resources res = getResources();
