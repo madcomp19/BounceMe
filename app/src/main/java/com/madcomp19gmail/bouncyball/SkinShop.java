@@ -1,9 +1,11 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -46,103 +48,20 @@ public class SkinShop extends FragmentActivity {
     }
 
     public void onClickSkin(View view) {
-        switch (view.getId()) {
-            case R.id.emoji_1_Button:
-            case R.id.emoji_1_Label:
-                buyOrSetSkin(R.drawable.emoji_1, R.id.emoji_1_Label);
-                break;
 
-            case R.id.emoji_2_Button:
-            case R.id.emoji_2_Label:
-                buyOrSetSkin(R.drawable.emoji_2, R.id.emoji_2_Label);
-                break;
+        String view_id = view.getResources().getResourceEntryName(view.getId());
+        view_id = view_id.split("_Label")[0].split("_Button")[0];
+        //Log.i("TEST", view_id);
 
-            case R.id.emoji_3_Button:
-            case R.id.emoji_3_Label:
-                buyOrSetSkin(R.drawable.emoji_3, R.id.emoji_3_Label);
-                break;
+        int skin_id = this.getResources().getIdentifier(view_id, "drawable", getPackageName());
+        int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
+        /*Log.i("skin", view_id);
+        Log.i("label", view_id + "_Label");
+        Log.i("skin_id", Integer.toString(skin_id));
+        Log.i("label_id", Integer.toString(label_id));
+        Log.i("res_id", Integer.toString(view.getId()));*/
 
-            case R.id.emoji_4_Button:
-            case R.id.emoji_4_Label:
-                buyOrSetSkin(R.drawable.emoji_4, R.id.emoji_4_Label);
-                break;
-
-            case R.id.emoji_5_Button:
-            case R.id.emoji_5_Label:
-                buyOrSetSkin(R.drawable.emoji_5, R.id.emoji_5_Label);
-                break;
-
-            case R.id.emoji_6_Button:
-            case R.id.emoji_6_Label:
-                buyOrSetSkin(R.drawable.emoji_6, R.id.emoji_6_Label);
-                break;
-
-            case R.id.emoji_7_Button:
-            case R.id.emoji_7_Label:
-                buyOrSetSkin(R.drawable.emoji_7, R.id.emoji_7_Label);
-                break;
-
-            case R.id.emoji_8_Button:
-            case R.id.emoji_8_Label:
-                buyOrSetSkin(R.drawable.emoji_8, R.id.emoji_8_Label);
-                break;
-
-            case R.id.emoji_9_Button:
-            case R.id.emoji_9_Label:
-                buyOrSetSkin(R.drawable.emoji_9, R.id.emoji_9_Label);
-                break;
-
-            case R.id.emoji_10_Button:
-            case R.id.emoji_10_Label:
-                buyOrSetSkin(R.drawable.emoji_10, R.id.emoji_10_Label);
-                break;
-
-            /*case R.id.emoji_11_Button:
-            case R.id.emoji_11_Label:
-                buyorsetskin(R.drawable.emoji_11); break;
-            case R.id.emoji_12_Button:
-            case R.id.emoji_12_Label:
-                buyorsetskin(R.drawable.emoji_12); break;
-            case R.id.emoji_13_Button:
-            case R.id.emoji_13_Label:
-                buyorsetskin(R.drawable.emoji_13); break;
-            case R.id.emoji_14_Button:
-            case R.id.emoji_14_Label:
-                buyorsetskin(R.drawable.emoji_14); break;
-            case R.id.emoji_15_Button:
-            case R.id.emoji_15_Label:
-                buyorsetskin(R.drawable.emoji_15); break;
-            case R.id.emoji_16_Button:
-            case R.id.emoji_16_Label:
-                buyorsetskin(R.drawable.emoji_16); break;
-            case R.id.emoji_17_Button:
-            case R.id.emoji_17_Label:
-                buyorsetskin(R.drawable.emoji_17); break;
-            case R.id.emoji_18_Button:
-            case R.id.emoji_18_Label:
-                buyorsetskin(R.drawable.emoji_18); break;
-            case R.id.emoji_19_Button:
-            case R.id.emoji_19_Label:
-                buyorsetskin(R.drawable.emoji_19); break;
-            case R.id.emoji_20_Button:
-            case R.id.emoji_20_Label:
-                buyorsetskin(R.drawable.emoji_20); break;
-            case R.id.emoji_21_Button:
-            case R.id.emoji_21_Label:
-                buyorsetskin(R.drawable.emoji_21); break;
-            case R.id.emoji_22_Button:
-            case R.id.emoji_22_Label:
-                buyorsetskin(R.drawable.emoji_22); break;
-            case R.id.emoji_23_Button:
-            case R.id.emoji_23_Label:
-                buyorsetskin(R.drawable.emoji_23); break;
-            case R.id.emoji_24_Button:
-            case R.id.emoji_24_Label:
-                buyorsetskin(R.drawable.emoji_24); break;
-            case R.id.emoji_25_Button:
-            case R.id.emoji_25_Label:
-                buyorsetskin(R.drawable.emoji_25); break;*/
-        }
+        buyOrSetSkin(skin_id, label_id);
     }
 
     public void buyOrSetSkin(int skin_id, int label_id) {
