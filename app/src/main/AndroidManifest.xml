@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TrailShop"></activity>
+        <activity android:name=".SettingsMenu"></activity>
         <activity android:name=".AchievementsMenu" />
         <activity
             android:name=".SkinShop"

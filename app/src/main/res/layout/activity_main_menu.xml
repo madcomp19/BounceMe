@@ -147,7 +147,8 @@
                 android:layout_height="40dp"
                 android:background="@drawable/circle_button"
                 android:contentDescription="TODO"
-                app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+                app:srcCompat="@drawable/settings_icon"
+                android:onClick="goToSettings"/>
 
             <ImageButton
                 android:id="@+id/rateButton"

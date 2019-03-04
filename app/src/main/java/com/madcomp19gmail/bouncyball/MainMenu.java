@@ -1,6 +1,7 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class MainMenu extends AppCompatActivity {
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
         //SoundPoolManager.initialize(this);
+
     }
 
     @Override
@@ -110,5 +112,11 @@ public class MainMenu extends AppCompatActivity {
     {
         Intent goAchievements = new Intent(this, AchievementsMenu.class);
         startActivity(goAchievements);
+    }
+
+    public void goToSettings(View view)
+    {
+        Intent goSettings = new Intent(this, SettingsMenu.class);
+        startActivity(goSettings);
     }
 }
