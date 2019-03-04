@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class SkinShop extends FragmentActivity {
 
     private TextView coins;
+    private TextView gems;
     private StorageManager storageManager;
 
     @Override
@@ -33,6 +34,7 @@ public class SkinShop extends FragmentActivity {
 
         storageManager = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
+        gems = findViewById(R.id.gems);
     }
 
     @Override
@@ -40,6 +42,7 @@ public class SkinShop extends FragmentActivity {
         super.onResume();
 
         coins.setText(storageManager.getTotalTouches() + "");
+        gems.setText(storageManager.getTotalGems() + "");
     }
 
     public void onClickSkin(View view) {

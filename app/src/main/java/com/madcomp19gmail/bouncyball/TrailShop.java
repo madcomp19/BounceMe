@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 public class TrailShop extends AppCompatActivity {
 
+    private StorageManager storage;
+    TextView coins;
+    TextView gems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +22,18 @@ public class TrailShop extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         updateLabels();
+
+        storage = StorageManager.getInstance();
+        coins = findViewById(R.id.coins);
+        gems = findViewById(R.id.gems);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        coins.setText(storage.getTotalTouches() + "");
+        gems.setText(storage.getTotalGems() + "");
     }
 
     public void onClickTrail(View view)

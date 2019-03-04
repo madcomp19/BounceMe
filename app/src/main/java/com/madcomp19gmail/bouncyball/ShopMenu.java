@@ -11,6 +11,7 @@ public class ShopMenu extends AppCompatActivity {
 
     private StorageManager storage;
     TextView coins;
+    TextView gems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class ShopMenu extends AppCompatActivity {
 
         storage = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
+        gems = findViewById(R.id.gems);
     }
 
     @Override
@@ -29,6 +31,7 @@ public class ShopMenu extends AppCompatActivity {
         super.onResume();
 
         coins.setText(storage.getTotalTouches() + "");
+        gems.setText(storage.getTotalGems() + "");
     }
 
     public void onShopMenuButtonClick(View view)
