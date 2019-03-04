@@ -20,8 +20,12 @@
     <string name="total_bounces_ever">TotalBouncesEver</string>
     <string name="owned_skins">OwnedSkins</string>
     <string name="owned_skins_labels">OwnedSkinsLabels</string>
+    <string name="owned_trails">OwnedTrails</string>
+    <string name="owned_trails_labels">OwnedTrailsLabels</string>
     <string name="selected_skin">SelectedSkin</string>
-    <string name="selected_label">SelectedLabel</string>
+    <string name="selected_skin_label">SelectedSkinLabel</string>
     <string name="selected_trail">SelectedTrail</string>
+    <string name="selected_trail_label">SelectedTrailLabel</string>
     <string name="linearLayout">LinearLayout</string>
+
 </resources>

@@ -148,9 +148,9 @@ public class SkinShop extends FragmentActivity {
         if (storageManager.getOwnedSkins().contains(skin_id)) {
             storageManager.setSelectedSkin(skin_id);
 
-            ((TextView) findViewById(storageManager.getSelectedLabel())).setText("Owned");
+            ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
 
-            storageManager.setSelectedLabel(label_id);
+            storageManager.setSelectedSkinLabel(label_id);
 
             ((TextView) findViewById(label_id)).setText("Selected");
         } else {
@@ -164,10 +164,10 @@ public class SkinShop extends FragmentActivity {
                 storageManager.setSelectedSkin(skin_id);
                 storageManager.addOwnedSkinLabel(label_id);
 
-                if (storageManager.getSelectedLabel() != 0)
-                    ((TextView) findViewById(storageManager.getSelectedLabel())).setText("Owned");
+                if (storageManager.getSelectedSkinLabel() != 0)
+                    ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
 
-                storageManager.setSelectedLabel(label_id);
+                storageManager.setSelectedSkinLabel(label_id);
 
                 label_text.setText("Selected");
                 Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();

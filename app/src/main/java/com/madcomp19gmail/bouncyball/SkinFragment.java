@@ -5,9 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -66,7 +64,7 @@ public class SkinFragment extends Fragment {
                 if(label_ids.contains(v.getId()))
                     ((TextView) v).setText("Owned");
 
-                if (storageManager.getSelectedLabel() == v.getId())
+                if (storageManager.getSelectedSkinLabel() == v.getId())
                     ((TextView) v).setText("Selected");
             }
             else if(v instanceof ViewGroup)

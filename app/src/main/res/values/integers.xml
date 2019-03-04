@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="trail_1">1</integer>
+    <integer name="trail_2">28</integer>
+    <integer name="trail_3">40</integer>
+    <integer name="trail_4">51</integer>
+    <integer name="trail_5">59</integer>
+    <integer name="trail_6">84</integer>
+    <integer name="trail_7">102</integer>
+    <integer name="trail_8">154</integer>
+    <integer name="trail_9">178</integer>
+    <integer name="trail_10">204</integer>
+    <integer name="trail_11">220</integer>
+    <integer name="trail_12">275</integer>
+    <integer name="trail_13">289</integer>
+    <integer name="trail_14">302</integer>
+    <integer name="trail_15">313</integer>
+    <integer name="trail_16">332</integer>
+    <integer name="trail_17">-5</integer>
+    <integer name="trail_18">-6</integer>
+    <integer name="trail_19">-7</integer>
+    <integer name="trail_20">-8</integer>
+    <integer name="trail_21">-9</integer>
+    <integer name="trail_22">-2</integer>
+    <integer name="trail_23">-3</integer>
+    <integer name="trail_24">-4</integer>
+    <integer name="trail_25">-1</integer>
+
+</resources>

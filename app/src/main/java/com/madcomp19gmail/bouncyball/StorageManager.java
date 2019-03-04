@@ -137,15 +137,15 @@ public class StorageManager {
         editor.apply();
     }
 
-    public int getSelectedLabel()
+    public int getSelectedSkinLabel()
     {
-        return prefs.getInt(context.getString(R.string.selected_label), 0);
+        return prefs.getInt(context.getString(R.string.selected_skin_label), 0);
     }
 
-    public void setSelectedLabel(int label)
+    public void setSelectedSkinLabel(int label)
     {
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(context.getString(R.string.selected_label), label);
+        editor.putInt(context.getString(R.string.selected_skin_label), label);
         editor.apply();
     }
 
@@ -161,15 +161,73 @@ public class StorageManager {
         editor.apply();
     }
 
+    public ArrayList<Integer> getOwnedTrails()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
+
+        ArrayList<Integer> owned_trails = new ArrayList<>();
+
+        for(String s : set)
+            owned_trails.add(Integer.parseInt(s));
+
+        return owned_trails;
+    }
+
+    public void addOwnedTrail(int trail)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
+
+        set.add(trail + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_trails), set);
+        editor.apply();
+    }
+
     public int getSelectedTrail()
     {
-        return prefs.getInt(context.getString(R.string.selected_trail), 0);
+        return prefs.getInt(context.getString(R.string.selected_trail), -10);
     }
 
     public void setSelectedTrail(int trail)
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_trail), trail);
+        editor.apply();
+    }
+
+    public ArrayList<Integer> getOwnedTrailsLabels()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails_labels), new HashSet<String>());
+
+        ArrayList<Integer> owned_trails_labels = new ArrayList<>();
+
+        for(String s : set)
+            owned_trails_labels.add(Integer.parseInt(s));
+
+        return owned_trails_labels;
+    }
+
+    public void addOwnedTrailLabel(int trail_label)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails_labels), new HashSet<String>());
+
+        set.add(trail_label + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_trails_labels), set);
+        editor.apply();
+    }
+
+    public int getSelectedTrailLabel()
+    {
+        return prefs.getInt(context.getString(R.string.selected_trail_label), 0);
+    }
+
+    public void setSelectedTrailLabel(int trail)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_trail_label), trail);
         editor.apply();
     }
 }

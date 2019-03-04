@@ -6,6 +6,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Ball
 {
@@ -19,14 +20,17 @@ public class Ball
 
     float radius;
     Bitmap image;
-    Bitmap trail;
+    int trail;
 
     ArrayList<Vector2> trailPositions;
 
     boolean dragged;
 
+    int iteration;
+    boolean reactive;
 
-    public Ball(float x, float y, BallAttributes ba, Bitmap img, Bitmap aTrail)
+
+    public Ball(float x, float y, BallAttributes ba, Bitmap img, int trailHue)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
@@ -40,13 +44,16 @@ public class Ball
         if(img != null)
             image = img;
 
-        trail = aTrail;
-        if(trail != null)
-            trail = getResizedBitmap(trail, (int) radius * 2, (int) radius * 2);
+        trail = trailHue;
+
+        reactive = (trail == -4);
+
         trailPositions = new ArrayList<>();
         trailPositions.add(new Vector2(position.x, position.y));
 
         dragged = false;
+
+        iteration = 0;
     }
 
     public void move()
@@ -87,16 +94,20 @@ public class Ball
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
             GameWorld.addTouch();
-            //Play sound effect
             playSound();
+
+            if(reactive)
+                trail = new Random().nextInt(361);
         }
         if (position.x <= radius) {
             position.x = radius;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
             GameWorld.addTouch();
-            //Play sound effect
             playSound();
+
+            if(reactive)
+                trail = new Random().nextInt(361);
         }
         if (position.y >= bottomLimit)
         {
@@ -109,6 +120,9 @@ public class Ball
             {
                 GameWorld.addTouch();
                 playSound();
+
+                if(reactive)
+                    trail = new Random().nextInt(361);
             }
             else if(Math.abs(prev_velY - velocity.y) > 10f)
                 playSound();
@@ -120,8 +134,10 @@ public class Ball
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
             GameWorld.addTouch();
-            //Play sound effect
             playSound();
+
+            if(reactive)
+                trail = new Random().nextInt(361);
         }
 
         if(position.x <= radius && velocity.x < 1)
@@ -130,7 +146,8 @@ public class Ball
             position.x = rightLimit - 1;
 
 
-        if(trail == null)
+        // Trail -1 --> clear (no trail)
+        if(trail == -1)
             return;
 
         trailPositions.add(new Vector2(position.x, position.y));
@@ -168,42 +185,63 @@ public class Ball
         return resizedBitmap;
     }
 
-    int frameCount = 0;
+    private void drawTrail(Canvas canvas, float hue, float saturation, float value)
+    {
+        int size = trailPositions.size();
+
+        Paint p = new Paint();
+
+        for(int i = 0; i < size; i++)
+        {
+            int alpha = 255 - (size - i) * 10;
+            float[] values = {hue, saturation, value}; // hue (0-360) ; saturation (0-1) ; value (0-1)
+            p.setColor(Color.HSVToColor(alpha, values));
+
+            canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, radius - 2 * (size - i), p);
+        }
+    }
 
     public void display(Canvas canvas)
     {
+        if(iteration > 360)
+            iteration = 0;
+        else
+            iteration++;
+
         if(image != null)
         {
-            if(trail != null)
+            if(trail != -1) // clear == -1
             {
-                if(frameCount > 360)
-                    frameCount = 0;
-                else
-                    frameCount += 5;
-
-                int size = trailPositions.size();
-
-                for(int i = 0; i < size; i++)
+                if(trail == -2) // rainbow
                 {
-                    //trail = getResizedBitmap(trail, (int) radius - i * 2, (int) radius - i * 2);
-                    //Bitmap t = getResizedBitmap(trail.copy(trail.getConfig(), true), (int) radius * 2 - 2 * (size - i), (int) radius * 2 - 2 * (size - i));
+                    int size = trailPositions.size();
+
                     Paint p = new Paint();
-                    //p.setARGB(255 - (size - i) * 10, 255 - i * 10, 255, 0);
 
-                    //int h = frameCount;//i * increment;
-                    int h = i * (360 / size);
-                    int s = 1;
-                    int v = 1;
+                    for(int i = 0; i < size; i++)
+                    {
+                        int hue = i * (360 / size);
+                        int alpha = 255 - (size - i) * 10;
+                        float[] values = {hue, 1, 1}; // hue (0-360) ; saturation (0-1) ; value (0-1)
+                        p.setColor(Color.HSVToColor(alpha, values));
 
-                    float[] values = {h, s, v};
-
-                    p.setColor(Color.HSVToColor(255 - (size - i) * 10, values));
-
-                    //p.setAlpha(255 - (size - i) * 10);
-                    canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, radius - 2 * (size - i), p);
-                    //canvas.drawBitmap(t, trailPositions.get(i).x - radius, trailPositions.get(i).y - radius, p);
-                    //t.recycle();
+                        canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, radius - 2 * (size - i), p);
+                    }
                 }
+                else if(trail == -3) // spectrum
+                    drawTrail(canvas, iteration, 1, 1);
+                else if(trail == -5) // black
+                    drawTrail(canvas, 0, 0, 0);
+                else if(trail == -6) // gray #1
+                    drawTrail(canvas, 0, 0, 0.2f);
+                else if(trail == -7) // gray #2
+                    drawTrail(canvas, 0, 0, 0.43f);
+                else if(trail == -8) // gray #2
+                    drawTrail(canvas, 0, 0, 0.68f);
+                else if(trail == -9) // white
+                    drawTrail(canvas, 0, 0, 1);
+                else if(trail >= 0 && trail <= 360 || reactive)// color/reactive
+                    drawTrail(canvas, trail, 1, 1);
             }
 
 
