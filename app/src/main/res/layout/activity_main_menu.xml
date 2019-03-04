@@ -157,6 +157,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/circle_button2"
+                android:onClick="rateApp"
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
             <ImageButton
