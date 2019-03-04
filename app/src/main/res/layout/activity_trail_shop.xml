@@ -56,681 +56,716 @@
         app:layout_constraintStart_toEndOf="@+id/gems"
         app:layout_constraintTop_toTopOf="@+id/gems" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails1"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gems">
 
-        <ImageButton
-            android:id="@+id/trail_1_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_1" />
-
-        <ImageButton
-            android:id="@+id/trail_2_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_2" />
-
-        <ImageButton
-            android:id="@+id/trail_3_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_3" />
-
-        <ImageButton
-            android:id="@+id/trail_4_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_4" />
-
-        <ImageButton
-            android:id="@+id/trail_5_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_5" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails2"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
-
-
-        <TextView
-            android:id="@+id/trail_1_Label"
-            android:layout_width="0dp"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="80"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_2_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_3_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_4_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="140"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_5_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="160"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails3"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails2">
-
-        <ImageButton
-            android:id="@+id/trail_6_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
+            android:layout_marginTop="100dp"
             android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_6" />
-
-        <ImageButton
-            android:id="@+id/trail_7_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_7" />
-
-        <ImageButton
-            android:id="@+id/trail_8_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_8" />
-
-        <ImageButton
-            android:id="@+id/trail_9_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_9" />
-
-        <ImageButton
-            android:id="@+id/trail_10_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_10" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails4"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails3">
-
-
-        <TextView
-            android:id="@+id/trail_6_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="80"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_7_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_8_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_9_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="140"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_10_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="160"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails5"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails4">
-
-        <ImageButton
-            android:id="@+id/trail_11_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_11" />
-
-        <ImageButton
-            android:id="@+id/trail_12_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_12" />
-
-        <ImageButton
-            android:id="@+id/trail_13_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_13" />
-
-        <ImageButton
-            android:id="@+id/trail_14_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_14" />
-
-        <ImageButton
-            android:id="@+id/trail_15_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_15" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails6"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails5">
-
-
-        <TextView
-            android:id="@+id/trail_11_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="80"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_12_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_13_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_14_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="140"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_15_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="160"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails7"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails6">
-
-        <ImageButton
-            android:id="@+id/trail_16_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_16" />
-
-        <ImageButton
-            android:id="@+id/trail_17_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_17" />
-
-        <ImageButton
-            android:id="@+id/trail_18_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_18" />
-
-        <ImageButton
-            android:id="@+id/trail_19_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_19" />
-
-        <ImageButton
-            android:id="@+id/trail_20_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_20" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails8"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails7">
-
-
-        <TextView
-            android:id="@+id/trail_16_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="80"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_17_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_18_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_19_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="140"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_20_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="160"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails9"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
-
-        <ImageButton
-            android:id="@+id/trail_21_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/colored_21" />
-
-        <ImageButton
-            android:id="@+id/trail_22_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/rainbow" />
-
-        <ImageButton
-            android:id="@+id/trail_23_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/spectrum" />
-
-        <ImageButton
-            android:id="@+id/trail_24_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/reactive" />
-
-        <ImageButton
-            android:id="@+id/trail_25_Button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#424242"
-            android:onClick="onClickTrail"
-            android:scaleType="fitCenter"
-            android:src="@drawable/clear" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutTrails10"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails9">
-
-
-        <TextView
-            android:id="@+id/trail_21_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="80"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_22_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_23_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_24_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="140"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-        <TextView
-            android:id="@+id/trail_25_Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="160"
-            android:onClick="onClickTrail"
-            android:textAlignment="center" />
-
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems"
+                app:layout_constraintVertical_bias="0.138">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails1"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gems">
+
+                    <ImageButton
+                        android:id="@+id/trail_1_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_1" />
+
+                    <ImageButton
+                        android:id="@+id/trail_2_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_2" />
+
+                    <ImageButton
+                        android:id="@+id/trail_3_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_3" />
+
+                    <ImageButton
+                        android:id="@+id/trail_4_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_4" />
+
+                    <ImageButton
+                        android:id="@+id/trail_5_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_5" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails2"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                    <TextView
+                        android:id="@+id/trail_1_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="80"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_2_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="100"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_3_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="120"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_4_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="140"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_5_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="160"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails3"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails2">
+
+                    <ImageButton
+                        android:id="@+id/trail_6_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_6" />
+
+                    <ImageButton
+                        android:id="@+id/trail_7_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_7" />
+
+                    <ImageButton
+                        android:id="@+id/trail_8_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_8" />
+
+                    <ImageButton
+                        android:id="@+id/trail_9_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_9" />
+
+                    <ImageButton
+                        android:id="@+id/trail_10_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_10" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails4"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails3">
+
+
+                    <TextView
+                        android:id="@+id/trail_6_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="80"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_7_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="100"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_8_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="120"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_9_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="140"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_10_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="160"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails5"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails4">
+
+                    <ImageButton
+                        android:id="@+id/trail_11_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_11" />
+
+                    <ImageButton
+                        android:id="@+id/trail_12_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_12" />
+
+                    <ImageButton
+                        android:id="@+id/trail_13_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_13" />
+
+                    <ImageButton
+                        android:id="@+id/trail_14_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_14" />
+
+                    <ImageButton
+                        android:id="@+id/trail_15_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_15" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails6"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails5">
+
+
+                    <TextView
+                        android:id="@+id/trail_11_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="80"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_12_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="100"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_13_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="120"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_14_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="140"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_15_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="160"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails7"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails6">
+
+                    <ImageButton
+                        android:id="@+id/trail_16_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_16" />
+
+                    <ImageButton
+                        android:id="@+id/trail_17_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_17" />
+
+                    <ImageButton
+                        android:id="@+id/trail_18_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_18" />
+
+                    <ImageButton
+                        android:id="@+id/trail_19_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_19" />
+
+                    <ImageButton
+                        android:id="@+id/trail_20_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_20" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails8"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails7">
+
+
+                    <TextView
+                        android:id="@+id/trail_16_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="80"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_17_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="100"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_18_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="120"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_19_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="140"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_20_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="160"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails9"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
+
+                    <ImageButton
+                        android:id="@+id/trail_21_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/colored_21" />
+
+                    <ImageButton
+                        android:id="@+id/trail_22_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/rainbow" />
+
+                    <ImageButton
+                        android:id="@+id/trail_23_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/spectrum" />
+
+                    <ImageButton
+                        android:id="@+id/trail_24_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/reactive" />
+
+                    <ImageButton
+                        android:id="@+id/trail_25_Button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#424242"
+                        android:onClick="onClickTrail"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/clear" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTrails10"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails9">
+
+
+                    <TextView
+                        android:id="@+id/trail_21_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="80"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_22_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="100"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_23_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="120"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_24_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="140"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/trail_25_Label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onClickTrail"
+                        android:text="160"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>
