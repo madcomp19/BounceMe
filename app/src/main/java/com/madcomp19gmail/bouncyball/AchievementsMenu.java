@@ -1,10 +1,13 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AchievementsMenu extends AppCompatActivity {
 
@@ -39,6 +42,22 @@ public class AchievementsMenu extends AppCompatActivity {
     TextView text13;
     TextView text14;
     TextView text15;
+
+    TextView reward1;
+    TextView reward2;
+    TextView reward3;
+    TextView reward4;
+    TextView reward5;
+    TextView reward6;
+    TextView reward7;
+    TextView reward8;
+    TextView reward9;
+    TextView reward10;
+    TextView reward11;
+    TextView reward12;
+    TextView reward13;
+    TextView reward14;
+    TextView reward15;
 
     private StorageManager storage;
 
@@ -82,9 +101,27 @@ public class AchievementsMenu extends AppCompatActivity {
         text14 = findViewById(R.id.textView14);
         text15 = findViewById(R.id.textView15);
 
+        reward1 = findViewById(R.id.reward1);
+        reward2 = findViewById(R.id.reward2);
+        reward3 = findViewById(R.id.reward3);
+        reward4 = findViewById(R.id.reward4);
+        reward5 = findViewById(R.id.reward5);
+        reward6 = findViewById(R.id.reward6);
+        reward7 = findViewById(R.id.reward7);
+        reward8 = findViewById(R.id.reward8);
+        reward9 = findViewById(R.id.reward9);
+        reward10 = findViewById(R.id.reward10);
+        reward11 = findViewById(R.id.reward11);
+        reward12 = findViewById(R.id.reward12);
+        reward13 = findViewById(R.id.reward13);
+        reward14 = findViewById(R.id.reward14);
+        reward15 = findViewById(R.id.reward15);
+
         storage = StorageManager.getInstance();
 
         updateProgressBars();
+
+        updateRewardText();
     }
 
     public void updateProgressBars()
@@ -121,5 +158,549 @@ public class AchievementsMenu extends AppCompatActivity {
         text13.setText(bar13.getProgress() + "/" + bar13.getMax() + " Skins");
         text14.setText(bar14.getProgress() + "/" + bar14.getMax() + " Skins");
         text15.setText(bar15.getProgress() + "/" + bar15.getMax() + " Skins");
+    }
+
+    public void updateRewardText()
+    {
+        //Reward 1 ---------------------------------------------------------
+        if(bar1.getProgress() == bar1.getMax() && !storage.getCollectedAchievements().contains(reward1.getId()))
+        {
+            reward1.setText("COLLECT");
+            reward1.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward1.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward1.getId()))
+        {
+            reward1.setText("COLLECTED");
+            reward1.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward1.setTextColor(Color.WHITE);
+        }
+
+        //Reward 2 -----------------------------------------------------------
+        if(bar2.getProgress() == bar2.getMax() && !storage.getCollectedAchievements().contains(reward2.getId()))
+        {
+            reward2.setText("COLLECT");
+            reward2.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward2.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward2.getId()))
+        {
+            reward2.setText("COLLECTED");
+            reward2.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward2.setTextColor(Color.WHITE);
+        }
+
+        //Reward 3 -------------------------------------------------------------
+        if(bar3.getProgress() == bar3.getMax() && !storage.getCollectedAchievements().contains(reward3.getId()))
+        {
+            reward3.setText("COLLECT");
+            reward3.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward3.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward3.getId()))
+        {
+            reward3.setText("COLLECTED");
+            reward3.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward3.setTextColor(Color.WHITE);
+        }
+
+        //Reward 4 ---------------------------------------------------------------
+        if(bar4.getProgress() == bar4.getMax() && !storage.getCollectedAchievements().contains(reward4.getId()))
+        {
+            reward4.setText("COLLECT");
+            reward4.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward4.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward4.getId()))
+        {
+            reward4.setText("COLLECTED");
+            reward4.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward4.setTextColor(Color.WHITE);
+        }
+
+        //Reward 5 ---------------------------------------------------------------
+        if(bar5.getProgress() == bar5.getMax() && !storage.getCollectedAchievements().contains(reward5.getId()))
+        {
+            reward5.setText("COLLECT");
+            reward5.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward5.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward5.getId()))
+        {
+            reward5.setText("COLLECTED");
+            reward5.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward5.setTextColor(Color.WHITE);
+        }
+
+        //Reward 6 ---------------------------------------------------------------
+        if(bar6.getProgress() == bar6.getMax() && !storage.getCollectedAchievements().contains(reward6.getId()))
+        {
+            reward6.setText("COLLECT");
+            reward6.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward6.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward6.getId()))
+        {
+            reward6.setText("COLLECTED");
+            reward6.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward6.setTextColor(Color.WHITE);
+        }
+
+        //Reward 7 ---------------------------------------------------------------
+        if(bar7.getProgress() == bar7.getMax() && !storage.getCollectedAchievements().contains(reward7.getId()))
+        {
+            reward7.setText("COLLECT");
+            reward7.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward7.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward7.getId()))
+        {
+            reward7.setText("COLLECTED");
+            reward7.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward7.setTextColor(Color.WHITE);
+        }
+
+        //Reward 8 ---------------------------------------------------------------
+        if(bar8.getProgress() == bar8.getMax() && !storage.getCollectedAchievements().contains(reward8.getId()))
+        {
+            reward8.setText("COLLECT");
+            reward8.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward8.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward8.getId()))
+        {
+            reward8.setText("COLLECTED");
+            reward8.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward8.setTextColor(Color.WHITE);
+        }
+
+        //Reward 9 ---------------------------------------------------------------
+        if(bar9.getProgress() == bar9.getMax() && !storage.getCollectedAchievements().contains(reward9.getId()))
+        {
+            reward9.setText("COLLECT");
+            reward9.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward9.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward9.getId()))
+        {
+            reward9.setText("COLLECTED");
+            reward9.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward9.setTextColor(Color.WHITE);
+        }
+
+        //Reward 10 ---------------------------------------------------------------
+        if(bar10.getProgress() == bar10.getMax() && !storage.getCollectedAchievements().contains(reward10.getId()))
+        {
+            reward10.setText("COLLECT");
+            reward10.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward10.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward10.getId()))
+        {
+            reward10.setText("COLLECTED");
+            reward10.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward10.setTextColor(Color.WHITE);
+        }
+
+        //Reward 11 ---------------------------------------------------------------
+        if(bar11.getProgress() == bar11.getMax() && !storage.getCollectedAchievements().contains(reward11.getId()))
+        {
+            reward11.setText("COLLECT");
+            reward11.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward11.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward11.getId()))
+        {
+            reward11.setText("COLLECTED");
+            reward11.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward11.setTextColor(Color.WHITE);
+        }
+
+        //Reward 12 ---------------------------------------------------------------
+        if(bar12.getProgress() == bar12.getMax() && !storage.getCollectedAchievements().contains(reward12.getId()))
+        {
+            reward12.setText("COLLECT");
+            reward12.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward12.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward12.getId()))
+        {
+            reward12.setText("COLLECTED");
+            reward12.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward12.setTextColor(Color.WHITE);
+        }
+
+        //Reward 13 ---------------------------------------------------------------
+        if(bar13.getProgress() == bar13.getMax() && !storage.getCollectedAchievements().contains(reward13.getId()))
+        {
+            reward13.setText("COLLECT");
+            reward13.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward13.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward13.getId()))
+        {
+            reward13.setText("COLLECTED");
+            reward13.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward13.setTextColor(Color.WHITE);
+        }
+
+        //Reward 14 ---------------------------------------------------------------
+        if(bar14.getProgress() == bar14.getMax() && !storage.getCollectedAchievements().contains(reward14.getId()))
+        {
+            reward14.setText("COLLECT");
+            reward14.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward14.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward14.getId()))
+        {
+            reward14.setText("COLLECTED");
+            reward14.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward14.setTextColor(Color.WHITE);
+        }
+
+        //Reward 15 ---------------------------------------------------------------
+        if(bar15.getProgress() == bar15.getMax() && !storage.getCollectedAchievements().contains(reward15.getId()))
+        {
+            reward15.setText("COLLECT");
+            reward15.setBackgroundColor(Color.parseColor("#00FF00"));
+            reward15.setTextColor(Color.BLACK);
+        }
+        if(storage.getCollectedAchievements().contains(reward15.getId()))
+        {
+            reward15.setText("COLLECTED");
+            reward15.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward15.setTextColor(Color.WHITE);
+        }
+
+    }
+
+    public void rewardClick1(View view)
+    {
+        if (reward1.getText() == "COLLECT")
+        {
+            storage.addGems(2);
+            Toast.makeText(this, "You won 2 Gems", Toast.LENGTH_LONG).show();
+            reward1.setText("COLLECTED");
+            reward1.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward1.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward1.getId());
+            return;
+        }
+
+        if(reward1.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick2(View view)
+    {
+        if (reward2.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward2.setText("COLLECTED");
+            reward2.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward2.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward2.getId());
+            return;
+        }
+
+        if(reward2.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick3(View view)
+    {
+        if (reward3.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward3.setText("COLLECTED");
+            reward3.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward3.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward3.getId());
+            return;
+        }
+
+        if(reward3.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick4(View view)
+    {
+        if (reward4.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward4.setText("COLLECTED");
+            reward4.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward4.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward4.getId());
+            return;
+        }
+
+        if(reward4.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick5(View view)
+    {
+        if (reward5.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward5.setText("COLLECTED");
+            reward5.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward5.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward5.getId());
+            return;
+        }
+
+        if(reward5.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick6(View view)
+    {
+        if (reward6.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward6.setText("COLLECTED");
+            reward6.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward6.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward6.getId());
+            return;
+        }
+
+        if(reward6.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick7(View view)
+    {
+        if (reward7.getText() == "COLLECT")
+        {
+            storage.addGems(10);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward7.setText("COLLECTED");
+            reward7.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward7.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward7.getId());
+            return;
+        }
+
+        if(reward7.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick8(View view)
+    {
+        if (reward8.getText() == "COLLECT")
+        {
+            storage.addGems(50);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward8.setText("COLLECTED");
+            reward8.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward8.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward8.getId());
+            return;
+        }
+
+        if(reward8.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick9(View view)
+    {
+        if (reward9.getText() == "COLLECT")
+        {
+            storage.addGems(100);
+            Toast.makeText(this, "You won 100 Gems", Toast.LENGTH_LONG).show();
+            reward9.setText("COLLECTED");
+            reward9.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward9.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward9.getId());
+            return;
+        }
+
+        if(reward9.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick10(View view)
+    {
+        if (reward10.getText() == "COLLECT")
+        {
+            storage.addGems(2);
+            Toast.makeText(this, "You won 2 Gems", Toast.LENGTH_LONG).show();
+            reward10.setText("COLLECTED");
+            reward10.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward10.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward10.getId());
+            return;
+        }
+
+        if(reward10.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick11(View view)
+    {
+        if (reward11.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward11.setText("COLLECTED");
+            reward11.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward11.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward11.getId());
+            return;
+        }
+
+        if(reward11.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick12(View view)
+    {
+        if (reward12.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward12.setText("COLLECTED");
+            reward12.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward12.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward12.getId());
+            return;
+        }
+
+        if(reward12.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick13(View view)
+    {
+        if (reward13.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward13.setText("COLLECTED");
+            reward13.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward13.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward13.getId());
+            return;
+        }
+
+        if(reward13.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick14(View view)
+    {
+        if (reward14.getText() == "COLLECT")
+        {
+            storage.addGems(10);
+            Toast.makeText(this, "You won 2 Gems", Toast.LENGTH_LONG).show();
+            reward14.setText("COLLECTED");
+            reward14.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward14.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward14.getId());
+            return;
+        }
+
+        if(reward14.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick15(View view)
+    {
+        if (reward15.getText() == "COLLECT")
+        {
+            storage.addGems(50);
+            Toast.makeText(this, "You won 50 Gems", Toast.LENGTH_LONG).show();
+            reward15.setText("COLLECTED");
+            reward15.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward15.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward15.getId());
+            return;
+        }
+
+        if(reward15.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
     }
 }
