@@ -12,7 +12,9 @@ import java.util.ArrayList;
 
 public class TrailShop extends AppCompatActivity {
 
-    private TextView coins;
+    private StorageManager storage;
+    TextView coins;
+    TextView gems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +24,19 @@ public class TrailShop extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        coins = findViewById(R.id.coins);
-
         setOwnedTrailsPage(this.findViewById(android.R.id.content));
+
+        storage = StorageManager.getInstance();
+        coins = findViewById(R.id.coins);
+        gems = findViewById(R.id.gems);
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
 
-        coins.setText(StorageManager.getInstance().getTotalTouches() + "");
+        coins.setText(storage.getTotalTouches() + "");
+        gems.setText(storage.getTotalGems() + "");
     }
 
     public void onClickTrail(View view)

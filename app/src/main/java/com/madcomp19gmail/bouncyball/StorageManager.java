@@ -74,6 +74,22 @@ public class StorageManager {
         editor.apply();
     }
 
+    public int getTotalGems(){
+        return prefs.getInt(context.getString(R.string.total_gems), 0);
+    }
+
+    public void addGems(int gems){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.total_gems), getTotalGems() + gems);
+        editor.apply();
+    }
+
+    public void takeGems(int gems){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.total_gems), getTotalGems() - gems);
+        editor.apply();
+    }
+
     public int getTotalBouncesEver(){
         return prefs.getInt(context.getString(R.string.total_bounces_ever), 0);
     }

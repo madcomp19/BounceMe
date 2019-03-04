@@ -1,6 +1,7 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class MainMenu extends AppCompatActivity {
     public static boolean prev_act_GameWorld = false;
     private static int prev_touches;
     TextView coins;
+    TextView gems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,11 @@ public class MainMenu extends AppCompatActivity {
         StorageManager.initialize(this);
         storage = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
+        gems = findViewById(R.id.gems);
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
         //SoundPoolManager.initialize(this);
+
     }
 
     @Override
@@ -54,6 +58,7 @@ public class MainMenu extends AppCompatActivity {
         }
 
         coins.setText(storage.getTotalTouches() + "");
+        gems.setText(storage.getTotalGems() + "");
     }
 
     public static int getPrevTouches()
@@ -110,5 +115,12 @@ public class MainMenu extends AppCompatActivity {
     {
         Intent goAchievements = new Intent(this, AchievementsMenu.class);
         startActivity(goAchievements);
+        storage.addGems(2);
+    }
+
+    public void goToSettings(View view)
+    {
+        Intent goSettings = new Intent(this, SettingsMenu.class);
+        startActivity(goSettings);
     }
 }
