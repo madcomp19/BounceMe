@@ -67,11 +67,14 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
         //LEMBRAR MUDAR O ID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
                 new AdRequest.Builder().build());
+
+        watchAdButton.setEnabled(false);
     }
 
     @Override
     public void onRewardedVideoAdLoaded() {
 
+        watchAdButton.setEnabled(true);
     }
 
     @Override
@@ -111,5 +114,23 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
     @Override
     public void onRewardedVideoCompleted() {
 
+    }
+
+    @Override
+    public void onResume() {
+        mRewardedVideoAd.resume(this);
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        mRewardedVideoAd.pause(this);
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        mRewardedVideoAd.destroy(this);
+        super.onDestroy();
     }
 }
