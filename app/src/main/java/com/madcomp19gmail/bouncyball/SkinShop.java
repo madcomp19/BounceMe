@@ -26,7 +26,7 @@ public class SkinShop extends FragmentActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        viewPager.setOffscreenPageLimit(2);
+        viewPager.setOffscreenPageLimit(1);
         SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
         viewPager.setCurrentItem(0);

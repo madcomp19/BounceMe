@@ -165,213 +165,167 @@ public class AchievementsMenu extends AppCompatActivity {
         //Reward 1 ---------------------------------------------------------
         if(bar1.getProgress() == bar1.getMax() && !storage.getCollectedAchievements().contains(reward1.getId()))
         {
-            reward1.setText("COLLECT");
-            reward1.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward1.setTextColor(Color.BLACK);
+            canCollectAchievement(reward1);
         }
         if(storage.getCollectedAchievements().contains(reward1.getId()))
         {
-            reward1.setText("COLLECTED");
-            reward1.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward1.setTextColor(Color.WHITE);
+            achievementCollected(reward1);
         }
 
         //Reward 2 -----------------------------------------------------------
         if(bar2.getProgress() == bar2.getMax() && !storage.getCollectedAchievements().contains(reward2.getId()))
         {
-            reward2.setText("COLLECT");
-            reward2.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward2.setTextColor(Color.BLACK);
+            canCollectAchievement(reward2);
         }
         if(storage.getCollectedAchievements().contains(reward2.getId()))
         {
-            reward2.setText("COLLECTED");
-            reward2.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward2.setTextColor(Color.WHITE);
+            achievementCollected(reward2);
         }
 
         //Reward 3 -------------------------------------------------------------
         if(bar3.getProgress() == bar3.getMax() && !storage.getCollectedAchievements().contains(reward3.getId()))
         {
-            reward3.setText("COLLECT");
-            reward3.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward3.setTextColor(Color.BLACK);
+            canCollectAchievement(reward3);
         }
         if(storage.getCollectedAchievements().contains(reward3.getId()))
         {
-            reward3.setText("COLLECTED");
-            reward3.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward3.setTextColor(Color.WHITE);
+            achievementCollected(reward3);
         }
 
         //Reward 4 ---------------------------------------------------------------
         if(bar4.getProgress() == bar4.getMax() && !storage.getCollectedAchievements().contains(reward4.getId()))
         {
-            reward4.setText("COLLECT");
-            reward4.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward4.setTextColor(Color.BLACK);
+            canCollectAchievement(reward4);
         }
         if(storage.getCollectedAchievements().contains(reward4.getId()))
         {
-            reward4.setText("COLLECTED");
-            reward4.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward4.setTextColor(Color.WHITE);
+            achievementCollected(reward4);
         }
 
         //Reward 5 ---------------------------------------------------------------
         if(bar5.getProgress() == bar5.getMax() && !storage.getCollectedAchievements().contains(reward5.getId()))
         {
-            reward5.setText("COLLECT");
-            reward5.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward5.setTextColor(Color.BLACK);
+            canCollectAchievement(reward5);
         }
         if(storage.getCollectedAchievements().contains(reward5.getId()))
         {
-            reward5.setText("COLLECTED");
-            reward5.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward5.setTextColor(Color.WHITE);
+            achievementCollected(reward5);
         }
 
         //Reward 6 ---------------------------------------------------------------
         if(bar6.getProgress() == bar6.getMax() && !storage.getCollectedAchievements().contains(reward6.getId()))
         {
-            reward6.setText("COLLECT");
-            reward6.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward6.setTextColor(Color.BLACK);
+            canCollectAchievement(reward6);
         }
         if(storage.getCollectedAchievements().contains(reward6.getId()))
         {
-            reward6.setText("COLLECTED");
-            reward6.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward6.setTextColor(Color.WHITE);
+            achievementCollected(reward6);
         }
 
         //Reward 7 ---------------------------------------------------------------
         if(bar7.getProgress() == bar7.getMax() && !storage.getCollectedAchievements().contains(reward7.getId()))
         {
-            reward7.setText("COLLECT");
-            reward7.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward7.setTextColor(Color.BLACK);
+            canCollectAchievement(reward7);
         }
         if(storage.getCollectedAchievements().contains(reward7.getId()))
         {
-            reward7.setText("COLLECTED");
-            reward7.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward7.setTextColor(Color.WHITE);
+            achievementCollected(reward7);
         }
 
         //Reward 8 ---------------------------------------------------------------
         if(bar8.getProgress() == bar8.getMax() && !storage.getCollectedAchievements().contains(reward8.getId()))
         {
-            reward8.setText("COLLECT");
-            reward8.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward8.setTextColor(Color.BLACK);
+            canCollectAchievement(reward8);
         }
         if(storage.getCollectedAchievements().contains(reward8.getId()))
         {
-            reward8.setText("COLLECTED");
-            reward8.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward8.setTextColor(Color.WHITE);
+            achievementCollected(reward8);
         }
 
         //Reward 9 ---------------------------------------------------------------
         if(bar9.getProgress() == bar9.getMax() && !storage.getCollectedAchievements().contains(reward9.getId()))
         {
-            reward9.setText("COLLECT");
-            reward9.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward9.setTextColor(Color.BLACK);
+            canCollectAchievement(reward9);
         }
         if(storage.getCollectedAchievements().contains(reward9.getId()))
         {
-            reward9.setText("COLLECTED");
-            reward9.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward9.setTextColor(Color.WHITE);
+            achievementCollected(reward9);
         }
 
         //Reward 10 ---------------------------------------------------------------
         if(bar10.getProgress() == bar10.getMax() && !storage.getCollectedAchievements().contains(reward10.getId()))
         {
-            reward10.setText("COLLECT");
-            reward10.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward10.setTextColor(Color.BLACK);
+            canCollectAchievement(reward10);
         }
         if(storage.getCollectedAchievements().contains(reward10.getId()))
         {
-            reward10.setText("COLLECTED");
-            reward10.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward10.setTextColor(Color.WHITE);
+            achievementCollected(reward10);
         }
 
         //Reward 11 ---------------------------------------------------------------
         if(bar11.getProgress() == bar11.getMax() && !storage.getCollectedAchievements().contains(reward11.getId()))
         {
-            reward11.setText("COLLECT");
-            reward11.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward11.setTextColor(Color.BLACK);
+            canCollectAchievement(reward11);
         }
         if(storage.getCollectedAchievements().contains(reward11.getId()))
         {
-            reward11.setText("COLLECTED");
-            reward11.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward11.setTextColor(Color.WHITE);
+            achievementCollected(reward11);
         }
 
         //Reward 12 ---------------------------------------------------------------
         if(bar12.getProgress() == bar12.getMax() && !storage.getCollectedAchievements().contains(reward12.getId()))
         {
-            reward12.setText("COLLECT");
-            reward12.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward12.setTextColor(Color.BLACK);
+            canCollectAchievement(reward12);
         }
         if(storage.getCollectedAchievements().contains(reward12.getId()))
         {
-            reward12.setText("COLLECTED");
-            reward12.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward12.setTextColor(Color.WHITE);
+            achievementCollected(reward12);
         }
 
         //Reward 13 ---------------------------------------------------------------
         if(bar13.getProgress() == bar13.getMax() && !storage.getCollectedAchievements().contains(reward13.getId()))
         {
-            reward13.setText("COLLECT");
-            reward13.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward13.setTextColor(Color.BLACK);
+            canCollectAchievement(reward13);
         }
         if(storage.getCollectedAchievements().contains(reward13.getId()))
         {
-            reward13.setText("COLLECTED");
-            reward13.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward13.setTextColor(Color.WHITE);
+            achievementCollected(reward13);
         }
 
         //Reward 14 ---------------------------------------------------------------
         if(bar14.getProgress() == bar14.getMax() && !storage.getCollectedAchievements().contains(reward14.getId()))
         {
-            reward14.setText("COLLECT");
-            reward14.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward14.setTextColor(Color.BLACK);
+            canCollectAchievement(reward14);
         }
         if(storage.getCollectedAchievements().contains(reward14.getId()))
         {
-            reward14.setText("COLLECTED");
-            reward14.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward14.setTextColor(Color.WHITE);
+            achievementCollected(reward14);
         }
 
         //Reward 15 ---------------------------------------------------------------
         if(bar15.getProgress() == bar15.getMax() && !storage.getCollectedAchievements().contains(reward15.getId()))
         {
-            reward15.setText("COLLECT");
-            reward15.setBackgroundColor(Color.parseColor("#00FF00"));
-            reward15.setTextColor(Color.BLACK);
+            canCollectAchievement(reward15);
         }
         if(storage.getCollectedAchievements().contains(reward15.getId()))
         {
-            reward15.setText("COLLECTED");
-            reward15.setBackgroundColor(Color.parseColor("#0B3B0B"));
-            reward15.setTextColor(Color.WHITE);
+            achievementCollected(reward15);
         }
 
+    }
+
+    public void canCollectAchievement(TextView reward)
+    {
+        reward.setText("COLLECT");
+        reward.setBackgroundColor(Color.parseColor("#00FF00"));
+        reward.setTextColor(Color.BLACK);
+    }
+
+    public void achievementCollected(TextView reward)
+    {
+        reward.setText("COLLECTED");
+        reward.setBackgroundColor(Color.parseColor("#0B3B0B"));
+        reward.setTextColor(Color.WHITE);
     }
 
     public void rewardClick1(View view)
