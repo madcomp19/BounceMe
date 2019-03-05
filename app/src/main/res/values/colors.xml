@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#303F9F</color>
+    <color name="colorAccent">#00B8D4</color>
     <color name="corPrimaria">#00B8D4</color>
     <color name="corSecundaria">#8E24AA</color>
     <color name="corCabecalhoNivel">#A4A4A4</color>
