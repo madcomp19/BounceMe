@@ -57,6 +57,11 @@ public class SoundPoolManager
         sound = soundPool.load(context, R.raw.bubble, 1);
     }
 
+    public void loadSound(int sound_id)
+    {
+        sound = soundPool.load(context, sound_id, 1);
+    }
+
     public static synchronized SoundPoolManager getInstance()
     {
         if(instance == null)

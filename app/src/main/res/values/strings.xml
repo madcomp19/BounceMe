@@ -29,5 +29,6 @@
     <string name="selected_trail">SelectedTrail</string>
     <string name="selected_trail_label">SelectedTrailLabel</string>
     <string name="linearLayout">LinearLayout</string>
+    <string name="musicSetting">MusicSetting</string>
 
 </resources>

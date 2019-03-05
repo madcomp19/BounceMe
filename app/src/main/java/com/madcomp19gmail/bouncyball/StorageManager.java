@@ -269,4 +269,16 @@ public class StorageManager {
         editor.putInt(context.getString(R.string.selected_trail_label), trail);
         editor.apply();
     }
+
+    public boolean getMusicSetting()
+    {
+        return prefs.getBoolean(context.getString(R.string.musicSetting), true);
+    }
+
+    public void setMusicSetting(boolean setting)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(context.getString(R.string.musicSetting), setting);
+        editor.apply();
+    }
 }
