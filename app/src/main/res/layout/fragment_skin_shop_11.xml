@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" > 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2_1"
+                android:id="@+id/linearLayoutSkins11_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -27,53 +27,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/emoji_21_Button"
+                    android:id="@+id/fiji_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_21" />
+                    android:src="@drawable/fiji" />
                 <ImageButton
-                    android:id="@+id/emoji_22_Button"
+                    android:id="@+id/finland_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_22" />
+                    android:src="@drawable/finland" />
                 <ImageButton
-                    android:id="@+id/emoji_23_Button"
+                    android:id="@+id/france_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_23" />
+                    android:src="@drawable/france" />
                 <ImageButton
-                    android:id="@+id/emoji_24_Button"
+                    android:id="@+id/french_polynesia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_24" />
+                    android:src="@drawable/french_polynesia" />
                 <ImageButton
-                    android:id="@+id/emoji_25_Button"
+                    android:id="@+id/gabon_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_25" />
+                    android:src="@drawable/gabon" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2_2"
+                android:id="@+id/linearLayoutSkins11_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -85,7 +85,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/emoji_21_Label"
+                    android:id="@+id/fiji_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,7 +93,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_22_Label"
+                    android:id="@+id/finland_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -101,7 +101,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_23_Label"
+                    android:id="@+id/france_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -109,7 +109,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_24_Label"
+                    android:id="@+id/french_polynesia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -117,118 +117,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_25_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayoutSkins2_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp" > 
-                <ImageButton
-                    android:id="@+id/emoji_26_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_26" />
-                <ImageButton
-                    android:id="@+id/emoji_27_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_27" />
-                <ImageButton
-                    android:id="@+id/emoji_29_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_29" />
-                <ImageButton
-                    android:id="@+id/emoji_30_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_30" />
-                <ImageButton
-                    android:id="@+id/emoji_31_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_31" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayoutSkins2_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp" > 
-                <TextView
-                    android:id="@+id/emoji_26_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_27_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_29_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_30_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_31_Label"
+                    android:id="@+id/gabon_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +126,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2_5"
+                android:id="@+id/linearLayoutSkins11_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -249,53 +138,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/emoji_32_Button"
+                    android:id="@+id/galapagos_islands_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_32" />
+                    android:src="@drawable/galapagos_islands" />
                 <ImageButton
-                    android:id="@+id/emoji_33_Button"
+                    android:id="@+id/gambia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_33" />
+                    android:src="@drawable/gambia" />
                 <ImageButton
-                    android:id="@+id/emoji_34_Button"
+                    android:id="@+id/georgia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_34" />
+                    android:src="@drawable/georgia" />
                 <ImageButton
-                    android:id="@+id/emoji_36_Button"
+                    android:id="@+id/germany_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_36" />
+                    android:src="@drawable/germany" />
                 <ImageButton
-                    android:id="@+id/emoji_37_Button"
+                    android:id="@+id/ghana_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_37" />
+                    android:src="@drawable/ghana" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2_6"
+                android:id="@+id/linearLayoutSkins11_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -307,7 +196,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/emoji_32_Label"
+                    android:id="@+id/galapagos_islands_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -315,7 +204,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_33_Label"
+                    android:id="@+id/gambia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -323,7 +212,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_34_Label"
+                    android:id="@+id/georgia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -331,7 +220,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_36_Label"
+                    android:id="@+id/germany_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -339,7 +228,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_37_Label"
+                    android:id="@+id/ghana_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -348,7 +237,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2_7"
+                android:id="@+id/linearLayoutSkins11_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -360,53 +249,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/emoji_39_Button"
+                    android:id="@+id/gibraltar_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_39" />
+                    android:src="@drawable/gibraltar" />
                 <ImageButton
-                    android:id="@+id/emoji_40_Button"
+                    android:id="@+id/greece_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_40" />
+                    android:src="@drawable/greece" />
                 <ImageButton
-                    android:id="@+id/emoji_41_Button"
+                    android:id="@+id/greenland_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_41" />
+                    android:src="@drawable/greenland" />
                 <ImageButton
-                    android:id="@+id/emoji_42_Button"
+                    android:id="@+id/grenada_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_42" />
+                    android:src="@drawable/grenada" />
                 <ImageButton
-                    android:id="@+id/emoji_43_Button"
+                    android:id="@+id/guam_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_43" />
+                    android:src="@drawable/guam" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins2_8"
+                android:id="@+id/linearLayoutSkins11_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -418,7 +307,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/emoji_39_Label"
+                    android:id="@+id/gibraltar_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -426,7 +315,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_40_Label"
+                    android:id="@+id/greece_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -434,7 +323,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_41_Label"
+                    android:id="@+id/greenland_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -442,7 +331,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_42_Label"
+                    android:id="@+id/grenada_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -450,7 +339,118 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/emoji_43_Label"
+                    android:id="@+id/guam_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutSkins11_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp" > 
+                <ImageButton
+                    android:id="@+id/guatemala_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/guatemala" />
+                <ImageButton
+                    android:id="@+id/guernsey_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/guernsey" />
+                <ImageButton
+                    android:id="@+id/guinea_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/guinea" />
+                <ImageButton
+                    android:id="@+id/guinea_bissau_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/guinea_bissau" />
+                <ImageButton
+                    android:id="@+id/guyana_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/guyana" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutSkins11_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp" > 
+                <TextView
+                    android:id="@+id/guatemala_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/guernsey_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/guinea_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/guinea_bissau_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/guyana_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
