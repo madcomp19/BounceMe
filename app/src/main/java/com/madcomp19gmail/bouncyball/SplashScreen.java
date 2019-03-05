@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.google.android.gms.ads.MobileAds;
+
 public class SplashScreen extends AppCompatActivity {
 
     private CountDownTimer timer;

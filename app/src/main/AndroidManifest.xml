@@ -3,6 +3,7 @@
     package="com.madcomp19gmail.bouncyball">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -41,6 +42,13 @@
         <activity
             android:name=".GameWorld"
             android:screenOrientation="portrait" />
+
+        <meta-data
+
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5557351606937995~8015272303"
+
+            />
     </application>
 
 </manifest>

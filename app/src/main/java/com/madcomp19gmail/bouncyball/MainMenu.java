@@ -12,6 +12,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+
 public class MainMenu extends AppCompatActivity {
 
     //private static int touches;
@@ -30,6 +32,8 @@ public class MainMenu extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        MobileAds.initialize(this, "ca-app-pub-5557351606937995~8015272303");
+
         StorageManager.initialize(this);
         storage = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
@@ -37,7 +41,6 @@ public class MainMenu extends AppCompatActivity {
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
         //SoundPoolManager.initialize(this);
-
     }
 
     @Override

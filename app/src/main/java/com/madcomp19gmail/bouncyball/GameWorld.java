@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
 import com.squareup.seismic.ShakeDetector;
 
 
