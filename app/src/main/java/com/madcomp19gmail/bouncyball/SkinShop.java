@@ -13,9 +13,12 @@ import android.widget.Toast;
 
 public class SkinShop extends FragmentActivity {
 
+    private final int background_music_id = R.raw.background_music_1;
+
     private TextView coins;
     private TextView gems;
     private StorageManager storageManager;
+    private MediaPlayerManager mediaPlayerManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +38,15 @@ public class SkinShop extends FragmentActivity {
         tabLayout.setupWithViewPager(viewPager, true);
 
         storageManager = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
+
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
@@ -45,6 +55,20 @@ public class SkinShop extends FragmentActivity {
 
         coins.setText(storageManager.getTotalTouches() + "");
         gems.setText(storageManager.getTotalGems() + "");
+
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(storageManager.getMusicSetting())
+            mediaPlayerManager.pause();
     }
 
     public void onClickSkin(View view) {

@@ -9,7 +9,10 @@ import android.widget.TextView;
 
 public class ShopMenu extends AppCompatActivity {
 
+    private final int background_music_id = R.raw.background_music_1;
+
     private StorageManager storage;
+    private MediaPlayerManager mediaPlayerManager;
     TextView coins;
     TextView gems;
 
@@ -22,8 +25,15 @@ public class ShopMenu extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         storage = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
@@ -32,6 +42,28 @@ public class ShopMenu extends AppCompatActivity {
 
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(storage.getMusicSetting())
+            mediaPlayerManager.pause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        //if(storage.getMusicSetting())
+            //mediaPlayerManager.stop();
     }
 
     public void onShopMenuButtonClick(View view)

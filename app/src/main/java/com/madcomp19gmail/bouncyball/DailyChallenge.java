@@ -10,10 +10,13 @@ import android.widget.ImageView;
 
 public class DailyChallenge extends AppCompatActivity {
 
+    private final int background_music_id = R.raw.background_music_2;
+
     private ImageView day_counter;
     private int id;
     private int consecutive_days;
     private StorageManager prefs;
+    private MediaPlayerManager mediaPlayerManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,31 @@ public class DailyChallenge extends AppCompatActivity {
         prefs = StorageManager.getInstance();
         consecutive_days = prefs.getConsecutiveDays();
         setStarImages(consecutive_days);
+
+        if(prefs.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(prefs.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(prefs.getMusicSetting())
+            mediaPlayerManager.pause();
     }
 
     //sets the stars to the number of consecutive days

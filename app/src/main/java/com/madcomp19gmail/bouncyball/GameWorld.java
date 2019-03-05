@@ -19,8 +19,10 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     HashMap<Integer, Integer> soundPoolMap;
     int soundID = 1;*/
 
+    private static final int background_music_id = R.raw.background_music_2;
 
     private static StorageManager storageManager;
+    private static MediaPlayerManager mediaPlayerManager;
     private static int touches;
     private static int total_bounces_ever;
 
@@ -48,6 +50,25 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalTouches();
         total_bounces_ever = storageManager.getTotalBouncesEver();
+
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.changeVolume(0.4f);
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.changeVolume(0.4f);
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
@@ -56,9 +77,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onStop();
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
-
-
-
     }
 
     @Override
@@ -70,6 +88,12 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
 
         MainMenu.prev_act_GameWorld = true;
+
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.changeVolume(1);
+            mediaPlayerManager.pause();
+        }
     }
 
     @Override
@@ -80,6 +104,9 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         SoundPoolManager.getInstance().release();
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
+
+        //if(storageManager.getMusicSetting())
+        //    mediaPlayerManager.pause();
     }
 
     public static void addTouch()

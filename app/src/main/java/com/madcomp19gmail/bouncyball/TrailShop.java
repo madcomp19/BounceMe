@@ -12,7 +12,10 @@ import java.util.ArrayList;
 
 public class TrailShop extends AppCompatActivity {
 
+    private final int background_music_id = R.raw.background_music_1;
+
     private StorageManager storage;
+    private MediaPlayerManager mediaPlayerManager;
     TextView coins;
     TextView gems;
 
@@ -27,8 +30,15 @@ public class TrailShop extends AppCompatActivity {
         setOwnedTrailsPage(this.findViewById(android.R.id.content));
 
         storage = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
@@ -37,6 +47,20 @@ public class TrailShop extends AppCompatActivity {
 
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(storage.getMusicSetting())
+            mediaPlayerManager.pause();
     }
 
     public void onClickTrail(View view)

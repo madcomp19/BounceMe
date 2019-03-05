@@ -9,6 +9,11 @@ import android.widget.Switch;
 
 public class SettingsMenu extends AppCompatActivity {
 
+    private final int background_music_id = R.raw.background_music_2;
+
+    private StorageManager storageManager;
+    private MediaPlayerManager mediaPlayerManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,13 +22,46 @@ public class SettingsMenu extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        storageManager = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
+
         Switch mySwitch = findViewById(R.id.musicSwitch);
         mySwitch.setChecked(StorageManager.getInstance().getMusicSetting());
 
         mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                StorageManager.getInstance().setMusicSetting(isChecked);
+                storageManager.setMusicSetting(isChecked);
+
+                if(isChecked)
+                    MediaPlayerManager.getInstance().play();
+                else
+                    MediaPlayerManager.getInstance().pause();
             }
         });
+
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        //StorageManager.getInstance().setTotalTouches(touches);
+        if(storageManager.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(storageManager.getMusicSetting())
+            mediaPlayerManager.pause();
     }
 }

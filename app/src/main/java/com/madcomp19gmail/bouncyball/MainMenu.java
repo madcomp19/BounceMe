@@ -18,7 +18,9 @@ public class MainMenu extends AppCompatActivity {
 
     //private static int touches;
     private StorageManager storage;
-    private MediaPlayer mediaPlayer;
+    private MediaPlayerManager mediaPlayerManager;
+
+    private final int background_music_id = R.raw.background_music_2;
 
     public static boolean prev_act_GameWorld = false;
     private static int prev_touches;
@@ -41,19 +43,26 @@ public class MainMenu extends AppCompatActivity {
         gems = findViewById(R.id.gems);
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
+        /*mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
         mediaPlayer.setLooping(true);
 
         if(storage.getMusicSetting())
-            mediaPlayer.start();
+            mediaPlayer.start();*/
+
+        MediaPlayerManager.initialize(this, background_music_id);
+        mediaPlayerManager = MediaPlayerManager.getInstance();
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
     protected void onResume(){
         super.onResume();
         //StorageManager.getInstance().setTotalTouches(touches);
-        if(storage.getMusicSetting())
-            mediaPlayer.start();
 
         if(prev_act_GameWorld)
         {
@@ -70,6 +79,12 @@ public class MainMenu extends AppCompatActivity {
 
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
@@ -77,15 +92,15 @@ public class MainMenu extends AppCompatActivity {
         super.onPause();
 
         if(storage.getMusicSetting())
-            mediaPlayer.pause();
+            mediaPlayerManager.pause();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-        if(storage.getMusicSetting())
-            mediaPlayer.stop();
+        //if(storage.getMusicSetting())
+            //mediaPlayerManager.pause();
     }
 
     public static int getPrevTouches()

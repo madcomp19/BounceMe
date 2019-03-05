@@ -59,7 +59,10 @@ public class AchievementsMenu extends AppCompatActivity {
     TextView reward14;
     TextView reward15;
 
+    private final int background_music_id = R.raw.background_music_2;
+
     private StorageManager storage;
+    private MediaPlayerManager mediaPlayerManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,10 +121,36 @@ public class AchievementsMenu extends AppCompatActivity {
         reward15 = findViewById(R.id.reward15);
 
         storage = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
 
         updateProgressBars();
 
         updateRewardText();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(storage.getMusicSetting())
+            mediaPlayerManager.pause();
     }
 
     public void updateProgressBars()
