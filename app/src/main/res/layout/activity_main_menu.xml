@@ -7,6 +7,32 @@
     android:background="#424242"
     tools:context=".MainMenu">
 
+    <Button
+        android:id="@+id/adButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:text="   +1 Gem"
+        android:background="#FFFF00"
+        android:onClick="watchAdMainMenu"
+        android:drawableLeft="@drawable/ad_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adsLeftToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="10 Left Today"
+        android:textColor="#FFF"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/adButton"
+        app:layout_constraintStart_toStartOf="@+id/adButton"
+        app:layout_constraintTop_toBottomOf="@+id/adButton" />
 
     <TextView
         android:id="@+id/coins"
