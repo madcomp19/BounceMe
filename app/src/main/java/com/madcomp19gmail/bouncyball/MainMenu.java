@@ -2,19 +2,22 @@ package com.madcomp19gmail.bouncyball;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-public class MainMenu extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener {
 
     //private static int touches;
     private StorageManager storage;
@@ -26,6 +29,11 @@ public class MainMenu extends AppCompatActivity {
     private static int prev_touches;
     TextView coins;
     TextView gems;
+    TextView adsLeftToday;
+    Button adButton;
+    private RewardedVideoAd mRewardedVideoAd;
+    boolean rewarded = false;
+    boolean adsLeft = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +49,8 @@ public class MainMenu extends AppCompatActivity {
         storage = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
+        adButton = findViewById(R.id.adButton);
+        adsLeftToday = findViewById(R.id.adsLeftToday);
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
         /*mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
@@ -56,6 +66,36 @@ public class MainMenu extends AppCompatActivity {
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
+        }
+
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mRewardedVideoAd.setRewardedVideoAdListener(this);
+
+        if(storage.getAdsAvailableToday() > 0)
+            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+        else
+        {
+            adsLeftToday.setText("Come Back Tomorrow");
+            adsLeft = false;
+            adButton.setEnabled(false);
+        }
+
+        if (adsLeft)
+            loadRewardedVideoAd();
+    }
+
+    private void loadRewardedVideoAd() {
+        //LEMBRAR MUDAR O ID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
+                new AdRequest.Builder().build());
+
+        adButton.setEnabled(false);
+    }
+
+    public void watchAdMainMenu(View view)
+    {
+        if (mRewardedVideoAd.isLoaded()) {
+            mRewardedVideoAd.show();
         }
     }
 
@@ -79,6 +119,15 @@ public class MainMenu extends AppCompatActivity {
 
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
+
+        if(storage.getAdsAvailableToday() > 0)
+            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+        else
+        {
+            adsLeftToday.setText("Come Back Tomorrow");
+            adsLeft = false;
+            adButton.setEnabled(false);
+        }
 
         if(storage.getMusicSetting())
         {
@@ -178,5 +227,66 @@ public class MainMenu extends AppCompatActivity {
             startActivity(new Intent(Intent.ACTION_VIEW,
                     Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
         }
+    }
+
+    @Override
+    public void onRewardedVideoAdLoaded() {
+
+        adButton.setEnabled(true);
+    }
+
+    @Override
+    public void onRewardedVideoAdOpened() {
+
+    }
+
+    @Override
+    public void onRewardedVideoStarted() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdClosed() {
+
+        if (adsLeft)
+            loadRewardedVideoAd();
+
+        if(rewarded)
+            Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_LONG).show();
+
+        rewarded = false;
+    }
+
+    @Override
+    public void onRewarded(RewardItem rewardItem) {
+
+        storage.addGems(1);
+        gems.setText(storage.getTotalGems() + "");
+        rewarded = true;
+
+        storage.removeAdsAvailableToday();
+        if(storage.getAdsAvailableToday() > 0)
+            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+        else
+        {
+            adsLeftToday.setText("Come Back Tomorrow");
+            adsLeft = false;
+            adButton.setEnabled(false);
+        }
+    }
+
+    @Override
+    public void onRewardedVideoAdLeftApplication() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdFailedToLoad(int i) {
+
+    }
+
+    @Override
+    public void onRewardedVideoCompleted() {
+
     }
 }

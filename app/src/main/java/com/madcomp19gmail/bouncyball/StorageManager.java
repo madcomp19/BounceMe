@@ -281,4 +281,23 @@ public class StorageManager {
         editor.putBoolean(context.getString(R.string.musicSetting), setting);
         editor.apply();
     }
+
+    public int getAdsAvailableToday()
+    {
+        return prefs.getInt("NumberAdsAvailableToday", 10);
+    }
+
+    public void removeAdsAvailableToday()
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("NumberAdsAvailableToday", getAdsAvailableToday() - 1);
+        editor.apply();
+    }
+
+    public void resetAdAvailableToday()
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("NumberAdsAvailableToday", 10);
+        editor.apply();
+    }
 }
