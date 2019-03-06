@@ -24,7 +24,7 @@
 
     <TextView
         android:id="@+id/adsLeftToday"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="10 Left Today"

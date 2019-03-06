@@ -2,9 +2,7 @@ package com.madcomp19gmail.bouncyball;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,8 +29,11 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private static int prev_touches;
     TextView coins;
     TextView gems;
+    TextView adsLeftToday;
     Button adButton;
     private RewardedVideoAd mRewardedVideoAd;
+    boolean rewarded = false;
+    boolean adsLeft = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
         adButton = findViewById(R.id.adButton);
+        adsLeftToday = findViewById(R.id.adsLeftToday);
         //touches = StorageManager.getInstance().getTotalTouches();*/
 
         /*mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
@@ -69,7 +71,17 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoAd.setRewardedVideoAdListener(this);
 
-        loadRewardedVideoAd();
+        if(storage.getAdsAvailableToday() > 0)
+            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+        else
+        {
+            adsLeftToday.setText("Come Back Tomorrow");
+            adsLeft = false;
+            adButton.setEnabled(false);
+        }
+
+        if (adsLeft)
+            loadRewardedVideoAd();
     }
 
     private void loadRewardedVideoAd() {
@@ -107,6 +119,15 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
+
+        if(storage.getAdsAvailableToday() > 0)
+            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+        else
+        {
+            adsLeftToday.setText("Come Back Tomorrow");
+            adsLeft = false;
+            adButton.setEnabled(false);
+        }
 
         if(storage.getMusicSetting())
         {
@@ -227,7 +248,13 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onRewardedVideoAdClosed() {
 
-        loadRewardedVideoAd();
+        if (adsLeft)
+            loadRewardedVideoAd();
+
+        if(rewarded)
+            Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_LONG).show();
+
+        rewarded = false;
     }
 
     @Override
@@ -235,8 +262,17 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         storage.addGems(1);
         gems.setText(storage.getTotalGems() + "");
-        Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_LONG).show();
-        loadRewardedVideoAd();
+        rewarded = true;
+
+        storage.removeAdsAvailableToday();
+        if(storage.getAdsAvailableToday() > 0)
+            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+        else
+        {
+            adsLeftToday.setText("Come Back Tomorrow");
+            adsLeft = false;
+            adButton.setEnabled(false);
+        }
     }
 
     @Override
@@ -252,6 +288,5 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onRewardedVideoCompleted() {
 
-        loadRewardedVideoAd();
     }
 }
