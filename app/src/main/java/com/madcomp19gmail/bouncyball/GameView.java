@@ -27,6 +27,21 @@ public class GameView extends View
     public static int height;
 
 
+    private final int TICKS_PER_SECOND = 50;
+    private final int SKIP_TICKS = 1000 / TICKS_PER_SECOND;
+    private final int MAX_FRAMESKIP = 5;
+    private int fps = -1;
+
+    private long next_game_tick = System.currentTimeMillis();
+    private long previous_display_tick = System.currentTimeMillis();
+    int loops;
+    float interpolation;
+
+    boolean isRunning = true;
+
+    Paint p;
+
+
     public GameView(Context context)
     {
         super(context);
@@ -55,6 +70,8 @@ public class GameView extends View
         balls = new ArrayList<>();
 
         Resources res = getResources();
+
+        p = new Paint();
 
         int selected_skin = StorageManager.getInstance().getSelectedSkin();
         int selected_trail = StorageManager.getInstance().getSelectedTrail();
@@ -161,7 +178,7 @@ public class GameView extends View
 
     protected void onDraw(Canvas c)
     {
-        for(Ball ball : balls)
+        /*for(Ball ball : balls)
         {
             ball.move();
             ball.display(c);
@@ -175,6 +192,57 @@ public class GameView extends View
 
 
 
-        postInvalidateDelayed(1000/90);
+        postInvalidateDelayed(1000/90);*/
+
+        //while(isRunning)
+        //{
+
+
+
+            loops = 0;
+
+            while (System.currentTimeMillis() > next_game_tick && loops < MAX_FRAMESKIP)
+            {
+                updateGame();
+
+                next_game_tick += SKIP_TICKS;
+                loops++;
+            }
+
+            interpolation = ((float) System.currentTimeMillis() + SKIP_TICKS - next_game_tick) / (float) SKIP_TICKS;
+
+            displayGame(c, interpolation);
+        //}
+
+        postInvalidate();
+    }
+
+    private void updateGame()
+    {
+        for(Ball ball : balls)
+            ball.move();
+    }
+
+    private void displayGame(Canvas canvas, float interpolation)
+    {
+        for(Ball ball : balls)
+            ball.display(canvas);
+
+        p.setColor(Color.WHITE);
+        p.setTextAlign(Paint.Align.CENTER);
+        p.setTextSize(64);
+        canvas.drawText(GameWorld.getTouches() - MainMenu.getPrevTouches() + "", width / 2, 50, p);
+
+
+        long timePassed = System.currentTimeMillis() - previous_display_tick;
+        previous_display_tick = System.currentTimeMillis();
+
+        if(randomWithRange(0, 101) < 10 || fps == -1)
+        {
+            fps = (int) Math.floor(1000 / timePassed);
+            canvas.drawText(fps + "", width - 100, 50, p);
+        }
+        else
+            canvas.drawText(fps + "", width - 100, 50, p);
     }
 }
