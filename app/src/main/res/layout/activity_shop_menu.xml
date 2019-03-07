@@ -86,7 +86,7 @@
         app:layout_constraintVertical_bias="0.006" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/soundButton"
         android:layout_width="110dp"
         android:layout_height="120dp"
         android:layout_marginStart="8dp"
@@ -97,6 +97,7 @@
         android:layout_marginBottom="8dp"
         android:background="#424242"
         android:src="@drawable/sounds_icon"
+        android:onClick="onShopMenuButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"

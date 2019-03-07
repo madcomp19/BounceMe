@@ -73,9 +73,16 @@ public class ShopMenu extends AppCompatActivity {
             Intent intent = new Intent(this, SkinShop.class);
             startActivity(intent);
         }
-        else if(view.getId() == R.id.trailsButton)
+
+        if(view.getId() == R.id.trailsButton)
         {
             Intent intent = new Intent(this, TrailShop.class);
+            startActivity(intent);
+        }
+
+        if (view.getId() == R.id.soundButton)
+        {
+            Intent intent = new Intent(this, SoundShop.class);
             startActivity(intent);
         }
     }
