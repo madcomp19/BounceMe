@@ -9,7 +9,7 @@
     android:gravity="center"
     tools:context=".AchievementsMenu">
 
-    <TextView
+    <ImageView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,8 @@
         android:text="Achievements"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@color/corPrimaria"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:srcCompat="@drawable/achievements_title_menu"/>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"

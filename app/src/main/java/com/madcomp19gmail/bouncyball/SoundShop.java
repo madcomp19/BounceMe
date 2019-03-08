@@ -8,6 +8,9 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 
 public class SoundShop extends AppCompatActivity {
@@ -18,6 +21,9 @@ public class SoundShop extends AppCompatActivity {
     private MediaPlayerManager mediaPlayerManager;
     TextView coins;
     TextView gems;
+
+    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,10 @@ public class SoundShop extends AppCompatActivity {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
+
+        mAdView = findViewById(R.id.bannerAdTrailShop);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override
