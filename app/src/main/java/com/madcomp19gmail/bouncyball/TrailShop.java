@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,8 @@ public class TrailShop extends AppCompatActivity {
     private MediaPlayerManager mediaPlayerManager;
     TextView coins;
     TextView gems;
+
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,10 @@ public class TrailShop extends AppCompatActivity {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
+
+        mAdView = findViewById(R.id.bannerAdTrailShop);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override
@@ -203,31 +211,75 @@ public class TrailShop extends AppCompatActivity {
             storageManager.setSelectedTrail(trail);
 
             ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setText("Owned");
+            ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setCompoundDrawables(null,null,null,null);
+            ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setPadding(0,0,0,0);
 
             storageManager.setSelectedTrailLabel(label_id);
 
             ((TextView) findViewById(label_id)).setText("Selected");
+            ((TextView) findViewById(label_id)).setText("");
+            ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+            ((TextView) findViewById(label_id)).setPadding(0,10,0,0);
         } else {
             TextView label_text = (TextView) findViewById(label_id);
             int price = Integer.parseInt(label_text.getText() + "");
             int total_touches = storageManager.getTotalTouches();
+            int total_gems = storageManager.getTotalGems();
 
-            if (total_touches >= price) {
-                storageManager.setTotalTouches(total_touches - price);
-                storageManager.addOwnedTrail(trail);
-                storageManager.setSelectedTrail(trail);
-                storageManager.addOwnedTrailLabel(label_id);
+            if(aTrail == R.id.trail_24_Button || label_id == R.id.trail_24_Label
+                    || aTrail == R.id.trail_23_Button || label_id == R.id.trail_23_Label
+                    || aTrail == R.id.trail_22_Button || label_id == R.id.trail_22_Label)
+            {
+                if (total_gems >= price) {
+                    storageManager.takeGems(price);
+                    storageManager.addOwnedTrail(trail);
+                    storageManager.setSelectedTrail(trail);
+                    storageManager.addOwnedTrailLabel(label_id);
 
-                if (storageManager.getSelectedTrailLabel() != 0)
-                    ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setText("Owned");
+                    if (storageManager.getSelectedTrailLabel() != 0)
+                    {
+                        ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setText("Owned");
+                        ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setCompoundDrawables(null,null,null,null);
+                        ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setPadding(0,0,0,0);
+                    }
 
-                storageManager.setSelectedTrailLabel(label_id);
+                    storageManager.setSelectedTrailLabel(label_id);
 
-                label_text.setText("Selected");
-                Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
-                coins.setText(storageManager.getTotalTouches() + "");
-            } else
-                Toast.makeText(this, "You need " + (price - total_touches) + " more touches", Toast.LENGTH_LONG).show();
+                    //label_text.setText("Selected");
+                    label_text.setText("");
+                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label_text.setPadding(0,10,0,0);
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                    gems.setText(storageManager.getTotalGems() + "");
+                } else
+                    Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                if (total_touches >= price) {
+                    storageManager.setTotalTouches(total_touches - price);
+                    storageManager.addOwnedTrail(trail);
+                    storageManager.setSelectedTrail(trail);
+                    storageManager.addOwnedTrailLabel(label_id);
+
+                    if (storageManager.getSelectedTrailLabel() != 0)
+                    {
+                        ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setText("Owned");
+                        ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setCompoundDrawables(null,null,null,null);
+                        ((TextView) findViewById(storageManager.getSelectedTrailLabel())).setPadding(0,0,0,0);
+                    }
+
+                    storageManager.setSelectedTrailLabel(label_id);
+
+                    //label_text.setText("Selected");
+                    label_text.setText("");
+                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label_text.setPadding(0,10,0,0);
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                    coins.setText(storageManager.getTotalTouches() + "");
+                } else
+                    Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces!", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -248,10 +300,17 @@ public class TrailShop extends AppCompatActivity {
             if(v instanceof TextView)
             {
                 if(label_ids.contains(v.getId()))
+                {
                     ((TextView) v).setText("Owned");
-
+                    ((TextView) v).setCompoundDrawables(null,null,null,null);
+                    ((TextView) v).setPadding(0,0,0,0);
+                }
                 if (storageManager.getSelectedTrailLabel() == v.getId())
-                    ((TextView) v).setText("Selected");
+                {
+                    ((TextView) v).setText("");
+                    ((TextView) v).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    v.setPadding(0,10,0,0);
+                }
             }
             else if(v instanceof ViewGroup)
                 setOwnedTrailsPage(v);
