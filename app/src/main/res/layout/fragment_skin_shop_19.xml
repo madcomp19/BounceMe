@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" > 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins19_1"
+                android:id="@+id/linearLayoutSkins19_137"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -27,53 +27,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/tunisia_Button"
+                    android:id="@+id/sao_tome_and_principe_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/tunisia" />
+                    android:src="@drawable/sao_tome_and_principe" />
                 <ImageButton
-                    android:id="@+id/turkey_Button"
+                    android:id="@+id/sardinia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/turkey" />
+                    android:src="@drawable/sardinia" />
                 <ImageButton
-                    android:id="@+id/turkmenistan_Button"
+                    android:id="@+id/saudi_arabia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/turkmenistan" />
+                    android:src="@drawable/saudi_arabia" />
                 <ImageButton
-                    android:id="@+id/turks_and_caicos_Button"
+                    android:id="@+id/scotland_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/turks_and_caicos" />
+                    android:src="@drawable/scotland" />
                 <ImageButton
-                    android:id="@+id/tuvalu_Button"
+                    android:id="@+id/senegal_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/tuvalu" />
+                    android:src="@drawable/senegal" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins19_2"
+                android:id="@+id/linearLayoutSkins19_138"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -85,7 +85,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/tunisia_Label"
+                    android:id="@+id/sao_tome_and_principe_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,7 +93,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/turkey_Label"
+                    android:id="@+id/sardinia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -101,7 +101,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/turkmenistan_Label"
+                    android:id="@+id/saudi_arabia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -109,7 +109,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/turks_and_caicos_Label"
+                    android:id="@+id/scotland_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -117,118 +117,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/tuvalu_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayoutSkins19_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp" > 
-                <ImageButton
-                    android:id="@+id/uganda_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/uganda" />
-                <ImageButton
-                    android:id="@+id/ukraine_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ukraine" />
-                <ImageButton
-                    android:id="@+id/united_arab_emirates_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/united_arab_emirates" />
-                <ImageButton
-                    android:id="@+id/united_kingdom_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/united_kingdom" />
-                <ImageButton
-                    android:id="@+id/united_states_of_america_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/united_states_of_america" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayoutSkins19_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="8dp" > 
-                <TextView
-                    android:id="@+id/uganda_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/ukraine_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/united_arab_emirates_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/united_kingdom_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/united_states_of_america_Label"
+                    android:id="@+id/senegal_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +126,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins19_5"
+                android:id="@+id/linearLayoutSkins19_139"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -249,53 +138,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/uruguay_Button"
+                    android:id="@+id/serbia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uruguay" />
+                    android:src="@drawable/serbia" />
                 <ImageButton
-                    android:id="@+id/uzbekistn_Button"
+                    android:id="@+id/seychelles_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uzbekistn" />
+                    android:src="@drawable/seychelles" />
                 <ImageButton
-                    android:id="@+id/vanuatu_Button"
+                    android:id="@+id/sierra_leone_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/vanuatu" />
+                    android:src="@drawable/sierra_leone" />
                 <ImageButton
-                    android:id="@+id/vatican_city_Button"
+                    android:id="@+id/singapore_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/vatican_city" />
+                    android:src="@drawable/singapore" />
                 <ImageButton
-                    android:id="@+id/venezuela_Button"
+                    android:id="@+id/sint_eustatius_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/venezuela" />
+                    android:src="@drawable/sint_eustatius" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins19_6"
+                android:id="@+id/linearLayoutSkins19_140"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -307,7 +196,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/uruguay_Label"
+                    android:id="@+id/serbia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -315,7 +204,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/uzbekistn_Label"
+                    android:id="@+id/seychelles_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -323,7 +212,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/vanuatu_Label"
+                    android:id="@+id/sierra_leone_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -331,7 +220,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/vatican_city_Label"
+                    android:id="@+id/singapore_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -339,7 +228,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/venezuela_Label"
+                    android:id="@+id/sint_eustatius_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -348,7 +237,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins19_7"
+                android:id="@+id/linearLayoutSkins19_141"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -360,53 +249,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/vietnam_Button"
+                    android:id="@+id/sint_maarten_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/vietnam" />
+                    android:src="@drawable/sint_maarten" />
                 <ImageButton
-                    android:id="@+id/virgin_islands_Button"
+                    android:id="@+id/slovakia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/virgin_islands" />
+                    android:src="@drawable/slovakia" />
                 <ImageButton
-                    android:id="@+id/wales_Button"
+                    android:id="@+id/slovenia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/wales" />
+                    android:src="@drawable/slovenia" />
                 <ImageButton
-                    android:id="@+id/western_sahara_Button"
+                    android:id="@+id/solomon_islands_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/western_sahara" />
+                    android:src="@drawable/solomon_islands" />
                 <ImageButton
-                    android:id="@+id/yemen_Button"
+                    android:id="@+id/somalia_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/yemen" />
+                    android:src="@drawable/somalia" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins19_8"
+                android:id="@+id/linearLayoutSkins19_142"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -418,7 +307,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/vietnam_Label"
+                    android:id="@+id/sint_maarten_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -426,7 +315,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/virgin_islands_Label"
+                    android:id="@+id/slovakia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -434,7 +323,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/wales_Label"
+                    android:id="@+id/slovenia_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -442,7 +331,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/western_sahara_Label"
+                    android:id="@+id/solomon_islands_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -450,7 +339,118 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/yemen_Label"
+                    android:id="@+id/somalia_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutSkins19_143"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp" > 
+                <ImageButton
+                    android:id="@+id/somaliland_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/somaliland" />
+                <ImageButton
+                    android:id="@+id/south_africa_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/south_africa" />
+                <ImageButton
+                    android:id="@+id/south_korea_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/south_korea" />
+                <ImageButton
+                    android:id="@+id/south_sudan_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/south_sudan" />
+                <ImageButton
+                    android:id="@+id/spain_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/spain" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutSkins19_144"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="8dp" > 
+                <TextView
+                    android:id="@+id/somaliland_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/south_africa_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/south_korea_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/south_sudan_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/spain_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

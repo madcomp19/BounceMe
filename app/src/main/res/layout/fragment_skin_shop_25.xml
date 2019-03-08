@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" > 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_1"
+                android:id="@+id/linearLayoutSkins25_173"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -27,14 +27,14 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/diveball_Button"
+                    android:id="@+id/clock_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/diveball" />
+                    android:src="@drawable/clock" />
                 <ImageButton
                     android:id="@+id/dollar_coin_Button"
                     android:layout_width="50dp"
@@ -45,6 +45,15 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/dollar_coin" />
                 <ImageButton
+                    android:id="@+id/eye_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eye" />
+                <ImageButton
                     android:id="@+id/ferris_wheel_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -54,26 +63,17 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/ferris_wheel" />
                 <ImageButton
-                    android:id="@+id/food_1_Button"
+                    android:id="@+id/gear_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_1" />
-                <ImageButton
-                    android:id="@+id/food_10_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/food_10" />
+                    android:src="@drawable/gear" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_2"
+                android:id="@+id/linearLayoutSkins25_174"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -85,7 +85,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/diveball_Label"
+                    android:id="@+id/clock_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -101,6 +101,14 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
+                    android:id="@+id/eye_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
+                <TextView
                     android:id="@+id/ferris_wheel_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -109,15 +117,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_1_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/food_10_Label"
+                    android:id="@+id/gear_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -126,7 +126,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_3"
+                android:id="@+id/linearLayoutSkins25_175"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -138,53 +138,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/food_11_Button"
+                    android:id="@+id/misc_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_11" />
+                    android:src="@drawable/misc_1" />
                 <ImageButton
-                    android:id="@+id/food_12_Button"
+                    android:id="@+id/misc_10_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_12" />
+                    android:src="@drawable/misc_10" />
                 <ImageButton
-                    android:id="@+id/food_13_Button"
+                    android:id="@+id/misc_11_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_13" />
+                    android:src="@drawable/misc_11" />
                 <ImageButton
-                    android:id="@+id/food_14_Button"
+                    android:id="@+id/misc_12_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_14" />
+                    android:src="@drawable/misc_12" />
                 <ImageButton
-                    android:id="@+id/food_15_Button"
+                    android:id="@+id/misc_13_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_15" />
+                    android:src="@drawable/misc_13" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_4"
+                android:id="@+id/linearLayoutSkins25_176"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -196,7 +196,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/food_11_Label"
+                    android:id="@+id/misc_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -204,7 +204,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_12_Label"
+                    android:id="@+id/misc_10_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -212,7 +212,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_13_Label"
+                    android:id="@+id/misc_11_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -220,7 +220,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_14_Label"
+                    android:id="@+id/misc_12_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -228,7 +228,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_15_Label"
+                    android:id="@+id/misc_13_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +237,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_5"
+                android:id="@+id/linearLayoutSkins25_177"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -249,53 +249,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/food_16_Button"
+                    android:id="@+id/misc_14_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_16" />
+                    android:src="@drawable/misc_14" />
                 <ImageButton
-                    android:id="@+id/food_17_Button"
+                    android:id="@+id/misc_15_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_17" />
+                    android:src="@drawable/misc_15" />
                 <ImageButton
-                    android:id="@+id/food_18_Button"
+                    android:id="@+id/misc_16_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_18" />
+                    android:src="@drawable/misc_16" />
                 <ImageButton
-                    android:id="@+id/food_19_Button"
+                    android:id="@+id/misc_17_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_19" />
+                    android:src="@drawable/misc_17" />
                 <ImageButton
-                    android:id="@+id/food_2_Button"
+                    android:id="@+id/misc_18_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_2" />
+                    android:src="@drawable/misc_18" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_6"
+                android:id="@+id/linearLayoutSkins25_178"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -307,7 +307,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/food_16_Label"
+                    android:id="@+id/misc_14_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -315,7 +315,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_17_Label"
+                    android:id="@+id/misc_15_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -323,7 +323,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_18_Label"
+                    android:id="@+id/misc_16_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -331,7 +331,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_19_Label"
+                    android:id="@+id/misc_17_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -339,7 +339,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_2_Label"
+                    android:id="@+id/misc_18_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -348,7 +348,7 @@
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_7"
+                android:id="@+id/linearLayoutSkins25_179"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -360,53 +360,53 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <ImageButton
-                    android:id="@+id/food_20_Button"
+                    android:id="@+id/misc_2_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_20" />
+                    android:src="@drawable/misc_2" />
                 <ImageButton
-                    android:id="@+id/food_3_Button"
+                    android:id="@+id/misc_3_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_3" />
+                    android:src="@drawable/misc_3" />
                 <ImageButton
-                    android:id="@+id/food_4_Button"
+                    android:id="@+id/misc_4_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_4" />
+                    android:src="@drawable/misc_4" />
                 <ImageButton
-                    android:id="@+id/food_5_Button"
+                    android:id="@+id/misc_5_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_5" />
+                    android:src="@drawable/misc_5" />
                 <ImageButton
-                    android:id="@+id/food_6_Button"
+                    android:id="@+id/misc_6_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/food_6" />
+                    android:src="@drawable/misc_6" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins25_8"
+                android:id="@+id/linearLayoutSkins25_180"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -418,7 +418,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp" > 
                 <TextView
-                    android:id="@+id/food_20_Label"
+                    android:id="@+id/misc_2_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -426,7 +426,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_3_Label"
+                    android:id="@+id/misc_3_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -434,7 +434,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_4_Label"
+                    android:id="@+id/misc_4_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -442,7 +442,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_5_Label"
+                    android:id="@+id/misc_5_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -450,7 +450,7 @@
                     android:text="80"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/food_6_Label"
+                    android:id="@+id/misc_6_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" > 
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_1"
+                android:id="@+id/linearLayoutSkins5_33"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -26,6 +26,15 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <ImageButton
+                    android:id="@+id/emoji_87_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/emoji_87" />
                 <ImageButton
                     android:id="@+id/emoji_88_Button"
                     android:layout_width="50dp"
@@ -62,18 +71,9 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/emoji_91" />
-                <ImageButton
-                    android:id="@+id/emoji_92_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_92" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_2"
+                android:id="@+id/linearLayoutSkins5_34"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -84,6 +84,14 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <TextView
+                    android:id="@+id/emoji_87_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/emoji_88_Label"
                     android:layout_width="0dp"
@@ -116,17 +124,9 @@
                     android:onClick="onClickSkin"
                     android:text="80"
                     android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_92_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_3"
+                android:id="@+id/linearLayoutSkins5_35"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -137,6 +137,15 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <ImageButton
+                    android:id="@+id/emoji_92_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/emoji_92" />
                 <ImageButton
                     android:id="@+id/emoji_93_Button"
                     android:layout_width="50dp"
@@ -173,18 +182,9 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/emoji_96" />
-                <ImageButton
-                    android:id="@+id/emoji_97_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_97" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_4"
+                android:id="@+id/linearLayoutSkins5_36"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -195,6 +195,14 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <TextView
+                    android:id="@+id/emoji_92_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/emoji_93_Label"
                     android:layout_width="0dp"
@@ -227,17 +235,9 @@
                     android:onClick="onClickSkin"
                     android:text="80"
                     android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_97_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_5"
+                android:id="@+id/linearLayoutSkins5_37"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -248,6 +248,15 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <ImageButton
+                    android:id="@+id/emoji_97_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/emoji_97" />
                 <ImageButton
                     android:id="@+id/emoji_98_Button"
                     android:layout_width="50dp"
@@ -284,18 +293,9 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/emoji_101" />
-                <ImageButton
-                    android:id="@+id/emoji_102_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_102" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_6"
+                android:id="@+id/linearLayoutSkins5_38"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -306,6 +306,14 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <TextView
+                    android:id="@+id/emoji_97_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/emoji_98_Label"
                     android:layout_width="0dp"
@@ -338,17 +346,9 @@
                     android:onClick="onClickSkin"
                     android:text="80"
                     android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_102_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_7"
+                android:id="@+id/linearLayoutSkins5_39"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -359,6 +359,15 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <ImageButton
+                    android:id="@+id/emoji_102_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/emoji_102" />
                 <ImageButton
                     android:id="@+id/emoji_103_Button"
                     android:layout_width="50dp"
@@ -395,18 +404,9 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/emoji_106" />
-                <ImageButton
-                    android:id="@+id/emoji_107_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_107" />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/linearLayoutSkins5_8"
+                android:id="@+id/linearLayoutSkins5_40"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -417,6 +417,14 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="8dp" > 
+                <TextView
+                    android:id="@+id/emoji_102_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="80"
+                    android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/emoji_103_Label"
                     android:layout_width="0dp"
@@ -443,14 +451,6 @@
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/emoji_106_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/emoji_107_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
