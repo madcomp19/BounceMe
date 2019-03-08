@@ -20,6 +20,7 @@ public class Ball
 
     float radius;
     Bitmap image;
+    int sound;
     int trail;
 
     ArrayList<Vector2> trailPositions;
@@ -30,7 +31,7 @@ public class Ball
     boolean reactive;
 
 
-    public Ball(float x, float y, BallAttributes ba, Bitmap img, int trailHue)
+    public Ball(float x, float y, BallAttributes ba, Bitmap img, int trailHue, int sound)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
@@ -38,6 +39,10 @@ public class Ball
         //gravity = new Vector2(0, 9.8f);
         angle = 0;
         attributes = ba;
+        this.sound = sound;
+
+        if(sound!=0)
+            SoundPoolManager.getInstance().loadSound(sound);
 
         radius = attributes.radius;
 
@@ -164,7 +169,8 @@ public class Ball
     private void playSound()
     {
         //SoundPoolManager.getInstance().playSound(R.raw.bubble);
-        SoundPoolManager.getInstance().playSound();
+        if(sound != 0)
+            SoundPoolManager.getInstance().playSound();
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight)

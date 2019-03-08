@@ -193,7 +193,7 @@ public class SoundShop extends AppCompatActivity {
         view_id = view_id.split("_Label")[0].split("_Button")[0];
         //Log.i("TEST", view_id);
 
-        int skin_id = this.getResources().getIdentifier(view_id, "raw", getPackageName());
+        int sound_id = this.getResources().getIdentifier(view_id, "raw", getPackageName());
         int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
         //region
         /*Log.i("skin", view_id);
@@ -203,7 +203,7 @@ public class SoundShop extends AppCompatActivity {
         Log.i("res_id", Integer.toString(view.getId()));*/
         //endregion
 
-        buyOrSetSound(skin_id, label_id);
+        buyOrSetSound(sound_id, label_id);
     }
 
     private void buyOrSetSound(int aSound, int label_id)

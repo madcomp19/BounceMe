@@ -30,7 +30,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_game_world);
-
+        SoundPoolManager.initialize(this);
         gameView = new GameView(this);
         setContentView(gameView);
 
@@ -45,7 +45,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         sd.start(sensorManager);
         sd.setSensitivity(11);
 
-        SoundPoolManager.initialize(this);
+
         StorageManager.initialize(this);
         storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalTouches();

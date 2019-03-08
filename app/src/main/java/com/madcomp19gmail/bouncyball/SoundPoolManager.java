@@ -74,7 +74,7 @@ public class SoundPoolManager
     {
         SoundPoolManager soundPoolManager = getInstance();
         context = aContext;
-        soundPoolManager.loadSound();
+        //soundPoolManager.loadSound();
     }
 
     public void playSound()
