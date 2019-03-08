@@ -75,6 +75,7 @@ public class GameView extends View
 
         int selected_skin = StorageManager.getInstance().getSelectedSkin();
         int selected_trail = StorageManager.getInstance().getSelectedTrail();
+        int selected_sound = StorageManager.getInstance().getSelectedSound();
 
         Bitmap ball_img;
 

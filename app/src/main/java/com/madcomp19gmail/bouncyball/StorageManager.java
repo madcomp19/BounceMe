@@ -212,6 +212,31 @@ public class StorageManager {
         return owned_trails;
     }
 
+    public ArrayList<Integer> getOwnedSounds()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds), new HashSet<String>());
+
+        ArrayList<Integer> owned_sounds = new ArrayList<>();
+
+        for(String s : set)
+            owned_sounds.add(Integer.parseInt(s));
+
+        return owned_sounds;
+    }
+
+    public ArrayList<Integer> getOwnedSoundsLabels()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds_labels), new HashSet<String>());
+
+        ArrayList<Integer> owned_sounds_labels = new ArrayList<>();
+
+        for(String s : set)
+            owned_sounds_labels.add(Integer.parseInt(s));
+
+        return owned_sounds_labels;
+    }
+
+
     public void addOwnedTrail(int trail)
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
@@ -223,15 +248,38 @@ public class StorageManager {
         editor.apply();
     }
 
+    public void addOwnedSound(int sound)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds), new HashSet<String>());
+
+        set.add(sound + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_sounds), set);
+        editor.apply();
+    }
+
     public int getSelectedTrail()
     {
         return prefs.getInt(context.getString(R.string.selected_trail), -10);
+    }
+
+    public int getSelectedSound()
+    {
+        return prefs.getInt(context.getString(R.string.selected_sound), 0);
     }
 
     public void setSelectedTrail(int trail)
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_trail), trail);
+        editor.apply();
+    }
+
+    public void setSelectedSound(int sound)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_sound), sound);
         editor.apply();
     }
 
@@ -258,15 +306,38 @@ public class StorageManager {
         editor.apply();
     }
 
+    public void addOwnedSoundLabel(int sound_label)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds_labels), new HashSet<String>());
+
+        set.add(sound_label + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_sounds_labels), set);
+        editor.apply();
+    }
+
     public int getSelectedTrailLabel()
     {
         return prefs.getInt(context.getString(R.string.selected_trail_label), 0);
+    }
+
+    public int getSelectedSoundLabel()
+    {
+        return prefs.getInt(context.getString(R.string.selected_sound_label), 0);
     }
 
     public void setSelectedTrailLabel(int trail)
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_trail_label), trail);
+        editor.apply();
+    }
+
+    public void setSelectedSoundLabel(int sound)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_sound_label), sound);
         editor.apply();
     }
 

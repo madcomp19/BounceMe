@@ -79,11 +79,13 @@ public class SkinShop extends FragmentActivity {
 
         int skin_id = this.getResources().getIdentifier(view_id, "drawable", getPackageName());
         int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
+        //region
         /*Log.i("skin", view_id);
         Log.i("label", view_id + "_Label");
         Log.i("skin_id", Integer.toString(skin_id));
         Log.i("label_id", Integer.toString(label_id));
         Log.i("res_id", Integer.toString(view.getId()));*/
+        //endregion
 
         buyOrSetSkin(skin_id, label_id);
     }
