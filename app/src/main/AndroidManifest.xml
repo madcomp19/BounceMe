@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:hardwareAccelerated="false"
         android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,6 +17,7 @@
         <activity android:name=".SettingsMenu" />
         <activity android:name=".AchievementsMenu" />
         <activity
+            android:hardwareAccelerated="false"
             android:name=".SkinShop"
             android:screenOrientation="portrait" />
         <activity
@@ -44,6 +44,7 @@
             android:name=".MainMenu"
             android:screenOrientation="portrait" />
         <activity
+            android:hardwareAccelerated="false"
             android:name=".GameWorld"
             android:screenOrientation="portrait" />
 
