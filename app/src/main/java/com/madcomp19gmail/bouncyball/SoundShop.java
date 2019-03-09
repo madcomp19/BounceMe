@@ -227,31 +227,75 @@ public class SoundShop extends AppCompatActivity {
             storageManager.setSelectedSound(sound);
 
             ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setText("Owned");
+            ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setCompoundDrawables(null,null,null,null);
+            ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setPadding(0,0,0,0);
 
             storageManager.setSelectedSoundLabel(label_id);
 
             ((TextView) findViewById(label_id)).setText("Selected");
+            ((TextView) findViewById(label_id)).setText("");
+            ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+            ((TextView) findViewById(label_id)).setPadding(0,10,0,0);
         } else {
             TextView label_text = (TextView) findViewById(label_id);
             int price = Integer.parseInt(label_text.getText() + "");
             int total_touches = storageManager.getTotalTouches();
+            int total_gems = storageManager.getTotalGems();
 
-            if (total_touches >= price) {
-                storageManager.setTotalTouches(total_touches - price);
-                storageManager.addOwnedSound(sound);
-                storageManager.setSelectedSound(sound);
-                storageManager.addOwnedSoundLabel(label_id);
+            if(aSound == R.id.laser_Button || label_id == R.id.laser_Label
+                    || aSound == R.id.pew_Button || label_id == R.id.pew_Label
+                    || aSound == R.id.ricochet_Button || label_id == R.id.ricochet_Label
+                    || aSound == R.id.gun_Button || label_id == R.id.gun_Label
+                    || aSound == R.id.trigger_Button || label_id == R.id.trigger_Label)
+            {
+                if (total_gems >= price) {
+                    storageManager.takeGems(price);
+                    storageManager.addOwnedSound(sound);
+                    storageManager.setSelectedSound(sound);
+                    storageManager.addOwnedSoundLabel(label_id);
 
-                if (storageManager.getSelectedSoundLabel() != 0)
-                    ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setText("Owned");
+                    if (storageManager.getSelectedSoundLabel() != 0)
+                    {
+                        ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setText("Owned");
+                        ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setCompoundDrawables(null,null,null,null);
+                        ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setPadding(0,0,0,0);
+                    }
 
-                storageManager.setSelectedSoundLabel(label_id);
+                    storageManager.setSelectedSoundLabel(label_id);
 
-                label_text.setText("Selected");
-                Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
-                coins.setText(storageManager.getTotalTouches() + "");
-            } else
-                Toast.makeText(this, "You need " + (price - total_touches) + " more touches", Toast.LENGTH_LONG).show();
+                    label_text.setText("");
+                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label_text.setPadding(0,10,0,0);
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                    gems.setText(storageManager.getTotalGems() + "");
+                } else
+                    Toast.makeText(this, "You need " + (price - total_gems) + " more Gems", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                if (total_touches >= price) {
+                    storageManager.setTotalTouches(total_touches - price);
+                    storageManager.addOwnedSound(sound);
+                    storageManager.setSelectedSound(sound);
+                    storageManager.addOwnedSoundLabel(label_id);
+
+                    if (storageManager.getSelectedSoundLabel() != 0)
+                    {
+                        ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setText("Owned");
+                        ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setCompoundDrawables(null,null,null,null);
+                        ((TextView) findViewById(storageManager.getSelectedSoundLabel())).setPadding(0,0,0,0);
+                    }
+
+                    storageManager.setSelectedSoundLabel(label_id);
+
+                    label_text.setText("");
+                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label_text.setPadding(0,10,0,0);
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                    coins.setText(storageManager.getTotalTouches() + "");
+                } else
+                    Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -272,10 +316,18 @@ public class SoundShop extends AppCompatActivity {
             if(v instanceof TextView)
             {
                 if(label_ids.contains(v.getId()))
+                {
                     ((TextView) v).setText("Owned");
+                    ((TextView) v).setCompoundDrawables(null,null,null,null);
+                    ((TextView) v).setPadding(0,0,0,0);
+                }
 
                 if (storageManager.getSelectedSoundLabel() == v.getId())
-                    ((TextView) v).setText("Selected");
+                {
+                    ((TextView) v).setText("");
+                    ((TextView) v).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    v.setPadding(0,10,0,0);
+                }
             }
             else if(v instanceof ViewGroup)
                 setOwnedSoundsPage(v);

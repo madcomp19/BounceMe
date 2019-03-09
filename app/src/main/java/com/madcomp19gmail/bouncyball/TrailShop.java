@@ -216,7 +216,6 @@ public class TrailShop extends AppCompatActivity {
 
             storageManager.setSelectedTrailLabel(label_id);
 
-            ((TextView) findViewById(label_id)).setText("Selected");
             ((TextView) findViewById(label_id)).setText("");
             ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
             ((TextView) findViewById(label_id)).setPadding(0,10,0,0);
@@ -245,7 +244,6 @@ public class TrailShop extends AppCompatActivity {
 
                     storageManager.setSelectedTrailLabel(label_id);
 
-                    //label_text.setText("Selected");
                     label_text.setText("");
                     label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
                     label_text.setPadding(0,10,0,0);
@@ -271,7 +269,6 @@ public class TrailShop extends AppCompatActivity {
 
                     storageManager.setSelectedTrailLabel(label_id);
 
-                    //label_text.setText("Selected");
                     label_text.setText("");
                     label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
                     label_text.setPadding(0,10,0,0);

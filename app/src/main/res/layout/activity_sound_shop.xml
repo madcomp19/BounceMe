@@ -196,6 +196,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -205,6 +209,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -214,6 +222,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="120"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -223,6 +235,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="140"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -232,6 +248,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="160"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -331,6 +351,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -340,6 +364,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -349,6 +377,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="120"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -358,6 +390,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="140"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -367,6 +403,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="160"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -466,6 +506,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -475,6 +519,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -484,6 +532,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="120"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -493,6 +545,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="140"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -502,6 +558,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="160"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -601,6 +661,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -610,6 +674,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -619,6 +687,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="120"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -628,6 +700,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="140"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -637,6 +713,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="160"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -735,6 +815,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -744,6 +828,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -753,6 +841,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="120"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -762,6 +854,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="140"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -771,6 +867,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="160"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -868,7 +968,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSound"
-                    android:text="80"
+                    android:text="2"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -877,7 +981,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSound"
-                    android:text="100"
+                    android:text="2"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -886,7 +994,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSound"
-                    android:text="120"
+                    android:text="2"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -895,7 +1007,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSound"
-                    android:text="140"
+                    android:text="2"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -904,7 +1020,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSound"
-                    android:text="160"
+                    android:text="2"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -1003,6 +1123,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -1012,6 +1136,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -1021,6 +1149,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="120"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -1030,6 +1162,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="140"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -1039,6 +1175,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="160"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -1086,9 +1226,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/spectrum" />
+                    android:scaleType="fitCenter" />
 
                 <ImageButton
                     android:id="@+id/b_Button"
@@ -1096,9 +1234,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/reactive" />
+                    android:scaleType="fitCenter" />
 
                 <ImageButton
                     android:id="@+id/c_Button"
@@ -1106,9 +1242,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/clear" />
+                    android:scaleType="fitCenter" />
 
 
             </LinearLayout>
@@ -1137,6 +1271,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="80"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -1146,6 +1284,10 @@
                     android:layout_weight="1"
                     android:onClick="onClickSound"
                     android:text="100"
+                    android:textColor="#FFF"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
                 <TextView
@@ -1153,8 +1295,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="120"
+                    android:text=""
                     android:textAlignment="center" />
 
                 <TextView
@@ -1162,8 +1303,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="140"
+                    android:text=""
                     android:textAlignment="center" />
 
                 <TextView
@@ -1171,8 +1311,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="160"
+                    android:text=""
                     android:textAlignment="center" />
 
             </LinearLayout>
