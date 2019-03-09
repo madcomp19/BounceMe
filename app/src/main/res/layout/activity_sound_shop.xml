@@ -120,7 +120,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/gems">
 
                 <ImageButton
-                    android:id="@+id/drop_Button"
+                    android:id="@+id/boing_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -130,7 +130,7 @@
                     android:src="@drawable/colored_1" />
 
                 <ImageButton
-                    android:id="@+id/sound_2_Button"
+                    android:id="@+id/car_horn_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -140,7 +140,7 @@
                     android:src="@drawable/colored_2" />
 
                 <ImageButton
-                    android:id="@+id/sound_3_Button"
+                    android:id="@+id/stab_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -150,7 +150,7 @@
                     android:src="@drawable/colored_3" />
 
                 <ImageButton
-                    android:id="@+id/sound_4_Button"
+                    android:id="@+id/basketball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -160,7 +160,7 @@
                     android:src="@drawable/colored_4" />
 
                 <ImageButton
-                    android:id="@+id/sound_5_Button"
+                    android:id="@+id/bottle_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -190,7 +190,7 @@
 
 
                 <TextView
-                    android:id="@+id/drop_Label"
+                    android:id="@+id/boing_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -199,7 +199,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_2_Label"
+                    android:id="@+id/car_horn_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -208,7 +208,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_3_Label"
+                    android:id="@+id/stab_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -217,7 +217,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_4_Label"
+                    android:id="@+id/basketball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -226,7 +226,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_5_Label"
+                    android:id="@+id/bottle_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -255,7 +255,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails2">
 
                 <ImageButton
-                    android:id="@+id/sound_6_Button"
+                    android:id="@+id/bubble_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -265,7 +265,7 @@
                     android:src="@drawable/colored_6" />
 
                 <ImageButton
-                    android:id="@+id/sound_7_Button"
+                    android:id="@+id/drop_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -275,7 +275,7 @@
                     android:src="@drawable/colored_7" />
 
                 <ImageButton
-                    android:id="@+id/sound_8_Button"
+                    android:id="@+id/football_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -285,7 +285,7 @@
                     android:src="@drawable/colored_8" />
 
                 <ImageButton
-                    android:id="@+id/sound_9_Button"
+                    android:id="@+id/pingpong_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -295,7 +295,7 @@
                     android:src="@drawable/colored_9" />
 
                 <ImageButton
-                    android:id="@+id/sound_10_Button"
+                    android:id="@+id/pop_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -325,7 +325,7 @@
 
 
                 <TextView
-                    android:id="@+id/sound_6_Label"
+                    android:id="@+id/bubble_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -334,7 +334,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_7_Label"
+                    android:id="@+id/drop_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -343,7 +343,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_8_Label"
+                    android:id="@+id/football_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -352,7 +352,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_9_Label"
+                    android:id="@+id/pingpong_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -361,7 +361,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_10_Label"
+                    android:id="@+id/pop_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -390,7 +390,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails4">
 
                 <ImageButton
-                    android:id="@+id/sound_11_Button"
+                    android:id="@+id/powerup_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -400,7 +400,7 @@
                     android:src="@drawable/colored_11" />
 
                 <ImageButton
-                    android:id="@+id/sound_12_Button"
+                    android:id="@+id/thud_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -410,7 +410,7 @@
                     android:src="@drawable/colored_12" />
 
                 <ImageButton
-                    android:id="@+id/sound_13_Button"
+                    android:id="@+id/tennis_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -420,7 +420,7 @@
                     android:src="@drawable/colored_13" />
 
                 <ImageButton
-                    android:id="@+id/sound_14_Button"
+                    android:id="@+id/frying_pan_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -430,7 +430,7 @@
                     android:src="@drawable/colored_14" />
 
                 <ImageButton
-                    android:id="@+id/sound_15_Button"
+                    android:id="@+id/arrow_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -460,7 +460,7 @@
 
 
                 <TextView
-                    android:id="@+id/sound_11_Label"
+                    android:id="@+id/powerup_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -469,7 +469,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_12_Label"
+                    android:id="@+id/thud_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -478,7 +478,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_13_Label"
+                    android:id="@+id/tennis_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -487,7 +487,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_14_Label"
+                    android:id="@+id/frying_pan_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -496,7 +496,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_15_Label"
+                    android:id="@+id/arrow_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -525,7 +525,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails6">
 
                 <ImageButton
-                    android:id="@+id/sound_16_Button"
+                    android:id="@+id/anvil_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -535,7 +535,7 @@
                     android:src="@drawable/colored_16" />
 
                 <ImageButton
-                    android:id="@+id/sound_17_Button"
+                    android:id="@+id/glass_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -545,7 +545,7 @@
                     android:src="@drawable/colored_17" />
 
                 <ImageButton
-                    android:id="@+id/sound_18_Button"
+                    android:id="@+id/slap_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -555,7 +555,7 @@
                     android:src="@drawable/colored_18" />
 
                 <ImageButton
-                    android:id="@+id/sound_19_Button"
+                    android:id="@+id/coin_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -565,7 +565,7 @@
                     android:src="@drawable/colored_19" />
 
                 <ImageButton
-                    android:id="@+id/sound_20_Button"
+                    android:id="@+id/cash_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -595,7 +595,7 @@
 
 
                 <TextView
-                    android:id="@+id/sound_16_Label"
+                    android:id="@+id/anvil_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -604,7 +604,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_17_Label"
+                    android:id="@+id/glass_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -613,7 +613,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_18_Label"
+                    android:id="@+id/slap_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -622,7 +622,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_19_Label"
+                    android:id="@+id/coin_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -631,7 +631,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_20_Label"
+                    android:id="@+id/cash_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -640,7 +640,6 @@
                     android:textAlignment="center" />
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:id="@+id/linearLayoutTrails9"
@@ -657,57 +656,57 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails6">
 
                 <ImageButton
-                    android:id="@+id/sound_21_Button"
+                    android:id="@+id/fart_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_21" />
+                    android:src="@drawable/colored_16" />
 
                 <ImageButton
-                    android:id="@+id/sound_22_Button"
+                    android:id="@+id/punch_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:src="@drawable/colored_17" />
 
                 <ImageButton
-                    android:id="@+id/sound_23_Button"
+                    android:id="@+id/windows_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/spectrum" />
+                    android:src="@drawable/colored_18" />
 
                 <ImageButton
-                    android:id="@+id/sound_24_Button"
+                    android:id="@+id/horn_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/reactive" />
+                    android:src="@drawable/colored_19" />
 
                 <ImageButton
-                    android:id="@+id/sound_25_Button"
+                    android:id="@+id/roipe_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/clear" />
+                    android:src="@drawable/colored_20" />
 
 
             </LinearLayout>
@@ -726,11 +725,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails9">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails7">
 
 
                 <TextView
-                    android:id="@+id/sound_21_Label"
+                    android:id="@+id/fart_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -739,7 +738,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_22_Label"
+                    android:id="@+id/punch_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -748,7 +747,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_23_Label"
+                    android:id="@+id/windows_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -757,7 +756,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_24_Label"
+                    android:id="@+id/horn_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -766,7 +765,409 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/sound_25_Label"
+                    android:id="@+id/roipe_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="160"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails11"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
+
+                <ImageButton
+                    android:id="@+id/trigger_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/colored_21" />
+
+                <ImageButton
+                    android:id="@+id/laser_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rainbow" />
+
+                <ImageButton
+                    android:id="@+id/gun_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/spectrum" />
+
+                <ImageButton
+                    android:id="@+id/ricochet_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/reactive" />
+
+                <ImageButton
+                    android:id="@+id/pew_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clear" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails12"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails9">
+
+
+                <TextView
+                    android:id="@+id/trigger_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="80"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/laser_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="100"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/gun_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="120"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/ricochet_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="140"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/pew_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="160"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails13"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
+
+                <ImageButton
+                    android:id="@+id/hagay_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/colored_21" />
+
+                <ImageButton
+                    android:id="@+id/noice_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rainbow" />
+
+                <ImageButton
+                    android:id="@+id/nope_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/spectrum" />
+
+                <ImageButton
+                    android:id="@+id/oof_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/reactive" />
+
+                <ImageButton
+                    android:id="@+id/ree_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clear" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails14"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails9">
+
+
+                <TextView
+                    android:id="@+id/hagay_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="80"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/noice_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="100"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/nope_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="120"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/oof_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="140"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/ree_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="160"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails15"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
+
+                <ImageButton
+                    android:id="@+id/wow_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/colored_21" />
+
+                <ImageButton
+                    android:id="@+id/yeet_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/rainbow" />
+
+                <ImageButton
+                    android:id="@+id/a_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/spectrum" />
+
+                <ImageButton
+                    android:id="@+id/b_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/reactive" />
+
+                <ImageButton
+                    android:id="@+id/c_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clear" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails16"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails9">
+
+
+                <TextView
+                    android:id="@+id/wow_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="80"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/yeet_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="100"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/a_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="120"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/b_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSound"
+                    android:text="140"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/c_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
