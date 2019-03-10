@@ -221,6 +221,13 @@ public class StorageManager {
         return owned_trails;
     }
 
+    public int getNumberOfOwnedTrails()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
+
+        return set.size();
+    }
+
     public ArrayList<Integer> getOwnedSounds()
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds), new HashSet<String>());
@@ -231,6 +238,13 @@ public class StorageManager {
             owned_sounds.add(Integer.parseInt(s));
 
         return owned_sounds;
+    }
+
+    public int getNumberOfOwnedSounds()
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds), new HashSet<String>());
+
+        return set.size();
     }
 
     public ArrayList<Integer> getOwnedSoundsLabels()

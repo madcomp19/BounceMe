@@ -855,13 +855,14 @@
             <LinearLayout
                 android:id="@+id/linearLayoutAchievements6"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="0dp"
                 android:gravity="center"
                 android:orientation="horizontal"
+                android:paddingTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -879,20 +880,40 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="100"
-                        android:progress="90"
+                        android:max="5"
+                        android:progress="1"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView16"
-                        android:layout_width="70dp"
+                        android:layout_width="45dp"
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/100 Bounces"
+                        android:text="1/5 Trails"
                         android:textAlignment="center"
                         android:textSize="12sp"
                         android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/reward16"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView16"
+                        android:layout_alignStart="@+id/circularProgressBar16"
+                        android:layout_alignLeft="@+id/circularProgressBar16"
+                        android:layout_alignEnd="@+id/circularProgressBar16"
+                        android:layout_alignRight="@+id/circularProgressBar16"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="85dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/corGemas"
+                        android:text="5 Gems"
+                        android:onClick="rewardClick16"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
                 </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -907,20 +928,40 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="1000"
-                        android:progress="30"
+                        android:max="10"
+                        android:progress="6"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView17"
-                        android:layout_width="70dp"
+                        android:layout_width="55dp"
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/1000 Bounces"
+                        android:text="6/10 Trails"
                         android:textAlignment="center"
                         android:textSize="12sp"
                         android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/reward17"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView17"
+                        android:layout_alignStart="@+id/circularProgressBar17"
+                        android:layout_alignLeft="@+id/circularProgressBar17"
+                        android:layout_alignEnd="@+id/circularProgressBar17"
+                        android:layout_alignRight="@+id/circularProgressBar17"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="85dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/corGemas"
+                        android:text="10 Gems"
+                        android:onClick="rewardClick17"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
                 </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -934,23 +975,208 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="5000"
-                        android:progress="300"
+                        android:max="25"
+                        android:progress="10"
                         android:progressDrawable="@drawable/ring_progress_bar" />
 
                     <TextView
                         android:id="@+id/textView18"
-                        android:layout_width="70dp"
+                        android:layout_width="55dp"
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="90/5000 Bounces"
+                        android:text="10/25 Trails"
                         android:textAlignment="center"
                         android:textSize="12sp"
                         android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/reward18"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView18"
+                        android:layout_alignStart="@+id/circularProgressBar18"
+                        android:layout_alignLeft="@+id/circularProgressBar18"
+                        android:layout_alignEnd="@+id/circularProgressBar18"
+                        android:layout_alignRight="@+id/circularProgressBar18"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="85dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/corGemas"
+                        android:text="25 Gems"
+                        android:onClick="rewardClick18"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
                 </RelativeLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAchievements7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="0dp">
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressBar19"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="5"
+                        android:progress="1"
+                        android:progressDrawable="@drawable/ring_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="45dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="1/5 Sounds"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/reward19"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView19"
+                        android:layout_alignStart="@+id/circularProgressBar19"
+                        android:layout_alignLeft="@+id/circularProgressBar19"
+                        android:layout_alignEnd="@+id/circularProgressBar19"
+                        android:layout_alignRight="@+id/circularProgressBar19"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="85dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/corGemas"
+                        android:text="5 Gems"
+                        android:onClick="rewardClick19"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="0dp">
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressBar20"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="20"
+                        android:progress="6"
+                        android:progressDrawable="@drawable/ring_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="6/20 Sounds"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/reward20"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView20"
+                        android:layout_alignStart="@+id/circularProgressBar20"
+                        android:layout_alignLeft="@+id/circularProgressBar20"
+                        android:layout_alignEnd="@+id/circularProgressBar20"
+                        android:layout_alignRight="@+id/circularProgressBar20"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="85dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/corGemas"
+                        android:text="20 Gems"
+                        android:onClick="rewardClick20"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/circularProgressBar21"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="40"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/ring_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="55dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="10/40 Sounds"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/reward21"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView21"
+                        android:layout_alignStart="@+id/circularProgressBar21"
+                        android:layout_alignLeft="@+id/circularProgressBar21"
+                        android:layout_alignEnd="@+id/circularProgressBar21"
+                        android:layout_alignRight="@+id/circularProgressBar21"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="85dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/corGemas"
+                        android:text="50 Gems"
+                        android:onClick="rewardClick21"
+                        android:textAlignment="center"
+                        android:textColor="#FFF" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
         </LinearLayout>
 

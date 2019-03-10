@@ -226,6 +226,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     public void resetStorage(View view){
         storage.resetStorage();
+        coins.setText(storage.getTotalTouches() + "");
+        gems.setText(storage.getTotalGems() + "");
     }
 
     public void startShop(View view)
@@ -327,4 +329,18 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     public void onRewardedVideoCompleted() {
 
     }
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void godMode(View v)
+    {
+        storage.setTotalTouches(100000);
+        storage.addGems(100000);
+        coins.setText(storage.getTotalTouches() + "");
+        gems.setText(storage.getTotalGems() + "");
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 }
