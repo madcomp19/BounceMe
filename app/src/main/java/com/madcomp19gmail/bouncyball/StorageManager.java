@@ -104,6 +104,9 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.collected_achievements), new HashSet<String>());
 
+        if(set.contains(achievement))
+            return;
+
         set.add(achievement + "");
 
         SharedPreferences.Editor editor = prefs.edit();
@@ -146,6 +149,9 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
 
+        if(set.contains(skin))
+            return;
+
         set.add(skin + "");
 
         SharedPreferences.Editor editor = prefs.edit();
@@ -168,6 +174,9 @@ public class StorageManager {
     public void addOwnedSkinLabel(int label)
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins_labels), new HashSet<String>());
+
+        if(set.contains(label))
+            return;
 
         set.add(label + "");
 
@@ -241,6 +250,9 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
 
+        if(set.contains(trail))
+            return;
+
         set.add(trail + "");
 
         SharedPreferences.Editor editor = prefs.edit();
@@ -251,6 +263,9 @@ public class StorageManager {
     public void addOwnedSound(int sound)
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds), new HashSet<String>());
+
+        if(set.contains(sound))
+            return;
 
         set.add(sound + "");
 
@@ -299,6 +314,9 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails_labels), new HashSet<String>());
 
+        if(set.contains(trail_label))
+            return;
+
         set.add(trail_label + "");
 
         SharedPreferences.Editor editor = prefs.edit();
@@ -309,6 +327,9 @@ public class StorageManager {
     public void addOwnedSoundLabel(int sound_label)
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds_labels), new HashSet<String>());
+
+        if(set.contains(sound_label))
+            return;
 
         set.add(sound_label + "");
 

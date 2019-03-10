@@ -203,7 +203,14 @@ public class SoundShop extends AppCompatActivity {
         view_id = view_id.split("_Label")[0].split("_Button")[0];
         //Log.i("TEST", view_id);
 
-        int sound_id = this.getResources().getIdentifier(view_id, "raw", getPackageName());
+        int sound_id;
+
+        if(view_id == "mute")
+            sound_id = 0;
+        else
+            sound_id = this.getResources().getIdentifier(view_id, "raw", getPackageName());
+
+
         int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
         //region
         /*Log.i("skin", view_id);

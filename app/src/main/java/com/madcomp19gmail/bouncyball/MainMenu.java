@@ -35,6 +35,14 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     boolean rewarded = false;
     boolean adsLeft = true;
 
+    private final int default_skin = R.drawable.emoji_0;
+    private final int default_skin_label = R.id.emoji_0_Label;
+    private final int default_sound = 0;
+    private final int default_sound_label = R.id.mute_Label;
+    private final int default_trail = R.drawable.clear;
+    private final int default_trail_label = R.id.trail_25_Label;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +90,36 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         if (adsLeft)
             loadRewardedVideoAd();
+
+
+        initializeShops();
+    }
+
+    private void initializeShops()
+    {
+        if(storage.getSelectedSkin() == 0)
+        {
+            storage.addOwnedSkin(default_skin);
+            storage.addOwnedSkinLabel(default_skin_label);
+            storage.setSelectedSkin(default_skin);
+            storage.setSelectedSkinLabel(default_skin_label);
+        }
+
+        if(storage.getSelectedSound() == 0)
+        {
+            storage.addOwnedSound(default_sound);
+            storage.addOwnedSoundLabel(default_sound_label);
+            storage.setSelectedSound(default_sound);
+            storage.setSelectedSoundLabel(default_sound_label);
+        }
+
+        if(storage.getSelectedTrail() == -10)
+        {
+            storage.addOwnedTrail(default_trail);
+            storage.addOwnedTrailLabel(default_trail_label);
+            storage.setSelectedTrail(default_trail);
+            storage.setSelectedTrailLabel(default_trail_label);
+        }
     }
 
     private void loadRewardedVideoAd() {
