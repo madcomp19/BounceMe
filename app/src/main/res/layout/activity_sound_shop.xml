@@ -197,8 +197,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -210,8 +210,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -223,8 +223,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -236,8 +236,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -249,8 +249,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -352,8 +352,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -365,8 +365,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -378,8 +378,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -391,8 +391,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -404,8 +404,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -507,8 +507,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -520,8 +520,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -533,8 +533,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -546,8 +546,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -559,8 +559,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -662,8 +662,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -675,8 +675,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -688,8 +688,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -701,8 +701,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -714,8 +714,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -816,8 +816,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -829,8 +829,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -842,8 +842,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -855,8 +855,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -868,8 +868,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -970,8 +970,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -983,8 +983,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -996,8 +996,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1009,8 +1009,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1022,8 +1022,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1124,8 +1124,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1137,8 +1137,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1150,8 +1150,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1163,8 +1163,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1176,8 +1176,8 @@
                     android:onClick="onClickSound"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="13dp"
-                    android:paddingLeft="13dp"
+                    android:paddingRight="11dp"
+                    android:paddingLeft="11dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" />
 
@@ -1278,8 +1278,8 @@
                     android:onClick="onClickSound"
                     android:text="100"
                     android:textColor="#FFF"
-                    android:paddingRight="14dp"
-                    android:paddingLeft="14dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
@@ -1291,8 +1291,8 @@
                     android:onClick="onClickSound"
                     android:text="100"
                     android:textColor="#FFF"
-                    android:paddingRight="14dp"
-                    android:paddingLeft="14dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
@@ -1304,8 +1304,8 @@
                     android:onClick="onClickSound"
                     android:text="100"
                     android:textColor="#FFF"
-                    android:paddingRight="14dp"
-                    android:paddingLeft="14dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
@@ -1317,8 +1317,8 @@
                     android:onClick="onClickSound"
                     android:text="100"
                     android:textColor="#FFF"
-                    android:paddingRight="14dp"
-                    android:paddingLeft="14dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
@@ -1330,8 +1330,8 @@
                     android:onClick="onClickSound"
                     android:text="100"
                     android:textColor="#FFF"
-                    android:paddingRight="14dp"
-                    android:paddingLeft="14dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:textAlignment="center" />
 
