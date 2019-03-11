@@ -39,7 +39,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private final int default_skin_label = R.id.emoji_0_Label;
     private final int default_sound = 0;
     private final int default_sound_label = R.id.mute_Label;
-    private final int default_trail = R.drawable.clear;
+    private final int default_trail = -1;
     private final int default_trail_label = R.id.trail_25_Label;
 
 
