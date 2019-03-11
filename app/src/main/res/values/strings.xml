@@ -37,5 +37,6 @@
     <string name="play_sound">Play Sound</string>
     <string name="answer">Answer</string>
     <string name="place_holder_text">Place Holder Text</string>
+    <string name="consecutive_days">Consecutive Days</string>
 
 </resources>

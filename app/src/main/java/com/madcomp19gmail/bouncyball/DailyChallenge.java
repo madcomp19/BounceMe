@@ -155,7 +155,7 @@ public class DailyChallenge extends AppCompatActivity {
             //change the corresponding images
             id = getResources().getIdentifier("consecutive_day_" + i, "id", getPackageName());
             day_counter = findViewById(id);
-            day_counter.setImageResource(R.drawable.btn_rating_star_off_pressed);
+            day_counter.setImageResource(R.drawable.selected_icon);
         }
     }
 
@@ -193,7 +193,7 @@ public class DailyChallenge extends AppCompatActivity {
             //change the corresponding images
             id = getResources().getIdentifier("consecutive_day_" + i, "id", getPackageName());
             day_counter = findViewById(id);
-            day_counter.setImageResource(R.drawable.btn_rating_star_off_normal);
+            day_counter.setImageResource(R.drawable.cross_icon);
         }
     }
 
