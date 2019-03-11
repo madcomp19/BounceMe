@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -77,17 +78,23 @@ public class DailyChallenge extends AppCompatActivity {
     }
 
     public void onClickSubmit(View view) {
-        //disable all buttons
-        ((RadioGroup) findViewById(R.id.radioGroup)).setEnabled(false);
-        ((Button) findViewById(R.id.submitButton)).setEnabled(false);
-
         int btnId = ((RadioGroup) findViewById(R.id.radioGroup)).getCheckedRadioButtonId();
-        RadioButton btn = findViewById(btnId);
 
-        if ((int) btn.getTag() == soundId) {
-            rightAnswer();
-        } else {
-            wrongAnswer();
+        if(btnId == -1){
+            Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            //disable all buttons
+            ((RadioGroup) findViewById(R.id.radioGroup)).setEnabled(false);
+            ((Button) findViewById(R.id.submitButton)).setEnabled(false);
+
+            RadioButton btn = findViewById(btnId);
+
+            if ((int) btn.getTag() == soundId) {
+                rightAnswer();
+            } else {
+                wrongAnswer();
+            }
         }
     }
 
