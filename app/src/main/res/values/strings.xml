@@ -34,5 +34,8 @@
     <string name="selected_sound_label">SelectedSoundLabel</string>
     <string name="linearLayout">LinearLayout</string>
     <string name="musicSetting">MusicSetting</string>
+    <string name="play_sound">Play Sound</string>
+    <string name="answer">Answer</string>
+    <string name="place_holder_text">Place Holder Text</string>
 
 </resources>
