@@ -1,11 +1,9 @@
 package com.madcomp19gmail.bouncyball;
 
-import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -42,8 +40,7 @@ public class SkinShop extends FragmentActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if(storageManager.getMusicSetting())
-        {
+        if (storageManager.getMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -56,8 +53,7 @@ public class SkinShop extends FragmentActivity {
         coins.setText(storageManager.getTotalTouches() + "");
         gems.setText(storageManager.getTotalGems() + "");
 
-        if(storageManager.getMusicSetting())
-        {
+        if (storageManager.getMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -67,12 +63,11 @@ public class SkinShop extends FragmentActivity {
     protected void onPause() {
         super.onPause();
 
-        if(storageManager.getMusicSetting())
+        if (storageManager.getMusicSetting())
             mediaPlayerManager.pause();
     }
 
     public void onClickSkin(View view) {
-
         String view_id = view.getResources().getResourceEntryName(view.getId());
         view_id = view_id.split("_Label")[0].split("_Button")[0];
         //Log.i("TEST", view_id);
@@ -92,36 +87,45 @@ public class SkinShop extends FragmentActivity {
 
     public void buyOrSetSkin(int skin_id, int label_id) {
         StorageManager storageManager = StorageManager.getInstance();
+        int selectedLabelId = storageManager.getSelectedSkinLabel();
+        TextView new_label = findViewById(label_id);
+        TextView old_label = findViewById(selectedLabelId);
 
+        //if the skin is already owned, set the label as "Selected"
         if (storageManager.getOwnedSkins().contains(skin_id)) {
+            //save the new selected skin id
             storageManager.setSelectedSkin(skin_id);
 
-            ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
+            //set the previous selected skin label as "Owned"
+            if(old_label != null)
+                old_label.setText("Owned");
 
+            //save the new selected label id
             storageManager.setSelectedSkinLabel(label_id);
 
-            ((TextView) findViewById(label_id)).setText("Selected");
-        } else {
-            TextView label_text = (TextView) findViewById(label_id);
-            int price = Integer.parseInt(label_text.getText() + "");
-            int total_touches = storageManager.getTotalTouches();
+            //set the new label as "Selected"
+            new_label.setText("Selected");
+        } else { //if the skin is not owned
+            int price = Integer.parseInt(new_label.getText() + ""); //get price
+            int total_touches = storageManager.getTotalTouches(); //get money
 
             if (total_touches >= price) {
                 storageManager.setTotalTouches(total_touches - price);
                 storageManager.addOwnedSkin(skin_id);
-                storageManager.setSelectedSkin(skin_id);
                 storageManager.addOwnedSkinLabel(label_id);
-
-                if (storageManager.getSelectedSkinLabel() != 0)
-                    ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
-
+                storageManager.setSelectedSkin(skin_id);
                 storageManager.setSelectedSkinLabel(label_id);
 
-                label_text.setText("Selected");
-                Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                //if (storageManager.getSelectedSkinLabel() != 0)
+                  //  ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
+                if(old_label != null)
+                    old_label.setText("Owned");
+
+                new_label.setText("Selected");
+                Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
                 coins.setText(storageManager.getTotalTouches() + "");
             } else
-                Toast.makeText(this, "You need " + (price - total_touches) + " more touches", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "You need " + (price - total_touches) + " more touches", Toast.LENGTH_SHORT).show();
         }
     }
 }

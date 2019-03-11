@@ -1,6 +1,7 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,20 +12,18 @@ import java.util.ArrayList;
 
 public class SkinFragment extends Fragment {
 
-    private Bundle bundle;
-    private TextView coins;
     private StorageManager storageManager;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view;
-        bundle = getArguments();
+        Bundle bundle = getArguments();
         int pageNumber = bundle.getInt("pageNumber");
-        coins = (TextView) getActivity().findViewById(R.id.coins);
         storageManager = StorageManager.getInstance();
+        String packageName = getContext().getPackageName();
 
-        int fragment_id = this.getResources().getIdentifier("fragment_skin_shop_" + pageNumber,
-                "layout", getActivity().getPackageName());
+        int fragment_id = getResources().getIdentifier("fragment_skin_shop_" + pageNumber,
+                "layout", packageName);
 
         view = inflater.inflate(fragment_id, container, false);
         setOwnedSkinsPage(view);

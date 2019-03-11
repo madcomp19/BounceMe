@@ -104,7 +104,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.collected_achievements), new HashSet<String>());
 
-        if(set.contains(achievement))
+        if(set.contains(Integer.toString(achievement)))
             return;
 
         set.add(achievement + "");
@@ -149,7 +149,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
 
-        if(set.contains(skin))
+        if(set.contains(Integer.toString(skin)))
             return;
 
         set.add(skin + "");
@@ -175,7 +175,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins_labels), new HashSet<String>());
 
-        if(set.contains(label))
+        if(set.contains(Integer.toString(label)))
             return;
 
         set.add(label + "");
@@ -264,7 +264,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
 
-        if(set.contains(trail))
+        if(set.contains(Integer.toString(trail)))
             return;
 
         set.add(trail + "");
@@ -278,7 +278,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds), new HashSet<String>());
 
-        if(set.contains(sound))
+        if(set.contains(Integer.toString(sound)))
             return;
 
         set.add(sound + "");
@@ -328,7 +328,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails_labels), new HashSet<String>());
 
-        if(set.contains(trail_label))
+        if(set.contains(Integer.toString(trail_label)))
             return;
 
         set.add(trail_label + "");
@@ -342,7 +342,7 @@ public class StorageManager {
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_sounds_labels), new HashSet<String>());
 
-        if(set.contains(sound_label))
+        if(set.contains(Integer.toString(sound_label)))
             return;
 
         set.add(sound_label + "");
