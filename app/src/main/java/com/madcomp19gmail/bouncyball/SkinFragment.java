@@ -40,11 +40,22 @@ public class SkinFragment extends Fragment {
             View v = viewGroup.getChildAt(i);
 
             if (v instanceof TextView) {
+
+                TextView label = ((TextView) v);
+
                 if (label_ids.contains(v.getId()))
-                    ((TextView) v).setText("Owned");
+                {
+                    label.setText("Owned");
+                    label.setCompoundDrawables(null,null,null,null);
+                    label.setPadding(0,0,0,0);
+                }
 
                 if (storageManager.getSelectedSkinLabel() == v.getId())
-                    ((TextView) v).setText("Selected");
+                {
+                    label.setText("");
+                    label.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label.setPadding(0,10,0,0);
+                }
             } else if (v instanceof ViewGroup)
                 setOwnedSkinsPage(v);
         }
