@@ -18,12 +18,27 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="#424242"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046"
         app:srcCompat="@drawable/sound_shop_title" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/homeButton2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="onClickHome"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_icon" />
 
     <TextView
         android:id="@+id/coins"
@@ -79,12 +94,12 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="8dp"
         android:background="#424242"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/gems">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -194,65 +209,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/car_horn_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/stab_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/basketball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/boing_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -349,65 +364,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/drop_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/football_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/pingpong_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/pop_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -504,65 +519,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/thud_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/tennis_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/frying_pan_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/arrow_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -659,65 +674,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/glass_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/slap_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/coin_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/cash_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -813,65 +828,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/punch_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/windows_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/horn_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/roipe_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -967,65 +982,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/noice_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/nope_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/oof_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/ree_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -1074,7 +1089,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow"/>
+                    android:src="@drawable/rainbow" />
 
                 <ImageButton
                     android:id="@+id/meow_Button"
@@ -1084,7 +1099,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow"/>
+                    android:src="@drawable/rainbow" />
 
                 <ImageButton
                     android:id="@+id/laugh_Button"
@@ -1094,7 +1109,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow"/>
+                    android:src="@drawable/rainbow" />
 
 
             </LinearLayout>
@@ -1121,65 +1136,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/yeet_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/bark_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/meow_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/laugh_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
@@ -1275,65 +1290,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="100"
-                    android:textColor="#FFF"
-                    android:paddingRight="9dp"
-                    android:paddingLeft="9dp"
                     android:drawableRight="@drawable/gem_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/laser_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="100"
-                    android:textColor="#FFF"
-                    android:paddingRight="9dp"
-                    android:paddingLeft="9dp"
                     android:drawableRight="@drawable/gem_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/gun_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="100"
-                    android:textColor="#FFF"
-                    android:paddingRight="9dp"
-                    android:paddingLeft="9dp"
                     android:drawableRight="@drawable/gem_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/ricochet_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="100"
-                    android:textColor="#FFF"
-                    android:paddingRight="9dp"
-                    android:paddingLeft="9dp"
                     android:drawableRight="@drawable/gem_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
                 <TextView
                     android:id="@+id/pew_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSound"
-                    android:text="100"
-                    android:textColor="#FFF"
-                    android:paddingRight="9dp"
-                    android:paddingLeft="9dp"
                     android:drawableRight="@drawable/gem_icon_small"
-                    android:textAlignment="center" />
+                    android:onClick="onClickSound"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
