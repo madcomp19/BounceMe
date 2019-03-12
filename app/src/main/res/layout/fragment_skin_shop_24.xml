@@ -13,10 +13,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" > 
+            android:orientation="vertical" >
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins24_171"
-                android:layout_width="match_parent"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -25,7 +26,8 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <ImageButton
                     android:id="@+id/food_9_Button"
                     android:layout_width="50dp"
@@ -35,6 +37,7 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/food_9" />
+
                 <ImageButton
                     android:id="@+id/orange_Button"
                     android:layout_width="50dp"
@@ -44,6 +47,7 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/orange" />
+
                 <ImageButton
                     android:id="@+id/watermelon_Button"
                     android:layout_width="50dp"
@@ -54,9 +58,10 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/watermelon" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins24_172"
-                android:layout_width="match_parent"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -65,43 +70,46 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <TextView
                     android:id="@+id/food_9_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="28dp"
-                    android:paddingLeft="28dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
                 <TextView
                     android:id="@+id/orange_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="28dp"
-                    android:paddingLeft="28dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
                 <TextView
                     android:id="@+id/watermelon_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="28dp"
-                    android:paddingLeft="28dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

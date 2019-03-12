@@ -90,7 +90,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/fiji_Label"
@@ -98,7 +102,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/finland_Label"
@@ -106,7 +114,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/france_Label"
@@ -114,7 +126,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/french_polynesia_Label"
@@ -122,7 +138,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
@@ -201,7 +221,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/galapagos_islands_Label"
@@ -209,7 +233,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/gambia_Label"
@@ -217,7 +245,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/georgia_Label"
@@ -225,7 +257,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/germany_Label"
@@ -233,7 +269,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
@@ -312,7 +352,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/gibraltar_Label"
@@ -320,7 +364,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/greece_Label"
@@ -328,7 +376,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/greenland_Label"
@@ -336,7 +388,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/grenada_Label"
@@ -344,7 +400,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
@@ -353,12 +413,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/guam_Button"
                     android:layout_width="50dp"
@@ -423,7 +483,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/guatemala_Label"
@@ -431,7 +495,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/guernsey_Label"
@@ -439,7 +507,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/guinea_Label"
@@ -447,7 +519,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/guinea_bissau_Label"
@@ -455,7 +531,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
         </LinearLayout>

@@ -145,9 +145,10 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins8_55"
-                android:layout_width="match_parent"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -156,7 +157,8 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <ImageButton
                     android:id="@+id/animal_7_Button"
                     android:layout_width="50dp"
@@ -166,6 +168,7 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/animal_7" />
+
                 <ImageButton
                     android:id="@+id/animal_8_Button"
                     android:layout_width="50dp"
@@ -175,6 +178,7 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/animal_8" />
+
                 <ImageButton
                     android:id="@+id/animal_9_Button"
                     android:layout_width="50dp"
@@ -187,7 +191,7 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins8_56"
-                android:layout_width="match_parent"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -205,8 +209,8 @@
                     android:onClick="onClickSkin"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="28dp"
-                    android:paddingLeft="28dp"
+                    android:paddingRight="7dp"
+                    android:paddingLeft="7dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
@@ -217,8 +221,8 @@
                     android:onClick="onClickSkin"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="28dp"
-                    android:paddingLeft="28dp"
+                    android:paddingRight="7dp"
+                    android:paddingLeft="7dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
@@ -229,8 +233,8 @@
                     android:onClick="onClickSkin"
                     android:text="1000"
                     android:textColor="#FFF"
-                    android:paddingRight="28dp"
-                    android:paddingLeft="28dp"
+                    android:paddingRight="7dp"
+                    android:paddingLeft="7dp"
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>

@@ -27,14 +27,14 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <ImageButton
-                    android:id="@+id/baseball_ball_Button"
+                    android:id="@+id/football_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/baseball_ball" />
+                    android:src="@drawable/football" />
                 <ImageButton
                     android:id="@+id/basketball_ball_Button"
                     android:layout_width="50dp"
@@ -45,32 +45,33 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/basketball_ball" />
                 <ImageButton
-                    android:id="@+id/beach_ball_Button"
+                    android:id="@+id/tennis_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/beach_ball" />
+                    android:src="@drawable/tennis_ball" />
                 <ImageButton
-                    android:id="@+id/bowling_ball_Button"
+                    android:id="@+id/baseball_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/bowling_ball" />
+                    android:src="@drawable/baseball_ball" />
                 <ImageButton
-                    android:id="@+id/diveball_Button"
+                    android:id="@+id/volleyball_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/diveball" />
+                    android:src="@drawable/volleyball_ball" />
+
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins27_186"
@@ -85,7 +86,7 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <TextView
-                    android:id="@+id/baseball_ball_Label"
+                    android:id="@+id/football_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -109,7 +110,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/beach_ball_Label"
+                    android:id="@+id/tennis_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -121,7 +122,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/bowling_ball_Label"
+                    android:id="@+id/baseball_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -133,7 +134,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/diveball_Label"
+                    android:id="@+id/volleyball_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -158,14 +159,23 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <ImageButton
-                    android:id="@+id/football_Button"
+                    android:id="@+id/ping_pong_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/football" />
+                    android:src="@drawable/ping_pong_ball" />
+                <ImageButton
+                    android:id="@+id/bowling_ball_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bowling_ball" />
                 <ImageButton
                     android:id="@+id/golf_ball_Button"
                     android:layout_width="50dp"
@@ -176,32 +186,24 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/golf_ball" />
                 <ImageButton
-                    android:id="@+id/greatball_Button"
+                    android:id="@+id/beach_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/greatball" />
+                    android:src="@drawable/beach_ball" />
                 <ImageButton
-                    android:id="@+id/masterball_Button"
+                    android:id="@+id/pool_ball_0_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/masterball" />
-                <ImageButton
-                    android:id="@+id/multicolor1_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/multicolor1" />
+                    android:src="@drawable/pool_ball_0" />
+
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins27_188"
@@ -216,7 +218,19 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <TextView
-                    android:id="@+id/football_Label"
+                    android:id="@+id/ping_pong_ball_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/bowling_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -240,7 +254,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/greatball_Label"
+                    android:id="@+id/beach_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -252,19 +266,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/masterball_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/multicolor1_Label"
+                    android:id="@+id/pool_ball_0_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -289,42 +291,6 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <ImageButton
-                    android:id="@+id/nestball_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/nestball" />
-                <ImageButton
-                    android:id="@+id/ping_pong_ball_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ping_pong_ball" />
-                <ImageButton
-                    android:id="@+id/pokeball_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pokeball" />
-                <ImageButton
-                    android:id="@+id/pool_ball_0_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_0" />
-                <ImageButton
                     android:id="@+id/pool_ball_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -333,6 +299,42 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pool_ball_1" />
+                <ImageButton
+                    android:id="@+id/pool_ball_2_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_2" />
+                <ImageButton
+                    android:id="@+id/pool_ball_3_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_3" />
+                <ImageButton
+                    android:id="@+id/pool_ball_4_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_4" />
+                <ImageButton
+                    android:id="@+id/pool_ball_5_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_5" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins27_190"
@@ -347,55 +349,55 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <TextView
-                    android:id="@+id/nestball_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/ping_pong_ball_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/pokeball_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/pool_ball_0_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
                     android:id="@+id/pool_ball_1_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_2_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_3_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_4_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_5_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -420,6 +422,42 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <ImageButton
+                    android:id="@+id/pool_ball_6_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_6" />
+                <ImageButton
+                    android:id="@+id/pool_ball_7_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_7" />
+                <ImageButton
+                    android:id="@+id/pool_ball_8_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_8" />
+                <ImageButton
+                    android:id="@+id/pool_ball_9_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pool_ball_9" />
+                <ImageButton
                     android:id="@+id/pool_ball_10_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -428,42 +466,6 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pool_ball_10" />
-                <ImageButton
-                    android:id="@+id/pool_ball_11_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_11" />
-                <ImageButton
-                    android:id="@+id/pool_ball_12_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_12" />
-                <ImageButton
-                    android:id="@+id/pool_ball_13_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_13" />
-                <ImageButton
-                    android:id="@+id/pool_ball_14_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_14" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins27_192"
@@ -478,55 +480,55 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <TextView
+                    android:id="@+id/pool_ball_6_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_7_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_8_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
+                    android:id="@+id/pool_ball_9_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSkin"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:textAlignment="center" /> 
+                <TextView
                     android:id="@+id/pool_ball_10_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/pool_ball_11_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/pool_ball_12_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/pool_ball_13_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="6dp"
-                    android:paddingLeft="6dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/pool_ball_14_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

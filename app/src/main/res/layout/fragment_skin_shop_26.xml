@@ -145,9 +145,10 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins26_183"
-                android:layout_width="match_parent"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -156,7 +157,8 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <ImageButton
                     android:id="@+id/smiley_ball_Button"
                     android:layout_width="50dp"
@@ -166,15 +168,7 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/smiley_ball" />
-                <ImageButton
-                    android:id="@+id/space_3_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/space_3" />
+
                 <ImageButton
                     android:id="@+id/star_coin_Button"
                     android:layout_width="50dp"
@@ -184,6 +178,7 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/star_coin" />
+
                 <ImageButton
                     android:id="@+id/steering_wheel_Button"
                     android:layout_width="50dp"
@@ -194,9 +189,10 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/steering_wheel" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins26_184"
-                android:layout_width="match_parent"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -205,55 +201,46 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <TextView
                     android:id="@+id/smiley_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
-                <TextView
-                    android:id="@+id/space_3_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
                     android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
                 <TextView
                     android:id="@+id/star_coin_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
                 <TextView
                     android:id="@+id/steering_wheel_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

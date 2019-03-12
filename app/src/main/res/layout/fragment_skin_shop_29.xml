@@ -158,14 +158,14 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <ImageButton
-                    android:id="@+id/jupiter_Button"
+                    android:id="@+id/moon_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/jupiter" />
+                    android:src="@drawable/moon" />
                 <ImageButton
                     android:id="@+id/mars_Button"
                     android:layout_width="50dp"
@@ -176,6 +176,15 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/mars" />
                 <ImageButton
+                    android:id="@+id/jupiter_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSkin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/jupiter" />
+                <ImageButton
                     android:id="@+id/mercury_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -184,15 +193,6 @@
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
                     android:src="@drawable/mercury" />
-                <ImageButton
-                    android:id="@+id/moon_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/moon" />
                 <ImageButton
                     android:id="@+id/neptune_Button"
                     android:layout_width="50dp"
@@ -216,7 +216,7 @@
                 android:orientation="horizontal"
                 android:padding="0dp" >
                 <TextView
-                    android:id="@+id/jupiter_Label"
+                    android:id="@+id/moon_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -240,7 +240,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/mercury_Label"
+                    android:id="@+id/jupiter_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -252,7 +252,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/moon_Label"
+                    android:id="@+id/mercury_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -298,23 +298,24 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/pluto" />
                 <ImageButton
-                    android:id="@+id/space_1_Button"
+                    android:id="@+id/uranus_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/space_1" />
+                    android:src="@drawable/uranus" />
+
                 <ImageButton
-                    android:id="@+id/space_2_Button"
+                    android:id="@+id/venus_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/space_2" />
+                    android:src="@drawable/venus" />
                 <ImageButton
                     android:id="@+id/space_4_Button"
                     android:layout_width="50dp"
@@ -359,7 +360,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/space_1_Label"
+                    android:id="@+id/uranus_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -371,7 +372,7 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
-                    android:id="@+id/space_2_Label"
+                    android:id="@+id/venus_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -407,9 +408,10 @@
                     android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins29_205"
-                android:layout_width="match_parent"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -418,29 +420,32 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <ImageButton
-                    android:id="@+id/uranus_Button"
+                    android:id="@+id/space_3_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/uranus" />
+                    android:src="@drawable/space_3" />
+
                 <ImageButton
-                    android:id="@+id/venus_Button"
+                    android:id="@+id/space_2_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/venus" />
+                    android:src="@drawable/space_2" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/linearLayoutSkins29_206"
-                android:layout_width="match_parent"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -449,31 +454,33 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp" >
+                android:padding="0dp">
+
                 <TextView
-                    android:id="@+id/uranus_Label"
+                    android:id="@+id/space_3_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="60dp"
-                    android:paddingLeft="60dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
                 <TextView
-                    android:id="@+id/venus_Label"
+                    android:id="@+id/space_2_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSkin"
-                    android:text="1000"
-                    android:textColor="#FFF"
-                    android:paddingRight="60dp"
-                    android:paddingLeft="60dp"
                     android:drawableRight="@drawable/coin_icon_small"
-                    android:textAlignment="center" /> 
+                    android:onClick="onClickSkin"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

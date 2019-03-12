@@ -20,12 +20,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/guyana_Button"
                     android:layout_width="50dp"
@@ -78,19 +78,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/guyana_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/haiti_Label"
@@ -98,7 +102,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/hawaii_Label"
@@ -106,7 +114,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/honduras_Label"
@@ -114,7 +126,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/hong_kong_Label"
@@ -122,7 +138,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
@@ -131,12 +151,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/hungary_Button"
                     android:layout_width="50dp"
@@ -194,14 +214,18 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/hungary_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/iceland_Label"
@@ -209,7 +233,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/india_Label"
@@ -217,7 +245,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/indonesia_Label"
@@ -225,7 +257,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/iran_Label"
@@ -233,7 +269,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
@@ -242,12 +282,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/iraq_Button"
                     android:layout_width="50dp"
@@ -305,14 +345,18 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/iraq_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/ireland_Label"
@@ -320,7 +364,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/isle_of_man_Label"
@@ -328,7 +376,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/israel_Label"
@@ -336,7 +388,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/italy_Label"
@@ -344,7 +400,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
             <LinearLayout
@@ -353,12 +413,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/ivory_coast_Button"
                     android:layout_width="50dp"
@@ -416,14 +476,18 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/ivory_coast_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/jamaica_Label"
@@ -431,7 +495,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/japan_Label"
@@ -439,7 +507,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/jersey_Label"
@@ -447,7 +519,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
                 <TextView
                     android:id="@+id/jordan_Label"
@@ -455,7 +531,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"
                     android:textAlignment="center" /> 
             </LinearLayout>
         </LinearLayout>

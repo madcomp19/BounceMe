@@ -83,7 +83,7 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/maldives_Label"
                     android:layout_width="0dp"
@@ -214,7 +214,7 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/mauritania_Label"
                     android:layout_width="0dp"
@@ -345,7 +345,7 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/moldova_Label"
                     android:layout_width="0dp"
@@ -476,7 +476,7 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/morocco_Label"
                     android:layout_width="0dp"
