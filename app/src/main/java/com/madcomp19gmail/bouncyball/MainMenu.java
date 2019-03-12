@@ -2,6 +2,7 @@ package com.madcomp19gmail.bouncyball;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener {
+public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener{
 
     //private static int touches;
     private StorageManager storage;
@@ -321,6 +322,29 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     public void onRewardedVideoCompleted() {
 
     }
+
+    /*private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener(){
+
+        public void onAudioFocusChange(int focusChange)
+        {
+            if(focusChange <= 0)
+                mediaPlayerManager.pause(); //LOSS -> PAUSE
+            else
+                mediaPlayerManager.play(); //GAIN -> PLAY
+        }
+    };
+    AudioManager audioManager = (AudioManager)getApplicationContext(). getSystemService(this.AUDIO_SERVICE);
+
+    int result = audioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC,
+            AudioManager.AUDIOFOCUS_GAIN);
+    @Override
+    public void onAudioFocusChange(int focusChange)
+    {
+        if(focusChange <= 0)
+            mediaPlayerManager.pause(); //LOSS -> PAUSE
+        else
+            mediaPlayerManager.play(); //GAIN -> PLAY
+    }*/
 
 
 
