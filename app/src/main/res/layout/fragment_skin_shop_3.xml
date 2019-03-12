@@ -20,12 +20,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/emoji_43_Button"
                     android:layout_width="50dp"
@@ -83,47 +83,62 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/emoji_43_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_44_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_45_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_46_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_47_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins3_19"
@@ -131,12 +146,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/emoji_48_Button"
                     android:layout_width="50dp"
@@ -194,47 +209,62 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/emoji_48_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_49_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_50_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_52_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_53_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins3_21"
@@ -242,12 +272,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/emoji_54_Button"
                     android:layout_width="50dp"
@@ -305,47 +335,62 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/emoji_54_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_55_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_56_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_57_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_58_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins3_23"
@@ -353,12 +398,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/emoji_60_Button"
                     android:layout_width="50dp"
@@ -416,47 +461,62 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/emoji_60_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_61_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_62_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_63_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
                 <TextView
                     android:id="@+id/emoji_64_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="onClickSkin"
-                    android:text="80"
-                    android:textAlignment="center" /> 
+                    android:text="1000"
+                    android:textColor="#FFF"
+                    android:paddingRight="6dp"
+                    android:paddingLeft="6dp"
+                    android:drawableRight="@drawable/coin_icon_small"                    android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

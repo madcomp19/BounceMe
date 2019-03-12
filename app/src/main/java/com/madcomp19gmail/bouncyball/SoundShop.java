@@ -65,138 +65,6 @@ public class SoundShop extends AppCompatActivity {
         }
     }
 
-    //region
-    /*public void onClickSound(View view)
-    {
-        switch (view.getId()) {
-            case R.id.trail_1_Button:
-            case R.id.trail_1_Label:
-                buyOrSetSound(R.integer.trail_1, R.id.trail_1_Label);
-                break;
-
-            case R.id.trail_2_Button:
-            case R.id.trail_2_Label:
-                buyOrSetSound(R.integer.trail_2, R.id.trail_2_Label);
-                break;
-
-            case R.id.trail_3_Button:
-            case R.id.trail_3_Label:
-                buyOrSetSound(R.integer.trail_3, R.id.trail_3_Label);
-                break;
-
-            case R.id.trail_4_Button:
-            case R.id.trail_4_Label:
-                buyOrSetSound(R.integer.trail_4, R.id.trail_4_Label);
-                break;
-
-            case R.id.trail_5_Button:
-            case R.id.trail_5_Label:
-                buyOrSetSound(R.integer.trail_5, R.id.trail_5_Label);
-                break;
-
-            case R.id.trail_6_Button:
-            case R.id.trail_6_Label:
-                buyOrSetSound(R.integer.trail_6, R.id.trail_6_Label);
-                break;
-
-            case R.id.trail_7_Button:
-            case R.id.trail_7_Label:
-                buyOrSetSound(R.integer.trail_7, R.id.trail_7_Label);
-                break;
-
-            case R.id.trail_8_Button:
-            case R.id.trail_8_Label:
-                buyOrSetSound(R.integer.trail_8, R.id.trail_8_Label);
-                break;
-
-            case R.id.trail_9_Button:
-            case R.id.trail_9_Label:
-                buyOrSetSound(R.integer.trail_9, R.id.trail_9_Label);
-                break;
-
-            case R.id.trail_10_Button:
-            case R.id.trail_10_Label:
-                buyOrSetSound(R.integer.trail_10, R.id.trail_10_Label);
-                break;
-
-            case R.id.trail_11_Button:
-            case R.id.trail_11_Label:
-                buyOrSetSound(R.integer.trail_11, R.id.trail_11_Label);
-                break;
-
-            case R.id.trail_12_Button:
-            case R.id.trail_12_Label:
-                buyOrSetSound(R.integer.trail_12, R.id.trail_12_Label);
-                break;
-
-            case R.id.trail_13_Button:
-            case R.id.trail_13_Label:
-                buyOrSetSound(R.integer.trail_13, R.id.trail_13_Label);
-                break;
-
-            case R.id.trail_14_Button:
-            case R.id.trail_14_Label:
-                buyOrSetSound(R.integer.trail_14, R.id.trail_14_Label);
-                break;
-
-            case R.id.trail_15_Button:
-            case R.id.trail_15_Label:
-                buyOrSetSound(R.integer.trail_15, R.id.trail_15_Label);
-                break;
-
-            case R.id.trail_16_Button:
-            case R.id.trail_16_Label:
-                buyOrSetSound(R.integer.trail_16, R.id.trail_16_Label);
-                break;
-
-            case R.id.trail_17_Button:
-            case R.id.trail_17_Label:
-                buyOrSetSound(R.integer.trail_17, R.id.trail_17_Label);
-                break;
-
-            case R.id.trail_18_Button:
-            case R.id.trail_18_Label:
-                buyOrSetSound(R.integer.trail_18, R.id.trail_18_Label);
-                break;
-
-            case R.id.trail_19_Button:
-            case R.id.trail_19_Label:
-                buyOrSetSound(R.integer.trail_19, R.id.trail_19_Label);
-                break;
-
-            case R.id.trail_20_Button:
-            case R.id.trail_20_Label:
-                buyOrSetSound(R.integer.trail_20, R.id.trail_20_Label);
-                break;
-
-            case R.id.trail_21_Button:
-            case R.id.trail_21_Label:
-                buyOrSetSound(R.integer.trail_21, R.id.trail_21_Label);
-                break;
-
-            case R.id.trail_22_Button:
-            case R.id.trail_22_Label:
-                buyOrSetSound(R.integer.trail_22, R.id.trail_22_Label);
-                break;
-
-            case R.id.trail_23_Button:
-            case R.id.trail_23_Label:
-                buyOrSetSound(R.integer.trail_23, R.id.trail_23_Label);
-                break;
-
-            case R.id.trail_24_Button:
-            case R.id.trail_24_Label:
-                buyOrSetSound(R.integer.trail_24, R.id.trail_24_Label);
-                break;
-
-            case R.id.trail_25_Button:
-            case R.id.trail_25_Label:
-                buyOrSetSound(R.integer.trail_25, R.id.trail_25_Label);
-                break;
-        }
-    }*/
-    //endregion
-
     public void onClickSound(View view) {
 
         String view_id = view.getResources().getResourceEntryName(view.getId());
@@ -239,7 +107,7 @@ public class SoundShop extends AppCompatActivity {
 
             storageManager.setSelectedSoundLabel(label_id);
 
-            ((TextView) findViewById(label_id)).setText("Selected");
+            //((TextView) findViewById(label_id)).setText("Selected");
             ((TextView) findViewById(label_id)).setText("");
             ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
             ((TextView) findViewById(label_id)).setPadding(0,10,0,0);
