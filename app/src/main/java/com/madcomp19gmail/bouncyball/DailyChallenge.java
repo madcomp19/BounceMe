@@ -29,6 +29,8 @@ public class DailyChallenge extends AppCompatActivity {
     private SoundPoolManager soundPoolManager;
     private Random rand;
     private int soundId;
+    private ArrayList<RadioButton> radioButtons;
+    private Button playSoundButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class DailyChallenge extends AppCompatActivity {
         rand = new Random();
         int chosenSoundIndex = rand.nextInt((sounds.size()));
 
+        radioButtons = new ArrayList<>();
+        initializeButtons();
         setupSound(sounds, chosenSoundIndex);
         setupChoices(sounds, chosenSoundIndex);
     }
@@ -79,6 +83,15 @@ public class DailyChallenge extends AppCompatActivity {
 
     public void onClickSubmit(View view) {
         int btnId = ((RadioGroup) findViewById(R.id.radioGroup)).getCheckedRadioButtonId();
+        String todays_date = prefs.getTodayDateString();
+        String last_daily = prefs.getLastDailyChallengeDateString();
+
+        //if the player has played the daily challenge today
+        if (todays_date.equals(last_daily)) {
+            Toast toast = Toast.makeText(getApplicationContext(), "Come back tomorrow!", Toast.LENGTH_SHORT);
+            toast.show();
+            return;
+        }
 
         if(btnId == -1){
             Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show();
@@ -98,18 +111,22 @@ public class DailyChallenge extends AppCompatActivity {
         }
     }
 
+    private void initializeButtons(){
+        radioButtons.add((RadioButton) findViewById(R.id.radioButton));
+        radioButtons.add((RadioButton) findViewById(R.id.radioButton2));
+        radioButtons.add((RadioButton) findViewById(R.id.radioButton3));
+        radioButtons.add((RadioButton) findViewById(R.id.radioButton4));
+
+        playSoundButton = findViewById(R.id.playSoundButton);
+    }
+
     private void setupChoices(ArrayList<String> list, int index) {
-        ArrayList<RadioButton> buttons = new ArrayList<>();
         ArrayList<String> selectedNames = new ArrayList<>();
         String aux = "";
-        buttons.add((RadioButton) findViewById(R.id.radioButton));
-        buttons.add((RadioButton) findViewById(R.id.radioButton2));
-        buttons.add((RadioButton) findViewById(R.id.radioButton3));
-        buttons.add((RadioButton) findViewById(R.id.radioButton4));
 
         selectedNames.add(formatStringUnderscore(list.get(index))); //add the selected sound for the challenge
 
-        for (RadioButton btn : buttons) {
+        for (RadioButton btn : radioButtons) {
             btn.setTag(0);
             aux = formatStringUnderscore(list.get(rand.nextInt(list.size())));
 
@@ -122,8 +139,8 @@ public class DailyChallenge extends AppCompatActivity {
         }
 
         int ind = rand.nextInt(4);
-        buttons.get(ind).setTag(soundId);
-        buttons.get(ind).setText(formatStringUnderscore(list.get(index)));
+        radioButtons.get(ind).setTag(soundId);
+        radioButtons.get(ind).setText(formatStringUnderscore(list.get(index)));
     }
 
     private void setupSound(ArrayList<String> list, int index) {

@@ -1,5 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -65,6 +66,13 @@ public class SoundShop extends AppCompatActivity {
         }
     }
 
+    public void onClickHome(View view){
+        Intent intent = new Intent(this, GameWorld.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
+
     public void onClickSound(View view) {
 
         String view_id = view.getResources().getResourceEntryName(view.getId());
@@ -107,7 +115,7 @@ public class SoundShop extends AppCompatActivity {
 
             storageManager.setSelectedSoundLabel(label_id);
 
-            //((TextView) findViewById(label_id)).setText("Selected");
+            ((TextView) findViewById(label_id)).setText("Selected");
             ((TextView) findViewById(label_id)).setText("");
             ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
             ((TextView) findViewById(label_id)).setPadding(0,10,0,0);

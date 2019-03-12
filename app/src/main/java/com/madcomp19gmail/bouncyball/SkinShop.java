@@ -1,5 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -44,6 +45,13 @@ public class SkinShop extends FragmentActivity {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
+    }
+
+    public void onClickHome(View view){
+        Intent intent = new Intent(this, GameWorld.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 
     @Override

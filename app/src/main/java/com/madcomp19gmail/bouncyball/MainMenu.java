@@ -210,24 +210,16 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         prev_touches = StorageManager.getInstance().getTotalTouches();
     }
 
-    public void startChallengeActivity(View view) {
-        String todays_date = storage.getTodayDateString();
-        String last_daily = storage.getLastDailyChallengeDateString();
-
-        //if the player has played the daily challenge today
-        if (todays_date.equals(last_daily)) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Come back tomorrow!", Toast.LENGTH_SHORT);
-            toast.show();
-        } else {
-            Intent intent = new Intent(this, DailyChallenge.class);
-            startActivity(intent);
-        }
+    public void onClickDailyChallenge(View view) {
+        Intent intent = new Intent(this, DailyChallenge.class);
+        startActivity(intent);
     }
 
     public void resetStorage(View view){
         storage.resetStorage();
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
+        initializeShops(); //set defaults
     }
 
     public void startShop(View view)

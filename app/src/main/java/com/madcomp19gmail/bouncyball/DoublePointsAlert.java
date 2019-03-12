@@ -21,6 +21,9 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
 
     private RewardedVideoAd mRewardedVideoAd;
 
+    private MediaPlayerManager mediaPlayerManager;
+    private final int background_music_id = R.raw.background_music_2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -41,6 +44,7 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
         watchAdButton = findViewById(R.id.watchAdButton);
 
         storage = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
 
         numberBouncesEarned = findViewById(R.id.numberBounces);
         numberBouncesEarned.setText(bouncesEarned + " Bounces");
@@ -120,12 +124,21 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
     public void onResume() {
         mRewardedVideoAd.resume(this);
         super.onResume();
+
+        if(storage.getMusicSetting())
+        {
+            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.play();
+        }
     }
 
     @Override
     public void onPause() {
         mRewardedVideoAd.pause(this);
         super.onPause();
+
+        if(storage.getMusicSetting())
+            mediaPlayerManager.pause();
     }
 
     @Override
