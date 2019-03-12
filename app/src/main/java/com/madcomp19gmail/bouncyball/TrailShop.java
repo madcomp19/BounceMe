@@ -73,7 +73,7 @@ public class TrailShop extends AppCompatActivity {
     }
 
     public void onClickHome(View view){
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, GameWorld.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();

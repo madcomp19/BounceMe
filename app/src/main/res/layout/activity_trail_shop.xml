@@ -25,20 +25,20 @@
         app:srcCompat="@drawable/trail_shop_title" />
 
     <android.support.v7.widget.AppCompatImageButton
-        android:id="@+id/homeButton1"
+        android:id="@+id/homeButton3"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/rounded_button"
+        android:background="@android:color/transparent"
         android:onClick="onClickHome"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home_icon" />
+        app:srcCompat="@drawable/play_icon" />
 
     <TextView
         android:id="@+id/coins"
