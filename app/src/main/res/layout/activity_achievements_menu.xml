@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/main_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="57dp"
         android:layout_marginTop="40dp"
         android:text="Achievements"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
