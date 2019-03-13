@@ -13,10 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SoundShop"></activity>
-        <activity android:name=".TrailShop" />
-        <activity android:name=".SettingsMenu" />
-        <activity android:name=".AchievementsMenu" />
+        <activity
+            android:name=".SoundShop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".TrailShop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SettingsMenu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AchievementsMenu"
+            android:screenOrientation="portrait"/>
         <activity
             android:hardwareAccelerated="false"
             android:name=".SkinShop"

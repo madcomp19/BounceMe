@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:onClick="onClickHome"
+        android:onClick="onClickPlay"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
