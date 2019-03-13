@@ -1,5 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
@@ -56,10 +57,10 @@ public class SkinShop extends FragmentActivity {
         mAdView.loadAd(adRequest);
     }
 
-    public void onClickHome(View view){
-        Intent intent = new Intent(this, GameWorld.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+    public void onClickPlay(View view) {
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("result", true);
+        setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
 
@@ -114,11 +115,10 @@ public class SkinShop extends FragmentActivity {
             storageManager.setSelectedSkin(skin_id);
 
             //set the previous selected skin label as "Owned"
-            if(old_label != null)
-            {
+            if (old_label != null) {
                 old_label.setText("Owned");
-                old_label.setCompoundDrawables(null,null,null,null);
-                old_label.setPadding(0,0,0,0);
+                old_label.setCompoundDrawables(null, null, null, null);
+                old_label.setPadding(0, 0, 0, 0);
             }
 
             //save the new selected label id
@@ -127,8 +127,8 @@ public class SkinShop extends FragmentActivity {
             //set the new label as "Selected"
             //new_label.setText("Selected");
             new_label.setText("");
-            new_label.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
-            new_label.setPadding(0,10,0,0);
+            new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon, 0, 0);
+            new_label.setPadding(0, 10, 0, 0);
 
         } else { //if the skin is not owned
             int price = Integer.parseInt(new_label.getText() + ""); //get price
@@ -142,18 +142,17 @@ public class SkinShop extends FragmentActivity {
                 storageManager.setSelectedSkinLabel(label_id);
 
                 //if (storageManager.getSelectedSkinLabel() != 0)
-                  //  ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
-                if(old_label != null)
-                {
+                //  ((TextView) findViewById(storageManager.getSelectedSkinLabel())).setText("Owned");
+                if (old_label != null) {
                     old_label.setText("Owned");
-                    old_label.setCompoundDrawables(null,null,null,null);
-                    old_label.setPadding(0,0,0,0);
+                    old_label.setCompoundDrawables(null, null, null, null);
+                    old_label.setPadding(0, 0, 0, 0);
                 }
 
                 //new_label.setText("Selected");
                 new_label.setText("");
-                new_label.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
-                new_label.setPadding(0,10,0,0);
+                new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon, 0, 0);
+                new_label.setPadding(0, 10, 0, 0);
                 Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
                 coins.setText(storageManager.getTotalTouches() + "");
             } else

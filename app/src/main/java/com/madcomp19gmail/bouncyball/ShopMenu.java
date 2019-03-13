@@ -1,5 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,22 +30,20 @@ public class ShopMenu extends AppCompatActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if(storage.getMusicSetting())
-        {
+        if (storage.getMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
     }
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
 
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
 
-        if(storage.getMusicSetting())
-        {
+        if (storage.getMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -54,7 +53,7 @@ public class ShopMenu extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(storage.getMusicSetting())
+        if (storage.getMusicSetting())
             mediaPlayerManager.pause();
     }
 
@@ -63,27 +62,41 @@ public class ShopMenu extends AppCompatActivity {
         super.onStop();
 
         //if(storage.getMusicSetting())
-            //mediaPlayerManager.stop();
+        //mediaPlayerManager.stop();
     }
 
-    public void onShopMenuButtonClick(View view)
-    {
-        if(view.getId() == R.id.skinsButton)
-        {
+    public void onShopMenuButtonClick(View view) {
+
+        if (view.getId() == R.id.skinsButton) {
             Intent intent = new Intent(this, SkinShop.class);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
         }
 
-        if(view.getId() == R.id.trailsButton)
-        {
+        if (view.getId() == R.id.trailsButton) {
             Intent intent = new Intent(this, TrailShop.class);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
         }
 
-        if (view.getId() == R.id.soundButton)
-        {
+        if (view.getId() == R.id.soundButton) {
             Intent intent = new Intent(this, SoundShop.class);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                boolean result = data.getBooleanExtra("result", false);
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result", result);
+                setResult(Activity.RESULT_OK, returnIntent);
+                finish();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
         }
     }
 }

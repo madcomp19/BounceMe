@@ -1,5 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,10 +73,10 @@ public class TrailShop extends AppCompatActivity {
             mediaPlayerManager.pause();
     }
 
-    public void onClickHome(View view){
-        Intent intent = new Intent(this, GameWorld.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+    public void onClickPlay(View view){
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("result", true);
+        setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
 

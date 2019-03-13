@@ -1,11 +1,13 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -18,7 +20,7 @@ import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
-public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener{
+public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener {
 
     //private static int touches;
     private StorageManager storage;
@@ -71,8 +73,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         MediaPlayerManager.initialize(this, background_music_id);
         mediaPlayerManager = MediaPlayerManager.getInstance();
 
-        if(storage.getMusicSetting())
-        {
+        if (storage.getMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -80,10 +81,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoAd.setRewardedVideoAdListener(this);
 
-        if(storage.getAdsAvailableToday() > 0)
+        if (storage.getAdsAvailableToday() > 0)
             adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
-        else
-        {
+        else {
             adsLeftToday.setText("Come Back Tomorrow");
             adsLeft = false;
             adButton.setEnabled(false);
@@ -96,26 +96,22 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         initializeShops();
     }
 
-    private void initializeShops()
-    {
-        if(storage.getSelectedSkin() == 0)
-        {
+    private void initializeShops() {
+        if (storage.getSelectedSkin() == 0) {
             storage.addOwnedSkin(default_skin);
             storage.addOwnedSkinLabel(default_skin_label);
             storage.setSelectedSkin(default_skin);
             storage.setSelectedSkinLabel(default_skin_label);
         }
 
-        if(storage.getSelectedSound() == 0)
-        {
+        if (storage.getSelectedSound() == 0) {
             storage.addOwnedSound(default_sound);
             storage.addOwnedSoundLabel(default_sound_label);
             storage.setSelectedSound(default_sound);
             storage.setSelectedSoundLabel(default_sound_label);
         }
 
-        if(storage.getSelectedTrail() == -10)
-        {
+        if (storage.getSelectedTrail() == -10) {
             storage.addOwnedTrail(default_trail);
             storage.addOwnedTrailLabel(default_trail_label);
             storage.setSelectedTrail(default_trail);
@@ -131,24 +127,21 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         adButton.setEnabled(false);
     }
 
-    public void watchAdMainMenu(View view)
-    {
+    public void watchAdMainMenu(View view) {
         if (mRewardedVideoAd.isLoaded()) {
             mRewardedVideoAd.show();
         }
     }
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         //StorageManager.getInstance().setTotalTouches(touches);
 
-        if(prev_act_GameWorld)
-        {
+        if (prev_act_GameWorld) {
             int new_touches = Math.abs(StorageManager.getInstance().getTotalTouches() - prev_touches);
 
-            if(new_touches > 300)
-            {
+            if (new_touches > 300) {
                 Intent intent = new Intent(this, DoublePointsAlert.class);
                 startActivity(intent);
             }
@@ -159,17 +152,15 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
 
-        if(storage.getAdsAvailableToday() > 0)
+        if (storage.getAdsAvailableToday() > 0)
             adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
-        else
-        {
+        else {
             adsLeftToday.setText("Come Back Tomorrow");
             adsLeft = false;
             adButton.setEnabled(false);
         }
 
-        if(storage.getMusicSetting())
-        {
+        if (storage.getMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -179,7 +170,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     protected void onPause() {
         super.onPause();
 
-        if(storage.getMusicSetting())
+        if (storage.getMusicSetting())
             mediaPlayerManager.pause();
     }
 
@@ -188,11 +179,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         super.onDestroy();
 
         //if(storage.getMusicSetting())
-            //mediaPlayerManager.pause();
+        //mediaPlayerManager.pause();
     }
 
-    public static int getPrevTouches()
-    {
+    public static int getPrevTouches() {
         return prev_touches;
     }
 
@@ -211,44 +201,58 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         prev_touches = StorageManager.getInstance().getTotalTouches();
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 2) {
+            if (resultCode == Activity.RESULT_OK) {
+                boolean result = data.getBooleanExtra("result", false);
+
+                if (result) {
+                    Intent intent = new Intent(this, GameWorld.class);
+                    startActivityForResult(intent, 1);
+                    prev_touches = StorageManager.getInstance().getTotalTouches();
+                }
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }
+
     public void onClickDailyChallenge(View view) {
         Intent intent = new Intent(this, DailyChallenge.class);
         startActivity(intent);
     }
 
-    public void resetStorage(View view){
+    public void resetStorage(View view) {
         storage.resetStorage();
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
         initializeShops(); //set defaults
     }
 
-    public void startShop(View view)
-    {
+    public void startShop(View view) {
         Intent intent = new Intent(this, ShopMenu.class);
-        startActivity(intent);
+        startActivityForResult(intent,2);
     }
 
-    public void goFacebookPage(View view)
-    {
+    public void goFacebookPage(View view) {
         Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/francisco.teixeira.507"));
         startActivity(goFacebook);
     }
 
-    public void achievementButton(View view)
-    {
+    public void achievementButton(View view) {
         Intent goAchievements = new Intent(this, AchievementsMenu.class);
         startActivity(goAchievements);
     }
 
-    public void goToSettings(View view)
-    {
+    public void goToSettings(View view) {
         Intent goSettings = new Intent(this, SettingsMenu.class);
         startActivity(goSettings);
     }
 
-    public void rateApp(View view)
-    {
+    public void rateApp(View view) {
         Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
         goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
@@ -284,7 +288,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         if (adsLeft)
             loadRewardedVideoAd();
 
-        if(rewarded)
+        if (rewarded)
             Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_LONG).show();
 
         rewarded = false;
@@ -298,10 +302,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         rewarded = true;
 
         storage.removeAdsAvailableToday();
-        if(storage.getAdsAvailableToday() > 0)
+        if (storage.getAdsAvailableToday() > 0)
             adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
-        else
-        {
+        else {
             adsLeftToday.setText("Come Back Tomorrow");
             adsLeft = false;
             adButton.setEnabled(false);
@@ -347,11 +350,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }*/
 
 
-
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void godMode(View v)
-    {
+    public void godMode(View v) {
         storage.setTotalTouches(100000);
         storage.addGems(100000);
         coins.setText(storage.getTotalTouches() + "");

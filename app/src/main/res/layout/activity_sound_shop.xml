@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:onClick="onClickHome"
+        android:onClick="onClickPlay"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +142,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_1" />
+                    app:srcCompat="@drawable/mute_icon" />
 
                 <ImageButton
                     android:id="@+id/car_horn_Button"
@@ -172,7 +172,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_4" />
+                    android:src="@drawable/basketball_ball" />
 
                 <ImageButton
                     android:id="@+id/boing_Button"
@@ -317,7 +317,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_8" />
+                    android:src="@drawable/football" />
 
                 <ImageButton
                     android:id="@+id/pingpong_Button"
@@ -327,7 +327,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_9" />
+                    android:src="@drawable/ping_pong_ball" />
 
                 <ImageButton
                     android:id="@+id/pop_Button"
@@ -472,7 +472,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_13" />
+                    android:src="@drawable/tennis_ball" />
 
                 <ImageButton
                     android:id="@+id/frying_pan_Button"
@@ -482,7 +482,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_14" />
+                    android:src="@drawable/food_8" />
 
                 <ImageButton
                     android:id="@+id/arrow_Button"
@@ -637,7 +637,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_19" />
+                    android:src="@drawable/coin_icon" />
 
                 <ImageButton
                     android:id="@+id/cash_Button"
@@ -1089,7 +1089,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:src="@drawable/animal_8" />
 
                 <ImageButton
                     android:id="@+id/meow_Button"
@@ -1099,7 +1099,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:src="@drawable/animal_4" />
 
                 <ImageButton
                     android:id="@+id/laugh_Button"
