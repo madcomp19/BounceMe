@@ -53,7 +53,7 @@
             android:name=".MainMenu"
             android:screenOrientation="portrait" />
         <activity
-            android:hardwareAccelerated="false"
+            android:hardwareAccelerated="true"
             android:name=".GameWorld"
             android:screenOrientation="portrait" />
 

@@ -33,7 +33,7 @@ public class StorageManager {
 
     //clears the sharedPreferences file
     public void resetStorage(){
-        prefs.edit().clear().apply();
+        prefs.edit().clear().commit();
     }
 
     public String getLastDailyChallengeDateString(){
@@ -55,13 +55,13 @@ public class StorageManager {
     public void setLastDailyChallengeDate(String day){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(context.getString(R.string.last_daily_challenge_date), day);
-        editor.apply();
+        editor.commit();
     }
 
     public void setConsecutiveDays(int days){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.consecutive_days_daily_challenge), days);
-        editor.apply();
+        editor.commit();
     }
 
     public int getTotalTouches(){
@@ -71,7 +71,7 @@ public class StorageManager {
     public void setTotalTouches(int touches){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_touches), touches);
-        editor.apply();
+        editor.commit();
     }
 
     public int getTotalGems(){
@@ -81,13 +81,13 @@ public class StorageManager {
     public void addGems(int gems){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_gems), getTotalGems() + gems);
-        editor.apply();
+        editor.commit();
     }
 
     public void takeGems(int gems){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_gems), getTotalGems() - gems);
-        editor.apply();
+        editor.commit();
     }
 
     public int getTotalBouncesEver(){
@@ -97,7 +97,7 @@ public class StorageManager {
     public void setTotalBouncesEver(int touches){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_bounces_ever), touches);
-        editor.apply();
+        editor.commit();
     }
 
     public void addCollectedAchievement(int achievement)
@@ -111,7 +111,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_skins), set);
-        editor.apply();
+        editor.commit();
     }
 
     public ArrayList<Integer> getCollectedAchievements()
@@ -156,7 +156,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_skins), set);
-        editor.apply();
+        editor.commit();
     }
 
     public ArrayList<Integer> getOwnedSkinsLabels()
@@ -182,7 +182,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_skins_labels), set);
-        editor.apply();
+        editor.commit();
     }
 
     public int getSelectedSkinLabel()
@@ -194,7 +194,7 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_skin_label), label);
-        editor.apply();
+        editor.commit();
     }
 
     public int getSelectedSkin()
@@ -206,7 +206,7 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_skin), skin);
-        editor.apply();
+        editor.commit();
     }
 
     public ArrayList<Integer> getOwnedTrails()
@@ -271,7 +271,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_trails), set);
-        editor.apply();
+        editor.commit();
     }
 
     public void addOwnedSound(int sound)
@@ -285,7 +285,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_sounds), set);
-        editor.apply();
+        editor.commit();
     }
 
     public int getSelectedTrail()
@@ -302,14 +302,14 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_trail), trail);
-        editor.apply();
+        editor.commit();
     }
 
     public void setSelectedSound(int sound)
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_sound), sound);
-        editor.apply();
+        editor.commit();
     }
 
     public ArrayList<Integer> getOwnedTrailsLabels()
@@ -335,7 +335,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_trails_labels), set);
-        editor.apply();
+        editor.commit();
     }
 
     public void addOwnedSoundLabel(int sound_label)
@@ -349,7 +349,7 @@ public class StorageManager {
 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putStringSet(context.getString(R.string.owned_sounds_labels), set);
-        editor.apply();
+        editor.commit();
     }
 
     public int getSelectedTrailLabel()
@@ -366,14 +366,14 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_trail_label), trail);
-        editor.apply();
+        editor.commit();
     }
 
     public void setSelectedSoundLabel(int sound)
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_sound_label), sound);
-        editor.apply();
+        editor.commit();
     }
 
     public boolean getMusicSetting()
@@ -385,7 +385,7 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean(context.getString(R.string.musicSetting), setting);
-        editor.apply();
+        editor.commit();
     }
 
     public int getAdsAvailableToday()
@@ -397,13 +397,13 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("NumberAdsAvailableToday", getAdsAvailableToday() - 1);
-        editor.apply();
+        editor.commit();
     }
 
     public void resetAdAvailableToday()
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("NumberAdsAvailableToday", 10);
-        editor.apply();
+        editor.commit();
     }
 }
