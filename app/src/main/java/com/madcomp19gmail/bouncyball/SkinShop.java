@@ -10,6 +10,9 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class SkinShop extends FragmentActivity {
 
     private final int background_music_id = R.raw.background_music_1;
@@ -18,6 +21,8 @@ public class SkinShop extends FragmentActivity {
     private TextView gems;
     private StorageManager storageManager;
     private MediaPlayerManager mediaPlayerManager;
+
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,10 @@ public class SkinShop extends FragmentActivity {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
+
+        mAdView = findViewById(R.id.bannerAdTrailShop);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     public void onClickHome(View view){
