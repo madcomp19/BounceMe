@@ -11,7 +11,6 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import java.util.ArrayList;
@@ -20,6 +19,12 @@ public class GameView extends View
 {
     ArrayList<Ball> balls;
     float ball_radius;
+
+    static ArrayList<Drop> drops;
+    float coin_radius;
+    float gem_radius;
+    Bitmap coin_img;
+    Bitmap gem_img;
 
 
     private DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -48,6 +53,8 @@ public class GameView extends View
         setBackgroundColor(Color.parseColor("#000000"));
 
         ball_radius = 50;
+        coin_radius = 25;
+        gem_radius = 50;
 
         ((Activity) getContext()).getWindowManager()
                 .getDefaultDisplay()
@@ -70,6 +77,12 @@ public class GameView extends View
         balls = new ArrayList<>();
 
         Resources res = getResources();
+
+        drops = new ArrayList<>();
+        coin_img = BitmapFactory.decodeResource(res, R.drawable.coin_icon);
+        coin_img = getResizedBitmap(coin_img, (int) coin_radius * 2, (int) coin_radius * 2);
+        gem_img = BitmapFactory.decodeResource(res, R.drawable.gem_icon);
+        gem_img = getResizedBitmap(gem_img, (int) gem_radius * 2, (int) gem_radius * 2);
 
         p = new Paint();
 
@@ -177,6 +190,20 @@ public class GameView extends View
         centerY = h / 2;
     }*/
 
+    public void addCoin(Vector2 position)
+    {
+        Drop drop = new Drop(position.x, position.y, coin_radius, 1, coin_img);
+        drop.applyForce(new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(100, 200)));
+        drops.add(drop);
+    }
+
+    public void addGem(Vector2 position)
+    {
+        Drop drop = new Drop(position.x, position.y, gem_radius, 0, gem_img);
+        drop.applyForce(new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(100, 200)));
+        drops.add(drop);
+    }
+
     protected void onDraw(Canvas c)
     {
         /*for(Ball ball : balls)
@@ -222,12 +249,26 @@ public class GameView extends View
     {
         for(Ball ball : balls)
             ball.move();
+
+        for(int i = drops.size() - 1; i >= 0; i--) {
+
+            Drop drop = drops.get(i);
+
+            drop.move();
+
+            if(drop.health <= 0) {
+                drops.remove(drop);
+            }
+        }
     }
 
     private void displayGame(Canvas canvas, float interpolation)
     {
         for(Ball ball : balls)
             ball.display(canvas);
+
+        for(Drop drop : drops)
+            drop.display(canvas);
 
         p.setColor(Color.WHITE);
         p.setTextAlign(Paint.Align.CENTER);

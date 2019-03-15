@@ -101,6 +101,8 @@ public class Ball
             GameWorld.addTouch();
             playSound();
 
+            GameWorld.addDrop(position);
+
             if(reactive)
                 trail = new Random().nextInt(361);
         }
@@ -110,6 +112,8 @@ public class Ball
             velocity.x *= -1;
             GameWorld.addTouch();
             playSound();
+
+            GameWorld.addDrop(position);
 
             if(reactive)
                 trail = new Random().nextInt(361);
@@ -126,6 +130,8 @@ public class Ball
                 GameWorld.addTouch();
                 playSound();
 
+                GameWorld.addDrop(position);
+
                 if(reactive)
                     trail = new Random().nextInt(361);
             }
@@ -140,6 +146,8 @@ public class Ball
             velocity.y *= -1;
             GameWorld.addTouch();
             playSound();
+
+            GameWorld.addDrop(position);
 
             if(reactive)
                 trail = new Random().nextInt(361);

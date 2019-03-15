@@ -1,5 +1,8 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,10 +13,12 @@ import android.widget.Toast;
 import com.google.android.gms.ads.MobileAds;
 import com.squareup.seismic.ShakeDetector;
 
+import java.util.ArrayList;
+
 
 public class GameWorld extends AppCompatActivity implements ShakeDetector.Listener {
 
-    GameView gameView;
+    static GameView gameView;
     //public static MediaPlayer mediaPlayer;
     /*SoundPool soundPool;
     HashMap<Integer, Integer> soundPoolMap;
@@ -50,6 +55,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalTouches();
         total_bounces_ever = storageManager.getTotalBouncesEver();
+
 
         if(storageManager.getMusicSetting())
         {
@@ -113,6 +119,16 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     {
         touches++;
         total_bounces_ever++;
+    }
+
+    public static void addDrop(Vector2 position)
+    {
+        if(Math.random() * 100 < 1) {
+            gameView.addGem(position);
+            storageManager.addGems(1);
+        }
+        else
+            gameView.addCoin(position);
     }
 
     public static int getTouches()
