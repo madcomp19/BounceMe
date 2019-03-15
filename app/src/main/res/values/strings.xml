@@ -38,5 +38,8 @@
     <string name="answer">Answer</string>
     <string name="place_holder_text">Place Holder Text</string>
     <string name="consecutive_days">Consecutive Days</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="music">Music</string>
 
 </resources>

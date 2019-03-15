@@ -22,7 +22,6 @@ public class SkinShop extends FragmentActivity {
     private TextView gems;
     private StorageManager storageManager;
     private MediaPlayerManager mediaPlayerManager;
-
     private AdView mAdView;
 
     @Override
@@ -33,16 +32,16 @@ public class SkinShop extends FragmentActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        storageManager = StorageManager.getInstance();
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setOffscreenPageLimit(1);
         SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
-        viewPager.setCurrentItem(0);
+        viewPager.setCurrentItem(storageManager.getSkinPageNumber());
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
         tabLayout.setupWithViewPager(viewPager, true);
 
-        storageManager = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
@@ -92,6 +91,11 @@ public class SkinShop extends FragmentActivity {
 
         int skin_id = this.getResources().getIdentifier(view_id, "drawable", getPackageName());
         int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
+        int temp_id = ((View) view.getParent()).getId();
+        String temp_string = view.getResources().getResourceEntryName(temp_id);
+        int pageNumber_temp = Integer.parseInt(temp_string.split("_")[0].split("linearLayoutSkins")[1]);
+
+
         //region
         /*Log.i("skin", view_id);
         Log.i("label", view_id + "_Label");
@@ -100,14 +104,15 @@ public class SkinShop extends FragmentActivity {
         Log.i("res_id", Integer.toString(view.getId()));*/
         //endregion
 
-        buyOrSetSkin(skin_id, label_id);
+        buyOrSetSkin(skin_id, label_id, pageNumber_temp - 1);
     }
 
-    public void buyOrSetSkin(int skin_id, int label_id) {
+    public void buyOrSetSkin(int skin_id, int label_id, int pageNumber) {
         StorageManager storageManager = StorageManager.getInstance();
         int selectedLabelId = storageManager.getSelectedSkinLabel();
         TextView new_label = findViewById(label_id);
         TextView old_label = findViewById(selectedLabelId);
+        storageManager.setSkinPageNumber(pageNumber);
 
         //if the skin is already owned, set the label as "Selected"
         if (storageManager.getOwnedSkins().contains(skin_id)) {

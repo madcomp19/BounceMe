@@ -405,4 +405,14 @@ public class StorageManager {
         editor.putInt("NumberAdsAvailableToday", 10);
         editor.commit();
     }
+
+    public int getSkinPageNumber(){
+        return prefs.getInt("SkinPageNumber", 0);
+    }
+
+    public void setSkinPageNumber(int n){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("SkinPageNumber", n);
+        editor.commit();
+    }
 }
