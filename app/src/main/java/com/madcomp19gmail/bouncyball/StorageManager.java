@@ -259,7 +259,6 @@ public class StorageManager {
         return owned_sounds_labels;
     }
 
-
     public void addOwnedTrail(int trail)
     {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_trails), new HashSet<String>());
