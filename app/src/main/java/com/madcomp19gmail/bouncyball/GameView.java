@@ -10,6 +10,10 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
@@ -99,8 +103,42 @@ public class GameView extends View
 
         ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
 
-        BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
+        BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 0f));
         balls.add(new Ball(width / 2, height / 2, attributes, ball_img, selected_trail, selected_sound));
+
+
+
+
+        //listener for accelerometer, use anonymous class for simplicity
+        ((SensorManager)context.getSystemService(Context.SENSOR_SERVICE)).registerListener(
+                new SensorEventListener() {
+                    @Override
+                    public void onSensorChanged(SensorEvent event) {
+                        //set ball speed based on phone tilt (ignore Z axis)
+                        float valueX = -event.values[0];
+
+                        if(valueX < 0)
+                            valueX = Math.max(valueX, -9.8f);
+                        else if(valueX > 0)
+                            valueX = Math.min(valueX, 9.8f);
+
+                        float valueY = event.values[1];
+
+                        if(valueY < 0)
+                            valueY = Math.max(valueY, -9.8f);
+                        else if(valueY > 0)
+                            valueY = Math.min(valueY, 9.8f);
+
+                        balls.get(0).attributes.gravity.x = valueX;
+                        balls.get(0).attributes.gravity.y = valueY;
+                        //timer event will redraw ball
+                    }
+                    @Override
+                    public void onAccuracyChanged(Sensor sensor, int accuracy) {} //ignore
+                },
+                ((SensorManager)context.getSystemService(Context.SENSOR_SERVICE))
+                        .getSensorList(Sensor.TYPE_ACCELEROMETER).get(0),
+                SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
