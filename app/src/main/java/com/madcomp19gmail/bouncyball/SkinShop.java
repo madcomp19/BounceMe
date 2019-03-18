@@ -46,7 +46,7 @@ public class SkinShop extends FragmentActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if (storageManager.getMusicSetting()) {
+        if (storageManager.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -70,7 +70,7 @@ public class SkinShop extends FragmentActivity {
         coins.setText(storageManager.getTotalTouches() + "");
         gems.setText(storageManager.getTotalGems() + "");
 
-        if (storageManager.getMusicSetting()) {
+        if (storageManager.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -80,7 +80,7 @@ public class SkinShop extends FragmentActivity {
     protected void onPause() {
         super.onPause();
 
-        if (storageManager.getMusicSetting())
+        if (storageManager.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 

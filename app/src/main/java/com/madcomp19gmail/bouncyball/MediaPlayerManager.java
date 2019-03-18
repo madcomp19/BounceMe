@@ -32,29 +32,29 @@ public class MediaPlayerManager
             public void onAudioFocusChange ( int focusChange){
                 switch (focusChange) {
                     case AudioManager.AUDIOFOCUS_GAIN:
-                        if(storageManager.getMusicSetting())
+                        if(storageManager.getMenuMusicSetting())
                             play();
                         break;
                     case AudioManager.AUDIOFOCUS_GAIN_TRANSIENT:
                         // You have audio focus for a short time
-                        if(storageManager.getMusicSetting())
+                        if(storageManager.getMenuMusicSetting())
                             play();
                         break;
                     case AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK:
                         // Play over existing audio
-                        if(storageManager.getMusicSetting())
+                        if(storageManager.getMenuMusicSetting())
                         {
                             changeVolume(1);
                             play();
                         }
                         break;
                     case AudioManager.AUDIOFOCUS_LOSS:
-                        if(storageManager.getMusicSetting())
+                        if(storageManager.getMenuMusicSetting())
                             pause();
                         break;
                     case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                         // Temporary loss of audio focus - expect to get it back - you can keep your resources around
-                        if(storageManager.getMusicSetting())
+                        if(storageManager.getMenuMusicSetting())
                             pause();
                         break;
                 }

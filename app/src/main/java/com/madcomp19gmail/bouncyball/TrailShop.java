@@ -40,7 +40,7 @@ public class TrailShop extends AppCompatActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if(storage.getMusicSetting())
+        if(storage.getMenuMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
@@ -58,7 +58,7 @@ public class TrailShop extends AppCompatActivity {
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
 
-        if(storage.getMusicSetting())
+        if(storage.getMenuMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
@@ -69,7 +69,7 @@ public class TrailShop extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(storage.getMusicSetting())
+        if(storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 

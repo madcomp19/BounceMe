@@ -125,7 +125,7 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
         mRewardedVideoAd.resume(this);
         super.onResume();
 
-        if(storage.getMusicSetting())
+        if(storage.getMenuMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
@@ -137,7 +137,7 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
         mRewardedVideoAd.pause(this);
         super.onPause();
 
-        if(storage.getMusicSetting())
+        if(storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 

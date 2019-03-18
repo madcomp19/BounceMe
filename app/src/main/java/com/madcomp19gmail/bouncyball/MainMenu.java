@@ -3,11 +3,9 @@ package com.madcomp19gmail.bouncyball;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.media.AudioManager;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -67,13 +65,13 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         /*mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
         mediaPlayer.setLooping(true);
 
-        if(storage.getMusicSetting())
+        if(storage.getMenuMusicSetting())
             mediaPlayer.start();*/
 
         MediaPlayerManager.initialize(this, background_music_id);
         mediaPlayerManager = MediaPlayerManager.getInstance();
 
-        if (storage.getMusicSetting()) {
+        if (storage.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -160,7 +158,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             adButton.setEnabled(false);
         }
 
-        if (storage.getMusicSetting()) {
+        if (storage.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -170,7 +168,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     protected void onPause() {
         super.onPause();
 
-        if (storage.getMusicSetting())
+        if (storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 
@@ -178,7 +176,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     protected void onDestroy() {
         super.onDestroy();
 
-        //if(storage.getMusicSetting())
+        //if(storage.getMenuMusicSetting())
         //mediaPlayerManager.pause();
     }
 

@@ -1,7 +1,6 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.content.DialogInterface;
-import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,7 +45,7 @@ public class DailyChallenge extends AppCompatActivity {
         consecutive_days = prefs.getConsecutiveDays();
         setStarImages(consecutive_days);
 
-        if (prefs.getMusicSetting()) {
+        if (prefs.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -263,7 +262,7 @@ public class DailyChallenge extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        if (prefs.getMusicSetting()) {
+        if (prefs.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -273,7 +272,7 @@ public class DailyChallenge extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if (prefs.getMusicSetting())
+        if (prefs.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 }

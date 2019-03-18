@@ -7,6 +7,19 @@
     android:background="#424242"
     tools:context=".SettingsMenu">
 
+    <Switch
+        android:id="@+id/shopMusicSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:switchMinWidth="75dp"
+        android:textColorLink="@color/browser_actions_bg_grey"
+        android:textOff="@string/off"
+        android:textOn="@string/on"
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="@+id/menuMusicSwitch"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
     <ImageView
         android:id="@+id/settingsTitle"
         android:layout_width="129dp"
@@ -29,24 +42,62 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
-        android:text="@string/music"
+        android:text="@string/menu_music"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settingsTitle" />
 
     <Switch
-        android:id="@+id/musicSwitch"
-        android:layout_width="wrap_content"
+        android:id="@+id/menuMusicSwitch"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:checked="true"
         android:switchMinWidth="75dp"
+        android:textColorLink="@color/browser_actions_bg_grey"
         android:textOff="@string/off"
         android:textOn="@string/on"
         app:layout_constraintBottom_toBottomOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/game_music"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/shop_music"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <SeekBar
+        android:id="@+id/gameVolumeBar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:max="10"
+        android:progress="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
 </android.support.constraint.ConstraintLayout>

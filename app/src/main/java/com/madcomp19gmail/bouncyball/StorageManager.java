@@ -375,15 +375,39 @@ public class StorageManager {
         editor.commit();
     }
 
-    public boolean getMusicSetting()
+    public boolean getMenuMusicSetting()
     {
-        return prefs.getBoolean(context.getString(R.string.musicSetting), true);
+        return prefs.getBoolean(context.getString(R.string.menuMusicSetting), true);
     }
 
-    public void setMusicSetting(boolean setting)
+    public void setMenuMusicSetting(boolean setting)
     {
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean(context.getString(R.string.musicSetting), setting);
+        editor.putBoolean(context.getString(R.string.menuMusicSetting), setting);
+        editor.commit();
+    }
+
+    public boolean getShopMusicSetting()
+    {
+        return prefs.getBoolean(context.getString(R.string.shopMusicSetting), true);
+    }
+
+    public void setShopMusicSetting(boolean setting)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(context.getString(R.string.shopMusicSetting), setting);
+        editor.commit();
+    }
+
+    public int getGameMusicSetting()
+    {
+        return prefs.getInt(context.getString(R.string.gameMusicSetting), 5);
+    }
+
+    public void setGameMusicSetting(int setting)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.gameMusicSetting), setting);
         editor.commit();
     }
 

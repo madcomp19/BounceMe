@@ -2,9 +2,12 @@ package com.madcomp19gmail.bouncyball;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
+import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class SettingsMenu extends AppCompatActivity {
 
@@ -24,21 +27,52 @@ public class SettingsMenu extends AppCompatActivity {
         storageManager = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
 
-        Switch mySwitch = findViewById(R.id.musicSwitch);
-        mySwitch.setChecked(StorageManager.getInstance().getMusicSetting());
+        Switch menuMusicSwitch = findViewById(R.id.menuMusicSwitch);
+        Switch shopMusicSwitch = findViewById(R.id.shopMusicSwitch);
+        SeekBar gameVolumeBar = findViewById(R.id.gameVolumeBar);
+        menuMusicSwitch.setChecked(storageManager.getMenuMusicSetting());
+        shopMusicSwitch.setChecked(storageManager.getShopMusicSetting());
+        gameVolumeBar.setProgress(storageManager.getGameMusicSetting());
 
-        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        menuMusicSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                storageManager.setMusicSetting(isChecked);
+                storageManager.setMenuMusicSetting(isChecked);
 
-                if(isChecked)
+                if(isChecked) {
                     MediaPlayerManager.getInstance().play();
+                }
                 else
                     MediaPlayerManager.getInstance().pause();
             }
         });
 
-        if(storageManager.getMusicSetting())
+        shopMusicSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                storageManager.setShopMusicSetting(isChecked);
+            }
+        });
+
+        gameVolumeBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,boolean fromUser) {
+                // TODO Auto-generated method stub
+
+                storageManager.setGameMusicSetting(progress);
+            }
+        });
+
+        if(storageManager.getMenuMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
@@ -49,7 +83,7 @@ public class SettingsMenu extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         //StorageManager.getInstance().setTotalTouches(touches);
-        if(storageManager.getMusicSetting())
+        if(storageManager.getMenuMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
@@ -60,7 +94,7 @@ public class SettingsMenu extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(storageManager.getMusicSetting())
+        if(storageManager.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 }

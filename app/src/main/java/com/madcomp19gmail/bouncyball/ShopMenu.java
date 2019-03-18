@@ -30,7 +30,7 @@ public class ShopMenu extends AppCompatActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if (storage.getMusicSetting()) {
+        if (storage.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -43,7 +43,7 @@ public class ShopMenu extends AppCompatActivity {
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
 
-        if (storage.getMusicSetting()) {
+        if (storage.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }
@@ -53,7 +53,7 @@ public class ShopMenu extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if (storage.getMusicSetting())
+        if (storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 
@@ -61,7 +61,7 @@ public class ShopMenu extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        //if(storage.getMusicSetting())
+        //if(storage.getMenuMusicSetting())
         //mediaPlayerManager.stop();
     }
 

@@ -1,19 +1,11 @@
 package com.madcomp19gmail.bouncyball;
 
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import com.google.android.gms.ads.MobileAds;
 import com.squareup.seismic.ShakeDetector;
-
-import java.util.ArrayList;
 
 
 public class GameWorld extends AppCompatActivity implements ShakeDetector.Listener {
@@ -57,7 +49,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         total_bounces_ever = storageManager.getTotalBouncesEver();
 
 
-        if(storageManager.getMusicSetting())
+        if(storageManager.getMenuMusicSetting())
         {
             mediaPlayerManager.changeVolume(0.4f);
             mediaPlayerManager.loadSound(background_music_id);
@@ -69,7 +61,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     protected void onResume() {
         super.onResume();
 
-        if(storageManager.getMusicSetting())
+        if(storageManager.getMenuMusicSetting())
         {
             mediaPlayerManager.changeVolume(0.4f);
             mediaPlayerManager.loadSound(background_music_id);
@@ -95,7 +87,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
         MainMenu.prev_act_GameWorld = true;
 
-        if(storageManager.getMusicSetting())
+        if(storageManager.getMenuMusicSetting())
         {
             mediaPlayerManager.changeVolume(1);
             mediaPlayerManager.pause();
@@ -111,7 +103,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
 
-        //if(storageManager.getMusicSetting())
+        //if(storageManager.getMenuMusicSetting())
         //    mediaPlayerManager.pause();
     }
 

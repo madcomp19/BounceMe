@@ -11,7 +11,7 @@
     <string name="daily_challenge_title">Daily Challenge</string>
     <string name="success_dialog_message">You are one step closer to getting a prize!</string>
     <string name="success_dialog_title">Correct!</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="error_dialog_message">Oops! You failed and have to start over&#8230;</string>
     <string name="error_dialog_title">Wrong!</string>
     <string name="challenge_complete_dialog_title">Challenge Complete!</string>
@@ -33,13 +33,17 @@
     <string name="selected_sound">SelectedSound</string>
     <string name="selected_sound_label">SelectedSoundLabel</string>
     <string name="linearLayout">LinearLayout</string>
-    <string name="musicSetting">MusicSetting</string>
+    <string name="menuMusicSetting">MenuMusicSetting</string>
+    <string name="shopMusicSetting">ShopMusicSetting</string>
+    <string name="gameMusicSetting">GameMusicSetting</string>
     <string name="play_sound">Play Sound</string>
     <string name="answer">Answer</string>
     <string name="place_holder_text">Place Holder Text</string>
     <string name="consecutive_days">Consecutive Days</string>
     <string name="off">Off</string>
     <string name="on">On</string>
-    <string name="music">Music</string>
+    <string name="menu_music">Menu Music</string>
+    <string name="game_music">Game Music</string>
+    <string name="shop_music">Shop Music</string>
 
 </resources>
