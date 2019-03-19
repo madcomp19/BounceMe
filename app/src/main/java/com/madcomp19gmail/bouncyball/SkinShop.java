@@ -46,10 +46,10 @@ public class SkinShop extends FragmentActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if (storageManager.getMenuMusicSetting()) {
+        /*if (storageManager.getShopMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
-        }
+        }*/
 
         mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -57,6 +57,7 @@ public class SkinShop extends FragmentActivity {
     }
 
     public void onClickPlay(View view) {
+        mediaPlayerManager.changeVolume((float) storageManager.getGameMusicSetting() / 10);
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result", true);
         setResult(Activity.RESULT_OK, returnIntent);
@@ -70,8 +71,8 @@ public class SkinShop extends FragmentActivity {
         coins.setText(storageManager.getTotalTouches() + "");
         gems.setText(storageManager.getTotalGems() + "");
 
-        if (storageManager.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+        if (storageManager.getShopMusicSetting()) {
+            mediaPlayerManager.loadSound(background_music_id, "Shop");
             mediaPlayerManager.play();
         }
     }
@@ -80,7 +81,7 @@ public class SkinShop extends FragmentActivity {
     protected void onPause() {
         super.onPause();
 
-        if (storageManager.getMenuMusicSetting())
+        if (!this.isFinishing() && storageManager.getShopMusicSetting())
             mediaPlayerManager.pause();
     }
 

@@ -39,10 +39,11 @@ public class SettingsMenu extends AppCompatActivity {
                 storageManager.setMenuMusicSetting(isChecked);
 
                 if(isChecked) {
-                    MediaPlayerManager.getInstance().play();
+                    mediaPlayerManager.loadSound(background_music_id, "Menu");
+                    mediaPlayerManager.play();
                 }
                 else
-                    MediaPlayerManager.getInstance().pause();
+                    mediaPlayerManager.pause();
             }
         });
 
@@ -74,7 +75,7 @@ public class SettingsMenu extends AppCompatActivity {
 
         if(storageManager.getMenuMusicSetting())
         {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
     }
@@ -85,7 +86,7 @@ public class SettingsMenu extends AppCompatActivity {
         //StorageManager.getInstance().setTotalTouches(touches);
         if(storageManager.getMenuMusicSetting())
         {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
     }
@@ -94,7 +95,7 @@ public class SettingsMenu extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(storageManager.getMenuMusicSetting())
+        if(!this.isFinishing() && storageManager.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 }

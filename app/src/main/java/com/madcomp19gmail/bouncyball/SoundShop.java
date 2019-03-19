@@ -42,11 +42,11 @@ public class SoundShop extends AppCompatActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if(storage.getMenuMusicSetting())
+        /*if(storage.getShopMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
-        }
+        }*/
 
         mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -60,11 +60,19 @@ public class SoundShop extends AppCompatActivity {
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
 
-        if(storage.getMenuMusicSetting())
+        if(storage.getShopMusicSetting())
         {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Shop");
             mediaPlayerManager.play();
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(!this.isFinishing() && storage.getShopMusicSetting())
+            mediaPlayerManager.pause();
     }
 
     //region
@@ -200,6 +208,7 @@ public class SoundShop extends AppCompatActivity {
     //endregion
 
     public void onClickPlay(View view){
+        mediaPlayerManager.changeVolume((float) storage.getGameMusicSetting() / 10);
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result", true);
         setResult(Activity.RESULT_OK, returnIntent);

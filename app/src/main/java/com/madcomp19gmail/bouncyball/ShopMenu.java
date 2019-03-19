@@ -12,6 +12,8 @@ public class ShopMenu extends AppCompatActivity {
 
     private final int background_music_id = R.raw.background_music_1;
 
+    private boolean changingActivity;
+
     private StorageManager storage;
     private MediaPlayerManager mediaPlayerManager;
     TextView coins;
@@ -25,15 +27,20 @@ public class ShopMenu extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        changingActivity = false;
+
         storage = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        if (storage.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+        if (storage.getShopMusicSetting()) {
+            mediaPlayerManager.pause();
+            mediaPlayerManager.loadSound(background_music_id, "Shop");
             mediaPlayerManager.play();
         }
+        else
+            mediaPlayerManager.pause();
     }
 
     @Override
@@ -43,18 +50,23 @@ public class ShopMenu extends AppCompatActivity {
         coins.setText(storage.getTotalTouches() + "");
         gems.setText(storage.getTotalGems() + "");
 
-        if (storage.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+        if (storage.getShopMusicSetting()) {
+            mediaPlayerManager.pause();
+            mediaPlayerManager.loadSound(background_music_id, "Shop");
             mediaPlayerManager.play();
         }
+        else
+            mediaPlayerManager.pause();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (storage.getMenuMusicSetting())
+        if (!this.isFinishing() && !changingActivity && storage.getShopMusicSetting())
             mediaPlayerManager.pause();
+
+        changingActivity = false;
     }
 
     @Override
@@ -68,16 +80,19 @@ public class ShopMenu extends AppCompatActivity {
     public void onShopMenuButtonClick(View view) {
 
         if (view.getId() == R.id.skinsButton) {
+            changingActivity = true;
             Intent intent = new Intent(this, SkinShop.class);
             startActivityForResult(intent, 1);
         }
 
         if (view.getId() == R.id.trailsButton) {
+            changingActivity = true;
             Intent intent = new Intent(this, TrailShop.class);
             startActivityForResult(intent, 1);
         }
 
         if (view.getId() == R.id.soundButton) {
+            changingActivity = true;
             Intent intent = new Intent(this, SoundShop.class);
             startActivityForResult(intent, 1);
         }

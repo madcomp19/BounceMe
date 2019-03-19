@@ -22,7 +22,7 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
     private RewardedVideoAd mRewardedVideoAd;
 
     private MediaPlayerManager mediaPlayerManager;
-    private final int background_music_id = R.raw.background_music_2;
+    //private final int background_music_id = R.raw.background_music_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -125,11 +125,11 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
         mRewardedVideoAd.resume(this);
         super.onResume();
 
-        if(storage.getMenuMusicSetting())
+        /*if(storage.getMenuMusicSetting())
         {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
-        }
+        }*/
     }
 
     @Override
@@ -137,7 +137,7 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
         mRewardedVideoAd.pause(this);
         super.onPause();
 
-        if(storage.getMenuMusicSetting())
+        if(!this.isFinishing() && storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 

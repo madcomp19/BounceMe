@@ -159,11 +159,11 @@ public class AchievementsMenu extends AppCompatActivity {
         storage = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
 
-        if(storage.getMenuMusicSetting())
+        /*if(storage.getMenuMusicSetting())
         {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
-        }
+        }*/
 
         updateProgressBars();
 
@@ -176,7 +176,7 @@ public class AchievementsMenu extends AppCompatActivity {
 
         if(storage.getMenuMusicSetting())
         {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
     }
@@ -185,7 +185,7 @@ public class AchievementsMenu extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(storage.getMenuMusicSetting())
+        if(!this.isFinishing() && storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 

@@ -49,10 +49,11 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         total_bounces_ever = storageManager.getTotalBouncesEver();
 
 
-        if(storageManager.getMenuMusicSetting())
+        if(storageManager.getGameMusicSetting() != 0)
         {
-            mediaPlayerManager.changeVolume(0.4f);
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.pause();
+            mediaPlayerManager.changeVolume((float) storageManager.getGameMusicSetting() / 10);
+            mediaPlayerManager.loadSound(background_music_id, "Game");
             mediaPlayerManager.play();
         }
     }
@@ -61,10 +62,11 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     protected void onResume() {
         super.onResume();
 
-        if(storageManager.getMenuMusicSetting())
+        if(storageManager.getGameMusicSetting() != 0)
         {
-            mediaPlayerManager.changeVolume(0.4f);
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.pause();
+            mediaPlayerManager.changeVolume((float) storageManager.getGameMusicSetting() / 10);
+            mediaPlayerManager.loadSound(background_music_id, "Game");
             mediaPlayerManager.play();
         }
     }
@@ -87,11 +89,14 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
         MainMenu.prev_act_GameWorld = true;
 
-        if(storageManager.getMenuMusicSetting())
+
+        if(!this.isFinishing() && storageManager.getGameMusicSetting() != 0)
         {
-            mediaPlayerManager.changeVolume(1);
+            //mediaPlayerManager.changeVolume(1);
             mediaPlayerManager.pause();
         }
+        else
+            mediaPlayerManager.changeVolume(1);
     }
 
     @Override

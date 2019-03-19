@@ -12,6 +12,7 @@ public class MediaPlayerManager
     private static MediaPlayer mediaPlayer;
     private static int sound_id;
     private static Context context;
+    private static String currentMedia;
 
     private StorageManager storageManager;
 
@@ -30,31 +31,50 @@ public class MediaPlayerManager
 
             @Override
             public void onAudioFocusChange ( int focusChange){
+
+                boolean musicEnabled = false;
+
+                switch (currentMedia)
+                {
+                    case "Menu":
+                        musicEnabled = storageManager.getMenuMusicSetting();
+                        break;
+                    case "Shop":
+                        musicEnabled = storageManager.getShopMusicSetting();
+                        break;
+                    case "Game":
+                        if(storageManager.getGameMusicSetting() == 0)
+                            musicEnabled = false;
+                        else
+                            musicEnabled = true;
+                        break;
+                }
+
                 switch (focusChange) {
                     case AudioManager.AUDIOFOCUS_GAIN:
-                        if(storageManager.getMenuMusicSetting())
+                        if(musicEnabled)
                             play();
                         break;
                     case AudioManager.AUDIOFOCUS_GAIN_TRANSIENT:
                         // You have audio focus for a short time
-                        if(storageManager.getMenuMusicSetting())
+                        if(musicEnabled)
                             play();
                         break;
                     case AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK:
                         // Play over existing audio
-                        if(storageManager.getMenuMusicSetting())
+                        if(musicEnabled)
                         {
                             changeVolume(1);
                             play();
                         }
                         break;
                     case AudioManager.AUDIOFOCUS_LOSS:
-                        if(storageManager.getMenuMusicSetting())
+                        if(musicEnabled)
                             pause();
                         break;
                     case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                         // Temporary loss of audio focus - expect to get it back - you can keep your resources around
-                        if(storageManager.getMenuMusicSetting())
+                        if(musicEnabled)
                             pause();
                         break;
                 }
@@ -79,13 +99,14 @@ public class MediaPlayerManager
             return instance;
     }
 
-    public static void loadSound(int id)
+    public static void loadSound(int id, String str)
     {
         if(sound_id != id)
         {
             sound_id = id;
             mediaPlayer = MediaPlayer.create(context, sound_id);
         }
+        currentMedia = str;
     }
 
     public static void play()

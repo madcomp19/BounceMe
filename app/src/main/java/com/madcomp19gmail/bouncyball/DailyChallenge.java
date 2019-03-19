@@ -45,10 +45,10 @@ public class DailyChallenge extends AppCompatActivity {
         consecutive_days = prefs.getConsecutiveDays();
         setStarImages(consecutive_days);
 
-        if (prefs.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+        /*if (prefs.getMenuMusicSetting()) {
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
-        }
+        }*/
 
         ArrayList<String> sounds = getSoundsNames();
         rand = new Random();
@@ -263,7 +263,7 @@ public class DailyChallenge extends AppCompatActivity {
         super.onResume();
 
         if (prefs.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
     }
@@ -272,7 +272,7 @@ public class DailyChallenge extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if (prefs.getMenuMusicSetting())
+        if (!this.isFinishing() && prefs.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
 }

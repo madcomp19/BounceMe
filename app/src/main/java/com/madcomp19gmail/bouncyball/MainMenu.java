@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -25,6 +26,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private MediaPlayerManager mediaPlayerManager;
 
     private final int background_music_id = R.raw.background_music_2;
+
+    private boolean changingActivity;
 
     public static boolean prev_act_GameWorld = false;
     private static int prev_touches;
@@ -68,13 +71,18 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         if(storage.getMenuMusicSetting())
             mediaPlayer.start();*/
 
+        changingActivity = false;
+
         MediaPlayerManager.initialize(this, background_music_id);
         mediaPlayerManager = MediaPlayerManager.getInstance();
 
         if (storage.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+            //mediaPlayerManager.pause();
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
+        else
+            mediaPlayerManager.pause();
 
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoAd.setRewardedVideoAdListener(this);
@@ -140,6 +148,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             int new_touches = Math.abs(StorageManager.getInstance().getTotalTouches() - prev_touches);
 
             if (new_touches > 300) {
+                changingActivity = true;
                 Intent intent = new Intent(this, DoublePointsAlert.class);
                 startActivity(intent);
             }
@@ -159,17 +168,22 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         }
 
         if (storage.getMenuMusicSetting()) {
-            mediaPlayerManager.loadSound(background_music_id);
+            mediaPlayerManager.pause();
+            mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
+        else
+            mediaPlayerManager.pause();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        if (storage.getMenuMusicSetting())
+        if (!changingActivity && storage.getMenuMusicSetting())
             mediaPlayerManager.pause();
+
+        changingActivity = false;
     }
 
     @Override
@@ -194,6 +208,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }*/
 
     public void playGame(View view) {
+        changingActivity = true;
         Intent intent = new Intent(this, GameWorld.class);
         startActivity(intent);
         prev_touches = StorageManager.getInstance().getTotalTouches();
@@ -207,6 +222,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 boolean result = data.getBooleanExtra("result", false);
 
                 if (result) {
+                    changingActivity = true;
                     Intent intent = new Intent(this, GameWorld.class);
                     startActivityForResult(intent, 1);
                     prev_touches = StorageManager.getInstance().getTotalTouches();
@@ -219,6 +235,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void onClickDailyChallenge(View view) {
+        changingActivity = true;
         Intent intent = new Intent(this, DailyChallenge.class);
         startActivity(intent);
     }
@@ -231,26 +248,31 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void startShop(View view) {
+        changingActivity = true;
         Intent intent = new Intent(this, ShopMenu.class);
         startActivityForResult(intent,2);
     }
 
     public void goFacebookPage(View view) {
+        changingActivity = true;
         Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/francisco.teixeira.507"));
         startActivity(goFacebook);
     }
 
     public void achievementButton(View view) {
+        changingActivity = true;
         Intent goAchievements = new Intent(this, AchievementsMenu.class);
         startActivity(goAchievements);
     }
 
     public void goToSettings(View view) {
+        changingActivity = true;
         Intent goSettings = new Intent(this, SettingsMenu.class);
         startActivity(goSettings);
     }
 
     public void rateApp(View view) {
+        changingActivity = true;
         Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
         goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
