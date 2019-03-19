@@ -43,10 +43,7 @@ public class MediaPlayerManager
                         musicEnabled = storageManager.getShopMusicSetting();
                         break;
                     case "Game":
-                        if(storageManager.getGameMusicSetting() == 0)
-                            musicEnabled = false;
-                        else
-                            musicEnabled = true;
+                        musicEnabled = storageManager.getGameMusicSetting() != 0;
                         break;
                 }
 
