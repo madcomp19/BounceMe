@@ -57,7 +57,6 @@ public class SkinShop extends FragmentActivity {
     }
 
     public void onClickPlay(View view) {
-        mediaPlayerManager.changeVolume((float) storageManager.getGameMusicSetting() / 10);
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result", true);
         setResult(Activity.RESULT_OK, returnIntent);

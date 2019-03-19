@@ -74,7 +74,6 @@ public class TrailShop extends AppCompatActivity {
     }
 
     public void onClickPlay(View view){
-        mediaPlayerManager.changeVolume((float) storage.getGameMusicSetting() / 10);
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result", true);
         setResult(Activity.RESULT_OK, returnIntent);
