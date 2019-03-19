@@ -77,7 +77,7 @@
                         android:indeterminate="false"
                         android:max="100"
                         android:progress="90"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView1"
@@ -124,7 +124,7 @@
                         android:indeterminate="false"
                         android:max="1000"
                         android:progress="30"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView2"
@@ -171,7 +171,7 @@
                         android:indeterminate="false"
                         android:max="5000"
                         android:progress="300"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -237,7 +237,7 @@
                         android:indeterminate="false"
                         android:max="10000"
                         android:progress="10000"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -285,7 +285,7 @@
                         android:indeterminate="false"
                         android:max="20000"
                         android:progress="10000"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -332,7 +332,7 @@
                         android:indeterminate="false"
                         android:max="50000"
                         android:progress="10000"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -398,7 +398,7 @@
                         android:indeterminate="false"
                         android:max="100000"
                         android:progress="100000"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -446,7 +446,7 @@
                         android:indeterminate="false"
                         android:max="500000"
                         android:progress="250000"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -493,7 +493,7 @@
                         android:indeterminate="false"
                         android:max="1000000"
                         android:progress="1000000"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -559,7 +559,7 @@
                         android:indeterminate="false"
                         android:max="5"
                         android:progress="1"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView10"
@@ -607,7 +607,7 @@
                         android:indeterminate="false"
                         android:max="10"
                         android:progress="6"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -654,7 +654,7 @@
                         android:indeterminate="false"
                         android:max="25"
                         android:progress="10"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView12"
@@ -720,7 +720,7 @@
                         android:indeterminate="false"
                         android:max="50"
                         android:progress="35"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView13"
@@ -769,7 +769,7 @@
                         android:indeterminate="false"
                         android:max="100"
                         android:progress="70"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView14"
@@ -816,7 +816,7 @@
                         android:indeterminate="false"
                         android:max="250"
                         android:progress="100"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView15"
@@ -882,7 +882,7 @@
                         android:indeterminate="false"
                         android:max="5"
                         android:progress="1"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView16"
@@ -930,7 +930,7 @@
                         android:indeterminate="false"
                         android:max="10"
                         android:progress="6"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView17"
@@ -977,7 +977,7 @@
                         android:indeterminate="false"
                         android:max="25"
                         android:progress="10"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView18"
@@ -1043,7 +1043,7 @@
                         android:indeterminate="false"
                         android:max="5"
                         android:progress="1"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView19"
@@ -1091,7 +1091,7 @@
                         android:indeterminate="false"
                         android:max="20"
                         android:progress="6"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView20"
@@ -1138,7 +1138,7 @@
                         android:indeterminate="false"
                         android:max="40"
                         android:progress="10"
-                        android:progressDrawable="@drawable/ring_progress_bar" />
+                        android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView21"

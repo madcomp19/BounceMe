@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/play_icon" />
+        app:srcCompat="@drawable/play_icon_vector" />
 
     <TextView
         android:id="@+id/coins"
@@ -139,7 +139,7 @@
                     android:background="#424242"
                     android:onClick="onClickSound"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/mute_icon" />
+                    app:srcCompat="@drawable/mute_icon_vector" />
 
                 <ImageButton
                     android:id="@+id/car_horn_Button"

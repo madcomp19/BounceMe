@@ -132,7 +132,7 @@ public class SkinShop extends FragmentActivity {
             //set the new label as "Selected"
             //new_label.setText("Selected");
             new_label.setText("");
-            new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon, 0, 0);
+            new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
             new_label.setPadding(0, 10, 0, 0);
 
         } else { //if the skin is not owned
@@ -156,7 +156,7 @@ public class SkinShop extends FragmentActivity {
 
                 //new_label.setText("Selected");
                 new_label.setText("");
-                new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon, 0, 0);
+                new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
                 new_label.setPadding(0, 10, 0, 0);
                 Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
                 coins.setText(storageManager.getTotalTouches() + "");

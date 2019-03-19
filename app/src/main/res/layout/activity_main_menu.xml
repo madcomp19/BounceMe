@@ -18,7 +18,7 @@
         android:text="   +1 Gem"
         android:background="#FFFF00"
         android:onClick="watchAdMainMenu"
-        android:drawableLeft="@drawable/ad_icon"
+        android:drawableLeft="@drawable/ad_icon_vector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,7 +121,7 @@
             android:layout_width="203dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/rounded_button_vector"
             android:onClick="playGame"
             android:text="@string/play_button"
             android:textColor="#FFFFFF"
@@ -132,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_button3"
+            android:background="@drawable/rounded_button3_vector"
             android:onClick="onClickDailyChallenge"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
@@ -145,7 +145,7 @@
             android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_button2"
+            android:background="@drawable/rounded_button2_vector"
             android:onClick="startShop"
             android:text="@string/shop_button"
             android:textColor="#FFFFFF"
@@ -171,9 +171,9 @@
                 android:id="@+id/soundButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/circle_button"
+                android:background="@drawable/circle_button_vector"
                 android:contentDescription="TODO"
-                app:srcCompat="@drawable/settings_icon"
+                app:srcCompat="@drawable/settings_icon_vector"
                 android:onClick="goToSettings"/>
 
             <ImageButton
@@ -182,7 +182,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:background="@drawable/circle_button2"
+                android:background="@drawable/circle_button2_vector"
                 android:onClick="rateApp"
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
@@ -190,7 +190,7 @@
                 android:id="@+id/facebookButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/facebook"
+                android:background="@drawable/facebook_icon"
                 android:onClick="goFacebookPage" />
 
         </LinearLayout>
@@ -202,6 +202,23 @@
         android:id="@+id/secondary_layout"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="8dp"
+            android:text="Buy Everything"
+            android:onClick="buyEverything"
+            android:background="@drawable/buy_everything_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/madcomp"
+            app:layout_constraintHorizontal_bias="0.141"
+            app:layout_constraintStart_toEndOf="@+id/button" />
+
         <ImageView
             android:id="@+id/madcomp"
             android:layout_width="67dp"
@@ -209,7 +226,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/madcomp"
+            android:background="@drawable/madcomp_icon"
             android:onClick="godMode"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

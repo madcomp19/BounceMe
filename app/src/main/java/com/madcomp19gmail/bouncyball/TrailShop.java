@@ -226,7 +226,7 @@ public class TrailShop extends AppCompatActivity {
             storageManager.setSelectedTrailLabel(label_id);
 
             ((TextView) findViewById(label_id)).setText("");
-            ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+            ((TextView) findViewById(label_id)).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
             ((TextView) findViewById(label_id)).setPadding(0,10,0,0);
         } else {
             TextView label_text = (TextView) findViewById(label_id);
@@ -254,7 +254,7 @@ public class TrailShop extends AppCompatActivity {
                     storageManager.setSelectedTrailLabel(label_id);
 
                     label_text.setText("");
-                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label_text.setPadding(0,10,0,0);
                     Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
                     gems.setText(storageManager.getTotalGems() + "");
@@ -279,7 +279,7 @@ public class TrailShop extends AppCompatActivity {
                     storageManager.setSelectedTrailLabel(label_id);
 
                     label_text.setText("");
-                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label_text.setPadding(0,10,0,0);
                     Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
                     coins.setText(storageManager.getTotalTouches() + "");
@@ -314,7 +314,7 @@ public class TrailShop extends AppCompatActivity {
                 if (storageManager.getSelectedTrailLabel() == v.getId())
                 {
                     ((TextView) v).setText("");
-                    ((TextView) v).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    ((TextView) v).setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     v.setPadding(0,10,0,0);
                 }
             }

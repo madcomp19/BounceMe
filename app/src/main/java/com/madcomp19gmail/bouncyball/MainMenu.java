@@ -3,10 +3,10 @@ package com.madcomp19gmail.bouncyball;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -18,6 +18,9 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
 
 public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener {
 
@@ -77,7 +80,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         mediaPlayerManager = MediaPlayerManager.getInstance();
 
         if (storage.getMenuMusicSetting()) {
-            //mediaPlayerManager.pause();
             mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
         }
@@ -380,4 +382,61 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public void buyEverything(View v)
+    {
+        buyAllBalls();
+        buyAllSkins();
+        buyAllTrails();
+        buyAllBackgrounds();
+        buyAllSounds();
+    }
+
+    private void buyAllBalls()
+    {
+
+    }
+
+    private void buyAllSkins()
+    {
+        Field[] drawablesFields = R.drawable.class.getFields();
+
+        for (Field field : drawablesFields) {
+            try
+            {
+                String name = field.getName();
+                if(name.contains("vector") || name.contains("icon") || name.contains("reactive") || name.contains("rainbow") ||
+                        name.contains("colored") || name.contains("menu") || name.contains("title") || name.contains("background")
+                        || name.contains("clear") || name.contains("spectrum"))
+                    continue;
+
+                int id_label = this.getResources().getIdentifier(name + "_Label", "id", getPackageName());
+                int id = this.getResources().getIdentifier(name, "drawable", getPackageName());
+                storage.addOwnedSkinLabel(id_label);
+                storage.addOwnedSkin(id);
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+
+    private void buyAllTrails()
+    {
+
+    }
+
+    private void buyAllBackgrounds()
+    {
+
+    }
+
+    private void buyAllSounds()
+    {
+
+    }
 }

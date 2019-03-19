@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/play_icon" />
+        app:srcCompat="@drawable/play_icon_vector" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -92,7 +92,7 @@
         android:layout_height="36dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/bannerAdTrailShop"
-        app:tabBackground="@drawable/tab_selector"
+        app:tabBackground="@drawable/tab_selector_vector"
         app:tabGravity="center"
         app:tabIndicatorColor="@android:color/transparent"
         tools:layout_editor_absoluteX="0dp" />

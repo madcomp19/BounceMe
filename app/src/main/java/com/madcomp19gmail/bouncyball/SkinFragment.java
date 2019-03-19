@@ -53,7 +53,7 @@ public class SkinFragment extends Fragment {
                 if (storageManager.getSelectedSkinLabel() == v.getId())
                 {
                     label.setText("");
-                    label.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon, 0, 0);
+                    label.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label.setPadding(0,10,0,0);
                 }
             } else if (v instanceof ViewGroup)
