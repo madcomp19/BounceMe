@@ -421,13 +421,22 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 e.printStackTrace();
             }
         }
-
-
     }
 
     private void buyAllTrails()
     {
+        int res_id;
+        int trail;
+        int id_label;
 
+        for(int i = 0; i < 25; i++)
+        {
+            res_id = this.getResources().getIdentifier("trail_" + (i + 1), "integer", getPackageName());
+            trail = this.getResources().getInteger(res_id);
+            id_label = this.getResources().getIdentifier("trail_" + (i + 1) + "_Label", "id", getPackageName());
+            storage.addOwnedTrail(trail);
+            storage.addOwnedTrailLabel(id_label);
+        }
     }
 
     private void buyAllBackgrounds()
