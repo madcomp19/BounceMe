@@ -24,6 +24,8 @@ public class SoundShop extends AppCompatActivity {
     TextView coins;
     TextView gems;
 
+    SoundPoolManager soundPool;
+
     private AdView mAdView;
 
 
@@ -47,6 +49,11 @@ public class SoundShop extends AppCompatActivity {
             mediaPlayerManager.loadSound(background_music_id);
             mediaPlayerManager.play();
         }*/
+
+        soundPool = SoundPoolManager.getInstance();
+//        int id = this.getResources().getIdentifier("cash.wav", "raw", getPackageName());
+//        if(id != 0)
+//            soundPool.loadSound(id);
 
         mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -74,7 +81,7 @@ public class SoundShop extends AppCompatActivity {
         if(!this.isFinishing() && storage.getShopMusicSetting())
             mediaPlayerManager.pause();
     }
-    
+
     public void onClickPlay(View view){
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result", true);
@@ -166,6 +173,7 @@ public class SoundShop extends AppCompatActivity {
             else
             {
                 if (total_touches >= price) {
+                   //soundPool.playSound();
                     storageManager.setTotalTouches(total_touches - price);
                     storageManager.addOwnedSound(sound);
                     storageManager.setSelectedSound(sound);
