@@ -132,14 +132,11 @@ public class GameView extends View
         {
             for(Ball ball : balls)
             {
-                //if(Vector2.dist(touchPosition, ball.position) < ball.radius + 100)
-                //{
-                    ball.dragged = true;
-                    ball.trailPositions.clear();
-                    ball.position = touchPosition;
-                    ball.velocity.mult(0);
-                    ball.acceleration.mult(0);
-                //}
+                ball.dragged = true;
+                ball.trailPositions.clear();
+                ball.position = touchPosition;
+                ball.velocity.mult(0);
+                ball.acceleration.mult(0);
             }
         }
         else if(action == MotionEvent.ACTION_UP)
@@ -166,7 +163,6 @@ public class GameView extends View
             }
         }
 
-
         return true;
     }
 
@@ -183,24 +179,17 @@ public class GameView extends View
         return (Math.random() * range) + (min <= max ? min : max);
     }
 
-    /*@Override
-    protected void onSizeChanged(int w, int h, int oldW, int oldH)
-    {
-        centerX = w / 2;
-        centerY = h / 2;
-    }*/
-
     public void addCoin(Vector2 position)
     {
         Drop drop = new Drop(position.x, position.y, coin_radius, 1, coin_img);
-        drop.applyForce(new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(100, 200)));
+        drop.applyForce(new Vector2((float) randomWithRange(-40, 40), (float) randomWithRange(0, 200)));
         drops.add(drop);
     }
 
     public void addGem(Vector2 position)
     {
         Drop drop = new Drop(position.x, position.y, gem_radius, 0, gem_img);
-        drop.applyForce(new Vector2((float) randomWithRange(-20, 20), (float) randomWithRange(100, 200)));
+        drop.applyForce(new Vector2((float) randomWithRange(-40, 40), (float) randomWithRange(0, 200)));
         drops.add(drop);
     }
 
@@ -227,19 +216,19 @@ public class GameView extends View
 
 
 
-            loops = 0;
+        loops = 0;
 
-            while (System.currentTimeMillis() > next_game_tick && loops < MAX_FRAMESKIP)
-            {
-                updateGame();
+        while (System.currentTimeMillis() > next_game_tick && loops < MAX_FRAMESKIP)
+        {
+            updateGame();
 
-                next_game_tick += SKIP_TICKS;
-                loops++;
-            }
+            next_game_tick += SKIP_TICKS;
+            loops++;
+        }
 
-            interpolation = ((float) System.currentTimeMillis() + SKIP_TICKS - next_game_tick) / (float) SKIP_TICKS;
+        interpolation = ((float) System.currentTimeMillis() + SKIP_TICKS - next_game_tick) / (float) SKIP_TICKS;
 
-            displayGame(c, interpolation);
+        displayGame(c, interpolation);
         //}
 
         postInvalidate();
@@ -256,8 +245,26 @@ public class GameView extends View
 
             drop.move();
 
-            if(drop.health <= 0) {
-                drops.remove(drop);
+            for(Ball ball : balls)
+            {
+                float dist = Vector2.dist(ball.position, drop.position);
+
+                if(dist <= ball_radius + drop.radius && drop.health < 1)
+                {
+                    drops.remove(drop);
+
+                    if(drop.type == 1)
+                        GameWorld.addTouch();
+                    else if(drop.type == 0)
+                        GameWorld.addGem();
+                }
+                else if(dist < ball_radius + drop.radius + 300 && drop.health < 1)
+                {
+                    Vector2 force = Vector2.sub(ball.position, drop.position);
+                    force.mult(4f / dist);
+                    force.y -= 9.8f;
+                    drop.applyForce(force);
+                }
             }
         }
     }

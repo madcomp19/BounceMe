@@ -95,10 +95,9 @@ public class Ball
 
 
         if (position.x >= rightLimit) {
-            position.x = rightLimit;
+            position.x = rightLimit - 1;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
-            GameWorld.addTouch();
             playSound();
 
             GameWorld.addDrop(position);
@@ -107,10 +106,9 @@ public class Ball
                 trail = new Random().nextInt(361);
         }
         if (position.x <= radius) {
-            position.x = radius;
+            position.x = radius + 1;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
-            GameWorld.addTouch();
             playSound();
 
             GameWorld.addDrop(position);
@@ -118,16 +116,13 @@ public class Ball
             if(reactive)
                 trail = new Random().nextInt(361);
         }
-        if (position.y >= bottomLimit)
-        {
-            position.y = bottomLimit;
-
+        if (position.y >= bottomLimit) {
+            position.y = bottomLimit - 1;
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
 
             if(Math.abs(prev_velY - velocity.y) > 50f)
             {
-                GameWorld.addTouch();
                 playSound();
 
                 GameWorld.addDrop(position);
@@ -141,10 +136,9 @@ public class Ball
                 applyForce(new Vector2(-velocity.x / 30, 0));
         }
         if (position.y <= radius) {
-            position.y = radius;
+            position.y = radius + 1;
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
-            GameWorld.addTouch();
             playSound();
 
             GameWorld.addDrop(position);
@@ -152,12 +146,6 @@ public class Ball
             if(reactive)
                 trail = new Random().nextInt(361);
         }
-
-        if(position.x <= radius && velocity.x < 1)
-            position.x = 0 + radius + 1;
-        else if(position.x >= rightLimit && velocity.x < 1)
-            position.x = rightLimit - 1;
-
 
         // Trail -1 --> clear (no trail)
         if(trail == -1)
@@ -176,27 +164,8 @@ public class Ball
 
     private void playSound()
     {
-        //SoundPoolManager.getInstance().playSound(R.raw.bubble);
         if(sound != 0)
             SoundPoolManager.getInstance().playSound();
-    }
-
-    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight)
-    {
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-        // CREATE A MATRIX FOR THE MANIPULATION
-        Matrix matrix = new Matrix();
-        // RESIZE THE BIT MAP
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // "RECREATE" THE NEW BITMAP
-        Bitmap resizedBitmap = Bitmap.createBitmap(
-                bm, 0, 0, width, height, matrix, false);
-        bm.recycle();
-        return resizedBitmap;
     }
 
     private void drawTrail(Canvas canvas, float hue, float saturation, float value)

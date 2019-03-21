@@ -32,15 +32,13 @@ public class Drop
         gravity = new Vector2(0, 9.8f);
         angle = 0;
 
-        //if(sound!=0)
-        //    SoundPoolManager.getInstance().loadSound(sound);
-
         radius = r;
 
         image = img;
 
         type = aType;
-        health = 255;
+
+        health = 1;
     }
 
     public void move()
@@ -78,14 +76,14 @@ public class Drop
             applyForce(new Vector2(velocity.x / 2, 0));
             velocity.x *= -1;
 
-            removeHealth();
+            health--;
         }
         if (position.x <= radius) {
             position.x = radius;
             applyForce(new Vector2(velocity.x / 2, 0));
             velocity.x *= -1;
 
-            removeHealth();
+            health--;
         }
         if (position.y >= bottomLimit)
         {
@@ -96,7 +94,8 @@ public class Drop
 
             if(Math.abs(prev_velY - velocity.y) < 1f) {
                 applyForce(new Vector2(-velocity.x / 30, 0));
-                removeHealth();
+
+                health--;
             }
         }
         if (position.y <= radius) {
@@ -104,7 +103,7 @@ public class Drop
             applyForce(new Vector2(0,velocity.y / 2));
             velocity.y *= -1;
 
-            removeHealth();
+            health--;
         }
 
         if(position.x <= radius && velocity.x < 1)
@@ -113,56 +112,20 @@ public class Drop
             position.x = rightLimit - 1;
     }
 
-    private void removeHealth()
-    {
-        if(type == 1)
-            health -= 4;
-        else
-            health -= 1;
-    }
-
     public void applyForce(Vector2 force)
     {
         acceleration.add(force);
-    }
-
-    private void playSound()
-    {
-        //SoundPoolManager.getInstance().playSound(R.raw.bubble);
-        //if(sound != 0)
-        //    SoundPoolManager.getInstance().playSound();
-    }
-
-    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight)
-    {
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-        // CREATE A MATRIX FOR THE MANIPULATION
-        Matrix matrix = new Matrix();
-        // RESIZE THE BIT MAP
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // "RECREATE" THE NEW BITMAP
-        Bitmap resizedBitmap = Bitmap.createBitmap(
-                bm, 0, 0, width, height, matrix, false);
-        bm.recycle();
-        return resizedBitmap;
     }
 
     public void display(Canvas canvas)
     {
         if(image != null)
         {
-            Paint p = new Paint();
-            p.setAlpha(health);
-
             canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
 
             canvas.rotate(angle, position.x, position.y);
 
-            canvas.drawBitmap(image, position.x - radius, position.y - radius, p);
+            canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
 
             canvas.restore();
         }

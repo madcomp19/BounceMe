@@ -91,10 +91,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
 
         if(!this.isFinishing() && storageManager.getGameMusicSetting() != 0)
-        {
-            //mediaPlayerManager.changeVolume(1);
             mediaPlayerManager.pause();
-        }
         else
             mediaPlayerManager.changeVolume(1);
     }
@@ -107,9 +104,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         SoundPoolManager.getInstance().release();
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
-
-        //if(storageManager.getMenuMusicSetting())
-        //    mediaPlayerManager.pause();
     }
 
     public static void addTouch()
@@ -118,12 +112,15 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         total_bounces_ever++;
     }
 
+    public static void addGem()
+    {
+        storageManager.addGems(1);
+    }
+
     public static void addDrop(Vector2 position)
     {
-        if(Math.random() * 100 < 1) {
+        if(Math.random() * 100 < 1)
             gameView.addGem(position);
-            storageManager.addGems(1);
-        }
         else
             gameView.addCoin(position);
     }
@@ -137,18 +134,5 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     {
         gameView.shake();
     }
-
-    /*public void playSound()
-    {
-        AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
-        float curVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-        float maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-        float leftVolume = curVolume/maxVolume;
-        float rightVolume = curVolume/maxVolume;
-        int priority = 1;
-        int no_loop = 0;
-        float normal_playback_rate = 1f;
-        soundPool.play(soundID, leftVolume, rightVolume, priority, no_loop, normal_playback_rate);
-    }*/
 }
 
