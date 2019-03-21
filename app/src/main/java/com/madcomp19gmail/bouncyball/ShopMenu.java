@@ -96,6 +96,12 @@ public class ShopMenu extends AppCompatActivity {
             Intent intent = new Intent(this, SoundShop.class);
             startActivityForResult(intent, 1);
         }
+
+        if (view.getId() == R.id.boostButton) {
+            changingActivity = true;
+            Intent intent = new Intent(this, BoostShop.class);
+            startActivityForResult(intent, 1);
+        }
     }
 
     @Override

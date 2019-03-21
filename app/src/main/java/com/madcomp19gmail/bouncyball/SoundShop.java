@@ -51,9 +51,10 @@ public class SoundShop extends AppCompatActivity {
         }*/
 
         soundPool = SoundPoolManager.getInstance();
-//        int id = this.getResources().getIdentifier("cash.wav", "raw", getPackageName());
-//        if(id != 0)
-//            soundPool.loadSound(id);
+        int id = this.getResources().getIdentifier("cash", "raw", getPackageName());
+        Toast.makeText(this, String.valueOf(id), Toast.LENGTH_SHORT).show();
+        if(id != 0)
+            //soundPool.loadSound(id);
 
         mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();

@@ -32,6 +32,7 @@
     <string name="selected_trail_label">SelectedTrailLabel</string>
     <string name="selected_sound">SelectedSound</string>
     <string name="selected_sound_label">SelectedSoundLabel</string>
+    <string name="selected_boost">SelectedBoost</string>
     <string name="linearLayout">LinearLayout</string>
     <string name="menuMusicSetting">MenuMusicSetting</string>
     <string name="shopMusicSetting">ShopMusicSetting</string>

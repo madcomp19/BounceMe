@@ -439,4 +439,16 @@ public class StorageManager {
         editor.putInt("SkinPageNumber", n);
         editor.commit();
     }
+
+    public void setActiveBoost(int boost)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_boost), boost);
+        editor.commit();
+    }
+
+    public int getActiveBoost()
+    {
+        return prefs.getInt(context.getString(R.string.selected_boost), 1);
+    }
 }

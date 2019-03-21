@@ -148,7 +148,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/boostButton"
         android:layout_width="110dp"
         android:layout_height="120dp"
         android:layout_marginStart="8dp"
@@ -159,6 +159,7 @@
         android:layout_marginBottom="8dp"
         android:background="#424242"
         android:src="@drawable/multipliers_icon"
+        android:onClick="onShopMenuButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"

@@ -119,10 +119,19 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
     public static void addDrop(Vector2 position)
     {
-        if(Math.random() * 100 < 1)
-            gameView.addGem(position);
-        else
-            gameView.addCoin(position);
+        int boost = storageManager.getActiveBoost();
+
+        for(int i = 0; i < boost; i++)
+        {
+            if(Math.random() * 100 < 1)
+                gameView.addGem(position);
+            else
+                gameView.addCoin(position);
+        }
+//        if(Math.random() * 100 < 1)
+//            gameView.addGem(position);
+//        else
+//            gameView.addCoin(position);
     }
 
     public static int getTouches()
