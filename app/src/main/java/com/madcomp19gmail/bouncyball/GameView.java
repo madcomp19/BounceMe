@@ -271,11 +271,11 @@ public class GameView extends View
 
     private void displayGame(Canvas canvas, float interpolation)
     {
-        for(Ball ball : balls)
-            ball.display(canvas);
-
         for(Drop drop : drops)
             drop.display(canvas);
+
+        for(Ball ball : balls)
+            ball.display(canvas);
 
         p.setColor(Color.WHITE);
         p.setTextAlign(Paint.Align.CENTER);
