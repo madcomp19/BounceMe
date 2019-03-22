@@ -446,24 +446,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     private void buyAllSounds()
     {
-        Field[] rawFields = R.raw.class.getFields();
 
-        for (Field field : rawFields) {
-            try
-            {
-                String name = field.getName();
-                if(name.contains("background"))
-                    continue;
-
-                int id_label = this.getResources().getIdentifier(name + "_Label", "id", getPackageName());
-                int id = this.getResources().getIdentifier(name, "raw", getPackageName());
-                storage.addOwnedSoundLabel(id_label);
-                storage.addOwnedSound(id);
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-        }
     }
 }

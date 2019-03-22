@@ -117,7 +117,7 @@
             <LinearLayout
                 android:id="@+id/linearLayoutTrails1"
                 android:layout_width="match_parent"
-                android:layout_height="68dp"
+                android:layout_height="110dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
@@ -132,54 +132,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/gems">
 
                 <ImageButton
-                    android:id="@+id/x2_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/x2_2m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/mute_icon_vector" />
+                    app:srcCompat="@drawable/new_boosts_1" />
 
                 <ImageButton
-                    android:id="@+id/x5_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/x2_5m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_2" />
+                    android:src="@drawable/new_boosts_2" />
 
                 <ImageButton
-                    android:id="@+id/x10_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/x2_10m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_3" />
-
-                <ImageButton
-                    android:id="@+id/x20_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickBoost"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/basketball_ball" />
-
-                <ImageButton
-                    android:id="@+id/x50_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickBoost"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_5" />
+                    android:src="@drawable/new_boosts_3" />
 
 
             </LinearLayout>
@@ -202,7 +182,7 @@
 
 
                 <TextView
-                    android:id="@+id/x2_Label"
+                    android:id="@+id/x2_2m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -215,7 +195,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/x5_Label"
+                    android:id="@+id/x2_5m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -228,33 +208,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/x10_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
-                    android:textAlignment="center"
-                    android:textColor="#FFF" />
-
-                <TextView
-                    android:id="@+id/x20_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
-                    android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
-                    android:textAlignment="center"
-                    android:textColor="#FFF" />
-
-                <TextView
-                    android:id="@+id/x50_Label"
+                    android:id="@+id/x2_10m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -272,7 +226,7 @@
             <LinearLayout
                 android:id="@+id/linearLayoutTrails3"
                 android:layout_width="match_parent"
-                android:layout_height="68dp"
+                android:layout_height="110dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="15dp"
@@ -287,54 +241,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails2">
 
                 <ImageButton
-                    android:id="@+id/x100_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/x5_2m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_6" />
+                    android:src="@drawable/new_boosts_4" />
 
                 <ImageButton
-                    android:id="@+id/x200_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/x5_5m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/colored_7" />
+                    android:src="@drawable/new_boosts_5" />
 
                 <ImageButton
-                    android:id="@+id/x500_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:id="@+id/x5_10m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/football" />
-
-                <ImageButton
-                    android:id="@+id/x501_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickBoost"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ping_pong_ball" />
-
-                <ImageButton
-                    android:id="@+id/x502_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickBoost"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_10" />
+                    android:src="@drawable/new_boosts_6" />
 
 
             </LinearLayout>
@@ -355,9 +289,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails3">
 
-
                 <TextView
-                    android:id="@+id/x100_Label"
+                    android:id="@+id/x5_2m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -370,7 +303,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/x200_Label"
+                    android:id="@+id/x5_5m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -383,7 +316,89 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/x500_Label"
+                    android:id="@+id/x5_10m_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBoost"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails5"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+                <ImageButton
+                    android:id="@+id/x10_2m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBoost"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/new_boosts_7" />
+
+                <ImageButton
+                    android:id="@+id/x10_5m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBoost"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_boosts_8" />
+
+                <ImageButton
+                    android:id="@+id/x10_10m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBoost"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_boosts_9" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails6"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/x10_2m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -396,7 +411,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/x501_Label"
+                    android:id="@+id/x10_5m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -409,7 +424,115 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/x502_Label"
+                    android:id="@+id/x10_10m_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBoost"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails7"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+                <ImageButton
+                    android:id="@+id/x50_2m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBoost"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/new_boosts_10" />
+
+                <ImageButton
+                    android:id="@+id/x50_5m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBoost"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_boosts_11" />
+
+                <ImageButton
+                    android:id="@+id/x50_10m_Button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBoost"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_boosts_12" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTrails8"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/x50_2m_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBoost"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/x50_5m_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBoost"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/x50_10m_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -425,7 +548,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0dp" />
+                android:layout_height="150dp" />
 
         </LinearLayout>
 

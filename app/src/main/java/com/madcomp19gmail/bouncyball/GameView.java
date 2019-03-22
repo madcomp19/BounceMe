@@ -69,10 +69,10 @@ public class GameView extends View
 
         // This crops the image to the screen size starting from the bottom left corner
         Resources resources = getResources();
-        Bitmap bmp = BitmapFactory.decodeResource(resources, R.drawable.background_48);
-        BitmapDrawable background = new BitmapDrawable(resources, Bitmap.createBitmap(bmp, 0,bmp.getHeight() - height, width, height));
-        setBackgroundDrawable(background);
-        bmp.recycle();
+        //Bitmap bmp = BitmapFactory.decodeResource(resources, R.drawable.background_48); // Quick Play crash
+        //BitmapDrawable background = new BitmapDrawable(resources, Bitmap.createBitmap(bmp, 0,bmp.getHeight() - height, width, height));
+        //setBackgroundDrawable(background);
+        //bmp.recycle();
 
         balls = new ArrayList<>();
 

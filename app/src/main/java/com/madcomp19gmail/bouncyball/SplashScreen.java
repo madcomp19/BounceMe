@@ -24,7 +24,7 @@ public class SplashScreen extends AppCompatActivity {
 
         view = new View(this);
 
-        timer = new CountDownTimer(2500, 1000) {
+        timer = new CountDownTimer(500, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 //empty

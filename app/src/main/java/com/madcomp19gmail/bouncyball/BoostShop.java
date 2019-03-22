@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import static java.lang.Integer.parseInt;
+
 public class BoostShop extends AppCompatActivity {
 
     private AdView mAdView;
@@ -39,54 +41,11 @@ public class BoostShop extends AppCompatActivity {
 
     public void onClickBoost(View view)
     {
-        switch (view.getId()) {
-            case R.id.x2_Button:
-            case R.id.x2_Label:
-                storageManager.setActiveBoost(2);
-                break;
+        String view_id = view.getResources().getResourceEntryName(view.getId());
+        view_id = view_id.split("_Label")[0].split("_Button")[0];
+        int boost = parseInt(view_id.split("_")[0].replace("x", ""));
+        int time = parseInt(view_id.split("_")[1].replace("m", ""));
 
-            case R.id.x5_Button:
-            case R.id.x5_Label:
-                storageManager.setActiveBoost(5);
-                break;
-
-            case R.id.x10_Button:
-            case R.id.x10_Label:
-                storageManager.setActiveBoost(10);
-                break;
-
-            case R.id.x20_Button:
-            case R.id.x20_Label:
-                storageManager.setActiveBoost(20);
-                break;
-            case R.id.x50_Button:
-            case R.id.x50_Label:
-                storageManager.setActiveBoost(50);
-                break;
-
-            case R.id.x100_Button:
-            case R.id.x100_Label:
-                storageManager.setActiveBoost(100);
-                break;
-            case R.id.x200_Button:
-            case R.id.x200_Label:
-                storageManager.setActiveBoost(200);
-                break;
-
-            case R.id.x500_Button:
-            case R.id.x500_Label:
-                storageManager.setActiveBoost(500);
-                break;
-
-            case R.id.x501_Button:
-            case R.id.x501_Label:
-                storageManager.setActiveBoost(500);
-                break;
-
-            case R.id.x502_Button:
-            case R.id.x502_Label:
-                storageManager.setActiveBoost(1);
-                break;
-        }
+        storageManager.setActiveBoost(boost);
     }
 }
