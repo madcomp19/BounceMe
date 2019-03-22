@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
@@ -60,6 +62,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         MobileAds.initialize(this, "ca-app-pub-5557351606937995~8015272303");
+
+        ImageView iv = (ImageView) findViewById(R.id.bounce);
+
+        Glide.with(this).load(R.drawable.bounce).into(iv);
 
         StorageManager.initialize(this);
         storage = StorageManager.getInstance();

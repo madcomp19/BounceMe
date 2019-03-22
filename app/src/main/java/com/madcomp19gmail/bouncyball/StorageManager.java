@@ -94,6 +94,7 @@ public class StorageManager {
     {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_gems), gems);
+        editor.commit();
     }
 
     public int getTotalBouncesEver(){

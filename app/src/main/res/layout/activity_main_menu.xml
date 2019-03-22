@@ -99,22 +99,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <TextView
+        <ImageView
             android:id="@+id/main_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/main_title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            android:textColor="@color/corPrimaria"
-            android:textSize="30sp" />
+            android:layout_width="208dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bounce_it_up_title" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="144dp"
+            android:id="@+id/bounce"
+            android:layout_width="295dp"
             android:layout_height="148dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bounce" />
+            android:layout_marginTop="20dp" />
 
         <Button
             android:id="@+id/playButton"
