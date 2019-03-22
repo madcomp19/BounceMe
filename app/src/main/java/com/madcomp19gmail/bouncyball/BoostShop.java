@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.util.Calendar;
+
 import static java.lang.Integer.parseInt;
 
 public class BoostShop extends AppCompatActivity {
@@ -47,5 +49,6 @@ public class BoostShop extends AppCompatActivity {
         int time = parseInt(view_id.split("_")[1].replace("m", ""));
 
         storageManager.setActiveBoost(boost);
+        storageManager.setActiveBoostTime(Calendar.getInstance().getTimeInMillis() + time * 60000);
     }
 }

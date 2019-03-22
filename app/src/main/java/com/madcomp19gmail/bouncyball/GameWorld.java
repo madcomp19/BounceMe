@@ -7,6 +7,8 @@ import android.view.WindowManager;
 
 import com.squareup.seismic.ShakeDetector;
 
+import java.util.Calendar;
+
 
 public class GameWorld extends AppCompatActivity implements ShakeDetector.Listener {
 
@@ -22,6 +24,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     private static MediaPlayerManager mediaPlayerManager;
     private static int touches;
     private static int total_bounces_ever;
+    private static int gems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalTouches();
         total_bounces_ever = storageManager.getTotalBouncesEver();
+        gems  = storageManager.getTotalGems();
 
 
         if(storageManager.getGameMusicSetting() != 0)
@@ -77,6 +81,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onStop();
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
+        storageManager.setTotalGems(gems);
     }
 
     @Override
@@ -85,6 +90,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onPause();
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
+        storageManager.setTotalGems(gems);
 
 
         MainMenu.prev_act_GameWorld = true;
@@ -104,6 +110,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         SoundPoolManager.getInstance().release();
         storageManager.setTotalTouches(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
+        storageManager.setTotalGems(gems);
     }
 
     public static void addTouch()
@@ -114,12 +121,20 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
     public static void addGem()
     {
-        storageManager.addGems(1);
+        gems++;
     }
 
     public static void addDrop(Vector2 position)
     {
-        int boost = storageManager.getActiveBoost();
+        int boost;
+
+        if(Calendar.getInstance().getTimeInMillis() < storageManager.getActiveBoostTime())
+            boost = storageManager.getActiveBoost();
+        else
+        {
+            boost = 1;
+            storageManager.setActiveBoost(boost);
+        }
 
         for(int i = 0; i < boost; i++)
         {
@@ -137,6 +152,11 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     public static int getTouches()
     {
         return touches;
+    }
+
+    public static int getGems()
+    {
+        return gems;
     }
 
     @Override public void hearShake()

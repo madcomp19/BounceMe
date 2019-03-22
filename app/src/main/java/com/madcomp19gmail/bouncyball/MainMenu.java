@@ -34,6 +34,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     public static boolean prev_act_GameWorld = false;
     private static int prev_touches;
+    private static int prev_gems;
     TextView coins;
     TextView gems;
     TextView adsLeftToday;
@@ -200,6 +201,11 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         return prev_touches;
     }
 
+    public static int getPrevGems()
+    {
+        return prev_gems;
+    }
+
     /*public static void addTouch() {
         touches++;
         storage.setTotalTouches(touches);
@@ -213,7 +219,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         changingActivity = true;
         Intent intent = new Intent(this, GameWorld.class);
         startActivity(intent);
-        prev_touches = StorageManager.getInstance().getTotalTouches();
+        prev_touches = storage.getTotalTouches();
+        prev_gems = storage.getTotalGems();
     }
 
     @Override

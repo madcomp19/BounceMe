@@ -90,6 +90,12 @@ public class StorageManager {
         editor.commit();
     }
 
+    public void setTotalGems(int gems)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.total_gems), gems);
+    }
+
     public int getTotalBouncesEver(){
         return prefs.getInt(context.getString(R.string.total_bounces_ever), 0);
     }
@@ -450,5 +456,17 @@ public class StorageManager {
     public int getActiveBoost()
     {
         return prefs.getInt(context.getString(R.string.selected_boost), 1);
+    }
+
+    public void setActiveBoostTime(long time)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putLong(context.getString(R.string.selected_boost_time), time);
+        editor.commit();
+    }
+
+    public long getActiveBoostTime()
+    {
+        return prefs.getLong(context.getString(R.string.selected_boost_time), Calendar.getInstance().getTimeInMillis());
     }
 }
