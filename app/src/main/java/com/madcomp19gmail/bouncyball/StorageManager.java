@@ -468,6 +468,6 @@ public class StorageManager {
 
     public long getActiveBoostTime()
     {
-        return prefs.getLong(context.getString(R.string.selected_boost_time), Calendar.getInstance().getTimeInMillis());
+        return prefs.getLong(context.getString(R.string.selected_boost_time), 0);
     }
 }
