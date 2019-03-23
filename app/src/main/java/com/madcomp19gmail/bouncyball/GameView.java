@@ -28,6 +28,10 @@ public class GameView extends View
     float coin_radius;
     float gem_radius;
     Bitmap coin_img;
+    Bitmap coin_2x_img;
+    Bitmap coin_5x_img;
+    Bitmap coin_10x_img;
+    Bitmap coin_50x_img;
     Bitmap gem_img;
     Bitmap gem_icon;
 
@@ -88,10 +92,25 @@ public class GameView extends View
         Resources res = getResources();
 
         drops = new ArrayList<>();
+
         coin_img = BitmapFactory.decodeResource(res, R.drawable.coin_icon);
         coin_img = getResizedBitmap(coin_img, (int) coin_radius * 2, (int) coin_radius * 2);
+
+        coin_2x_img = BitmapFactory.decodeResource(res, R.drawable.coin_icon_2x);
+        coin_2x_img = getResizedBitmap(coin_2x_img, (int) coin_radius * 2, (int) coin_radius * 2);
+
+        coin_5x_img = BitmapFactory.decodeResource(res, R.drawable.coin_icon_5x);
+        coin_5x_img = getResizedBitmap(coin_5x_img, (int) coin_radius * 2, (int) coin_radius * 2);
+
+        coin_10x_img = BitmapFactory.decodeResource(res, R.drawable.coin_icon_10x);
+        coin_10x_img = getResizedBitmap(coin_10x_img, (int) coin_radius * 2, (int) coin_radius * 2);
+
+        coin_50x_img = BitmapFactory.decodeResource(res, R.drawable.coin_icon_50x);
+        coin_50x_img = getResizedBitmap(coin_50x_img, (int) coin_radius * 2, (int) coin_radius * 2);
+
         gem_img = BitmapFactory.decodeResource(res, R.drawable.gem_icon);
         gem_img = getResizedBitmap(gem_img, (int) gem_radius * 2, (int) gem_radius * 2);
+
         gem_icon = BitmapFactory.decodeResource(res, R.drawable.gem_icon);
         gem_icon = getResizedBitmap(gem_icon, (int) coin_radius * 2, (int) coin_radius * 2);
 
@@ -190,16 +209,28 @@ public class GameView extends View
         return (Math.random() * range) + (min <= max ? min : max);
     }
 
-    public void addCoin(Vector2 position)
+    public void spawnCoin(Vector2 position, int value)
     {
-        Drop drop = new Drop(position.x, position.y, coin_radius, 1, coin_img);
+        int boost = storageManager.getActiveBoost();
+        Bitmap coin = Bitmap.createBitmap((int) coin_radius * 2, (int) coin_radius * 2, Bitmap.Config.ARGB_8888);
+
+        switch (boost)
+        {
+            case 1: coin = coin_img; break;
+            case 2: coin = coin_2x_img; break;
+            case 5: coin = coin_5x_img; break;
+            case 10: coin = coin_10x_img; break;
+            case 50: coin = coin_50x_img; break;
+        }
+
+        Drop drop = new Drop(position.x, position.y, coin_radius, 1, value, coin);
         drop.applyForce(new Vector2((float) randomWithRange(-40, 40), (float) randomWithRange(0, 200)));
         drops.add(drop);
     }
 
-    public void addGem(Vector2 position)
+    public void spawnGem(Vector2 position, int value)
     {
-        Drop drop = new Drop(position.x, position.y, gem_radius, 0, gem_img);
+        Drop drop = new Drop(position.x, position.y, gem_radius, 0, value, gem_img);
         drop.applyForce(new Vector2((float) randomWithRange(-40, 40), (float) randomWithRange(0, 200)));
         drops.add(drop);
     }
@@ -262,12 +293,19 @@ public class GameView extends View
 
                 if(dist <= ball_radius + drop.radius && drop.health < 1)
                 {
-                    drops.remove(drop);
+                    //drops.remove(drop);
 
-                    if(drop.type == 1)
-                        GameWorld.addTouch();
-                    else if(drop.type == 0)
-                        GameWorld.addGem();
+                    //int boost = storageManager.getActiveBoost();
+
+                    //if(boost == 10 || boost == 50)
+                        //boost /= 2;
+
+                    if (drop.type == 1)
+                        GameWorld.addTouches(drop.value);
+                    else if (drop.type == 0)
+                        GameWorld.addGems(drop.value);
+
+                    drops.remove(drop);
                 }
                 else if(dist < ball_radius + drop.radius + 300 && drop.health < 1)
                 {

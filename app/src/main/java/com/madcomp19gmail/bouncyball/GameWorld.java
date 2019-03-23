@@ -113,20 +113,21 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         storageManager.setTotalGems(gems);
     }
 
-    public static void addTouch()
+    public static void addTouches(int t)
     {
-        touches++;
+        touches += t;
         total_bounces_ever++;
     }
 
-    public static void addGem()
+    public static void addGems(int g)
     {
-        gems++;
+        gems += g;
     }
 
     public static void addDrop(Vector2 position)
     {
         int boost;
+        int value = 1;
 
         if(Calendar.getInstance().getTimeInMillis() < storageManager.getActiveBoostTime())
             boost = storageManager.getActiveBoost();
@@ -136,17 +137,27 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
             storageManager.setActiveBoost(boost);
         }
 
+        switch (boost)
+        {
+            case 1: boost = 1; value = 1; break;
+            case 2: boost = 1; value = 2; break;
+            case 5: boost = 1; value = 5; break;
+            case 10: boost = 2; value = 5; break;
+            case 50: boost = 2; value = 25; break;
+            default: break;
+        }
+
         for(int i = 0; i < boost; i++)
         {
             if(Math.random() * 100 < 1)
-                gameView.addGem(position);
+                gameView.spawnGem(position, value);
             else
-                gameView.addCoin(position);
+                gameView.spawnCoin(position, value);
         }
 //        if(Math.random() * 100 < 1)
-//            gameView.addGem(position);
+//            gameView.addGems(position);
 //        else
-//            gameView.addCoin(position);
+//            gameView.spawnCoin(position);
     }
 
     public static int getTouches()

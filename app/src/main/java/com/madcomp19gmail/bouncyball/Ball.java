@@ -117,7 +117,7 @@ public class Ball
                 trail = new Random().nextInt(361);
         }
         if (position.y >= bottomLimit) {
-            position.y = bottomLimit - 1;
+            position.y = bottomLimit;
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
 

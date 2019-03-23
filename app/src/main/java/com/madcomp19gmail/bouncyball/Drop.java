@@ -23,8 +23,10 @@ public class Drop
     int health;
     int type;
 
+    int value;
 
-    public Drop(float x, float y, float r, int aType, Bitmap img)
+
+    public Drop(float x, float y, float r, int aType, int aValue, Bitmap img)
     {
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
@@ -39,6 +41,8 @@ public class Drop
         type = aType;
 
         health = 1;
+
+        value = aValue;
     }
 
     public void move()
