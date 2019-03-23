@@ -186,11 +186,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="42dp"
+                    android:paddingRight="42dp"
+                    android:text="5"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -199,11 +199,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="10"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -212,11 +212,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="15"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -294,11 +294,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="15"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -307,11 +307,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="20"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -320,11 +320,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="30"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -402,11 +402,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="20"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -415,11 +415,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="35"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -428,11 +428,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="50"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -510,11 +510,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="60"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -523,11 +523,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="80"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -536,11 +536,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/coin_icon_small"
+                    android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBoost"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="1000"
+                    android:paddingLeft="36dp"
+                    android:paddingRight="36dp"
+                    android:text="100"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -548,7 +548,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:layout_height="180dp" />
 
         </LinearLayout>
 

@@ -52,7 +52,6 @@ public class SoundShop extends AppCompatActivity {
 
         soundPool = SoundPoolManager.getInstance();
         int id = this.getResources().getIdentifier("cash", "raw", getPackageName());
-        Toast.makeText(this, String.valueOf(id), Toast.LENGTH_SHORT).show();
         if(id != 0)
             //soundPool.loadSound(id);
 
