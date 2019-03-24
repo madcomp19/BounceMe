@@ -50,7 +50,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private final int default_sound = 0;
     private final int default_sound_label = R.id.mute_Label;
     private final int default_trail = -1;
-    private final int default_trail_label = R.id.trail_25_Label;
+    private final int default_trail_label = R.id.clear_Label;
 
 
     @Override
@@ -442,14 +442,39 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         int trail;
         int id_label;
 
-        for(int i = 0; i < 25; i++)
+        for(int i = 0; i < 21; i++)
         {
-            res_id = this.getResources().getIdentifier("trail_" + (i + 1), "integer", getPackageName());
+
+            res_id = this.getResources().getIdentifier("colored_" + (i + 1), "integer", getPackageName());
             trail = this.getResources().getInteger(res_id);
-            id_label = this.getResources().getIdentifier("trail_" + (i + 1) + "_Label", "id", getPackageName());
+            id_label = this.getResources().getIdentifier("colored_" + (i + 1) + "_Label", "id", getPackageName());
             storage.addOwnedTrail(trail);
             storage.addOwnedTrailLabel(id_label);
         }
+
+        res_id = this.getResources().getIdentifier("reactive", "integer", getPackageName());
+        trail = this.getResources().getInteger(res_id);
+        id_label = this.getResources().getIdentifier("reactive" + "_Label", "id", getPackageName());
+        storage.addOwnedTrail(trail);
+        storage.addOwnedTrailLabel(id_label);
+
+        res_id = this.getResources().getIdentifier("rainbow", "integer", getPackageName());
+        trail = this.getResources().getInteger(res_id);
+        id_label = this.getResources().getIdentifier("rainbow" + "_Label", "id", getPackageName());
+        storage.addOwnedTrail(trail);
+        storage.addOwnedTrailLabel(id_label);
+
+        res_id = this.getResources().getIdentifier("spectrum", "integer", getPackageName());
+        trail = this.getResources().getInteger(res_id);
+        id_label = this.getResources().getIdentifier("spectrum" + "_Label", "id", getPackageName());
+        storage.addOwnedTrail(trail);
+        storage.addOwnedTrailLabel(id_label);
+
+        res_id = this.getResources().getIdentifier("clear", "integer", getPackageName());
+        trail = this.getResources().getInteger(res_id);
+        id_label = this.getResources().getIdentifier("clear" + "_Label", "id", getPackageName());
+        storage.addOwnedTrail(trail);
+        storage.addOwnedTrailLabel(id_label);
     }
 
     private void buyAllBackgrounds()

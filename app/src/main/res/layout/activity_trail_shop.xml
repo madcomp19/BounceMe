@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#424242"
-    tools:context=".TrailShop">
+    tools:context=".TrailShop"
+    android:id="@+id/trail_shop_ConstraintLayout">
 
     <ImageView
-        android:id="@+id/shopTitle"
-        android:tag="trail_shop_title"
+        android:id="@+id/trail_shop_title"
         android:layout_width="129dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
@@ -19,12 +19,10 @@
         android:background="#424242"
         app:layout_constraintBottom_toBottomOf="@+id/gems"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/trail_shop_title" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.AppCompatImageButton
-        android:id="@+id/homeButton3"
-        android:tag="play_icon_vector"
+        android:id="@+id/play_icon_vector"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -36,8 +34,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/play_icon_vector" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/coins"
@@ -53,14 +50,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:tag="coin_icon"
+        android:id="@+id/coin_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/coin_icon"
         app:layout_constraintBottom_toBottomOf="@+id/coins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/coins"
@@ -78,8 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/coins" />
 
     <ImageView
-        android:tag="gem_icon"
-        android:id="@+id/imageView4"
+        android:id="@+id/gem_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -136,59 +131,44 @@
                 app:layout_constraintTop_toBottomOf="@+id/gems">
 
                 <ImageButton
-                    android:id="@+id/trail_1_Button"
-                    android:tag="colored_1"
+                    android:id="@+id/colored_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_1" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_2_Button"
-                    android:tag="colored_2"
+                    android:id="@+id/colored_2_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_2" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_3_Button"
-                    android:tag="colored_3"
+                    android:id="@+id/colored_3_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_3" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_4_Button"
-                    android:tag="colored_4"
+                    android:id="@+id/colored_4_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_4" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_5_Button"
-                    android:tag="colored_5"
+                    android:id="@+id/colored_5_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_5" />
+                    android:onClick="onClickTrail" />
 
 
             </LinearLayout>
@@ -211,7 +191,7 @@
 
 
                 <TextView
-                    android:id="@+id/trail_1_Label"
+                    android:id="@+id/colored_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -224,7 +204,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_2_Label"
+                    android:id="@+id/colored_2_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +217,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_3_Label"
+                    android:id="@+id/colored_3_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -250,7 +230,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_4_Label"
+                    android:id="@+id/colored_4_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -263,7 +243,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_5_Label"
+                    android:id="@+id/colored_5_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -296,57 +276,44 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails2">
 
                 <ImageButton
-                    android:id="@+id/trail_6_Button"
-                    android:tag="colored_6"
+                    android:id="@+id/colored_6_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_6" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_7_Button"
-                    android:tag="colored_7"
+                    android:id="@+id/colored_7_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_7" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_8_Button"
-                    android:tag="colored_1"
+                    android:id="@+id/colored_8_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_8" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_9_Button"
+                    android:id="@+id/colored_9_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_9" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_10_Button"
+                    android:id="@+id/colored_10_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_10" />
+                    android:onClick="onClickTrail" />
 
 
             </LinearLayout>
@@ -369,7 +336,7 @@
 
 
                 <TextView
-                    android:id="@+id/trail_6_Label"
+                    android:id="@+id/colored_6_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -382,7 +349,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_7_Label"
+                    android:id="@+id/colored_7_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -395,7 +362,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_8_Label"
+                    android:id="@+id/colored_8_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -408,7 +375,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_9_Label"
+                    android:id="@+id/colored_9_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -421,7 +388,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_10_Label"
+                    android:id="@+id/colored_10_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -454,54 +421,44 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails4">
 
                 <ImageButton
-                    android:id="@+id/trail_11_Button"
+                    android:id="@+id/colored_11_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_11" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_12_Button"
+                    android:id="@+id/colored_12_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_12" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_13_Button"
+                    android:id="@+id/colored_13_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_13" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_14_Button"
+                    android:id="@+id/colored_14_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_14" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_15_Button"
+                    android:id="@+id/colored_15_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_15" />
+                    android:onClick="onClickTrail" />
 
 
             </LinearLayout>
@@ -524,7 +481,7 @@
 
 
                 <TextView
-                    android:id="@+id/trail_11_Label"
+                    android:id="@+id/colored_11_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -537,7 +494,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_12_Label"
+                    android:id="@+id/colored_12_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -550,7 +507,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_13_Label"
+                    android:id="@+id/colored_13_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -563,7 +520,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_14_Label"
+                    android:id="@+id/colored_14_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -576,7 +533,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_15_Label"
+                    android:id="@+id/colored_15_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -609,54 +566,44 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails6">
 
                 <ImageButton
-                    android:id="@+id/trail_16_Button"
+                    android:id="@+id/colored_16_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_16" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_17_Button"
+                    android:id="@+id/colored_17_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_17" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_18_Button"
+                    android:id="@+id/colored_18_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_18" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_19_Button"
+                    android:id="@+id/colored_19_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_19" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_20_Button"
+                    android:id="@+id/colored_20_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_20" />
+                    android:onClick="onClickTrail" />
 
 
             </LinearLayout>
@@ -679,7 +626,7 @@
 
 
                 <TextView
-                    android:id="@+id/trail_16_Label"
+                    android:id="@+id/colored_16_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -692,7 +639,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_17_Label"
+                    android:id="@+id/colored_17_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -705,7 +652,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_18_Label"
+                    android:id="@+id/colored_18_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -718,7 +665,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_19_Label"
+                    android:id="@+id/colored_19_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -731,7 +678,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_20_Label"
+                    android:id="@+id/colored_20_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -764,54 +711,44 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
 
                 <ImageButton
-                    android:id="@+id/trail_21_Button"
+                    android:id="@+id/colored_21_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_21" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_22_Button"
+                    android:id="@+id/rainbow_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_23_Button"
+                    android:id="@+id/spectrum_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/spectrum" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_24_Button"
+                    android:id="@+id/reactive_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/reactive" />
+                    android:onClick="onClickTrail" />
 
                 <ImageButton
-                    android:id="@+id/trail_25_Button"
+                    android:id="@+id/clear_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickTrail"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/clear" />
+                    android:onClick="onClickTrail" />
 
 
             </LinearLayout>
@@ -834,7 +771,7 @@
 
 
                 <TextView
-                    android:id="@+id/trail_21_Label"
+                    android:id="@+id/colored_21_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -847,7 +784,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_22_Label"
+                    android:id="@+id/rainbow_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -860,7 +797,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_23_Label"
+                    android:id="@+id/spectrum_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -873,7 +810,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_24_Label"
+                    android:id="@+id/reactive_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -886,7 +823,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/trail_25_Label"
+                    android:id="@+id/clear_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
