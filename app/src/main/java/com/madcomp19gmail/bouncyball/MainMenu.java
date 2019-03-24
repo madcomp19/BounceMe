@@ -1,8 +1,11 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -44,6 +47,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private RewardedVideoAd mRewardedVideoAd;
     boolean rewarded = false;
     boolean adsLeft = true;
+
+    Dialog coinDialog;
+    Dialog gemDialog;
 
     private final int default_skin = R.drawable.emoji_0;
     private final int default_skin_label = R.id.emoji_0_Label;
@@ -109,6 +115,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
 
         initializeShops();
+
+        coinDialog = new Dialog(this);
+        gemDialog = new Dialog(this);
     }
 
     private void initializeShops() {
@@ -503,5 +512,43 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 e.printStackTrace();
             }
         }
+    }
+
+    public void buyCoins(View view)
+    {
+        TextView txtClose;
+
+        coinDialog.setContentView(R.layout.buy_coins_popup);
+
+        txtClose = (TextView) coinDialog.findViewById(R.id.closeButtonCoinsPopup);
+
+        txtClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                coinDialog.dismiss();
+            }
+        });
+
+        coinDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        coinDialog.show();
+    }
+
+    public void buyGems(View view)
+    {
+        TextView txtClose;
+
+        gemDialog.setContentView(R.layout.buy_gems_popup);
+
+        txtClose = (TextView) gemDialog.findViewById(R.id.closeButtonGemsPopup);
+
+        txtClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gemDialog.dismiss();
+            }
+        });
+
+        gemDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        gemDialog.show();
     }
 }

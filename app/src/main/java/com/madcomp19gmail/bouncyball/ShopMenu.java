@@ -1,12 +1,18 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class ShopMenu extends AppCompatActivity {
 
@@ -14,10 +20,15 @@ public class ShopMenu extends AppCompatActivity {
 
     private boolean changingActivity;
 
+    private AdView mAdView;
+
     private StorageManager storage;
     private MediaPlayerManager mediaPlayerManager;
     TextView coins;
     TextView gems;
+
+    Dialog coinDialog;
+    Dialog gemDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,13 @@ public class ShopMenu extends AppCompatActivity {
         }
         else
             mediaPlayerManager.pause();
+
+        mAdView = findViewById(R.id.bannerAdTrailShop);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        coinDialog = new Dialog(this);
+        gemDialog = new Dialog(this);
     }
 
     @Override
@@ -119,5 +137,43 @@ public class ShopMenu extends AppCompatActivity {
                 //Write your code if there's no result
             }
         }
+    }
+
+    public void buyCoins(View view)
+    {
+        TextView txtClose;
+
+        coinDialog.setContentView(R.layout.buy_coins_popup);
+
+        txtClose = (TextView) coinDialog.findViewById(R.id.closeButtonCoinsPopup);
+
+        txtClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                coinDialog.dismiss();
+            }
+        });
+
+        coinDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        coinDialog.show();
+    }
+
+    public void buyGems(View view)
+    {
+        TextView txtClose;
+
+        gemDialog.setContentView(R.layout.buy_gems_popup);
+
+        txtClose = (TextView) gemDialog.findViewById(R.id.closeButtonGemsPopup);
+
+        txtClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gemDialog.dismiss();
+            }
+        });
+
+        gemDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        gemDialog.show();
     }
 }

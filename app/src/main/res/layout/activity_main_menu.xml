@@ -44,10 +44,12 @@
         android:text="1000"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
+        android:onClick="buyCoins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/coinView"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -55,10 +57,22 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/coin_icon"
+        android:onClick="buyCoins"
         app:layout_constraintBottom_toBottomOf="@+id/coins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/coins"
         app:layout_constraintTop_toTopOf="@+id/coins" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/add_icon_vector"
+        android:onClick="buyCoins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/coinView" />
 
     <TextView
         android:id="@+id/gems"
@@ -70,10 +84,12 @@
         android:text="1000"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
+        android:onClick="buyGems"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -81,10 +97,22 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/gem_icon"
+        android:onClick="buyGems"
         app:layout_constraintBottom_toBottomOf="@+id/gems"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/gems"
         app:layout_constraintTop_toTopOf="@+id/gems" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/add_icon_vector"
+        android:onClick="buyGems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <LinearLayout
         android:id="@+id/main_layout"

@@ -7,166 +7,6 @@
     android:background="#424242"
     tools:context=".ShopMenu">
 
-    <TextView
-        android:id="@+id/coins"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:text="1000"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/coin_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/coins"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coins"
-        app:layout_constraintTop_toTopOf="@+id/coins" />
-
-    <TextView
-        android:id="@+id/gems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/coins"
-        app:layout_constraintTop_toBottomOf="@+id/coins" />
-
-
-    <ImageButton
-        android:id="@+id/imageButton22"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#424242"
-        android:src="@drawable/balls_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <ImageButton
-        android:id="@+id/skinsButton"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#424242"
-        android:onClick="onShopMenuButtonClick"
-        android:src="@drawable/skins_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006" />
-
-    <ImageButton
-        android:id="@+id/soundButton"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#424242"
-        android:src="@drawable/sounds_icon"
-        android:onClick="onShopMenuButtonClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trailsButton"
-        app:layout_constraintVertical_bias="0.606" />
-
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#424242"
-        android:src="@drawable/background_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/skinsButton"
-        app:layout_constraintVertical_bias="0.222" />
-
-
-    <ImageButton
-        android:id="@+id/trailsButton"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#424242"
-        android:onClick="onShopMenuButtonClick"
-        android:src="@drawable/trails_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton22"
-        app:layout_constraintVertical_bias="0.229" />
-
-
-    <ImageButton
-        android:id="@+id/boostButton"
-        android:layout_width="110dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#424242"
-        android:src="@drawable/multipliers_icon"
-        android:onClick="onShopMenuButtonClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:layout_constraintVertical_bias="0.606" />
-
     <ImageView
         android:id="@+id/shopTitle"
         android:layout_width="129dp"
@@ -181,15 +21,246 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/shop_menu_title" />
 
+    <TextView
+        android:id="@+id/coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="1000"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:onClick="buyCoins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/coinView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/coin_icon"
+        android:onClick="buyCoins"
+        app:layout_constraintBottom_toBottomOf="@+id/coins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coins"
+        app:layout_constraintTop_toTopOf="@+id/coins" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/add_icon_vector"
+        android:onClick="buyCoins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/coinView" />
+
+    <TextView
+        android:id="@+id/gems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:onClick="buyGems"
+        app:layout_constraintEnd_toEndOf="@+id/coins"
+        app:layout_constraintTop_toBottomOf="@+id/coins" />
+
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:background="@drawable/gem_icon"
+        android:onClick="buyGems"
         app:layout_constraintBottom_toBottomOf="@+id/gems"
         app:layout_constraintStart_toEndOf="@+id/gems"
         app:layout_constraintTop_toTopOf="@+id/gems" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/add_icon_vector"
+        android:onClick="buyGems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#424242"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gems">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gems"
+            app:layout_constraintVertical_bias="0.138">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutShop1"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+                <ImageButton
+                    android:id="@+id/ballsButton"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onShopMenuButtonClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/balls_icon" />
+
+                <ImageButton
+                    android:id="@+id/skinsButton"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onShopMenuButtonClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/skins_icon" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutShop2"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+                <ImageButton
+                    android:id="@+id/trailsButton"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onShopMenuButtonClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/trails_icon" />
+
+                <ImageButton
+                    android:id="@+id/backgroundsButton"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onShopMenuButtonClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/background_icon" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutShop3"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+                <ImageButton
+                    android:id="@+id/soundButton"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onShopMenuButtonClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sounds_icon" />
+
+                <ImageButton
+                    android:id="@+id/boostButton"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onShopMenuButtonClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/multipliers_icon" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bannerAdTrailShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:layout_constraintBottom_toBottomOf="parent"></com.google.android.gms.ads.AdView>
 
 </android.support.constraint.ConstraintLayout>
