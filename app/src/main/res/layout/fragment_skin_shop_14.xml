@@ -33,8 +33,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/guyana" />
+                     />
                 <ImageButton
                     android:id="@+id/haiti_Button"
                     android:layout_width="50dp"
@@ -42,8 +41,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/haiti" />
+                     />
                 <ImageButton
                     android:id="@+id/hawaii_Button"
                     android:layout_width="50dp"
@@ -51,8 +49,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/hawaii" />
+                     />
                 <ImageButton
                     android:id="@+id/honduras_Button"
                     android:layout_width="50dp"
@@ -60,8 +57,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/honduras" />
+                     />
                 <ImageButton
                     android:id="@+id/hong_kong_Button"
                     android:layout_width="50dp"
@@ -69,8 +65,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/hong_kong" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins14_98"
@@ -164,8 +159,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/hungary" />
+                     />
                 <ImageButton
                     android:id="@+id/iceland_Button"
                     android:layout_width="50dp"
@@ -173,8 +167,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/iceland" />
+                     />
                 <ImageButton
                     android:id="@+id/india_Button"
                     android:layout_width="50dp"
@@ -182,8 +175,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/india" />
+                     />
                 <ImageButton
                     android:id="@+id/indonesia_Button"
                     android:layout_width="50dp"
@@ -191,8 +183,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/indonesia" />
+                     />
                 <ImageButton
                     android:id="@+id/iran_Button"
                     android:layout_width="50dp"
@@ -200,8 +191,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/iran" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins14_100"
@@ -295,8 +285,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/iraq" />
+                     />
                 <ImageButton
                     android:id="@+id/ireland_Button"
                     android:layout_width="50dp"
@@ -304,8 +293,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ireland" />
+                     />
                 <ImageButton
                     android:id="@+id/isle_of_man_Button"
                     android:layout_width="50dp"
@@ -313,8 +301,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/isle_of_man" />
+                     />
                 <ImageButton
                     android:id="@+id/israel_Button"
                     android:layout_width="50dp"
@@ -322,8 +309,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/israel" />
+                     />
                 <ImageButton
                     android:id="@+id/italy_Button"
                     android:layout_width="50dp"
@@ -331,8 +317,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/italy" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins14_102"
@@ -426,8 +411,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ivory_coast" />
+                     />
                 <ImageButton
                     android:id="@+id/jamaica_Button"
                     android:layout_width="50dp"
@@ -435,8 +419,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/jamaica" />
+                     />
                 <ImageButton
                     android:id="@+id/japan_Button"
                     android:layout_width="50dp"
@@ -444,8 +427,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/japan" />
+                     />
                 <ImageButton
                     android:id="@+id/jersey_Button"
                     android:layout_width="50dp"
@@ -453,8 +435,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/jersey" />
+                     />
                 <ImageButton
                     android:id="@+id/jordan_Button"
                     android:layout_width="50dp"
@@ -462,8 +443,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/jordan" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins14_104"

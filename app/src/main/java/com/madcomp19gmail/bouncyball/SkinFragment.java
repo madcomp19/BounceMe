@@ -6,7 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -28,7 +31,39 @@ public class SkinFragment extends Fragment {
         view = inflater.inflate(fragment_id, container, false);
         setOwnedSkinsPage(view);
 
+        /*for(int i = 1; i <= 1; i++)
+        {
+            String linearLayout = "frag_" + i + "_LinearLayout";
+            int id = getActivity().getResources().getIdentifier(linearLayout, "id", getActivity().getPackageName());
+
+            initializeImageButtons(getActivity().findViewById(id));
+        }*/
+
+        initializeImageButtons(view);
+
         return view;
+    }
+
+    private void initializeImageButtons(View view)
+    {
+        ViewGroup viewGroup = (ViewGroup) view;
+
+        int childCount = viewGroup.getChildCount();
+
+        for (int i = 0; i < childCount; i++) {
+            View v = viewGroup.getChildAt(i);
+
+            if (v instanceof ImageButton) {
+                ImageButton imageButton = (ImageButton) v;
+
+                String id = getResources().getResourceName(imageButton.getId()).split("/")[1].replace("_Button", "");
+
+                int image_id = getResources().getIdentifier(id, "drawable", getActivity().getPackageName());
+
+                Glide.with(this).load(image_id).fitCenter().into(imageButton);
+            } else if (v instanceof ViewGroup)
+                initializeImageButtons((ViewGroup) v);
+        }
     }
 
     private void setOwnedSkinsPage(View view) {

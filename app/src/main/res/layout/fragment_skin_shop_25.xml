@@ -33,8 +33,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/clock" />
+                     />
                 <ImageButton
                     android:id="@+id/dollar_coin_Button"
                     android:layout_width="50dp"
@@ -42,8 +41,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/dollar_coin" />
+                     />
                 <ImageButton
                     android:id="@+id/eye_Button"
                     android:layout_width="50dp"
@@ -51,8 +49,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/eye" />
+                     />
                 <ImageButton
                     android:id="@+id/ferris_wheel_Button"
                     android:layout_width="50dp"
@@ -60,8 +57,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ferris_wheel" />
+                     />
                 <ImageButton
                     android:id="@+id/gear_Button"
                     android:layout_width="50dp"
@@ -69,8 +65,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/gear" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins25_174"
@@ -164,8 +159,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_1" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_10_Button"
                     android:layout_width="50dp"
@@ -173,8 +167,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_10" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_11_Button"
                     android:layout_width="50dp"
@@ -182,8 +175,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_11" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_12_Button"
                     android:layout_width="50dp"
@@ -191,8 +183,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_12" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_13_Button"
                     android:layout_width="50dp"
@@ -200,8 +191,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_13" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins25_176"
@@ -295,8 +285,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_14" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_15_Button"
                     android:layout_width="50dp"
@@ -304,8 +293,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_15" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_16_Button"
                     android:layout_width="50dp"
@@ -313,8 +301,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_16" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_17_Button"
                     android:layout_width="50dp"
@@ -322,8 +309,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_17" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_18_Button"
                     android:layout_width="50dp"
@@ -331,8 +317,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_18" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins25_178"
@@ -426,8 +411,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_2" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_3_Button"
                     android:layout_width="50dp"
@@ -435,8 +419,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_3" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_4_Button"
                     android:layout_width="50dp"
@@ -444,8 +427,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_4" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_5_Button"
                     android:layout_width="50dp"
@@ -453,8 +435,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_5" />
+                     />
                 <ImageButton
                     android:id="@+id/misc_6_Button"
                     android:layout_width="50dp"
@@ -462,8 +443,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/misc_6" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins25_180"

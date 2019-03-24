@@ -33,8 +33,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/papua_new_guinea" />
+                     />
                 <ImageButton
                     android:id="@+id/paraguay_Button"
                     android:layout_width="50dp"
@@ -42,8 +41,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/paraguay" />
+                     />
                 <ImageButton
                     android:id="@+id/peru_Button"
                     android:layout_width="50dp"
@@ -51,8 +49,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/peru" />
+                     />
                 <ImageButton
                     android:id="@+id/philippines_Button"
                     android:layout_width="50dp"
@@ -60,8 +57,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/philippines" />
+                     />
                 <ImageButton
                     android:id="@+id/pitcairn_islands_Button"
                     android:layout_width="50dp"
@@ -69,8 +65,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pitcairn_islands" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins18_130"
@@ -164,8 +159,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/portugal" />
+                     />
                 <ImageButton
                     android:id="@+id/puerto_rico_Button"
                     android:layout_width="50dp"
@@ -173,8 +167,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/puerto_rico" />
+                     />
                 <ImageButton
                     android:id="@+id/qatar_Button"
                     android:layout_width="50dp"
@@ -182,8 +175,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/qatar" />
+                     />
                 <ImageButton
                     android:id="@+id/rapa_nui_Button"
                     android:layout_width="50dp"
@@ -191,8 +183,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rapa_nui" />
+                     />
                 <ImageButton
                     android:id="@+id/republic_of_macedonia_Button"
                     android:layout_width="50dp"
@@ -200,8 +191,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/republic_of_macedonia" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins18_132"
@@ -295,8 +285,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/republic_of_poland" />
+                     />
                 <ImageButton
                     android:id="@+id/republic_of_the_congo_Button"
                     android:layout_width="50dp"
@@ -304,8 +293,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/republic_of_the_congo" />
+                     />
                 <ImageButton
                     android:id="@+id/romania_Button"
                     android:layout_width="50dp"
@@ -313,8 +301,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/romania" />
+                     />
                 <ImageButton
                     android:id="@+id/russia_Button"
                     android:layout_width="50dp"
@@ -322,8 +309,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/russia" />
+                     />
                 <ImageButton
                     android:id="@+id/rwanda_Button"
                     android:layout_width="50dp"
@@ -331,8 +317,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rwanda" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins18_134"
@@ -426,8 +411,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/saba_island" />
+                     />
                 <ImageButton
                     android:id="@+id/saint_kitts_and_nevis_Button"
                     android:layout_width="50dp"
@@ -435,8 +419,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/saint_kitts_and_nevis" />
+                     />
                 <ImageButton
                     android:id="@+id/salvador_Button"
                     android:layout_width="50dp"
@@ -444,8 +427,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/salvador" />
+                     />
                 <ImageButton
                     android:id="@+id/samoa_Button"
                     android:layout_width="50dp"
@@ -453,8 +435,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/samoa" />
+                     />
                 <ImageButton
                     android:id="@+id/san_marino_Button"
                     android:layout_width="50dp"
@@ -462,8 +443,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/san_marino" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins18_136"

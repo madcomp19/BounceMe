@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -49,6 +53,45 @@ public class TrailShop extends AppCompatActivity {
         mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+
+        // Arranjar o onClickTrail primeiro como nas skins
+        //initializeImageButtons(findViewById(R.id.trail_shop_LinearLayout));
+    }
+
+    private void initializeImageButtons(View view)
+    {
+        ViewGroup viewGroup = (ViewGroup) view;
+
+        int childCount = viewGroup.getChildCount();
+
+        for(int i = 0; i < childCount; i++)
+        {
+            View v = viewGroup.getChildAt(i);
+
+            if(v instanceof ImageButton)
+            {
+                ImageButton imageButton = (ImageButton) v;
+
+                String id = getResources().getResourceName(imageButton.getId()).split("/")[1].replace("_Button", "");
+
+                int image_id = getResources().getIdentifier(id, "drawable", getPackageName());
+
+                Glide.with(this).load(image_id).fitCenter().into(imageButton);
+            }
+            else if(v instanceof ImageView)
+            {
+                ImageView imageView = (ImageView) v;
+
+                String id = imageView.getTag().toString();
+
+                int image_id = getResources().getIdentifier(id, "drawable", getPackageName());
+
+                Glide.with(this).load(image_id).into(imageView);
+            }
+            else if(v instanceof ViewGroup)
+                initializeImageButtons(v);
+        }
     }
 
     @Override

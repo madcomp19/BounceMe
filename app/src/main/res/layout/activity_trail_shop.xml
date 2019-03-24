@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/shopTitle"
+        android:tag="trail_shop_title"
         android:layout_width="129dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
@@ -23,6 +24,7 @@
 
     <android.support.v7.widget.AppCompatImageButton
         android:id="@+id/homeButton3"
+        android:tag="play_icon_vector"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -51,6 +53,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:tag="coin_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -75,6 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/coins" />
 
     <ImageView
+        android:tag="gem_icon"
         android:id="@+id/imageView4"
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -133,6 +137,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_1_Button"
+                    android:tag="colored_1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -143,6 +148,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_2_Button"
+                    android:tag="colored_2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -153,6 +159,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_3_Button"
+                    android:tag="colored_3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -163,6 +170,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_4_Button"
+                    android:tag="colored_4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -173,6 +181,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_5_Button"
+                    android:tag="colored_5"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -288,6 +297,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_6_Button"
+                    android:tag="colored_6"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -298,6 +308,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_7_Button"
+                    android:tag="colored_7"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -308,6 +319,7 @@
 
                 <ImageButton
                     android:id="@+id/trail_8_Button"
+                    android:tag="colored_1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"

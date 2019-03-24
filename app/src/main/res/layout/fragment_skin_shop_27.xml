@@ -33,8 +33,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/football" />
+                     />
                 <ImageButton
                     android:id="@+id/basketball_ball_Button"
                     android:layout_width="50dp"
@@ -42,8 +41,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/basketball_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/tennis_ball_Button"
                     android:layout_width="50dp"
@@ -51,8 +49,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/tennis_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/baseball_ball_Button"
                     android:layout_width="50dp"
@@ -60,8 +57,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/baseball_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/volleyball_ball_Button"
                     android:layout_width="50dp"
@@ -69,8 +65,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/volleyball_ball" />
+                     />
 
             </LinearLayout>
             <LinearLayout
@@ -165,8 +160,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ping_pong_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/bowling_ball_Button"
                     android:layout_width="50dp"
@@ -174,8 +168,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/bowling_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/golf_ball_Button"
                     android:layout_width="50dp"
@@ -183,8 +176,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/golf_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/beach_ball_Button"
                     android:layout_width="50dp"
@@ -192,8 +184,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/beach_ball" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_0_Button"
                     android:layout_width="50dp"
@@ -201,8 +192,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_0" />
+                     />
 
             </LinearLayout>
             <LinearLayout
@@ -297,8 +287,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_1" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_2_Button"
                     android:layout_width="50dp"
@@ -306,8 +295,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_2" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_3_Button"
                     android:layout_width="50dp"
@@ -315,8 +303,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_3" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_4_Button"
                     android:layout_width="50dp"
@@ -324,8 +311,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_4" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_5_Button"
                     android:layout_width="50dp"
@@ -333,8 +319,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_5" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins27_190"
@@ -428,8 +413,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_6" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_7_Button"
                     android:layout_width="50dp"
@@ -437,8 +421,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_7" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_8_Button"
                     android:layout_width="50dp"
@@ -446,8 +429,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_8" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_9_Button"
                     android:layout_width="50dp"
@@ -455,8 +437,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_9" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_10_Button"
                     android:layout_width="50dp"
@@ -464,8 +445,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_10" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins27_192"

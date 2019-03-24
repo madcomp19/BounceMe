@@ -33,8 +33,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_11" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_12_Button"
                     android:layout_width="50dp"
@@ -42,8 +41,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_12" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_13_Button"
                     android:layout_width="50dp"
@@ -51,8 +49,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_13" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_14_Button"
                     android:layout_width="50dp"
@@ -60,8 +57,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_14" />
+                     />
                 <ImageButton
                     android:id="@+id/pool_ball_15_Button"
                     android:layout_width="50dp"
@@ -69,8 +65,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pool_ball_15" />
+                     />
 
             </LinearLayout>
             <LinearLayout
@@ -165,8 +160,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/pokeball" />
+                     />
                 <ImageButton
                     android:id="@+id/ultraball_Button"
                     android:layout_width="50dp"
@@ -174,8 +168,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ultraball" />
+                     />
                 <ImageButton
                     android:id="@+id/masterball_Button"
                     android:layout_width="50dp"
@@ -183,8 +176,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/masterball" />
+                     />
                 <ImageButton
                     android:id="@+id/greatball_Button"
                     android:layout_width="50dp"
@@ -192,8 +184,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/greatball" />
+                     />
                 <ImageButton
                     android:id="@+id/repeatball_Button"
                     android:layout_width="50dp"
@@ -201,8 +192,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/repeatball" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins28_196"
@@ -298,8 +288,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/diveball" />
+                     />
 
                 <ImageButton
                     android:id="@+id/nestball_Button"
@@ -308,8 +297,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/nestball" />
+                     />
 
                 <ImageButton
                     android:id="@+id/multicolor1_Button"
@@ -318,8 +306,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/multicolor1" />
+                     />
             </LinearLayout>
 
             <LinearLayout

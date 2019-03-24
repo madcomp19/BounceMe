@@ -2,16 +2,25 @@ package com.madcomp19gmail.bouncyball;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import static java.lang.Integer.parseInt;
@@ -22,6 +31,8 @@ public class BoostShop extends AppCompatActivity {
     StorageManager storageManager;
     TextView coins;
     TextView gems;
+
+    int number = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +52,33 @@ public class BoostShop extends AppCompatActivity {
         mAdView = findViewById(R.id.bannerAdBoostShop);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        initializeImageButtons(findViewById(R.id.boostShopLinearLayout));
+    }
+
+    private void initializeImageButtons(View view)
+    {
+        ViewGroup viewGroup = (ViewGroup) view;
+
+        int childCount = viewGroup.getChildCount();
+
+        for(int i = 0; i < childCount; i++)
+        {
+            View v = viewGroup.getChildAt(i);
+
+            if(v instanceof ImageButton)
+            {
+                ImageButton imageButton = (ImageButton) v;
+
+                int image_id = getResources().getIdentifier("boosts_" + number, "drawable", getPackageName());
+
+                number++;
+
+                Glide.with(this).load(image_id).into(imageButton);
+            }
+            else if(v instanceof ViewGroup)
+                initializeImageButtons(v);
+        }
     }
 
     public void onClickPlay(View view){
@@ -77,7 +115,5 @@ public class BoostShop extends AppCompatActivity {
         }
         else
             Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();
-
-
     }
 }

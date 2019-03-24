@@ -35,8 +35,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/yemen" />
+                     />
 
                 <ImageButton
                     android:id="@+id/zambia_Button"
@@ -45,8 +44,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/zambia" />
+                     />
 
                 <ImageButton
                     android:id="@+id/zimbabwe_Button"
@@ -55,8 +53,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/zimbabwe" />
+                     />
             </LinearLayout>
 
             <LinearLayout

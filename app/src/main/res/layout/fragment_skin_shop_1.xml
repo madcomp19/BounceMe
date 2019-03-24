@@ -33,8 +33,8 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_0" />
+
+                     />
                 <ImageButton
                     android:id="@+id/emoji_1_Button"
                     android:layout_width="50dp"
@@ -42,8 +42,8 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_1" />
+
+                     />
                 <ImageButton
                     android:id="@+id/emoji_2_Button"
                     android:layout_width="50dp"
@@ -51,8 +51,8 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_2" />
+
+                     />
                 <ImageButton
                     android:id="@+id/emoji_3_Button"
                     android:layout_width="50dp"
@@ -60,8 +60,8 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_3" />
+
+                     />
                 <ImageButton
                     android:id="@+id/emoji_4_Button"
                     android:layout_width="50dp"
@@ -69,8 +69,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_4" />
+                     />
             </LinearLayout>
 
             <LinearLayout
@@ -170,8 +169,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_5" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_6_Button"
                     android:layout_width="50dp"
@@ -179,8 +177,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_6" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_7_Button"
                     android:layout_width="50dp"
@@ -188,8 +185,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_7" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_8_Button"
                     android:layout_width="50dp"
@@ -197,8 +193,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_8" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_9_Button"
                     android:layout_width="50dp"
@@ -206,8 +201,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_9" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins1_4"
@@ -301,8 +295,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_10" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_11_Button"
                     android:layout_width="50dp"
@@ -310,8 +303,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_11" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_12_Button"
                     android:layout_width="50dp"
@@ -319,8 +311,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_12" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_13_Button"
                     android:layout_width="50dp"
@@ -328,8 +319,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_13" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_14_Button"
                     android:layout_width="50dp"
@@ -337,8 +327,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_14" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins1_6"
@@ -432,8 +421,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_15" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_16_Button"
                     android:layout_width="50dp"
@@ -441,8 +429,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_16" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_17_Button"
                     android:layout_width="50dp"
@@ -450,8 +437,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_17" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_18_Button"
                     android:layout_width="50dp"
@@ -459,8 +445,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_18" />
+                     />
                 <ImageButton
                     android:id="@+id/emoji_19_Button"
                     android:layout_width="50dp"
@@ -468,8 +453,7 @@
                     android:layout_weight="1"
                     android:background="#424242"
                     android:onClick="onClickSkin"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/emoji_19" />
+                     />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutSkins1_8"

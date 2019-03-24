@@ -99,6 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/gems">
 
         <LinearLayout
+            android:id="@+id/boostShopLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -139,7 +140,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/new_boosts_1" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x2_5m_Button"
@@ -149,7 +150,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_2" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x2_10m_Button"
@@ -159,7 +160,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_3" />
+                     />
 
 
             </LinearLayout>
@@ -248,7 +249,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_4" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x5_5m_Button"
@@ -258,7 +259,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_5" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x5_10m_Button"
@@ -268,7 +269,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_6" />
+                     />
 
 
             </LinearLayout>
@@ -355,7 +356,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/new_boosts_7" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x10_5m_Button"
@@ -365,7 +366,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_8" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x10_10m_Button"
@@ -375,7 +376,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_9" />
+                     />
 
 
             </LinearLayout>
@@ -463,7 +464,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/new_boosts_10" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x50_5m_Button"
@@ -473,7 +474,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_11" />
+                     />
 
                 <ImageButton
                     android:id="@+id/x50_10m_Button"
@@ -483,7 +484,7 @@
                     android:background="#424242"
                     android:onClick="onClickBoost"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/new_boosts_12" />
+                     />
 
 
             </LinearLayout>
