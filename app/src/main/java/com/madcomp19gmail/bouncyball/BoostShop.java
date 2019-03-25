@@ -132,7 +132,8 @@ public class BoostShop extends AppCompatActivity {
             storageManager.setActiveBoostTime(Calendar.getInstance().getTimeInMillis() + time * 60000);
             Toast.makeText(this, "Boost is now active", Toast.LENGTH_SHORT).show();
             label_text.setCompoundDrawables(null, null, null, null);
-            
+            label_text.setPadding(0,0,0,0);
+
             Timer t = new Timer();
             t.scheduleAtFixedRate(new TimerTask() {
 
@@ -185,6 +186,7 @@ public class BoostShop extends AppCompatActivity {
 
         final TextView activeLabel = ((TextView) findViewById(storageManager.getActiveBoostLabel()));
         activeLabel.setCompoundDrawables(null, null, null, null);
+        activeLabel.setPadding(0,0,0,0);
         long milliseconds = storageManager.getActiveBoostTime() - Calendar.getInstance().getTimeInMillis();
         final String text = activeLabel.getText().toString();
 
