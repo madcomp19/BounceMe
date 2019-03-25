@@ -10,7 +10,9 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -531,6 +533,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         coinDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         coinDialog.show();
+
+        Window window = coinDialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, 650);
     }
 
     public void buyGems(View view)
@@ -550,5 +555,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         gemDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         gemDialog.show();
+
+        Window window = gemDialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, 650);
     }
 }
