@@ -22,6 +22,8 @@ import com.google.android.gms.ads.AdView;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import static java.lang.Integer.parseInt;
 
@@ -33,6 +35,10 @@ public class BoostShop extends AppCompatActivity {
     TextView gems;
 
     int number = 1;
+
+    public int time;
+    public int seconds;
+    public int price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,15 +98,25 @@ public class BoostShop extends AppCompatActivity {
     {
         String view_id = view.getResources().getResourceEntryName(view.getId());
         view_id = view_id.split("_Label")[0].split("_Button")[0];
-        int boost = parseInt(view_id.split("_")[0].replace("x", ""));
-        int time = parseInt(view_id.split("_")[1].replace("m", ""));
 
         String label = view_id + "_Label";
         int id = getResources().getIdentifier(label, "id", getApplicationContext().getPackageName());
-        TextView label_text = findViewById(id);
+
+        //If there is a boost already active, nothing happens
+        if(Calendar.getInstance().getTimeInMillis() < storageManager.getActiveBoostTime())
+        {
+            Toast.makeText(this, "Wait for the active boost to end", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int boost = parseInt(view_id.split("_")[0].replace("x", ""));
+        time = parseInt(view_id.split("_")[1].replace("m", ""));
+        seconds = 1;
+
+        final TextView label_text = findViewById(id);
         if(label_text.getText() == "")
             return;
-        int price = Integer.parseInt(label_text.getText() + "");
+        price = Integer.parseInt(label_text.getText() + "");
         int total_gems = storageManager.getTotalGems();
         if(total_gems > price)
         {
@@ -109,9 +125,46 @@ public class BoostShop extends AppCompatActivity {
             storageManager.setActiveBoost(boost);
             storageManager.setActiveBoostTime(Calendar.getInstance().getTimeInMillis() + time * 60000);
             Toast.makeText(this, "Boost is now active", Toast.LENGTH_SHORT).show();
-            label_text.setText("");
-            label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
-            label_text.setPadding(0,10,0,0);
+            label_text.setCompoundDrawables(null, null, null, null);
+
+//            label_text.setText("");
+//            label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
+//            label_text.setPadding(0,10,0,0);
+
+            Timer t = new Timer();
+            t.scheduleAtFixedRate(new TimerTask() {
+
+                @Override
+                public void run() {
+                    runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+
+                            label_text.setText(String.valueOf(time)+" : "+String.valueOf(seconds));
+                            seconds -= 1;
+
+                            if(seconds <= 0)
+                            {
+                                label_text.setText(String.valueOf(time)+":"+String.valueOf(seconds));
+
+                                seconds=59;
+                                time = time -1;
+
+                            }
+
+                            if(time < 0)
+                            {
+                                label_text.setText(price + "");
+                                label_text.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.gem_icon_small, 0);
+                                label_text.setPadding(110, 0, 110, 0);
+                                cancel();
+                            }
+                        }
+                    });
+                }
+
+            }, 0, 1000);
         }
         else
             Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();

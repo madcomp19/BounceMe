@@ -470,4 +470,16 @@ public class StorageManager {
     {
         return prefs.getLong(context.getString(R.string.selected_boost_time), 0);
     }
+
+    public void setActiveBoostLabel(int boost)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_boost_label), boost);
+        editor.commit();
+    }
+
+    public int getActiveBoostLabel()
+    {
+        return prefs.getInt(context.getString(R.string.selected_boost_label), 0);
+    }
 }
