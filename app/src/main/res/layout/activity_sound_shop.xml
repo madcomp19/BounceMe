@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#424242"
-    tools:context=".SoundShop">
+    tools:context=".SoundShop"
+    android:id="@+id/sound_shop_ConstraintLayout">
 
     <ImageView
-        android:id="@+id/shopTitle"
+        android:id="@+id/sound_shop_title"
         android:layout_width="129dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
@@ -18,11 +19,10 @@
         android:background="#424242"
         app:layout_constraintBottom_toBottomOf="@+id/gems"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sound_shop_title" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.AppCompatImageButton
-        android:id="@+id/homeButton3"
+        android:id="@+id/play_icon_vector"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
@@ -34,8 +34,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/pager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/play_icon_vector" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/coins"
@@ -51,13 +50,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/coin_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/coin_icon"
         app:layout_constraintBottom_toBottomOf="@+id/coins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/coins"
@@ -137,9 +136,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/mute_icon_vector" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/car_horn_Button"
@@ -147,9 +144,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_2" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/stab_Button"
@@ -157,19 +152,15 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_3" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
-                    android:id="@+id/basketball_Button"
+                    android:id="@+id/basketball_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/basketball_ball" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/boing_Button"
@@ -177,9 +168,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_5" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -292,9 +281,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_6" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/drop_Button"
@@ -302,9 +289,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_7" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/football_Button"
@@ -312,19 +297,15 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/football" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
-                    android:id="@+id/pingpong_Button"
+                    android:id="@+id/ping_pong_ball_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ping_pong_ball" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/pop_Button"
@@ -332,9 +313,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_10" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -447,9 +426,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_11" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/thud_Button"
@@ -457,9 +434,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_12" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/tennis_ball_Button"
@@ -467,9 +442,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/tennis_ball" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/frying_pan_Button"
@@ -477,9 +450,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/food_8" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/arrow_Button"
@@ -487,9 +458,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_15" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -602,9 +571,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_16" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/glass_Button"
@@ -612,9 +579,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_17" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/slap_Button"
@@ -622,19 +587,15 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_18" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
-                    android:id="@+id/coin_Button"
+                    android:id="@+id/coin_icon_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/coin_icon" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/cash_Button"
@@ -642,9 +603,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_20" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -756,9 +715,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_16" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/punch_Button"
@@ -766,9 +723,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_17" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/windows_Button"
@@ -776,9 +731,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_18" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/horn_Button"
@@ -786,9 +739,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_19" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/roipe_Button"
@@ -796,9 +747,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_20" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -910,9 +859,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_21" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/noice_Button"
@@ -920,9 +867,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/nope_Button"
@@ -930,9 +875,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/spectrum" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/oof_Button"
@@ -940,9 +883,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/reactive" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/ree_Button"
@@ -950,9 +891,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/clear" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -1064,9 +1003,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_21" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/yeet_Button"
@@ -1074,9 +1011,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/bark_Button"
@@ -1084,9 +1019,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/animal_8" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/meow_Button"
@@ -1094,9 +1027,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/animal_4" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/laugh_Button"
@@ -1104,9 +1035,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>
@@ -1218,9 +1147,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/colored_21" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/laser_Button"
@@ -1228,9 +1155,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/rainbow" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/gun_Button"
@@ -1238,9 +1163,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/spectrum" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/ricochet_Button"
@@ -1248,9 +1171,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/reactive" />
+                    android:onClick="onClickSound" />
 
                 <ImageButton
                     android:id="@+id/pew_Button"
@@ -1258,9 +1179,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="#424242"
-                    android:onClick="onClickSound"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/clear" />
+                    android:onClick="onClickSound" />
 
 
             </LinearLayout>

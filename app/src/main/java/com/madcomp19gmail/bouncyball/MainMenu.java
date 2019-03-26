@@ -410,11 +410,19 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     public void buyEverything(View v)
     {
-        buyAllBalls();
-        buyAllSkins();
-        buyAllTrails();
-        buyAllBackgrounds();
-        buyAllSounds();
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+
+                buyAllBalls();
+                buyAllSkins();
+                buyAllTrails();
+                buyAllBackgrounds();
+                buyAllSounds();
+
+            }
+        });
+
+        t.start();
     }
 
     private void buyAllBalls()
