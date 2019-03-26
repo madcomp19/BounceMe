@@ -543,7 +543,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         coinDialog.show();
 
         Window window = coinDialog.getWindow();
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, 650);
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }
 
     public void buyGems(View view)
@@ -565,6 +565,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         gemDialog.show();
 
         Window window = gemDialog.getWindow();
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, 650);
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }
 }
