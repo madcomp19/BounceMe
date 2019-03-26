@@ -88,7 +88,7 @@
     <SeekBar
         android:id="@+id/gameVolumeBar"
         android:layout_width="0dp"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="16dp"

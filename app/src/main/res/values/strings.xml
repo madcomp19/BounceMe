@@ -48,5 +48,8 @@
     <string name="menu_music">Menu Music</string>
     <string name="game_music">Game Music</string>
     <string name="shop_music">Shop Music</string>
+    <string name="close">Close</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="double_it">Double it</string>
 
 </resources>

@@ -6,11 +6,9 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,7 +25,6 @@ import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 
 public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener {
 
@@ -97,8 +94,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         if (storage.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
-        }
-        else
+        } else
             mediaPlayerManager.pause();
 
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
@@ -191,8 +187,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             mediaPlayerManager.pause();
             mediaPlayerManager.loadSound(background_music_id, "Menu");
             mediaPlayerManager.play();
-        }
-        else
+        } else
             mediaPlayerManager.pause();
     }
 
@@ -218,8 +213,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         return prev_touches;
     }
 
-    public static int getPrevGems()
-    {
+    public static int getPrevGems() {
         return prev_gems;
     }
 
@@ -276,7 +270,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     public void startShop(View view) {
         changingActivity = true;
         Intent intent = new Intent(this, ShopMenu.class);
-        startActivityForResult(intent,2);
+        startActivityForResult(intent, 2);
     }
 
     public void goFacebookPage(View view) {
@@ -408,8 +402,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    public void buyEverything(View v)
-    {
+    public void buyEverything(View v) {
         Thread t = new Thread(new Runnable() {
             public void run() {
 
@@ -425,20 +418,17 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         t.start();
     }
 
-    private void buyAllBalls()
-    {
+    private void buyAllBalls() {
 
     }
 
-    private void buyAllSkins()
-    {
+    private void buyAllSkins() {
         Field[] drawablesFields = R.drawable.class.getFields();
 
         for (Field field : drawablesFields) {
-            try
-            {
+            try {
                 String name = field.getName();
-                if(name.contains("vector") || name.contains("icon") || name.contains("reactive") || name.contains("rainbow") ||
+                if (name.contains("vector") || name.contains("icon") || name.contains("reactive") || name.contains("rainbow") ||
                         name.contains("colored") || name.contains("menu") || name.contains("title") || name.contains("background")
                         || name.contains("clear") || name.contains("spectrum"))
                     continue;
@@ -447,22 +437,18 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 int id = this.getResources().getIdentifier(name, "drawable", getPackageName());
                 storage.addOwnedSkinLabel(id_label);
                 storage.addOwnedSkin(id);
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private void buyAllTrails()
-    {
+    private void buyAllTrails() {
         int res_id;
         int trail;
         int id_label;
 
-        for(int i = 0; i < 21; i++)
-        {
+        for (int i = 0; i < 21; i++) {
 
             res_id = this.getResources().getIdentifier("colored_" + (i + 1), "integer", getPackageName());
             trail = this.getResources().getInteger(res_id);
@@ -496,36 +482,30 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         storage.addOwnedTrailLabel(id_label);
     }
 
-    private void buyAllBackgrounds()
-    {
+    private void buyAllBackgrounds() {
 
     }
 
-    private void buyAllSounds()
-    {
+    private void buyAllSounds() {
         Field[] rawFields = R.raw.class.getFields();
 
         for (Field field : rawFields) {
-            try
-            {
+            try {
                 String name = field.getName();
-                if(name.contains("background"))
+                if (name.contains("background"))
                     continue;
 
                 int id_label = this.getResources().getIdentifier(name + "_Label", "id", getPackageName());
                 int id = this.getResources().getIdentifier(name, "raw", getPackageName());
                 storage.addOwnedSoundLabel(id_label);
                 storage.addOwnedSound(id);
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public void buyCoins(View view)
-    {
+    public void buyCoins(View view) {
         TextView txtClose;
 
         coinDialog.setContentView(R.layout.buy_coins_popup);
@@ -546,8 +526,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }
 
-    public void buyGems(View view)
-    {
+    public void buyGems(View view) {
         TextView txtClose;
 
         gemDialog.setContentView(R.layout.buy_gems_popup);
