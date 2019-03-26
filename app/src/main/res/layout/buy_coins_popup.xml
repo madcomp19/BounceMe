@@ -47,11 +47,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="0dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="0dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -60,28 +61,28 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:text="1000"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:layout_marginRight="40dp"/>
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="30dp"
             android:text="10000"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="20dp"
-            android:layout_marginRight="40dp"/>
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:text="50000"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="75000"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="200000"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -89,11 +90,8 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,65 +100,72 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="40dp"
+            android:layout_gravity="left"
             android:src="@drawable/coin_bunch_icon" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginRight="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:src="@drawable/coin_pile_icon" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="0dp"
             android:src="@drawable/coin_bag_icon" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginRight="40dp"
+            android:background="@drawable/gold_button2_icon_vector"
+            android:drawableRight="@drawable/gem_icon_small"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:text="10"
             android:textAlignment="center"
-            android:drawableRight="@drawable/gem_icon_small"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:textColor="#fff"
+            android:gravity="center_vertical"
+            android:textColor="#000"
             android:textSize="20dp" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/gold_button2_icon_vector"
+            android:drawableRight="@drawable/gem_icon_small"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:text="50"
+            android:gravity="center_vertical"
             android:textAlignment="center"
-            android:drawableRight="@drawable/gem_icon_small"
-            android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="20dp" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:text="100"
-            android:textAlignment="center"
+            android:background="@drawable/gold_button2_icon_vector"
             android:drawableRight="@drawable/gem_icon_small"
-            android:paddingRight="16dp"
             android:paddingLeft="16dp"
-            android:textColor="#fff"
+            android:paddingRight="16dp"
+            android:text="100"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#000"
             android:textSize="20dp" />
 
     </LinearLayout>
