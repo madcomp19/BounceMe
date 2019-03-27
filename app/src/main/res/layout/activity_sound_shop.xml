@@ -230,7 +230,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/basketball_Label"
+                    android:id="@+id/basketball_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -375,7 +375,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/pingpong_Label"
+                    android:id="@+id/ping_pong_ball_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -665,7 +665,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/coin_Label"
+                    android:id="@+id/coin_icon_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
