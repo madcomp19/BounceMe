@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BoostShop"></activity>
+        <activity
+            android:name=".BoostShop"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SoundShop"
             android:screenOrientation="portrait" />
@@ -27,12 +29,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".SkinShop"
-            android:hardwareAccelerated="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".DoublePointsAlert"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.DoublePointsAlert" />
         <activity
             android:name=".ShopMenu"
             android:screenOrientation="portrait" />

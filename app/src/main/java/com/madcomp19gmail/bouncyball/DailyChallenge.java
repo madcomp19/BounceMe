@@ -1,14 +1,10 @@
 package com.madcomp19gmail.bouncyball;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
@@ -231,12 +227,14 @@ public class DailyChallenge extends AppCompatActivity {
         TextView text = customDialog.findViewById(R.id.customDialogText);
 
         text.setText(R.string.success_dialog_message);
+        text.setMaxWidth((int) (0.6 * width));
         title.setText(R.string.success_dialog_title);
         title.setTextColor(getResources().getColor(android.R.color.holo_green_light));
 
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                customDialog.dismiss();
                 finish();
             }
         });
@@ -254,12 +252,14 @@ public class DailyChallenge extends AppCompatActivity {
         TextView text = customDialog.findViewById(R.id.customDialogText);
 
         text.setText(R.string.error_dialog_message);
+        text.setMaxWidth((int) (0.6 * width));
         title.setText(R.string.error_dialog_title);
         title.setTextColor(getResources().getColor(android.R.color.holo_red_light));
 
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                customDialog.dismiss();
                 finish();
             }
         });
@@ -270,12 +270,14 @@ public class DailyChallenge extends AppCompatActivity {
         customDialog.show();
     }
 
+    //TODO - finish roulette mini game
     private void showFinalPrizeDialog() {
         customDialog.setContentView(R.layout.dialog_roulette_daily_challenge);
         Button closeBtn = customDialog.findViewById(R.id.closeRouletteButton);
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                customDialog.dismiss();
                 finish();
             }
         });

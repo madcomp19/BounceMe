@@ -29,7 +29,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You earned:  "
+            android:text="You earned: "
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
@@ -41,6 +41,17 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_button3_vector"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toTopOf="@+id/watchAdButton"
+        app:layout_constraintEnd_toEndOf="@+id/watchAdButton"
+        app:layout_constraintStart_toStartOf="@+id/watchAdButton" />
 
     <Button
         android:id="@+id/watchAdButton"
@@ -57,17 +68,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/okButton"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/rounded_button3_vector"
-        android:text="@string/ok"
-        app:layout_constraintBottom_toTopOf="@+id/watchAdButton"
-        app:layout_constraintEnd_toEndOf="@+id/watchAdButton"
-        app:layout_constraintStart_toStartOf="@+id/watchAdButton" />
-
 
 </android.support.constraint.ConstraintLayout>

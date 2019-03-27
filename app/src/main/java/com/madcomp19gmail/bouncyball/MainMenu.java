@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -45,11 +46,16 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     TextView adsLeftToday;
     Button adButton;
     private RewardedVideoAd mRewardedVideoAd;
-    boolean rewarded = false;
-    boolean adsLeft = true;
+    private boolean rewarded = false;
+    private boolean adsLeft = true;
+    private boolean watchedDoublePointsAd = false;
 
-    Dialog coinDialog;
-    Dialog gemDialog;
+    private Dialog coinDialog;
+    private Dialog gemDialog;
+    private Dialog doublePointsDialog;
+
+    private DisplayMetrics metrics;
+    private int width, height;
 
     private final int default_skin = R.drawable.emoji_0;
     private final int default_skin_label = R.id.emoji_0_Label;
@@ -117,6 +123,11 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         coinDialog = new Dialog(this);
         gemDialog = new Dialog(this);
+        doublePointsDialog = new Dialog(this);
+
+        metrics = getResources().getDisplayMetrics();
+        width = metrics.widthPixels;
+        height = metrics.heightPixels;
     }
 
     private void initializeShops() {
@@ -165,9 +176,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             int new_touches = Math.abs(StorageManager.getInstance().getTotalBounces() - prev_touches);
 
             if (new_touches > 300) {
-                changingActivity = true;
-                Intent intent = new Intent(this, DoublePointsAlert.class);
-                startActivity(intent);
+                showDoublePointsDialog();
             }
 
             prev_act_GameWorld = false;
@@ -326,11 +335,13 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onRewardedVideoAdClosed() {
 
-        if (adsLeft)
+        if (adsLeft || watchedDoublePointsAd) {
             loadRewardedVideoAd();
+            watchedDoublePointsAd = false;
+        }
 
         if (rewarded)
-            Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_SHORT).show();
 
         rewarded = false;
     }
@@ -338,17 +349,25 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onRewarded(RewardItem rewardItem) {
 
-        storage.addGems(1);
-        gems.setText(storage.getTotalGems() + "");
-        rewarded = true;
+        if (watchedDoublePointsAd) {
+            storage.setTotalBounces(storage.getTotalBounces() + GameWorld.getTouches() - getPrevTouches());
+            TextView test = ((TextView) doublePointsDialog.findViewById(R.id.numberBounces));
+            int result = 2 * (GameWorld.getTouches() - getPrevTouches());
+            test.setText(result + " " + "Bounces");
+            coins.setText(storage.getTotalBounces() + result + "");
+        } else {
+            storage.addGems(1);
+            gems.setText(storage.getTotalGems() + "");
+            rewarded = true;
 
-        storage.removeAdsAvailableToday();
-        if (storage.getAdsAvailableToday() > 0)
-            adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
-        else {
-            adsLeftToday.setText("Come Back Tomorrow");
-            adsLeft = false;
-            adButton.setEnabled(false);
+            storage.removeAdsAvailableToday();
+            if (storage.getAdsAvailableToday() > 0)
+                adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
+            else {
+                adsLeftToday.setText("Come Back Tomorrow");
+                adsLeft = false;
+                adButton.setEnabled(false);
+            }
         }
     }
 
@@ -403,6 +422,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    //region
     public void buyEverything(View v) {
         Thread t = new Thread(new Runnable() {
             public void run() {
@@ -505,6 +525,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             }
         }
     }
+    //endregion
 
     public void buyCoins(View view) {
 
@@ -524,17 +545,15 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         buyCoinPack1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 final String text = buyCoinPack1.getText().toString();
                 int price = Integer.valueOf(buyCoinPack1.getText().toString());
                 int total_gems = storage.getTotalGems();
 
-                if(total_gems > price)
-                {
+                if (total_gems > price) {
                     buyCoinPack1.setEnabled(false);
                     buyCoinPack1.setCompoundDrawables(null, null, null, null);
-                    buyCoinPack1.setPadding(0,0,0,0);
+                    buyCoinPack1.setPadding(0, 0, 0, 0);
                     buyCoinPack1.setText("Bought");
                     storage.takeGems(price);
                     storage.setTotalBounces(storage.getTotalBounces() + 10000);
@@ -550,25 +569,22 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                             buyCoinPack1.setPadding(55, 0, 55, 0);
                         }
                     }, 2000);
-                }
-                else
+                } else
                     buyGems(getWindow().getDecorView());
             }
         });
 
         buyCoinPack2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 final String text = buyCoinPack2.getText().toString();
                 int price = Integer.valueOf(buyCoinPack2.getText().toString());
                 int total_gems = storage.getTotalGems();
 
-                if(total_gems > price)
-                {
+                if (total_gems > price) {
                     buyCoinPack2.setEnabled(false);
                     buyCoinPack2.setCompoundDrawables(null, null, null, null);
-                    buyCoinPack2.setPadding(0,0,0,0);
+                    buyCoinPack2.setPadding(0, 0, 0, 0);
                     buyCoinPack2.setText("Bought");
                     storage.takeGems(price);
                     storage.setTotalBounces(storage.getTotalBounces() + 75000);
@@ -584,25 +600,22 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                             buyCoinPack2.setPadding(55, 0, 55, 0);
                         }
                     }, 2000);
-                }
-                else
+                } else
                     buyGems(getWindow().getDecorView());
             }
         });
 
         buyCoinPack3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 final String text = buyCoinPack3.getText().toString();
                 int price = Integer.valueOf(buyCoinPack3.getText().toString());
                 int total_gems = storage.getTotalGems();
 
-                if(total_gems > price)
-                {
+                if (total_gems > price) {
                     buyCoinPack3.setEnabled(false);
                     buyCoinPack3.setCompoundDrawables(null, null, null, null);
-                    buyCoinPack3.setPadding(0,0,0,0);
+                    buyCoinPack3.setPadding(0, 0, 0, 0);
                     buyCoinPack3.setText("Bought");
                     storage.takeGems(price);
                     storage.setTotalBounces(storage.getTotalBounces() + 200000);
@@ -618,8 +631,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                             buyCoinPack3.setPadding(46, 0, 46, 0);
                         }
                     }, 2000);
-                }
-                else
+                } else
                     buyGems(getWindow().getDecorView());
             }
         });
@@ -650,5 +662,41 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         Window window = gemDialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+    }
+
+    private void showDoublePointsDialog() {
+        doublePointsDialog.setContentView(R.layout.double_points_dialog);
+        int n_bounces = GameWorld.getTouches() - MainMenu.getPrevTouches();
+
+        Button okButton = (Button) doublePointsDialog.findViewById(R.id.okButton);
+        final Button watchAdButton = (Button) doublePointsDialog.findViewById(R.id.watchAdButton);
+        TextView bounces = (TextView) doublePointsDialog.findViewById(R.id.numberBounces);
+
+        bounces.setText(n_bounces + " Bounces");
+
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doublePointsDialog.dismiss();
+            }
+        });
+
+        watchAdButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mRewardedVideoAd.isLoaded()) {
+                    watchedDoublePointsAd = true;
+                    watchAdButton.setEnabled(false);
+                    mRewardedVideoAd.show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Can't watch an ad now", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        doublePointsDialog.getWindow().setLayout(width, height);
+        doublePointsDialog.setCancelable(false);
+        doublePointsDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        doublePointsDialog.show();
     }
 }
