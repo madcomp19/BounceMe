@@ -1,15 +1,22 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
@@ -20,6 +27,7 @@ public class DailyChallenge extends AppCompatActivity {
 
     private final int background_music_id = R.raw.background_music_2;
 
+    private Dialog customDialog;
     private ImageView day_counter;
     private int id;
     private int consecutive_days;
@@ -29,7 +37,8 @@ public class DailyChallenge extends AppCompatActivity {
     private Random rand;
     private int soundId;
     private ArrayList<RadioButton> radioButtons;
-    private Button playSoundButton;
+    private DisplayMetrics metrics;
+    private int height, width;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +51,7 @@ public class DailyChallenge extends AppCompatActivity {
         SoundPoolManager.initialize(this);
         soundPoolManager = SoundPoolManager.getInstance();
         prefs = StorageManager.getInstance();
+        mediaPlayerManager = MediaPlayerManager.getInstance();
         consecutive_days = prefs.getConsecutiveDays();
         setStarImages(consecutive_days);
 
@@ -58,6 +68,10 @@ public class DailyChallenge extends AppCompatActivity {
         initializeButtons();
         setupSound(sounds, chosenSoundIndex);
         setupChoices(sounds, chosenSoundIndex);
+        customDialog = new Dialog(this);
+        metrics = getResources().getDisplayMetrics();
+        width = metrics.widthPixels;
+        height = metrics.heightPixels;
     }
 
     //return a list with every sound file name
@@ -92,10 +106,9 @@ public class DailyChallenge extends AppCompatActivity {
             return;
         }
 
-        if(btnId == -1){
+        if (btnId == -1) {
             Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show();
-        }
-        else{
+        } else {
             //disable all buttons
             ((RadioGroup) findViewById(R.id.radioGroup)).setEnabled(false);
             ((Button) findViewById(R.id.submitButton)).setEnabled(false);
@@ -110,13 +123,11 @@ public class DailyChallenge extends AppCompatActivity {
         }
     }
 
-    private void initializeButtons(){
+    private void initializeButtons() {
         radioButtons.add((RadioButton) findViewById(R.id.radioButton));
         radioButtons.add((RadioButton) findViewById(R.id.radioButton2));
         radioButtons.add((RadioButton) findViewById(R.id.radioButton3));
         radioButtons.add((RadioButton) findViewById(R.id.radioButton4));
-
-        playSoundButton = findViewById(R.id.playSoundButton);
     }
 
     private void setupChoices(ArrayList<String> list, int index) {
@@ -184,7 +195,7 @@ public class DailyChallenge extends AppCompatActivity {
 
         if (consecutive_days == 7) {
             prefs.setConsecutiveDays(0);
-            showChallengeCompleteDialog();
+            showFinalPrizeDialog();
         } else {
             prefs.setConsecutiveDays(consecutive_days);
             showSuccessDialog();
@@ -213,49 +224,66 @@ public class DailyChallenge extends AppCompatActivity {
         }
     }
 
-    private void showChallengeCompleteDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(DailyChallenge.this);
-        builder.setMessage(R.string.challenge_complete_dialog_message)
-                .setTitle(R.string.challenge_complete_dialog_title);
-        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                finish();
-            }
-        });
-        builder.setCancelable(false);
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
     private void showSuccessDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(DailyChallenge.this);
-        builder.setMessage(R.string.success_dialog_message)
-                .setTitle(R.string.success_dialog_title);
-        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
+        customDialog.setContentView(R.layout.daily_challenge_custom_dialog);
+        Button closeBtn = customDialog.findViewById(R.id.closeRouletteButton2);
+        TextView title = customDialog.findViewById(R.id.customDialogTitle);
+        TextView text = customDialog.findViewById(R.id.customDialogText);
+
+        text.setText(R.string.success_dialog_message);
+        title.setText(R.string.success_dialog_title);
+        title.setTextColor(getResources().getColor(android.R.color.holo_green_light));
+
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 finish();
             }
         });
-        builder.setCancelable(false);
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        customDialog.getWindow().setLayout(width, height);
+        customDialog.setCancelable(false);
+        customDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        customDialog.show();
     }
 
     private void showErrorDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(DailyChallenge.this);
-        builder.setMessage(R.string.error_dialog_message)
-                .setTitle(R.string.error_dialog_title);
-        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
+        customDialog.setContentView(R.layout.daily_challenge_custom_dialog);
+        Button closeBtn = customDialog.findViewById(R.id.closeRouletteButton2);
+        TextView title = customDialog.findViewById(R.id.customDialogTitle);
+        TextView text = customDialog.findViewById(R.id.customDialogText);
+
+        text.setText(R.string.error_dialog_message);
+        title.setText(R.string.error_dialog_title);
+        title.setTextColor(getResources().getColor(android.R.color.holo_red_light));
+
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 finish();
             }
         });
-        builder.setCancelable(false);
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        customDialog.getWindow().setLayout(width, height);
+        customDialog.setCancelable(false);
+        customDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        customDialog.show();
+    }
+
+    private void showFinalPrizeDialog() {
+        customDialog.setContentView(R.layout.dialog_roulette_daily_challenge);
+        Button closeBtn = customDialog.findViewById(R.id.closeRouletteButton);
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        customDialog.getWindow().setLayout(width, height);
+        customDialog.setCancelable(false);
+        customDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        customDialog.show();
     }
 
     @Override

@@ -1,21 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="250dp"
     android:layout_gravity="center"
-    android:padding="5dp"
+    android:padding="10dp"
     android:background="#333A7D">
 
     <TextView
         android:id="@+id/closeButtonGemsPopup"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:text="X"
-        android:textStyle="bold"
-        android:textColor="#fff"
         android:layout_gravity="end"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/rounded_button5_vector"
         android:gravity="center"
-        android:background="@drawable/rounded_button5_vector"/>
+        android:text="X"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/coinTitle"
+        android:layout_width="185dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="Choose a gem pack"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="50"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="200"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="500"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="84dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left"
+            android:src="@drawable/gem_pile_icon" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/gem_bag_icon" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/gem_chest_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gold_button2_icon_vector"
+            android:text="0,50€"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/gold_button2_icon_vector"
+            android:text="1,50€"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gold_button2_icon_vector"
+            android:text="3,50€"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
