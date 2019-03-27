@@ -49,6 +49,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private boolean rewarded = false;
     private boolean adsLeft = true;
     private boolean watchedDoublePointsAd = false;
+    private boolean isWatchingDoublePointsAd = false;
 
     private Dialog coinDialog;
     private Dialog gemDialog;
@@ -338,6 +339,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         if (adsLeft || watchedDoublePointsAd) {
             loadRewardedVideoAd();
             watchedDoublePointsAd = false;
+            isWatchingDoublePointsAd = false;
         }
 
         if (rewarded)
@@ -349,12 +351,16 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onRewarded(RewardItem rewardItem) {
 
-        if (watchedDoublePointsAd) {
+        if (isWatchingDoublePointsAd) {
             storage.setTotalBounces(storage.getTotalBounces() + GameWorld.getTouches() - getPrevTouches());
             TextView test = ((TextView) doublePointsDialog.findViewById(R.id.numberBounces));
             int result = 2 * (GameWorld.getTouches() - getPrevTouches());
             test.setText(result + " " + "Bounces");
             coins.setText(storage.getTotalBounces() + result + "");
+            watchedDoublePointsAd = true;
+            Button watchAdButton = (Button) doublePointsDialog.findViewById(R.id.watchAdButton);
+            watchAdButton.setEnabled(false);
+            watchAdButton.setBackgroundResource(R.drawable.rounded_button6_vector);
         } else {
             storage.addGems(1);
             gems.setText(storage.getTotalGems() + "");
@@ -525,7 +531,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             }
         }
     }
-    //endregion
 
     public void buyCoins(View view) {
 
@@ -663,6 +668,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         Window window = gemDialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }
+    //endregion
 
     private void showDoublePointsDialog() {
         doublePointsDialog.setContentView(R.layout.double_points_dialog);
@@ -685,8 +691,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             @Override
             public void onClick(View v) {
                 if (mRewardedVideoAd.isLoaded()) {
-                    watchedDoublePointsAd = true;
-                    watchAdButton.setEnabled(false);
+                    isWatchingDoublePointsAd = true;
                     mRewardedVideoAd.show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Can't watch an ad now", Toast.LENGTH_SHORT).show();
