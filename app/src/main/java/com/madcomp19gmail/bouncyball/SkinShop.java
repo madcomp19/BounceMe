@@ -7,13 +7,10 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -72,7 +69,7 @@ public class SkinShop extends FragmentActivity {
     protected void onResume() {
         super.onResume();
 
-        coins.setText(storageManager.getTotalTouches() + "");
+        coins.setText(storageManager.getTotalBounces() + "");
         gems.setText(storageManager.getTotalGems() + "");
 
         if (storageManager.getShopMusicSetting()) {
@@ -142,10 +139,10 @@ public class SkinShop extends FragmentActivity {
 
         } else { //if the skin is not owned
             int price = Integer.parseInt(new_label.getText() + ""); //get price
-            int total_touches = storageManager.getTotalTouches(); //get money
+            int total_touches = storageManager.getTotalBounces(); //get money
 
             if (total_touches >= price) {
-                storageManager.setTotalTouches(total_touches - price);
+                storageManager.setTotalBounces(total_touches - price);
                 storageManager.addOwnedSkin(skin_id);
                 storageManager.addOwnedSkinLabel(label_id);
                 storageManager.setSelectedSkin(skin_id);
@@ -164,7 +161,7 @@ public class SkinShop extends FragmentActivity {
                 new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
                 new_label.setPadding(0, 10, 0, 0);
                 Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
-                coins.setText(storageManager.getTotalTouches() + "");
+                coins.setText(storageManager.getTotalBounces() + "");
             } else
                 Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
         }

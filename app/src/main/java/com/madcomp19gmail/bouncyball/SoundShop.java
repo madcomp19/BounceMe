@@ -105,7 +105,7 @@ public class SoundShop extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
 
-        coins.setText(storage.getTotalTouches() + "");
+        coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
 
         if(storage.getShopMusicSetting())
@@ -179,7 +179,7 @@ public class SoundShop extends AppCompatActivity {
         } else {
             TextView label_text = (TextView) findViewById(label_id);
             int price = Integer.parseInt(label_text.getText() + "");
-            int total_touches = storageManager.getTotalTouches();
+            int total_touches = storageManager.getTotalBounces();
             int total_gems = storageManager.getTotalGems();
 
             if(aSound == R.id.laser_Button || label_id == R.id.laser_Label
@@ -215,7 +215,7 @@ public class SoundShop extends AppCompatActivity {
             {
                 if (total_touches >= price) {
                    //soundPool.playSound();
-                    storageManager.setTotalTouches(total_touches - price);
+                    storageManager.setTotalBounces(total_touches - price);
                     storageManager.addOwnedSound(sound);
                     storageManager.setSelectedSound(sound);
                     storageManager.addOwnedSoundLabel(label_id);
@@ -233,7 +233,7 @@ public class SoundShop extends AppCompatActivity {
                     label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label_text.setPadding(0,10,0,0);
                     Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
-                    coins.setText(storageManager.getTotalTouches() + "");
+                    coins.setText(storageManager.getTotalBounces() + "");
                 } else
                     Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_LONG).show();
             }

@@ -2,16 +2,12 @@ package com.madcomp19gmail.bouncyball;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +15,6 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -54,7 +48,7 @@ public class BoostShop extends AppCompatActivity {
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        coins.setText(storageManager.getTotalTouches() + "");
+        coins.setText(storageManager.getTotalBounces() + "");
         gems.setText(storageManager.getTotalGems() + "");
 
         mAdView = findViewById(R.id.bannerAdBoostShop);

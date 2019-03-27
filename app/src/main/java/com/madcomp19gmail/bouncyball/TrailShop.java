@@ -101,7 +101,7 @@ public class TrailShop extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
 
-        coins.setText(storage.getTotalTouches() + "");
+        coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
 
         if(storage.getShopMusicSetting())
@@ -159,7 +159,7 @@ public class TrailShop extends AppCompatActivity {
         } else {
             TextView label_text = (TextView) findViewById(label_id);
             int price = Integer.parseInt(label_text.getText() + "");
-            int total_touches = storageManager.getTotalTouches();
+            int total_touches = storageManager.getTotalBounces();
             int total_gems = storageManager.getTotalGems();
 
             if(aTrail == R.id.reactive_Button || label_id == R.id.reactive_Label
@@ -192,7 +192,7 @@ public class TrailShop extends AppCompatActivity {
             else
             {
                 if (total_touches >= price) {
-                    storageManager.setTotalTouches(total_touches - price);
+                    storageManager.setTotalBounces(total_touches - price);
                     storageManager.addOwnedTrail(trail);
                     storageManager.setSelectedTrail(trail);
                     storageManager.addOwnedTrailLabel(label_id);
@@ -210,7 +210,7 @@ public class TrailShop extends AppCompatActivity {
                     label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label_text.setPadding(0,10,0,0);
                     Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
-                    coins.setText(storageManager.getTotalTouches() + "");
+                    coins.setText(storageManager.getTotalBounces() + "");
                 } else
                     Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces!", Toast.LENGTH_LONG).show();
             }

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -78,7 +79,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         gems = findViewById(R.id.gems);
         adButton = findViewById(R.id.adButton);
         adsLeftToday = findViewById(R.id.adsLeftToday);
-        //touches = StorageManager.getInstance().getTotalTouches();*/
+        //touches = StorageManager.getInstance().getTotalBounces();*/
 
         /*mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
         mediaPlayer.setLooping(true);
@@ -158,10 +159,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     protected void onResume() {
         super.onResume();
-        //StorageManager.getInstance().setTotalTouches(touches);
+        //StorageManager.getInstance().setTotalBounces(touches);
 
         if (prev_act_GameWorld) {
-            int new_touches = Math.abs(StorageManager.getInstance().getTotalTouches() - prev_touches);
+            int new_touches = Math.abs(StorageManager.getInstance().getTotalBounces() - prev_touches);
 
             if (new_touches > 300) {
                 changingActivity = true;
@@ -172,7 +173,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             prev_act_GameWorld = false;
         }
 
-        coins.setText(storage.getTotalTouches() + "");
+        coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
 
         if (storage.getAdsAvailableToday() > 0)
@@ -219,7 +220,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     /*public static void addTouch() {
         touches++;
-        storage.setTotalTouches(touches);
+        storage.setTotalBounces(touches);
     }
 
     public static int getTouches() {
@@ -230,7 +231,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         changingActivity = true;
         Intent intent = new Intent(this, GameWorld.class);
         startActivity(intent);
-        prev_touches = storage.getTotalTouches();
+        prev_touches = storage.getTotalBounces();
         prev_gems = storage.getTotalGems();
     }
 
@@ -245,7 +246,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                     changingActivity = true;
                     Intent intent = new Intent(this, GameWorld.class);
                     startActivityForResult(intent, 1);
-                    prev_touches = StorageManager.getInstance().getTotalTouches();
+                    prev_touches = StorageManager.getInstance().getTotalBounces();
                 }
             }
             if (resultCode == Activity.RESULT_CANCELED) {
@@ -262,7 +263,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     public void resetStorage(View view) {
         storage.resetStorage();
-        coins.setText(storage.getTotalTouches() + "");
+        coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
         initializeShops(); //set defaults
     }
@@ -393,9 +394,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     public void godMode(View v) {
-        storage.setTotalTouches(100000);
+        storage.setTotalBounces(100000);
         storage.addGems(100000);
-        coins.setText(storage.getTotalTouches() + "");
+        coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
     }
 
@@ -506,16 +507,120 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void buyCoins(View view) {
-        TextView txtClose;
 
         coinDialog.setContentView(R.layout.buy_coins_popup);
 
-        txtClose = (TextView) coinDialog.findViewById(R.id.closeButtonCoinsPopup);
+        TextView txtClose = (TextView) coinDialog.findViewById(R.id.closeButtonCoinsPopup);
+        final TextView buyCoinPack1 = (TextView) coinDialog.findViewById(R.id.buyCoin1);
+        final TextView buyCoinPack2 = (TextView) coinDialog.findViewById(R.id.buyCoin2);
+        final TextView buyCoinPack3 = (TextView) coinDialog.findViewById(R.id.buyCoin3);
 
         txtClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 coinDialog.dismiss();
+            }
+        });
+
+        buyCoinPack1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                final String text = buyCoinPack1.getText().toString();
+                int price = Integer.valueOf(buyCoinPack1.getText().toString());
+                int total_gems = storage.getTotalGems();
+
+                if(total_gems > price)
+                {
+                    buyCoinPack1.setEnabled(false);
+                    buyCoinPack1.setCompoundDrawables(null, null, null, null);
+                    buyCoinPack1.setPadding(0,0,0,0);
+                    buyCoinPack1.setText("Bought");
+                    storage.takeGems(price);
+                    storage.setTotalBounces(storage.getTotalBounces() + 10000);
+                    coins.setText(storage.getTotalBounces() + "");
+                    gems.setText(storage.getTotalGems() + "");
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            buyCoinPack1.setEnabled(true);
+                            buyCoinPack1.setText(text);
+                            buyCoinPack1.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.gem_icon_small, 0);
+                            buyCoinPack1.setPadding(55, 0, 55, 0);
+                        }
+                    }, 2000);
+                }
+                else
+                    buyGems(getWindow().getDecorView());
+            }
+        });
+
+        buyCoinPack2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                final String text = buyCoinPack2.getText().toString();
+                int price = Integer.valueOf(buyCoinPack2.getText().toString());
+                int total_gems = storage.getTotalGems();
+
+                if(total_gems > price)
+                {
+                    buyCoinPack2.setEnabled(false);
+                    buyCoinPack2.setCompoundDrawables(null, null, null, null);
+                    buyCoinPack2.setPadding(0,0,0,0);
+                    buyCoinPack2.setText("Bought");
+                    storage.takeGems(price);
+                    storage.setTotalBounces(storage.getTotalBounces() + 75000);
+                    coins.setText(storage.getTotalBounces() + "");
+                    gems.setText(storage.getTotalGems() + "");
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            buyCoinPack2.setEnabled(true);
+                            buyCoinPack2.setText(text);
+                            buyCoinPack2.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.gem_icon_small, 0);
+                            buyCoinPack2.setPadding(55, 0, 55, 0);
+                        }
+                    }, 2000);
+                }
+                else
+                    buyGems(getWindow().getDecorView());
+            }
+        });
+
+        buyCoinPack3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                final String text = buyCoinPack3.getText().toString();
+                int price = Integer.valueOf(buyCoinPack3.getText().toString());
+                int total_gems = storage.getTotalGems();
+
+                if(total_gems > price)
+                {
+                    buyCoinPack3.setEnabled(false);
+                    buyCoinPack3.setCompoundDrawables(null, null, null, null);
+                    buyCoinPack3.setPadding(0,0,0,0);
+                    buyCoinPack3.setText("Bought");
+                    storage.takeGems(price);
+                    storage.setTotalBounces(storage.getTotalBounces() + 200000);
+                    coins.setText(storage.getTotalBounces() + "");
+                    gems.setText(storage.getTotalGems() + "");
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            buyCoinPack3.setEnabled(true);
+                            buyCoinPack3.setText(text);
+                            buyCoinPack3.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.gem_icon_small, 0);
+                            buyCoinPack3.setPadding(46, 0, 46, 0);
+                        }
+                    }, 2000);
+                }
+                else
+                    buyGems(getWindow().getDecorView());
             }
         });
 

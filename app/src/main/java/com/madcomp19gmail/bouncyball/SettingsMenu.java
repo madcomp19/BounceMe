@@ -83,7 +83,7 @@ public class SettingsMenu extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-        //StorageManager.getInstance().setTotalTouches(touches);
+        //StorageManager.getInstance().setTotalBounces(touches);
         if(storageManager.getMenuMusicSetting())
         {
             mediaPlayerManager.loadSound(background_music_id, "Menu");

@@ -65,7 +65,7 @@ public class ShopMenu extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        coins.setText(storage.getTotalTouches() + "");
+        coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
 
         if (storage.getShopMusicSetting()) {

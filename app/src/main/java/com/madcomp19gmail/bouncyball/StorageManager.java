@@ -64,11 +64,11 @@ public class StorageManager {
         editor.commit();
     }
 
-    public int getTotalTouches(){
+    public int getTotalBounces(){
         return prefs.getInt(context.getString(R.string.total_touches), 0);
     }
 
-    public void setTotalTouches(int touches){
+    public void setTotalBounces(int touches){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.total_touches), touches);
         editor.commit();

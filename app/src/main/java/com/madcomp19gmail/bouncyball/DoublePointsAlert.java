@@ -100,7 +100,7 @@ public class DoublePointsAlert extends AppCompatActivity implements RewardedVide
     @Override
     public void onRewarded(RewardItem rewardItem) {
 
-        storage.setTotalTouches(storage.getTotalTouches() + bouncesEarned);
+        storage.setTotalBounces(storage.getTotalBounces() + bouncesEarned);
         watchAdButton.setVisibility(View.INVISIBLE);
         numberBouncesEarned.setText(bouncesEarned * 2 + " Bounces");
     }

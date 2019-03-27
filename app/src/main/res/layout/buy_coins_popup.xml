@@ -128,6 +128,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <TextView
+            android:id="@+id/buyCoin1"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:background="@drawable/gold_button2_icon_vector"
@@ -141,6 +142,7 @@
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/buyCoin2"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
@@ -156,6 +158,7 @@
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/buyCoin3"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:background="@drawable/gold_button2_icon_vector"
