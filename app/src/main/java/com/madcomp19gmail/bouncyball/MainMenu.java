@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -28,7 +30,7 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import java.lang.reflect.Field;
 
-public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener {
+public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener, BillingProcessor.IBillingHandler {
 
     //private static int touches;
     private StorageManager storage;
@@ -64,6 +66,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private final int default_sound_label = R.id.mute_Label;
     private final int default_trail = -1;
     private final int default_trail_label = R.id.clear_Label;
+
+
+    BillingProcessor bp;
 
 
     @Override
@@ -133,6 +138,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         metrics = getResources().getDisplayMetrics();
         width = metrics.widthPixels;
         height = metrics.heightPixels;
+
+        bp = new BillingProcessor(this, "YOUR LICENSE KEY FROM GOOGLE PLAY CONSOLE HERE", this);
+        bp.initialize();
     }
 
     private void initializeShops() {
@@ -228,6 +236,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     @Override
     protected void onDestroy() {
+
+        if (bp != null) {
+            bp.release();
+        }
         super.onDestroy();
 
         //if(storage.getMenuMusicSetting())
@@ -331,6 +343,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         }
     }
 
+    // ads
+    // region
     @Override
     public void onRewardedVideoAdLoaded() {
 
@@ -408,6 +422,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     public void onRewardedVideoCompleted() {
 
     }
+
+    // endregion
+
 
     /*private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener(){
 
@@ -730,4 +747,42 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         doublePointsDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         doublePointsDialog.show();
     }
+
+
+    // In app purchases
+    // region
+
+    @Override
+    public void onBillingInitialized() {
+        /*
+         * Called when BillingProcessor was initialized and it's ready to purchase
+         */
+    }
+
+    @Override
+    public void onProductPurchased(String productId, TransactionDetails details) {
+        /*
+         * Called when requested PRODUCT ID was successfully purchased
+         */
+    }
+
+    @Override
+    public void onBillingError(int errorCode, Throwable error) {
+        /*
+         * Called when some error occurred. See Constants class for more details
+         *
+         * Note - this includes handling the case where the user canceled the buy dialog:
+         * errorCode = Constants.BILLING_RESPONSE_RESULT_USER_CANCELED
+         */
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+        /*
+         * Called when purchase history was restored and the list of all owned PRODUCT ID's
+         * was loaded from Google Play
+         */
+    }
+
+    // endregion
 }
