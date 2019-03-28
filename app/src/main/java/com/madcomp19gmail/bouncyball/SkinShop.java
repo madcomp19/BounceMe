@@ -162,6 +162,8 @@ public class SkinShop extends FragmentActivity {
                 new_label.setPadding(0, 10, 0, 0);
                 Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
                 coins.setText(storageManager.getTotalBounces() + "");
+
+                SoundPoolManager.getInstance().playSound();
             } else
                 Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
         }

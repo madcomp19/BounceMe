@@ -53,6 +53,8 @@ public class ShopMenu extends AppCompatActivity {
         else
             mediaPlayerManager.pause();
 
+        SoundPoolManager.getInstance().loadSound(R.raw.cash);
+
         mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -75,6 +77,8 @@ public class ShopMenu extends AppCompatActivity {
         }
         else
             mediaPlayerManager.pause();
+
+        SoundPoolManager.getInstance().loadSound(R.raw.cash);
     }
 
     @Override

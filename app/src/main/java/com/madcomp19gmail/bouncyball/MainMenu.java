@@ -76,6 +76,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         MobileAds.initialize(this, "ca-app-pub-5557351606937995~8015272303");
 
+        SoundPoolManager.initialize(this);
+
         ImageView iv = (ImageView) findViewById(R.id.bounce);
 
         Glide.with(this).load(R.drawable.bounce).into(iv);
@@ -104,6 +106,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             mediaPlayerManager.play();
         } else
             mediaPlayerManager.pause();
+
+        //SoundPoolManager.getInstance().loadSound(R.raw.cash);
 
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoAd.setRewardedVideoAdListener(this);
@@ -174,6 +178,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         //StorageManager.getInstance().setTotalBounces(touches);
 
         if (prev_act_GameWorld) {
+
             int new_touches = Math.abs(StorageManager.getInstance().getTotalBounces() - prev_touches);
 
             if (new_touches > 300) {
@@ -200,6 +205,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             mediaPlayerManager.play();
         } else
             mediaPlayerManager.pause();
+
+        //SoundPoolManager.getInstance().loadSound(R.raw.cash);
     }
 
     @Override
@@ -430,6 +437,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     //region
     public void buyEverything(View v) {
+
+        SoundPoolManager.getInstance().playSound();
+
         Thread t = new Thread(new Runnable() {
             public void run() {
 
@@ -565,6 +575,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                     coins.setText(storage.getTotalBounces() + "");
                     gems.setText(storage.getTotalGems() + "");
 
+                    SoundPoolManager.getInstance().playSound();
+
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
@@ -596,6 +608,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                     coins.setText(storage.getTotalBounces() + "");
                     gems.setText(storage.getTotalGems() + "");
 
+                    SoundPoolManager.getInstance().playSound();
+
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         public void run() {
@@ -626,6 +640,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                     storage.setTotalBounces(storage.getTotalBounces() + 200000);
                     coins.setText(storage.getTotalBounces() + "");
                     gems.setText(storage.getTotalGems() + "");
+
+                    SoundPoolManager.getInstance().playSound();
 
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {

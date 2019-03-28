@@ -30,7 +30,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_game_world);
-        SoundPoolManager.initialize(this);
         gameView = new GameView(this);
         setContentView(gameView);
 
@@ -100,6 +99,8 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
             mediaPlayerManager.pause();
         else
             mediaPlayerManager.changeVolume(1);
+
+        //SoundPoolManager.getInstance().loadSound(R.raw.cash);
     }
 
     @Override
@@ -150,7 +151,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         for(int i = 0; i < boost; i++)
         {
             if(Math.random() * 100 < 1)
-                gameView.spawnGem(position, value);
+                gameView.spawnGem(position, 1);
             else
                 gameView.spawnCoin(position, value);
         }

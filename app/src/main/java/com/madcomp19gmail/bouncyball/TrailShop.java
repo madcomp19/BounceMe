@@ -186,6 +186,8 @@ public class TrailShop extends AppCompatActivity {
                     label_text.setPadding(0,10,0,0);
                     Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
                     gems.setText(storageManager.getTotalGems() + "");
+
+                    SoundPoolManager.getInstance().playSound();
                 } else
                     Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();
             }
@@ -211,6 +213,8 @@ public class TrailShop extends AppCompatActivity {
                     label_text.setPadding(0,10,0,0);
                     Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
                     coins.setText(storageManager.getTotalBounces() + "");
+
+                    SoundPoolManager.getInstance().playSound();
                 } else
                     Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces!", Toast.LENGTH_LONG).show();
             }
