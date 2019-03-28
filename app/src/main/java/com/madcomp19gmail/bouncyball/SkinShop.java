@@ -16,13 +16,10 @@ import com.google.android.gms.ads.AdView;
 
 public class SkinShop extends FragmentActivity {
 
-    private final int background_music_id = R.raw.background_music_1;
-
     private TextView coins;
     private TextView gems;
     private StorageManager storageManager;
     private MediaPlayerManager mediaPlayerManager;
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +30,14 @@ public class SkinShop extends FragmentActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         storageManager = StorageManager.getInstance();
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        viewPager.setOffscreenPageLimit(1);
+        ViewPager viewPager = findViewById(R.id.pager);
+        viewPager.setOffscreenPageLimit(2);
         SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
         viewPager.setCurrentItem(storageManager.getSkinPageNumber());
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
+        TabLayout tabLayout = findViewById(R.id.tabDots);
         tabLayout.setupWithViewPager(viewPager, true);
-
-
 
         mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
@@ -53,9 +48,8 @@ public class SkinShop extends FragmentActivity {
             mediaPlayerManager.play();
         }*/
 
-        mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        ((AdView)findViewById(R.id.bannerAdTrailShop)).loadAd(adRequest);
     }
 
     public void onClickPlay(View view) {
@@ -67,10 +61,14 @@ public class SkinShop extends FragmentActivity {
 
     @Override
     protected void onResume() {
+        int background_music_id = R.raw.background_music_1;
         super.onResume();
 
-        coins.setText(storageManager.getTotalBounces() + "");
-        gems.setText(storageManager.getTotalGems() + "");
+        String temp1 = storageManager.getTotalBounces() + "";
+        String temp2 = storageManager.getTotalGems() + "";
+
+        coins.setText(temp1);
+        gems.setText(temp2);
 
         if (storageManager.getShopMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id, "Shop");

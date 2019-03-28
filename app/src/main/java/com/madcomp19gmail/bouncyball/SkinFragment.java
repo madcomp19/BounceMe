@@ -30,24 +30,13 @@ public class SkinFragment extends Fragment {
 
         view = inflater.inflate(fragment_id, container, false);
         setOwnedSkinsPage(view);
-
-        /*for(int i = 1; i <= 1; i++)
-        {
-            String linearLayout = "frag_" + i + "_LinearLayout";
-            int id = getActivity().getResources().getIdentifier(linearLayout, "id", getActivity().getPackageName());
-
-            initializeImageButtons(getActivity().findViewById(id));
-        }*/
-
         initializeImageButtons(view);
 
         return view;
     }
 
-    private void initializeImageButtons(View view)
-    {
+    private void initializeImageButtons(View view) {
         ViewGroup viewGroup = (ViewGroup) view;
-
         int childCount = viewGroup.getChildCount();
 
         for (int i = 0; i < childCount; i++) {
@@ -57,7 +46,6 @@ public class SkinFragment extends Fragment {
                 ImageButton imageButton = (ImageButton) v;
 
                 String id = getResources().getResourceName(imageButton.getId()).split("/")[1].replace("_Button", "");
-
                 int image_id = getResources().getIdentifier(id, "drawable", getActivity().getPackageName());
 
                 Glide.with(this).load(image_id).fitCenter().into(imageButton);
@@ -75,21 +63,18 @@ public class SkinFragment extends Fragment {
             View v = viewGroup.getChildAt(i);
 
             if (v instanceof TextView) {
-
                 TextView label = ((TextView) v);
 
-                if (label_ids.contains(v.getId()))
-                {
+                if (label_ids.contains(v.getId())) {
                     label.setText("Owned");
-                    label.setCompoundDrawables(null,null,null,null);
-                    label.setPadding(0,0,0,0);
+                    label.setCompoundDrawables(null, null, null, null);
+                    label.setPadding(0, 0, 0, 0);
                 }
 
-                if (storageManager.getSelectedSkinLabel() == v.getId())
-                {
+                if (storageManager.getSelectedSkinLabel() == v.getId()) {
                     label.setText("");
-                    label.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
-                    label.setPadding(0,10,0,0);
+                    label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
+                    label.setPadding(0, 10, 0, 0);
                 }
             } else if (v instanceof ViewGroup)
                 setOwnedSkinsPage(v);

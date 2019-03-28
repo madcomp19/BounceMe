@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#424242"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".AchievementsMenu">
 
     <ImageView
@@ -14,11 +14,11 @@
         android:layout_width="250dp"
         android:layout_height="57dp"
         android:layout_marginTop="40dp"
-        android:text="Achievements"
+        android:text="@string/achievements"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="@color/corPrimaria"
         android:textSize="30sp"
-        app:srcCompat="@drawable/achievements_title_menu"/>
+        app:srcCompat="@drawable/achievements_title_menu" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -36,9 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,12 +52,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="0dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginRight="0dp"
+                android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +64,7 @@
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="0dp">
+                    android:layout_height="wrap_content">
 
                     <ProgressBar
                         android:id="@+id/circularProgressBar"
@@ -104,16 +102,15 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="2 Gems"
                         android:onClick="rewardClick1"
+                        android:text="2 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
 
                 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="0dp">
+                    android:layout_height="wrap_content">
 
                     <ProgressBar
                         android:id="@+id/circularProgressBar2"
@@ -134,8 +131,8 @@
                         android:layout_centerVertical="true"
                         android:text="90/1000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward2"
@@ -152,8 +149,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick2"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -181,8 +178,8 @@
                         android:layout_centerVertical="true"
                         android:text="90/5000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward3"
@@ -199,8 +196,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick3"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -217,8 +214,8 @@
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:paddingTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -247,8 +244,8 @@
                         android:layout_centerVertical="true"
                         android:text="10000/10000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="10sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/reward4"
@@ -265,8 +262,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick4"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -295,8 +292,8 @@
                         android:layout_centerVertical="true"
                         android:text="10000/20000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="10sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/reward5"
@@ -313,8 +310,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick5"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -342,8 +339,8 @@
                         android:layout_centerVertical="true"
                         android:text="10000/50000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="10sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp" />
 
                     <TextView
                         android:id="@+id/reward6"
@@ -360,8 +357,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick6"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -408,8 +405,8 @@
                         android:layout_centerVertical="true"
                         android:text="100000/100000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="9sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="9sp" />
 
                     <TextView
                         android:id="@+id/reward7"
@@ -426,8 +423,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="10 Gems"
                         android:onClick="rewardClick7"
+                        android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -456,8 +453,8 @@
                         android:layout_centerVertical="true"
                         android:text="250000/500000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="9sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="9sp" />
 
                     <TextView
                         android:id="@+id/reward8"
@@ -474,8 +471,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="50 Gems"
                         android:onClick="rewardClick8"
+                        android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -503,8 +500,8 @@
                         android:layout_centerVertical="true"
                         android:text="1000000/1000000 Bounces"
                         android:textAlignment="center"
-                        android:textSize="8.5sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="8.5sp" />
 
                     <TextView
                         android:id="@+id/reward9"
@@ -521,8 +518,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="100 Gems"
                         android:onClick="rewardClick9"
+                        android:text="100 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -569,8 +566,8 @@
                         android:layout_centerVertical="true"
                         android:text="1/5 Skins"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward10"
@@ -587,8 +584,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="2 Gems"
                         android:onClick="rewardClick10"
+                        android:text="2 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -617,8 +614,8 @@
                         android:layout_centerVertical="true"
                         android:text="6/10 Skins"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward11"
@@ -635,8 +632,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick11"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -664,8 +661,8 @@
                         android:layout_centerVertical="true"
                         android:text="10/25 Skins"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward12"
@@ -682,8 +679,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick12"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -699,8 +696,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
-                android:paddingTop="20dp"
                 android:orientation="horizontal"
+                android:paddingTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -730,8 +727,8 @@
                         android:layout_centerVertical="true"
                         android:text="35/50 Skins"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward13"
@@ -748,8 +745,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick13"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
 
@@ -779,8 +776,8 @@
                         android:layout_centerVertical="true"
                         android:text="70/100 Skins"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward14"
@@ -797,8 +794,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="10 Gems"
                         android:onClick="rewardClick14"
+                        android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -826,8 +823,8 @@
                         android:layout_centerVertical="true"
                         android:text="100/250 Skins"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward15"
@@ -844,8 +841,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="50 Gems"
                         android:onClick="rewardClick15"
+                        android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -892,8 +889,8 @@
                         android:layout_centerVertical="true"
                         android:text="1/5 Trails"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward16"
@@ -910,8 +907,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick16"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -940,8 +937,8 @@
                         android:layout_centerVertical="true"
                         android:text="6/10 Trails"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward17"
@@ -958,8 +955,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="10 Gems"
                         android:onClick="rewardClick17"
+                        android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -987,8 +984,8 @@
                         android:layout_centerVertical="true"
                         android:text="10/25 Trails"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward18"
@@ -1005,8 +1002,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="25 Gems"
                         android:onClick="rewardClick18"
+                        android:text="25 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -1053,8 +1050,8 @@
                         android:layout_centerVertical="true"
                         android:text="1/5 Sounds"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward19"
@@ -1071,8 +1068,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="5 Gems"
                         android:onClick="rewardClick19"
+                        android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -1101,8 +1098,8 @@
                         android:layout_centerVertical="true"
                         android:text="6/20 Sounds"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward20"
@@ -1119,8 +1116,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="20 Gems"
                         android:onClick="rewardClick20"
+                        android:text="20 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -1148,8 +1145,8 @@
                         android:layout_centerVertical="true"
                         android:text="10/40 Sounds"
                         android:textAlignment="center"
-                        android:textSize="12sp"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/reward21"
@@ -1166,8 +1163,8 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@color/corGemas"
-                        android:text="50 Gems"
                         android:onClick="rewardClick21"
+                        android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
