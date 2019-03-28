@@ -191,6 +191,11 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         coins.setText(storage.getTotalBounces() + "");
         gems.setText(storage.getTotalGems() + "");
 
+        if(!storage.getLastAdDateString().equals(storage.getTodayDateString()))
+        {
+            storage.resetAdAvailableToday();
+        }
+
         if (storage.getAdsAvailableToday() > 0)
             adsLeftToday.setText(storage.getAdsAvailableToday() + " Left Today");
         else {
@@ -381,6 +386,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 adsLeft = false;
                 adButton.setEnabled(false);
             }
+
+            storage.setLastAdDate(storage.getTodayDateString());
         }
     }
 

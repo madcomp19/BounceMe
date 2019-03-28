@@ -430,6 +430,16 @@ public class StorageManager {
         editor.commit();
     }
 
+    public String getLastAdDateString(){
+        return prefs.getString("LastAdDate", "");
+    }
+
+    public void setLastAdDate(String day){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("LastAdDate", day);
+        editor.commit();
+    }
+
     public void resetAdAvailableToday()
     {
         SharedPreferences.Editor editor = prefs.edit();

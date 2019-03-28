@@ -117,21 +117,21 @@
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="601dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center|fill_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/secondary_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/gems">
 
         <ImageView
             android:id="@+id/main_title"
             android:layout_width="208dp"
             android:layout_height="50dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="0dp"
             android:background="@drawable/bounce_it_up_title" />
 
         <ImageView
@@ -189,7 +189,7 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/achievements_icon"
                 android:contentDescription="TODO"
-                android:onClick="achievementButton"/>
+                android:onClick="achievementButton" />
 
             <ImageButton
                 android:id="@+id/soundButton"
@@ -197,8 +197,8 @@
                 android:layout_height="40dp"
                 android:background="@drawable/circle_button_vector"
                 android:contentDescription="TODO"
-                app:srcCompat="@drawable/settings_icon_vector"
-                android:onClick="goToSettings"/>
+                android:onClick="goToSettings"
+                app:srcCompat="@drawable/settings_icon_vector" />
 
             <ImageButton
                 android:id="@+id/rateButton"
@@ -253,7 +253,7 @@
         <Button
             android:id="@+id/button"
             android:layout_width="71dp"
-            android:layout_height="wrap_content"
+            android:layout_height="59dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="8dp"
