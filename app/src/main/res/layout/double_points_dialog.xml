@@ -63,8 +63,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/rounded_button_vector"
+        android:drawableLeft="@drawable/ad_icon_vector"
         android:text="@string/double_it"
         android:textColor="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
