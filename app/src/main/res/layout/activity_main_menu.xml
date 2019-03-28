@@ -14,17 +14,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:paddingLeft="15sp"
-        android:paddingRight="15sp"
-        android:paddingStart="15sp"
-        android:paddingEnd="15sp"
-        android:text="   +1 "
-        android:textSize="17dp"
-        android:textColor="#fff"
         android:background="@drawable/roulette_custom_background"
+        android:drawableLeft="@drawable/ad_icon_vector_white"
         android:drawableRight="@drawable/gem_icon_small"
         android:onClick="watchAdMainMenu"
-        android:drawableLeft="@drawable/ad_icon_vector_white"
+        android:paddingStart="15sp"
+        android:paddingLeft="15sp"
+        android:paddingEnd="15sp"
+        android:paddingRight="15sp"
+        android:text="   +1 "
+        android:textColor="#fff"
+        android:textSize="17dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="10 Left Today"
-        android:textColor="#FFF"
         android:textAlignment="center"
+        android:textColor="#FFF"
         app:layout_constraintEnd_toEndOf="@+id/adButton"
         app:layout_constraintStart_toStartOf="@+id/adButton"
         app:layout_constraintTop_toBottomOf="@+id/adButton" />
@@ -45,28 +45,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="buyCoins"
         android:text="1000"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        android:onClick="buyCoins"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/coinView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/coinView"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/coin_icon"
         android:onClick="buyCoins"
         app:layout_constraintBottom_toBottomOf="@+id/coins"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coins"
         app:layout_constraintTop_toTopOf="@+id/coins" />
 
     <ImageView
@@ -84,15 +81,14 @@
         android:id="@+id/gems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:layout_marginTop="8dp"
+        android:onClick="buyGems"
         android:text="1000"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        android:onClick="buyGems"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/coins"
+        app:layout_constraintTop_toBottomOf="@+id/coins"
+        tools:layout_editor_absoluteY="45dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -124,14 +120,14 @@
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="8dp"
         android:gravity="center|fill_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/secondary_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gems">
+        app:layout_constraintTop_toBottomOf="@+id/adsLeftToday">
 
         <ImageView
             android:id="@+id/main_title"
@@ -227,9 +223,9 @@
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/secondary_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/secondary_layout"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button

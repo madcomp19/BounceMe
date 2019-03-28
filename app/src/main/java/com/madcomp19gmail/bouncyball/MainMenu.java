@@ -164,7 +164,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 new AdRequest.Builder().build());
 
         adButton.setEnabled(false);
-        adButton.setBackgroundResource(R.drawable.rounded_button6_vector);
+        adButton.setBackgroundResource(R.drawable.roulette_custom_background_disabled);
     }
 
     public void watchAdMainMenu(View view) {
@@ -203,7 +203,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             adsLeftToday.setText("Come Back Tomorrow");
             adsLeft = false;
             adButton.setEnabled(false);
-            adButton.setBackgroundResource(R.drawable.rounded_button6_vector);
+            adButton.setBackgroundResource(R.drawable.roulette_custom_background_disabled);
         }
 
         if (storage.getMenuMusicSetting()) {
