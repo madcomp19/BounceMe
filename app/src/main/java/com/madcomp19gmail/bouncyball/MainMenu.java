@@ -139,7 +139,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         width = metrics.widthPixels;
         height = metrics.heightPixels;
 
-        bp = new BillingProcessor(this, "YOUR LICENSE KEY FROM GOOGLE PLAY CONSOLE HERE", this);
+        bp = new BillingProcessor(this, null, this);
         bp.initialize();
     }
 
@@ -287,6 +287,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             if (resultCode == Activity.RESULT_CANCELED) {
                 //Write your code if there's no result
             }
+        }
+
+        if (!bp.handleActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
@@ -461,6 +465,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    // buy everything
     //region
     public void buyEverything(View v) {
 
@@ -568,6 +573,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         }
     }
 
+    // endregion
+
+    // buy coins & buy gems dialogs
+    //region
     public void buyCoins(View view) {
 
         coinDialog.setContentView(R.layout.buy_coins_popup);
@@ -691,16 +700,27 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void buyGems(View view) {
-        TextView txtClose;
 
         gemDialog.setContentView(R.layout.buy_gems_popup);
 
-        txtClose = (TextView) gemDialog.findViewById(R.id.closeButtonGemsPopup);
+        TextView txtClose = (TextView) gemDialog.findViewById(R.id.closeButtonGemsPopup);
+        TextView buyGemPack1 = (TextView) gemDialog.findViewById(R.id.gemPack1);
+        TextView buyGemPack2 = (TextView) gemDialog.findViewById(R.id.gemPack2);
+        TextView buyGemPack3 = (TextView) gemDialog.findViewById(R.id.gemPack3);
 
         txtClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gemDialog.dismiss();
+            }
+        });
+
+        buyGemPack1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                bp.purchase(MainMenu.this, "android.test.purchased");
+                //bp.consumePurchase("android.test.purchased");
             }
         });
 
@@ -760,19 +780,16 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     @Override
     public void onProductPurchased(String productId, TransactionDetails details) {
-        /*
-         * Called when requested PRODUCT ID was successfully purchased
-         */
+        Toast.makeText(this, "Purchase successful", Toast.LENGTH_LONG).show();
+        bp.consumePurchase("android.test.purchased");
+
+        storage.addGems(50);
+        gems.setText(storage.getTotalGems() + "");
     }
 
     @Override
     public void onBillingError(int errorCode, Throwable error) {
-        /*
-         * Called when some error occurred. See Constants class for more details
-         *
-         * Note - this includes handling the case where the user canceled the buy dialog:
-         * errorCode = Constants.BILLING_RESPONSE_RESULT_USER_CANCELED
-         */
+        Toast.makeText(this, "Something went wrong with the purchase", Toast.LENGTH_LONG).show();
     }
 
     @Override
