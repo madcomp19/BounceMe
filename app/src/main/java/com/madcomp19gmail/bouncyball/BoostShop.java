@@ -128,6 +128,8 @@ public class BoostShop extends AppCompatActivity {
             label_text.setCompoundDrawables(null, null, null, null);
             label_text.setPadding(0,0,0,0);
 
+            SoundPoolManager.getInstance().playSound();
+
             Timer t = new Timer();
             t.scheduleAtFixedRate(new TimerTask() {
 
