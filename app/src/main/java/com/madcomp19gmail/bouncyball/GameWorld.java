@@ -84,8 +84,8 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     protected void onResume() {
         super.onResume();
 
-        //int selected_background = storageManager.getSelectedBackground();
-        int selected_background = R.drawable.background_22;
+        int selected_background = storageManager.getSelectedBackground();
+        //int selected_background = R.drawable.background_22;
 
         //gameView.setBackgroundResource(selected_background);
 
