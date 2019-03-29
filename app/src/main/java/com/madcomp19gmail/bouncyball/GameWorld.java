@@ -4,7 +4,10 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.squareup.seismic.ShakeDetector;
 
 import java.util.Calendar;
@@ -29,16 +32,26 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_game_world);
-        gameView = new GameView(this);
-        setContentView(gameView);
 
+        setContentView(R.layout.activity_game_world);
 
+        // Get the game background image view
+        ImageView game_background = findViewById(R.id.game_background);
+        gameView = findViewById(R.id.game_view);
+
+        // Load the background into that view
+        //int selected_background = storageManager.getSelectedBackground();
+        int selected_background = R.drawable.background_1;
+
+        gameView.setBackgroundResource(selected_background);
+
+        //Glide.with(this).load(selected_background).centerCrop().into(game_background);
+
+        // Make it fullscreen
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        //mediaPlayer = MediaPlayer.create(this, R.raw.bubble);
-
+        // Set up the shake detector
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         ShakeDetector sd = new ShakeDetector(this);
         sd.start(sensorManager);
@@ -51,7 +64,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         total_bounces_ever = storageManager.getTotalBouncesEver();
         gems  = storageManager.getTotalGems();
 
-
+        // Set up game world music
         if(storageManager.getGameMusicSetting() != 0)
         {
             mediaPlayerManager.pause();
@@ -64,6 +77,11 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     @Override
     protected void onResume() {
         super.onResume();
+
+        //int selected_background = storageManager.getSelectedBackground();
+        int selected_background = R.drawable.background_1;
+
+        gameView.setBackgroundResource(selected_background);
 
         if(storageManager.getGameMusicSetting() != 0)
         {
