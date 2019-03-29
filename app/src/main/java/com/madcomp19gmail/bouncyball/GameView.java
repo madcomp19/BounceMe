@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
@@ -57,11 +58,8 @@ public class GameView extends View
 
     StorageManager storageManager;
 
-
-    public GameView(Context context)
-    {
-        super(context);
-        setBackgroundColor(Color.parseColor("#000000"));
+    public GameView(Context context, AttributeSet attrs) {
+        super(context, attrs);
 
         storageManager = StorageManager.getInstance();
 
@@ -76,16 +74,6 @@ public class GameView extends View
 
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
-
-        // This stretches the image to fit
-        //setBackgroundResource(R.drawable.test_background);
-
-        // This crops the image to the screen size starting from the bottom left corner
-        Resources resources = getResources();
-        //Bitmap bmp = BitmapFactory.decodeResource(resources, R.drawable.background_48); // Quick Play crash
-        //BitmapDrawable background = new BitmapDrawable(resources, Bitmap.createBitmap(bmp, 0,bmp.getHeight() - height, width, height));
-        //setBackgroundDrawable(background);
-        //bmp.recycle();
 
         balls = new ArrayList<>();
 
