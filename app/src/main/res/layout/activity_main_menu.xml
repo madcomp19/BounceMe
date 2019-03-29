@@ -119,11 +119,12 @@
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="475dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center|fill_vertical"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/secondary_layout"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,12 +135,13 @@
             android:layout_width="208dp"
             android:layout_height="50dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/bounce_it_up_title" />
+            android:background="@drawable/bounce_it_up_title"
+            android:onClick="resetStorage" />
 
         <ImageView
             android:id="@+id/bounce"
             android:layout_width="295dp"
-            android:layout_height="148dp"
+            android:layout_height="130dp"
             android:layout_marginTop="20dp" />
 
         <Button
@@ -180,7 +182,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -222,49 +224,47 @@
         </LinearLayout>
     </LinearLayout>
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/secondary_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/buy_everything_icon"
+        android:onClick="buyEverything"
+        android:text="Buy Everything"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="165dp"
-            android:layout_height="50dp"
-            android:background="@drawable/buy_everything_icon"
-            android:onClick="buyEverything"
-            android:text="Buy Everything"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/madcomp"
-            app:layout_constraintStart_toEndOf="@+id/button"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/madcomp"
+        android:layout_width="67dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/madcomp_icon"
+        android:onClick="godMode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/madcomp"
-            android:layout_width="67dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/madcomp_icon"
-            android:onClick="godMode"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="71dp"
-            android:layout_height="59dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="resetStorage"
-            android:text="Reset Storage"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </android.support.constraint.ConstraintLayout>
-
+    <ImageButton
+        android:id="@+id/noAdsButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/no_ads_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
