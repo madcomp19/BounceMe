@@ -52,5 +52,8 @@
     <string name="placeholder">Placeholder</string>
     <string name="double_it">Double it</string>
     <string name="achievements">Achievements</string>
+    <string name="complete_for_a_chance">Complete for a chance at a prize!</string>
+    <string name="spin">Spin!</string>
+    <string name="win_a_big_prize">Win a big prize!</string>
 
 </resources>

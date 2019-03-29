@@ -28,10 +28,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
+        android:onClick="buyCoins"
         android:text="1000"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        android:onClick="buyCoins"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,10 +66,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:onClick="buyGems"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        android:onClick="buyGems"
         app:layout_constraintEnd_toEndOf="@+id/coins"
         app:layout_constraintTop_toBottomOf="@+id/coins" />
 
@@ -96,161 +96,140 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/scroll"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#424242"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/bannerAdTrailShop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gems">
 
         <LinearLayout
+            android:id="@+id/linearLayoutShop1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="8dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gems"
-            app:layout_constraintVertical_bias="0.138">
+            app:layout_constraintTop_toBottomOf="@+id/gems">
 
-            <LinearLayout
-                android:id="@+id/linearLayoutShop1"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gems">
+            <ImageButton
+                android:id="@+id/ballsButton"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="#424242"
+                android:onClick="onShopMenuButtonClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/balls_icon" />
 
-                <ImageButton
-                    android:id="@+id/ballsButton"
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onShopMenuButtonClick"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/balls_icon" />
+            <ImageButton
+                android:id="@+id/skinsButton"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="#424242"
+                android:onClick="onShopMenuButtonClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/skins_icon" />
 
-                <ImageButton
-                    android:id="@+id/skinsButton"
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onShopMenuButtonClick"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/skins_icon" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayoutShop2"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gems">
-
-                <ImageButton
-                    android:id="@+id/trailsButton"
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onShopMenuButtonClick"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/trails_icon" />
-
-                <ImageButton
-                    android:id="@+id/backgroundsButton"
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onShopMenuButtonClick"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/background_icon" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayoutShop3"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginRight="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gems">
-
-                <ImageButton
-                    android:id="@+id/soundButton"
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onShopMenuButtonClick"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/sounds_icon" />
-
-                <ImageButton
-                    android:id="@+id/boostButton"
-                    android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onShopMenuButtonClick"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/multipliers_icon" />
-
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="180dp" />
 
         </LinearLayout>
 
-    </ScrollView>
+        <LinearLayout
+            android:id="@+id/linearLayoutShop2"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gems">
+
+            <ImageButton
+                android:id="@+id/trailsButton"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="#424242"
+                android:onClick="onShopMenuButtonClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/trails_icon" />
+
+            <ImageButton
+                android:id="@+id/backgroundsButton"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="#424242"
+                android:onClick="onShopMenuButtonClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/background_icon" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutShop3"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gems">
+
+            <ImageButton
+                android:id="@+id/soundButton"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="#424242"
+                android:onClick="onShopMenuButtonClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sounds_icon" />
+
+            <ImageButton
+                android:id="@+id/boostButton"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:background="#424242"
+                android:onClick="onShopMenuButtonClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/multipliers_icon" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"

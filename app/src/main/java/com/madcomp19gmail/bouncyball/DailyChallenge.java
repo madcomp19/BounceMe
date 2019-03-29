@@ -49,7 +49,7 @@ public class DailyChallenge extends AppCompatActivity {
         prefs = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
         consecutive_days = prefs.getConsecutiveDays();
-        setStarImages(consecutive_days);
+        setConsecutiveImages(consecutive_days);
 
         /*if (prefs.getMenuMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id, "Menu");
@@ -68,6 +68,16 @@ public class DailyChallenge extends AppCompatActivity {
         metrics = getResources().getDisplayMetrics();
         width = metrics.widthPixels;
         height = metrics.heightPixels;
+
+
+        ImageView title = (ImageView) findViewById(R.id.title);
+        title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showFinalPrizeDialog();
+            }
+        });
+
     }
 
     //return a list with every sound file name
@@ -172,7 +182,7 @@ public class DailyChallenge extends AppCompatActivity {
     }
 
     //sets the stars to the number of consecutive days
-    private void setStarImages(int limit) {
+    private void setConsecutiveImages(int limit) {
         if (limit > 7 || limit < 1) return;
         for (int i = 1; i <= limit; i++) {
             //change the corresponding images
@@ -184,7 +194,7 @@ public class DailyChallenge extends AppCompatActivity {
 
     private void rightAnswer() {
         //update the number of consecutive days in shared prefs
-        setStarImages(++consecutive_days);
+        setConsecutiveImages(++consecutive_days);
 
         String todays_date = prefs.getTodayDateString();
         prefs.setLastDailyChallengeDate(todays_date);
@@ -201,7 +211,7 @@ public class DailyChallenge extends AppCompatActivity {
     private void wrongAnswer() {
         //update the number of consecutive days in shared prefs
         consecutive_days = 0;
-        clearStars();
+        clearConsecutiveDays();
 
         String todays_date = prefs.getTodayDateString();
 
@@ -211,7 +221,7 @@ public class DailyChallenge extends AppCompatActivity {
         showErrorDialog();
     }
 
-    private void clearStars() {
+    private void clearConsecutiveDays() {
         for (int i = 1; i <= 7; i++) {
             //change the corresponding images
             id = getResources().getIdentifier("consecutive_day_" + i, "id", getPackageName());
@@ -273,14 +283,13 @@ public class DailyChallenge extends AppCompatActivity {
     //TODO - finish roulette mini game
     private void showFinalPrizeDialog() {
         customDialog.setContentView(R.layout.dialog_roulette_daily_challenge);
-        Button closeBtn = customDialog.findViewById(R.id.closeRouletteButton);
-        closeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                customDialog.dismiss();
-                finish();
-            }
-        });
+
+        long degrees;
+
+        ImageView roulette = (ImageView) customDialog.findViewById(R.id.roulette);
+        roulette.getLayoutParams().height = (int) (0.5 * width);
+        roulette.getLayoutParams().width = (int) (0.5 * width);
+
 
         customDialog.getWindow().setLayout(width, height);
         customDialog.setCancelable(false);
