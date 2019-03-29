@@ -29,6 +29,8 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     private static int total_bounces_ever;
     private static int gems;
 
+    ImageView game_background;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,16 +38,16 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         setContentView(R.layout.activity_game_world);
 
         // Get the game background image view
-        ImageView game_background = findViewById(R.id.game_background);
+        game_background = findViewById(R.id.game_background);
         gameView = findViewById(R.id.game_view);
 
         // Load the background into that view
         //int selected_background = storageManager.getSelectedBackground();
         int selected_background = R.drawable.background_1;
 
-        gameView.setBackgroundResource(selected_background);
+        //gameView.setBackgroundResource(selected_background);
 
-        //Glide.with(this).load(selected_background).centerCrop().into(game_background);
+        Glide.with(this).load(selected_background).centerCrop().into(game_background);
 
         // Make it fullscreen
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -81,7 +83,9 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         //int selected_background = storageManager.getSelectedBackground();
         int selected_background = R.drawable.background_1;
 
-        gameView.setBackgroundResource(selected_background);
+        //gameView.setBackgroundResource(selected_background);
+
+        Glide.with(this).load(selected_background).centerCrop().into(game_background);
 
         if(storageManager.getGameMusicSetting() != 0)
         {

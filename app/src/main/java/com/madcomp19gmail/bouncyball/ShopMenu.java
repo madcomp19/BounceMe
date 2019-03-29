@@ -101,6 +101,12 @@ public class ShopMenu extends AppCompatActivity {
 
     public void onShopMenuButtonClick(View view) {
 
+        if (view.getId() == R.id.ballsButton) {
+            changingActivity = true;
+            Intent intent = new Intent(this, BallShop.class);
+            startActivityForResult(intent, 1);
+        }
+
         if (view.getId() == R.id.skinsButton) {
             changingActivity = true;
             Intent intent = new Intent(this, SkinShop.class);

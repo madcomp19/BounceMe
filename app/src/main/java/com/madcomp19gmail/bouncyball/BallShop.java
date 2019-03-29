@@ -18,7 +18,7 @@ import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
-public class SoundShop extends AppCompatActivity {
+public class BallShop extends AppCompatActivity {
 
     private final int background_music_id = R.raw.background_music_1;
 
@@ -35,34 +35,28 @@ public class SoundShop extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sound_shop);
+        setContentView(R.layout.activity_ball_shop);
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setOwnedSoundsPage(this.findViewById(android.R.id.content));
+        setOwnedBallsPage(this.findViewById(android.R.id.content));
 
         storage = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
         coins = findViewById(R.id.coins);
         gems = findViewById(R.id.gems);
 
-        /*if(storage.getShopMusicSetting())
-        {
-            mediaPlayerManager.loadSound(background_music_id);
-            mediaPlayerManager.play();
-        }*/
-
         soundPool = SoundPoolManager.getInstance();
         //int id = this.getResources().getIdentifier("cash", "raw", getPackageName());
         //if(id != 0)
             //soundPool.loadSound(id);
 
-        mAdView = findViewById(R.id.bannerAdTrailShop);
+        /*mAdView = findViewById(R.id.bannerAdTrailShop);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
 
-        initializeImageButtons(this.findViewById(R.id.sound_shop_ConstraintLayout));
+        initializeImageButtons(this.findViewById(R.id.ball_shop_ConstraintLayout));
     }
 
     private void initializeImageButtons(View view)
@@ -81,7 +75,7 @@ public class SoundShop extends AppCompatActivity {
 
                 int image_id = getResources().getIdentifier(id, "drawable", getPackageName());
 
-                Glide.with(this).load(image_id).fitCenter().into(imageButton);
+                Glide.with(this).load(image_id).into(imageButton);
             }
             else if(v instanceof ImageView)
             {
@@ -130,13 +124,13 @@ public class SoundShop extends AppCompatActivity {
         finish();
     }
 
-    public void onClickSound(View view) {
+    public void onClickBall(View view) {
 
         String view_id = view.getResources().getResourceEntryName(view.getId());
         view_id = view_id.split("_Label")[0].split("_Button")[0];
         //Log.i("TEST", view_id);
 
-        int sound_id;
+        /*int sound_id;
 
         if(view_id == "mute")
             sound_id = 0;
@@ -144,7 +138,7 @@ public class SoundShop extends AppCompatActivity {
             sound_id = this.getResources().getIdentifier(view_id, "raw", getPackageName());
 
 
-        int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
+        int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());*/
         //region
         /*Log.i("skin", view_id);
         Log.i("label", view_id + "_Label");
@@ -153,13 +147,13 @@ public class SoundShop extends AppCompatActivity {
         Log.i("res_id", Integer.toString(view.getId()));*/
         //endregion
 
-        buyOrSetSound(sound_id, label_id);
+        //buyOrSetSound(sound_id, label_id);
     }
 
-    private void buyOrSetSound(int aSound, int label_id)
+    private void buyOrSetBall(int aBall, int label_id)
     {
         //int sound = getResources().getInteger(aSound);
-        int sound = aSound;
+        /*int sound = aSound;
 
         StorageManager storageManager = StorageManager.getInstance();
 
@@ -216,7 +210,7 @@ public class SoundShop extends AppCompatActivity {
             else
             {
                 if (total_touches >= price) {
-                   //soundPool.playSound();
+                    //soundPool.playSound();
                     storageManager.setTotalBounces(total_touches - price);
                     storageManager.addOwnedSound(sound);
                     storageManager.setSelectedSound(sound);
@@ -241,12 +235,12 @@ public class SoundShop extends AppCompatActivity {
                 } else
                     Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_LONG).show();
             }
-        }
+        }*/
     }
 
-    private void setOwnedSoundsPage(View view)
+    private void setOwnedBallsPage(View view)
     {
-        StorageManager storageManager = StorageManager.getInstance();
+        /*StorageManager storageManager = StorageManager.getInstance();
 
         ArrayList<Integer> label_ids = storageManager.getOwnedSoundsLabels();
 
@@ -276,6 +270,6 @@ public class SoundShop extends AppCompatActivity {
             }
             else if(v instanceof ViewGroup)
                 setOwnedSoundsPage(v);
-        }
+        }*/
     }
 }

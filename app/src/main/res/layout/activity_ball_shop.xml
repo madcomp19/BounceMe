@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    tools:context=".BallShop"
+    android:id="@+id/ball_shop_ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/ball_shop_title"
+        android:layout_width="129dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#424242"
+        app:layout_constraintBottom_toBottomOf="@+id/gems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/play_icon_vector"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickPlay"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/pager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="1000"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/coin_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/coins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/coins"
+        app:layout_constraintTop_toTopOf="@+id/coins" />
+
+    <TextView
+        android:id="@+id/gems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/coins"
+        app:layout_constraintTop_toBottomOf="@+id/coins" />
+
+    <ImageView
+        android:id="@+id/gem_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/gem_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/gems"
+        app:layout_constraintStart_toEndOf="@+id/gems"
+        app:layout_constraintTop_toTopOf="@+id/gems" />
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#424242"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gems">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gems"
+            app:layout_constraintVertical_bias="0.138">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls1"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+
+                <ImageButton
+                    android:id="@+id/ball_1_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_2_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_3_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/ball_1_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_2_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_3_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls3"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+
+                <ImageButton
+                    android:id="@+id/ball_4_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_5_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_6_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls4"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/ball_4_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_5_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_6_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls5"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+
+                <ImageButton
+                    android:id="@+id/ball_7_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_8_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_9_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls6"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/ball_7_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_8_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_9_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls7"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+
+                <ImageButton
+                    android:id="@+id/ball_10_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_11_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_12_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls8"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/ball_10_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_11_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_12_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls9"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+
+                <ImageButton
+                    android:id="@+id/ball_13_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_14_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_15_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls10"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/ball_13_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_14_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_15_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls11"
+                android:layout_width="match_parent"
+                android:layout_height="138dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gems">
+
+
+                <ImageButton
+                    android:id="@+id/ball_16_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_17_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+                <ImageButton
+                    android:id="@+id/ball_18_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickBall" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBalls12"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails1">
+
+
+                <TextView
+                    android:id="@+id/ball_16_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_17_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/ball_18_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/coin_icon_small"
+                    android:onClick="onClickBall"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="1000"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bannerAdBallShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:layout_constraintBottom_toBottomOf="parent"></com.google.android.gms.ads.AdView>
+
+</android.support.constraint.ConstraintLayout>
