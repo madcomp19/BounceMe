@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.squareup.seismic.ShakeDetector;
 
 import java.util.Calendar;
@@ -37,13 +37,17 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
         setContentView(R.layout.activity_game_world);
 
+        StorageManager.initialize(this);
+        storageManager = StorageManager.getInstance();
+
         // Get the game background image view
         game_background = findViewById(R.id.game_background);
         gameView = findViewById(R.id.game_view);
 
         // Load the background into that view
-        //int selected_background = storageManager.getSelectedBackground();
-        int selected_background = R.drawable.background_1;
+        int selected_background = storageManager.getSelectedBackground();
+        //selected_background = R.drawable.background_40;
+
 
         //gameView.setBackgroundResource(selected_background);
 
@@ -60,8 +64,8 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         sd.setSensitivity(11);
 
 
-        StorageManager.initialize(this);
-        storageManager = StorageManager.getInstance();
+        //StorageManager.initialize(this);
+        //storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalBounces();
         total_bounces_ever = storageManager.getTotalBouncesEver();
         gems  = storageManager.getTotalGems();
@@ -81,7 +85,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onResume();
 
         //int selected_background = storageManager.getSelectedBackground();
-        int selected_background = R.drawable.background_1;
+        int selected_background = R.drawable.background_22;
 
         //gameView.setBackgroundResource(selected_background);
 

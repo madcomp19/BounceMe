@@ -382,6 +382,95 @@ public class StorageManager {
         editor.commit();
     }
 
+    //Backgrounds
+    //region
+
+    public void addOwnedBackground(int background)
+    {
+        Set<String> set = prefs.getStringSet("OwnedBackgrounds", new HashSet<String>());
+
+        if(set.contains(Integer.toString(background)))
+            return;
+
+        set.add(background + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet("OwnedBackgrounds", set);
+        editor.commit();
+    }
+
+    public ArrayList<Integer> getOwnedBackgrounds()
+    {
+        Set<String> set = prefs.getStringSet("OwnedBackgrounds", new HashSet<String>());
+
+        ArrayList<Integer> owned_backgrounds = new ArrayList<>();
+
+        for(String s : set)
+            owned_backgrounds.add(Integer.parseInt(s));
+
+        return owned_backgrounds;
+    }
+
+    public int getNumberOfOwnedBackgrounds()
+    {
+        Set<String> set = prefs.getStringSet("OwnedBackgrounds", new HashSet<String>());
+
+        return set.size();
+    }
+
+    public int getSelectedBackground()
+    {
+        return prefs.getInt("SelectedBackground", 0);
+    }
+
+    public void setSelectedBackground(int background)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("SelectedBackground", background);
+        editor.commit();
+    }
+
+    public ArrayList<Integer> getOwnedBackgroundsLabels()
+    {
+        Set<String> set = prefs.getStringSet("OwnedBackgroundsLabels", new HashSet<String>());
+
+        ArrayList<Integer> owned_backgrounds_labels = new ArrayList<>();
+
+        for(String s : set)
+            owned_backgrounds_labels.add(Integer.parseInt(s));
+
+        return owned_backgrounds_labels;
+    }
+
+    public void addOwnedBackgroundLabel(int background_label)
+    {
+        Set<String> set = prefs.getStringSet("OwnedBackgroundsLabels", new HashSet<String>());
+
+        if(set.contains(Integer.toString(background_label)))
+            return;
+
+        set.add(background_label + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet("OwnedBackgroundsLabels", set);
+        editor.commit();
+    }
+
+    public int getSelectedBackgroundLabel()
+    {
+        return prefs.getInt("SelectedBackgroundLabel", 0);
+    }
+
+    public void setSelectedBackgroundLabel(int background)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("SelectedBackgroundLabel", background);
+        editor.commit();
+    }
+
+    //endregion
+
+
     public boolean getMenuMusicSetting()
     {
         return prefs.getBoolean(context.getString(R.string.menuMusicSetting), true);

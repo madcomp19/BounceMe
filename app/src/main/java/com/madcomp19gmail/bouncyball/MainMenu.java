@@ -767,6 +767,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         doublePointsDialog.show();
     }
 
+    public void buyNoAds(View v)
+    {
+        bp.purchase(MainMenu.this, "android.test.purchased");
+    }
 
     // In app purchases
     // region
