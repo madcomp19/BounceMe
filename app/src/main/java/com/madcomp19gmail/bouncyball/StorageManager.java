@@ -581,4 +581,16 @@ public class StorageManager {
     {
         return prefs.getInt(context.getString(R.string.selected_boost_label), 0);
     }
+
+    public void setBallAttributes(String attributes)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(context.getString(R.string.ball_attributes), attributes);
+        editor.commit();
+    }
+
+    public String getBallAttributes()
+    {
+        return prefs.getString(context.getString(R.string.ball_attributes), "1_1_1_1");
+    }
 }

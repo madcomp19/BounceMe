@@ -14,11 +14,9 @@ public class Ball
     Vector2 position;
     Vector2 velocity;
     Vector2 acceleration;
-    //Vector2 gravity;
     float angle;
     BallAttributes attributes;
 
-    float radius;
     Bitmap image;
     int sound;
     int trail;
@@ -36,15 +34,12 @@ public class Ball
         position = new Vector2(x, y);
         velocity = new Vector2(0, 0);
         acceleration = new Vector2(0, 0);
-        //gravity = new Vector2(0, 9.8f);
         angle = 0;
         attributes = ba;
         this.sound = sound;
 
         if(sound!=0)
             SoundPoolManager.getInstance().loadSound(sound);
-
-        radius = attributes.radius;
 
         if(img != null)
             image = img;
@@ -67,10 +62,10 @@ public class Ball
             return;
 
         float prev_velY = velocity.y;
-        float rightLimit = GameView.width - radius;
-        float bottomLimit = GameView.height - radius;
+        float rightLimit = GameView.width - attributes.radius;
+        float bottomLimit = GameView.height - attributes.radius;
 
-        acceleration.add(attributes.gravity);
+        acceleration.add(new Vector2(0, attributes.gravity));
         velocity.add(acceleration);
         position.add(velocity);
 
@@ -105,8 +100,8 @@ public class Ball
             if(reactive)
                 trail = new Random().nextInt(361);
         }
-        if (position.x <= radius) {
-            position.x = radius + 1;
+        if (position.x <= attributes.radius) {
+            position.x = attributes.radius + 1;
             applyForce(new Vector2(velocity.x / 10, 0));
             velocity.x *= -1;
             playSound();
@@ -135,8 +130,8 @@ public class Ball
             else if(Math.abs(prev_velY - velocity.y) < 1f)
                 applyForce(new Vector2(-velocity.x / 30, 0));
         }
-        if (position.y <= radius) {
-            position.y = radius + 1;
+        if (position.y <= attributes.radius) {
+            position.y = attributes.radius + 1;
             applyForce(new Vector2(0,velocity.y / 10));
             velocity.y *= -1;
             playSound();
@@ -180,7 +175,7 @@ public class Ball
             float[] values = {hue, saturation, value}; // hue (0-360) ; saturation (0-1) ; value (0-1)
             p.setColor(Color.HSVToColor(alpha, values));
 
-            canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, radius - 2 * (size - i), p);
+            canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, attributes.radius - 2 * (size - i), p);
         }
     }
 
@@ -208,7 +203,7 @@ public class Ball
                         float[] values = {hue, 1, 1}; // hue (0-360) ; saturation (0-1) ; value (0-1)
                         p.setColor(Color.HSVToColor(alpha, values));
 
-                        canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, radius - 2 * (size - i), p);
+                        canvas.drawCircle(trailPositions.get(i).x, trailPositions.get(i).y, attributes.radius - 2 * (size - i), p);
                     }
                 }
                 else if(trail == -3) // spectrum
@@ -232,7 +227,7 @@ public class Ball
 
             canvas.rotate(angle, position.x, position.y);
 
-            canvas.drawBitmap(image, position.x - radius, position.y - radius, null);
+            canvas.drawBitmap(image, position.x - attributes.radius, position.y - attributes.radius, null);
 
             canvas.restore();
         }

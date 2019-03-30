@@ -63,7 +63,7 @@ public class GameView extends View
 
         storageManager = StorageManager.getInstance();
 
-        ball_radius = 50;
+        //ball_radius = 50;
         coin_radius = 25;
         gem_radius = 50;
 
@@ -117,7 +117,7 @@ public class GameView extends View
 
         ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
 
-        BallAttributes attributes = new BallAttributes(ball_radius, 10, 10, 10, 10, new Vector2(0, 9.8f));
+        BallAttributes attributes = new BallAttributes(storageManager.getBallAttributes());
         balls.add(new Ball(width / 2, height / 2, attributes, ball_img, selected_trail, selected_sound));
     }
 
