@@ -125,9 +125,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             adButton.setEnabled(false);
         }
 
-        if (adsLeft)
-            loadRewardedVideoAd();
-
+        loadRewardedVideoAd();
 
         initializeShops();
 
@@ -351,8 +349,10 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onRewardedVideoAdLoaded() {
 
-        adButton.setEnabled(true);
-        adButton.setBackgroundResource(R.drawable.roulette_custom_background);
+        if (adsLeft) {
+            adButton.setEnabled(true);
+            adButton.setBackgroundResource(R.drawable.roulette_custom_background);
+        }
     }
 
     @Override
@@ -367,12 +367,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     @Override
     public void onRewardedVideoAdClosed() {
-
-        if (adsLeft || watchedDoublePointsAd) {
-            loadRewardedVideoAd();
-            watchedDoublePointsAd = false;
-            isWatchingDoublePointsAd = false;
-        }
+        watchedDoublePointsAd = false;
+        isWatchingDoublePointsAd = false;
+        loadRewardedVideoAd();
 
         if (rewarded)
             Toast.makeText(this, "You earned 1 Gem", Toast.LENGTH_SHORT).show();
@@ -717,8 +714,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         buyGemPack1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 bp.purchase(MainMenu.this, "android.test.purchased");
                 //bp.consumePurchase("android.test.purchased");
             }
@@ -767,8 +763,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         doublePointsDialog.show();
     }
 
-    public void buyNoAds(View v)
-    {
+    public void buyNoAds(View v) {
         bp.purchase(MainMenu.this, "android.test.purchased");
     }
 

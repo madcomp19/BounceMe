@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -35,6 +36,9 @@ public class DailyChallenge extends AppCompatActivity {
     private ArrayList<RadioButton> radioButtons;
     private DisplayMetrics metrics;
     private int height, width;
+    private long degrees = 0;
+    private int n_prizes = 12;
+    private int prize = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -284,8 +288,6 @@ public class DailyChallenge extends AppCompatActivity {
     private void showFinalPrizeDialog() {
         customDialog.setContentView(R.layout.dialog_roulette_daily_challenge);
 
-        long degrees;
-
         ImageView roulette = (ImageView) customDialog.findViewById(R.id.roulette);
         roulette.getLayoutParams().height = (int) (0.5 * width);
         roulette.getLayoutParams().width = (int) (0.5 * width);
@@ -314,4 +316,22 @@ public class DailyChallenge extends AppCompatActivity {
         if (!this.isFinishing() && prefs.getMenuMusicSetting())
             mediaPlayerManager.pause();
     }
+
+    /*
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+        prize = (int)(((double) n_prizes) - Math.floor(((double)degrees)/(360.0d/(double)n_prizes)));
+        Toast.makeText(this, prize, Toast.LENGTH_SHORT).show();
+    }
+    */
 }
