@@ -60,18 +60,15 @@ public class BoostShop extends AppCompatActivity {
         updateLabel();
     }
 
-    private void initializeImageButtons(View view)
-    {
+    private void initializeImageButtons(View view) {
         ViewGroup viewGroup = (ViewGroup) view;
 
         int childCount = viewGroup.getChildCount();
 
-        for(int i = 0; i < childCount; i++)
-        {
+        for (int i = 0; i < childCount; i++) {
             View v = viewGroup.getChildAt(i);
 
-            if(v instanceof ImageButton)
-            {
+            if (v instanceof ImageButton) {
                 ImageButton imageButton = (ImageButton) v;
 
                 int image_id = getResources().getIdentifier("boosts_" + number, "drawable", getPackageName());
@@ -79,21 +76,19 @@ public class BoostShop extends AppCompatActivity {
                 number++;
 
                 Glide.with(this).load(image_id).into(imageButton);
-            }
-            else if(v instanceof ViewGroup)
+            } else if (v instanceof ViewGroup)
                 initializeImageButtons(v);
         }
     }
 
-    public void onClickPlay(View view){
+    public void onClickPlay(View view) {
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result", true);
         setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
 
-    public void onClickBoost(View view)
-    {
+    public void onClickBoost(View view) {
         String view_id = view.getResources().getResourceEntryName(view.getId());
         view_id = view_id.split("_Label")[0].split("_Button")[0];
 
@@ -102,8 +97,7 @@ public class BoostShop extends AppCompatActivity {
         int label_id = this.getResources().getIdentifier(label, "id", getPackageName());
 
         //If there is a boost already active, nothing happens
-        if(Calendar.getInstance().getTimeInMillis() < storageManager.getActiveBoostTime())
-        {
+        if (Calendar.getInstance().getTimeInMillis() < storageManager.getActiveBoostTime()) {
             Toast.makeText(this, "Wait for the active boost to end", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -113,12 +107,11 @@ public class BoostShop extends AppCompatActivity {
         seconds = 0;
 
         final TextView label_text = findViewById(id);
-        if(label_text.getText() == "")
+        if (label_text.getText() == "")
             return;
         price = Integer.parseInt(label_text.getText() + "");
         int total_gems = storageManager.getTotalGems();
-        if(total_gems > price)
-        {
+        if (total_gems > price) {
             storageManager.takeGems(price);
             gems.setText(storageManager.getTotalGems() + "");
             storageManager.setActiveBoost(boost);
@@ -126,7 +119,7 @@ public class BoostShop extends AppCompatActivity {
             storageManager.setActiveBoostTime(Calendar.getInstance().getTimeInMillis() + time * 60000);
             Toast.makeText(this, "Boost is now active", Toast.LENGTH_SHORT).show();
             label_text.setCompoundDrawables(null, null, null, null);
-            label_text.setPadding(0,0,0,0);
+            label_text.setPadding(0, 0, 0, 0);
 
             SoundPoolManager.getInstance().playSound();
 
@@ -141,25 +134,23 @@ public class BoostShop extends AppCompatActivity {
                         public void run() {
 
 
-                            if(time < 10 && seconds < 10)
-                                label_text.setText("0" + String.valueOf(time)+" : " + "0" + String.valueOf(seconds));
-                            if(time >= 10 && seconds >= 10)
-                                label_text.setText(String.valueOf(time)+" : "+String.valueOf(seconds));
-                            if(time >= 10 && seconds < 10)
-                                label_text.setText(String.valueOf(time)+" : " + "0" + String.valueOf(seconds));
-                            if(time < 10 && seconds >= 10)
-                                label_text.setText("0" + String.valueOf(time)+" : " + String.valueOf(seconds));
+                            if (time < 10 && seconds < 10)
+                                label_text.setText("0" + String.valueOf(time) + " : " + "0" + String.valueOf(seconds));
+                            if (time >= 10 && seconds >= 10)
+                                label_text.setText(String.valueOf(time) + " : " + String.valueOf(seconds));
+                            if (time >= 10 && seconds < 10)
+                                label_text.setText(String.valueOf(time) + " : " + "0" + String.valueOf(seconds));
+                            if (time < 10 && seconds >= 10)
+                                label_text.setText("0" + String.valueOf(time) + " : " + String.valueOf(seconds));
 
                             seconds -= 1;
 
-                            if(seconds < 0)
-                            {
-                                seconds=59;
-                                time = time -1;
+                            if (seconds < 0) {
+                                seconds = 59;
+                                time = time - 1;
                             }
 
-                            if(time < 0)
-                            {
+                            if (time < 0) {
                                 label_text.setText(price + "");
                                 label_text.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.gem_icon_small, 0);
                                 label_text.setPadding(110, 0, 110, 0);
@@ -170,24 +161,22 @@ public class BoostShop extends AppCompatActivity {
                 }
 
             }, 0, 1000);
-        }
-        else
+        } else
             Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();
     }
 
-    public void updateLabel()
-    {
-        if(Calendar.getInstance().getTimeInMillis() > storageManager.getActiveBoostTime())
+    public void updateLabel() {
+        if (Calendar.getInstance().getTimeInMillis() > storageManager.getActiveBoostTime())
             return;
 
         final TextView activeLabel = ((TextView) findViewById(storageManager.getActiveBoostLabel()));
         activeLabel.setCompoundDrawables(null, null, null, null);
-        activeLabel.setPadding(0,0,0,0);
+        activeLabel.setPadding(0, 0, 0, 0);
         long milliseconds = storageManager.getActiveBoostTime() - Calendar.getInstance().getTimeInMillis();
         final String text = activeLabel.getText().toString();
 
-        updatedSeconds = (int) (milliseconds / 1000) % 60 ;
-        updatedTime = (int) ((milliseconds / (1000*60)) % 60);
+        updatedSeconds = (int) (milliseconds / 1000) % 60;
+        updatedTime = (int) ((milliseconds / (1000 * 60)) % 60);
 
         Timer t = new Timer();
         t.scheduleAtFixedRate(new TimerTask() {
@@ -199,25 +188,23 @@ public class BoostShop extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        if(updatedTime < 10 && updatedSeconds < 10)
-                            activeLabel.setText("0" + String.valueOf(updatedTime)+" : " + "0" + String.valueOf(updatedSeconds));
-                        if(updatedTime >= 10 && updatedSeconds >= 10)
-                            activeLabel.setText(String.valueOf(updatedTime)+" : "+String.valueOf(updatedSeconds));
-                        if(updatedTime >= 10 && updatedSeconds < 10)
-                            activeLabel.setText(String.valueOf(updatedTime)+" : " + "0" + String.valueOf(updatedSeconds));
-                        if(updatedTime < 10 && updatedSeconds >= 10)
-                            activeLabel.setText("0" + String.valueOf(updatedTime)+" : " + String.valueOf(updatedSeconds));
+                        if (updatedTime < 10 && updatedSeconds < 10)
+                            activeLabel.setText("0" + String.valueOf(updatedTime) + " : " + "0" + String.valueOf(updatedSeconds));
+                        if (updatedTime >= 10 && updatedSeconds >= 10)
+                            activeLabel.setText(String.valueOf(updatedTime) + " : " + String.valueOf(updatedSeconds));
+                        if (updatedTime >= 10 && updatedSeconds < 10)
+                            activeLabel.setText(String.valueOf(updatedTime) + " : " + "0" + String.valueOf(updatedSeconds));
+                        if (updatedTime < 10 && updatedSeconds >= 10)
+                            activeLabel.setText("0" + String.valueOf(updatedTime) + " : " + String.valueOf(updatedSeconds));
 
                         updatedSeconds -= 1;
 
-                        if(updatedSeconds < 0)
-                        {
-                            updatedSeconds=59;
-                            updatedTime = updatedTime -1;
+                        if (updatedSeconds < 0) {
+                            updatedSeconds = 59;
+                            updatedTime = updatedTime - 1;
                         }
 
-                        if(updatedTime < 0)
-                        {
+                        if (updatedTime < 0) {
                             activeLabel.setText(text);
                             activeLabel.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.gem_icon_small, 0);
                             activeLabel.setPadding(110, 0, 110, 0);

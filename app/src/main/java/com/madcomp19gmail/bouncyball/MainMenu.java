@@ -50,7 +50,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private RewardedVideoAd mRewardedVideoAd;
     private boolean rewarded = false;
     private boolean adsLeft = true;
-    private boolean watchedDoublePointsAd = false;
     private boolean isWatchingDoublePointsAd = false;
 
     private Dialog coinDialog;
@@ -183,6 +182,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     protected void onResume() {
         super.onResume();
         //StorageManager.getInstance().setTotalBounces(touches);
+        mediaPlayerManager.changeVolume(1.0f);
 
         if (prev_act_GameWorld) {
 
@@ -367,7 +367,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     @Override
     public void onRewardedVideoAdClosed() {
-        watchedDoublePointsAd = false;
         isWatchingDoublePointsAd = false;
         loadRewardedVideoAd();
 
@@ -386,7 +385,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             int result = 2 * (GameWorld.getTouches() - getPrevTouches());
             test.setText(result + " " + "Bounces");
             coins.setText(storage.getTotalBounces() + result + "");
-            watchedDoublePointsAd = true;
+            isWatchingDoublePointsAd = true;
             Button watchAdButton = (Button) doublePointsDialog.findViewById(R.id.watchAdButton);
             watchAdButton.setEnabled(false);
             watchAdButton.setBackgroundResource(R.drawable.rounded_button6_vector);
