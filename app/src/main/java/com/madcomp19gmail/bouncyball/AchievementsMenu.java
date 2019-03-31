@@ -9,8 +9,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class AchievementsMenu extends AppCompatActivity {
 
+    //Initializations
+    //region
     ProgressBar bar1;
     ProgressBar bar2;
     ProgressBar bar3;
@@ -32,6 +37,9 @@ public class AchievementsMenu extends AppCompatActivity {
     ProgressBar bar19;
     ProgressBar bar20;
     ProgressBar bar21;
+    ProgressBar bar22;
+    ProgressBar bar23;
+    ProgressBar bar24;
 
     TextView text1;
     TextView text2;
@@ -54,6 +62,9 @@ public class AchievementsMenu extends AppCompatActivity {
     TextView text19;
     TextView text20;
     TextView text21;
+    TextView text22;
+    TextView text23;
+    TextView text24;
 
     TextView reward1;
     TextView reward2;
@@ -76,11 +87,17 @@ public class AchievementsMenu extends AppCompatActivity {
     TextView reward19;
     TextView reward20;
     TextView reward21;
+    TextView reward22;
+    TextView reward23;
+    TextView reward24;
+    //endregion
 
     private final int background_music_id = R.raw.background_music_2;
 
     private StorageManager storage;
     private MediaPlayerManager mediaPlayerManager;
+
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,6 +128,9 @@ public class AchievementsMenu extends AppCompatActivity {
         bar19 = findViewById(R.id.circularProgressBar19);
         bar20 = findViewById(R.id.circularProgressBar20);
         bar21 = findViewById(R.id.circularProgressBar21);
+        bar22 = findViewById(R.id.circularProgressBar22);
+        bar23 = findViewById(R.id.circularProgressBar23);
+        bar24 = findViewById(R.id.circularProgressBar24);
 
         text1 = findViewById(R.id.textView1);
         text2 = findViewById(R.id.textView2);
@@ -133,6 +153,9 @@ public class AchievementsMenu extends AppCompatActivity {
         text19 = findViewById(R.id.textView19);
         text20 = findViewById(R.id.textView20);
         text21 = findViewById(R.id.textView21);
+        text22 = findViewById(R.id.textView22);
+        text23 = findViewById(R.id.textView23);
+        text24 = findViewById(R.id.textView24);
 
         reward1 = findViewById(R.id.reward1);
         reward2 = findViewById(R.id.reward2);
@@ -155,6 +178,9 @@ public class AchievementsMenu extends AppCompatActivity {
         reward19 = findViewById(R.id.reward19);
         reward20 = findViewById(R.id.reward20);
         reward21 = findViewById(R.id.reward21);
+        reward22 = findViewById(R.id.reward22);
+        reward23 = findViewById(R.id.reward23);
+        reward24 = findViewById(R.id.reward24);
 
         storage = StorageManager.getInstance();
         mediaPlayerManager = MediaPlayerManager.getInstance();
@@ -168,6 +194,10 @@ public class AchievementsMenu extends AppCompatActivity {
         updateProgressBars();
 
         updateRewardText();
+
+        mAdView = findViewById(R.id.bannerAdTrailShop);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override
@@ -216,6 +246,10 @@ public class AchievementsMenu extends AppCompatActivity {
         bar20.setProgress(storage.getNumberOfOwnedSounds());
         bar21.setProgress(storage.getNumberOfOwnedSounds());
 
+        bar22.setProgress(storage.getNumberOfOwnedBackgrounds());
+        bar23.setProgress(storage.getNumberOfOwnedBackgrounds());
+        bar24.setProgress(storage.getNumberOfOwnedBackgrounds());
+
         text1.setText(bar1.getProgress() + "/" + bar1.getMax() + " Bounces");
         text2.setText(bar2.getProgress() + "/" + bar2.getMax() + " Bounces");
         text3.setText(bar3.getProgress() + "/" + bar3.getMax() + " Bounces");
@@ -237,6 +271,9 @@ public class AchievementsMenu extends AppCompatActivity {
         text19.setText(bar19.getProgress() + "/" + bar19.getMax() + " Sounds");
         text20.setText(bar20.getProgress() + "/" + bar20.getMax() + " Sounds");
         text21.setText(bar21.getProgress() + "/" + bar21.getMax() + " Sounds");
+        text22.setText(bar22.getProgress() + "/" + bar22.getMax() + " Backgrounds");
+        text23.setText(bar23.getProgress() + "/" + bar23.getMax() + " Backgrounds");
+        text24.setText(bar24.getProgress() + "/" + bar24.getMax() + " Backgrounds");
     }
 
     public void updateRewardText()
@@ -450,19 +487,51 @@ public class AchievementsMenu extends AppCompatActivity {
         {
             achievementCollected(reward21);
         }
+
+        //Reward 22 ---------------------------------------------------------------
+        if(bar22.getProgress() == bar22.getMax() && !storage.getCollectedAchievements().contains(reward22.getId()))
+        {
+            canCollectAchievement(reward22);
+        }
+        if(storage.getCollectedAchievements().contains(reward22.getId()))
+        {
+            achievementCollected(reward22);
+        }
+
+        //Reward 23 ---------------------------------------------------------------
+        if(bar23.getProgress() == bar23.getMax() && !storage.getCollectedAchievements().contains(reward23.getId()))
+        {
+            canCollectAchievement(reward23);
+        }
+        if(storage.getCollectedAchievements().contains(reward23.getId()))
+        {
+            achievementCollected(reward23);
+        }
+
+        //Reward 24 ---------------------------------------------------------------
+        if(bar24.getProgress() == bar24.getMax() && !storage.getCollectedAchievements().contains(reward24.getId()))
+        {
+            canCollectAchievement(reward24);
+        }
+        if(storage.getCollectedAchievements().contains(reward24.getId()))
+        {
+            achievementCollected(reward24);
+        }
     }
 
     public void canCollectAchievement(TextView reward)
     {
         reward.setText("COLLECT");
-        reward.setBackgroundColor(Color.parseColor("#00FF00"));
+        //reward.setBackgroundColor(Color.parseColor("#00FF00"));
+        reward.setBackgroundResource(R.drawable.rounded_corners2_vector);
         reward.setTextColor(Color.BLACK);
     }
 
     public void achievementCollected(TextView reward)
     {
         reward.setText("COLLECTED");
-        reward.setBackgroundColor(Color.parseColor("#0B3B0B"));
+        //reward.setBackgroundColor(Color.parseColor("#0B3B0B"));
+        reward.setBackgroundResource(R.drawable.rounded_corners3_vector);
         reward.setTextColor(Color.WHITE);
     }
 
@@ -920,6 +989,72 @@ public class AchievementsMenu extends AppCompatActivity {
         }
 
         if(reward21.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick22(View view)
+    {
+        if (reward22.getText() == "COLLECT")
+        {
+            storage.addGems(5);
+            Toast.makeText(this, "You won 5 Gems", Toast.LENGTH_LONG).show();
+            reward22.setText("COLLECTED");
+            reward22.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward22.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward22.getId());
+            return;
+        }
+
+        if(reward22.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick23(View view)
+    {
+        if (reward23.getText() == "COLLECT")
+        {
+            storage.addGems(20);
+            Toast.makeText(this, "You won 20 Gems", Toast.LENGTH_LONG).show();
+            reward23.setText("COLLECTED");
+            reward23.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward23.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward23.getId());
+            return;
+        }
+
+        if(reward23.getText() == "COLLECTED")
+        {
+            Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Toast.makeText(this, "You haven't unlocked this achievement yet", Toast.LENGTH_SHORT).show();
+    }
+
+    public void rewardClick24(View view)
+    {
+        if (reward24.getText() == "COLLECT")
+        {
+            storage.addGems(50);
+            Toast.makeText(this, "You won 50 Gems", Toast.LENGTH_LONG).show();
+            reward24.setText("COLLECTED");
+            reward24.setBackgroundColor(Color.parseColor("#0B3B0B"));
+            reward24.setTextColor(Color.WHITE);
+            storage.addCollectedAchievement(reward24.getId());
+            return;
+        }
+
+        if(reward24.getText() == "COLLECTED")
         {
             Toast.makeText(this, "You already claimed this reward", Toast.LENGTH_SHORT).show();
             return;
