@@ -39,7 +39,8 @@
         app:layout_constraintBottom_toTopOf="@+id/spin_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roulette_dialog_title" />
+        app:layout_constraintTop_toBottomOf="@+id/roulette_dialog_title"
+        app:srcCompat="@drawable/roulette_wheel"/>
 
     <TextView
         android:id="@+id/roulette_dialog_title"
@@ -61,6 +62,7 @@
         android:id="@+id/roulette_indicator"
         android:layout_width="36dp"
         android:layout_height="36dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@+id/roulette"
         app:layout_constraintStart_toStartOf="@+id/roulette"
         app:layout_constraintTop_toTopOf="@+id/view"
