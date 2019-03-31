@@ -65,6 +65,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private final int default_sound_label = R.id.mute_Label;
     private final int default_trail = -1;
     private final int default_trail_label = R.id.clear_Label;
+    private final int default_background = R.drawable.background_1;
+    private final int default_background_label = R.id.background_1_Label;
 
 
     BillingProcessor bp;
@@ -160,6 +162,13 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             storage.addOwnedTrailLabel(default_trail_label);
             storage.setSelectedTrail(default_trail);
             storage.setSelectedTrailLabel(default_trail_label);
+        }
+
+        if (storage.getSelectedBackground() == 0) {
+            storage.addOwnedBackground(default_background);
+            storage.addOwnedBackgroundLabel(default_background_label);
+            storage.setSelectedBackground(default_background);
+            storage.setSelectedBackgroundLabel(default_background_label);
         }
     }
 
@@ -548,6 +557,22 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     private void buyAllBackgrounds() {
 
+        Field[] drawableFields = R.drawable.class.getFields();
+
+        for (Field field : drawableFields) {
+            try {
+                String name = field.getName();
+                if (!name.startsWith("background") || name.contains("icon") || name.contains("title"))
+                    continue;
+
+                int id_label = this.getResources().getIdentifier(name + "_Label", "id", getPackageName());
+                int id = this.getResources().getIdentifier(name, "drawable", getPackageName());
+                storage.addOwnedBackgroundLabel(id_label);
+                storage.addOwnedBackground(id);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void buyAllSounds() {
