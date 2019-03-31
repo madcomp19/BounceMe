@@ -132,7 +132,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/ball_1_Button"
+                    android:id="@+id/b_1_1_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -140,7 +140,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_2_Button"
+                    android:id="@+id/b_2_1_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -148,7 +148,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_3_Button"
+                    android:id="@+id/b_3_1_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -176,7 +176,7 @@
 
 
                 <TextView
-                    android:id="@+id/ball_1_Label"
+                    android:id="@+id/b_1_1_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -189,7 +189,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_2_Label"
+                    android:id="@+id/b_2_1_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -202,7 +202,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_3_Label"
+                    android:id="@+id/b_3_1_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -236,7 +236,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/ball_4_Button"
+                    android:id="@+id/b_4_1_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -244,7 +244,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_5_Button"
+                    android:id="@+id/b_1_2_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -252,7 +252,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_6_Button"
+                    android:id="@+id/b_2_2_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -280,7 +280,7 @@
 
 
                 <TextView
-                    android:id="@+id/ball_4_Label"
+                    android:id="@+id/b_4_1_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -293,7 +293,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_5_Label"
+                    android:id="@+id/b_1_2_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -306,7 +306,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_6_Label"
+                    android:id="@+id/b_2_2_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -340,7 +340,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/ball_7_Button"
+                    android:id="@+id/b_3_2_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -348,7 +348,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_8_Button"
+                    android:id="@+id/b_4_2_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -356,7 +356,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_9_Button"
+                    android:id="@+id/b_1_3_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -384,7 +384,7 @@
 
 
                 <TextView
-                    android:id="@+id/ball_7_Label"
+                    android:id="@+id/b_3_2_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -397,7 +397,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_8_Label"
+                    android:id="@+id/b_4_2_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -410,7 +410,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_9_Label"
+                    android:id="@+id/b_1_3_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -444,7 +444,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/ball_10_Button"
+                    android:id="@+id/b_2_3_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -452,7 +452,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_11_Button"
+                    android:id="@+id/b_3_3_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -460,7 +460,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_12_Button"
+                    android:id="@+id/b_4_3_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -488,7 +488,7 @@
 
 
                 <TextView
-                    android:id="@+id/ball_10_Label"
+                    android:id="@+id/b_2_3_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -501,7 +501,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_11_Label"
+                    android:id="@+id/b_3_3_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -514,7 +514,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_12_Label"
+                    android:id="@+id/b_4_3_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -548,7 +548,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/ball_13_Button"
+                    android:id="@+id/b_1_4_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -556,7 +556,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_14_Button"
+                    android:id="@+id/b_2_4_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -564,7 +564,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_15_Button"
+                    android:id="@+id/b_3_4_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -592,7 +592,7 @@
 
 
                 <TextView
-                    android:id="@+id/ball_13_Label"
+                    android:id="@+id/b_1_4_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -605,7 +605,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_14_Label"
+                    android:id="@+id/b_2_4_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -618,7 +618,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_15_Label"
+                    android:id="@+id/b_3_4_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -652,7 +652,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/ball_16_Button"
+                    android:id="@+id/b_4_4_1_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -660,7 +660,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_17_Button"
+                    android:id="@+id/b_1_1_2_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -668,7 +668,7 @@
                     android:onClick="onClickBall" />
 
                 <ImageButton
-                    android:id="@+id/ball_18_Button"
+                    android:id="@+id/b_2_1_2_1_Button"
                     android:layout_width="50dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -696,7 +696,7 @@
 
 
                 <TextView
-                    android:id="@+id/ball_16_Label"
+                    android:id="@+id/b_4_4_1_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -709,7 +709,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_17_Label"
+                    android:id="@+id/b_1_1_2_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -722,7 +722,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/ball_18_Label"
+                    android:id="@+id/b_2_1_2_1_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

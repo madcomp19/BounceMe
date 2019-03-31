@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -127,7 +128,10 @@ public class BallShop extends AppCompatActivity {
     public void onClickBall(View view) {
 
         String view_id = view.getResources().getResourceEntryName(view.getId());
-        view_id = view_id.split("_Label")[0].split("_Button")[0];
+        view_id = view_id.split("_Label")[0].split("_Button")[0].substring(2);
+
+        storage.setBallAttributes(view_id);
+
         //Log.i("TEST", view_id);
 
         /*int sound_id;

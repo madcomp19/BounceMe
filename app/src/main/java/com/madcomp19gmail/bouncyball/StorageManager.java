@@ -591,6 +591,6 @@ public class StorageManager {
 
     public String getBallAttributes()
     {
-        return prefs.getString(context.getString(R.string.ball_attributes), "1_1_1_1");
+        return prefs.getString(context.getString(R.string.ball_attributes), "3_2_2_4");
     }
 }

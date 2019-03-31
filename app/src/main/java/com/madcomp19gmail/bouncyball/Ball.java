@@ -65,6 +65,8 @@ public class Ball
         float rightLimit = GameView.width - attributes.radius;
         float bottomLimit = GameView.height - attributes.radius;
 
+        applyForce(new Vector2(-velocity.x * attributes.friction, -velocity.y * attributes.friction));
+
         acceleration.add(new Vector2(0, attributes.gravity));
         velocity.add(acceleration);
         position.add(velocity);
@@ -91,7 +93,7 @@ public class Ball
 
         if (position.x >= rightLimit) {
             position.x = rightLimit - 1;
-            applyForce(new Vector2(velocity.x / 10, 0));
+            applyForce(new Vector2(velocity.x * attributes.bounce, 0));
             velocity.x *= -1;
             playSound();
 
@@ -102,7 +104,7 @@ public class Ball
         }
         if (position.x <= attributes.radius) {
             position.x = attributes.radius + 1;
-            applyForce(new Vector2(velocity.x / 10, 0));
+            applyForce(new Vector2(velocity.x * attributes.bounce, 0));
             velocity.x *= -1;
             playSound();
 
@@ -113,7 +115,7 @@ public class Ball
         }
         if (position.y >= bottomLimit) {
             position.y = bottomLimit;
-            applyForce(new Vector2(0,velocity.y / 10));
+            applyForce(new Vector2(0,velocity.y * attributes.bounce));
             velocity.y *= -1;
 
             if(Math.abs(prev_velY - velocity.y) > 50f)
@@ -128,11 +130,11 @@ public class Ball
             else if(Math.abs(prev_velY - velocity.y) > 10f)
                 playSound();
             else if(Math.abs(prev_velY - velocity.y) < 1f)
-                applyForce(new Vector2(-velocity.x / 30, 0));
+                applyForce(new Vector2(-velocity.x * attributes.friction, 0));
         }
         if (position.y <= attributes.radius) {
             position.y = attributes.radius + 1;
-            applyForce(new Vector2(0,velocity.y / 10));
+            applyForce(new Vector2(0,velocity.y * attributes.bounce));
             velocity.y *= -1;
             playSound();
 

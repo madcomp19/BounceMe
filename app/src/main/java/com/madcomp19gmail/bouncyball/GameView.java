@@ -23,7 +23,7 @@ import java.util.Calendar;
 public class GameView extends View
 {
     ArrayList<Ball> balls;
-    float ball_radius;
+    //float ball_radius;
 
     static ArrayList<Drop> drops;
     float coin_radius;
@@ -115,9 +115,10 @@ public class GameView extends View
         else
             ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
 
-        ball_img = getResizedBitmap(ball_img, (int) ball_radius * 2, (int) ball_radius * 2);
-
         BallAttributes attributes = new BallAttributes(storageManager.getBallAttributes());
+
+        ball_img = getResizedBitmap(ball_img, (int) attributes.radius * 2, (int) attributes.radius * 2);
+
         balls.add(new Ball(width / 2, height / 2, attributes, ball_img, selected_trail, selected_sound));
     }
 
@@ -279,7 +280,7 @@ public class GameView extends View
             {
                 float dist = Vector2.dist(ball.position, drop.position);
 
-                if(dist <= ball_radius + drop.radius && drop.health < 1)
+                if(dist <= ball.attributes.radius + drop.radius && drop.health < 1)
                 {
                     //drops.remove(drop);
 
@@ -295,7 +296,7 @@ public class GameView extends View
 
                     drops.remove(drop);
                 }
-                else if(dist < ball_radius + drop.radius + 300 && drop.health < 1)
+                else if(dist < ball.attributes.radius + drop.radius + 300 && drop.health < 1)
                 {
                     Vector2 force = Vector2.sub(ball.position, drop.position);
                     force.mult(4f / dist);
