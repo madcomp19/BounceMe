@@ -2,7 +2,6 @@ package com.madcomp19gmail.bouncyball;
 
 import android.app.Dialog;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.Rotate;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -298,7 +296,10 @@ public class DailyChallenge extends AppCompatActivity {
         customDialog.setContentView(R.layout.dialog_roulette_daily_challenge);
 
         roulette = (ImageView) customDialog.findViewById(R.id.roulette);
-        Glide.with(this).load(R.drawable.roulette_wheel).into(roulette);
+
+        //this makes the image get loaded 30 degrees off
+        //Glide.with(this).load(R.drawable.roulette_wheel).into(roulette);
+
         ImageView indicator = (ImageView) customDialog.findViewById(R.id.roulette_indicator);
         spin_button = (Button) customDialog.findViewById(R.id.spin_button);
 
