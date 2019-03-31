@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content">
 
                     <ProgressBar
-                        android:id="@+id/circularProgressBar"
+                        android:id="@+id/circularProgressBar1"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="110dp"
                         android:layout_height="110dp"
@@ -100,17 +100,17 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView1"
-                        android:layout_alignStart="@+id/circularProgressBar"
-                        android:layout_alignLeft="@+id/circularProgressBar"
-                        android:layout_alignEnd="@+id/circularProgressBar"
-                        android:layout_alignRight="@+id/circularProgressBar"
+                        android:layout_alignStart="@+id/circularProgressBar1"
+                        android:layout_alignLeft="@+id/circularProgressBar1"
+                        android:layout_alignEnd="@+id/circularProgressBar1"
+                        android:layout_alignRight="@+id/circularProgressBar1"
                         android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="85dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick1"
+                        android:onClick="rewardClick"
                         android:text="2 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -157,7 +157,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick2"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -204,7 +204,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick3"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -270,7 +270,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick4"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -318,7 +318,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick5"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -365,7 +365,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick6"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -431,7 +431,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick7"
+                        android:onClick="rewardClick"
                         android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -479,7 +479,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick8"
+                        android:onClick="rewardClick"
                         android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -527,7 +527,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick9"
+                        android:onClick="rewardClick"
                         android:text="100 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -593,7 +593,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick10"
+                        android:onClick="rewardClick"
                         android:text="2 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -641,7 +641,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick11"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -688,7 +688,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick12"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -754,7 +754,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick13"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -803,7 +803,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick14"
+                        android:onClick="rewardClick"
                         android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -850,7 +850,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick15"
+                        android:onClick="rewardClick"
                         android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -916,7 +916,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick16"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -964,7 +964,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick17"
+                        android:onClick="rewardClick"
                         android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1011,7 +1011,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick18"
+                        android:onClick="rewardClick"
                         android:text="25 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1077,7 +1077,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick19"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1125,7 +1125,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick20"
+                        android:onClick="rewardClick"
                         android:text="20 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1172,7 +1172,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick21"
+                        android:onClick="rewardClick"
                         android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1239,7 +1239,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick22"
+                        android:onClick="rewardClick"
                         android:text="5 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1288,7 +1288,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick23"
+                        android:onClick="rewardClick"
                         android:text="20 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
@@ -1336,7 +1336,7 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
-                        android:onClick="rewardClick24"
+                        android:onClick="rewardClick"
                         android:text="50 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
