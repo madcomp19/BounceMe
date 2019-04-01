@@ -79,6 +79,9 @@ public class DailyChallenge extends AppCompatActivity {
         width = metrics.widthPixels;
         height = metrics.heightPixels;
 
+        if(prefs.getConsecutiveDays() == 7){
+            showFinalPrizeDialog();
+        }
 
         //REMOVE THIS LATER*********************************************
         //testing roulette mini game
@@ -212,7 +215,6 @@ public class DailyChallenge extends AppCompatActivity {
         prefs.setLastDailyChallengeDate(todays_date);
 
         if (consecutive_days == 7) {
-            prefs.setConsecutiveDays(0);
             showFinalPrizeDialog();
         } else {
             prefs.setConsecutiveDays(consecutive_days);
@@ -345,6 +347,7 @@ public class DailyChallenge extends AppCompatActivity {
                 int prize = (int) (((double) n_prizes) - Math.floor(((double) degrees % 360)
                         / (360.0d / (double) n_prizes)));
                 getPrize(prize, true);
+                prefs.setConsecutiveDays(0);
 
                 //enable the spin button and change it to finish activity
                 spin_button.setEnabled(true);
@@ -375,8 +378,29 @@ public class DailyChallenge extends AppCompatActivity {
 
         if (!isFinalPrize) {
             //daily prize
-            prefs.setTotalGems(prefs.getTotalGems() + 5);
-            Toast.makeText(this, "You have won 5 gems!", Toast.LENGTH_LONG).show();
+            switch(prize_id){
+                case 1:
+                    setCoins(1000);
+                    break;
+                case 2:
+                    setCoins(1000);
+                    break;
+                case 3:
+                    setCoins(1000);
+                    break;
+                case 4:
+                    setCoins(1000);
+                    break;
+                case 5:
+                    setCoins(1000);
+                    break;
+                case 6:
+                    setCoins(1000);
+                    break;
+                default:
+                    setCoins(1000);
+                    break;
+            }
         } else {
             //roulette prizes
             switch (prize_id) {
