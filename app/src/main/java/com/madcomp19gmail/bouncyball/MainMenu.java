@@ -30,6 +30,9 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 import java.lang.reflect.Field;
 
+import hotchemi.android.rate.AppRate;
+import hotchemi.android.rate.OnClickButtonListener;
+
 public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener, BillingProcessor.IBillingHandler {
 
     //private static int touches;
@@ -140,6 +143,16 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         bp = new BillingProcessor(this, null, this);
         bp.initialize();
+
+        AppRate.with(this)
+                .setInstallDays(5) // default 10, 0 means install day.
+                .setLaunchTimes(5) // default 10
+                .setRemindInterval(2) // default 1
+                .setShowLaterButton(true) // default true
+                .setDebug(true) // default false
+                .monitor();
+
+        AppRate.showRateDialogIfMeetsConditions(this);
     }
 
     private void initializeShops() {
