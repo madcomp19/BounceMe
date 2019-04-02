@@ -86,11 +86,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         MobileAds.initialize(this, "ca-app-pub-5557351606937995~8015272303");
 
         SoundPoolManager.initialize(this);
-
-        ImageView iv = (ImageView) findViewById(R.id.bounce);
-
-        Glide.with(this).load(R.drawable.bounce).into(iv);
-
         StorageManager.initialize(this);
         storage = StorageManager.getInstance();
         coins = findViewById(R.id.coins);
@@ -134,6 +129,13 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         width = metrics.widthPixels;
         height = metrics.heightPixels;
 
+        ImageView iv = (ImageView) findViewById(R.id.bounce);
+        if (iv.getLayoutParams().height > (int) (0.2 * height)) {
+            iv.getLayoutParams().height = (int) (0.2 * height);
+            iv.getLayoutParams().width = (int) (0.4 * height);
+        }
+        Glide.with(this).load(R.drawable.bounce).into(iv);
+
         bp = new BillingProcessor(this, null, this);
         bp.initialize();
 
@@ -149,8 +151,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     private void initializeShops() {
-        if(storage.getSelectedBall() == "0_0_0_0")
-        {
+        if (storage.getSelectedBall() == "0_0_0_0") {
             storage.addOwnedBall(default_ball);
             storage.addOwnedBallLabel(default_ball_label);
             storage.setSelectedBall(default_ball);
@@ -507,7 +508,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             try {
                 String name = field.getName();
 
-                if(!name.startsWith("b_"))
+                if (!name.startsWith("b_"))
                     continue;
 
                 int id_label = this.getResources().getIdentifier(name + "_Label", "id", getPackageName());

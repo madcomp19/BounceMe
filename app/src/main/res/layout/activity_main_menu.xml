@@ -119,11 +119,12 @@
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="475dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:gravity="center|fill_vertical"
+        android:gravity="center"
         android:orientation="vertical"
+        android:weightSum="6"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -134,21 +135,21 @@
             android:id="@+id/main_title"
             android:layout_width="208dp"
             android:layout_height="50dp"
-            android:layout_marginTop="0dp"
+
             android:background="@drawable/bounce_it_up_title"
             android:onClick="resetStorage" />
 
         <ImageView
             android:id="@+id/bounce"
-            android:layout_width="295dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="20dp" />
+            android:layout_width="338dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="10dp" />
 
         <Button
             android:id="@+id/playButton"
-            android:layout_width="203dp"
+            android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button_vector"
             android:onClick="playGame"
             android:text="@string/play_button"
@@ -157,9 +158,9 @@
 
         <Button
             android:id="@+id/challengeButton"
-            android:layout_width="wrap_content"
+            android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button3_vector"
             android:onClick="onClickDailyChallenge"
             android:paddingLeft="16dp"
@@ -170,9 +171,9 @@
 
         <Button
             android:id="@+id/shopButton"
-            android:layout_width="204dp"
+            android:layout_width="206dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_button2_vector"
             android:onClick="startShop"
             android:text="@string/shop_button"
@@ -190,9 +191,8 @@
                 android:id="@+id/achievementButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginRight="0dp"
                 android:background="@drawable/achievements_icon"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/todo"
                 android:onClick="achievementButton" />
 
             <ImageButton
@@ -202,6 +202,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/circle_button2_vector"
+                android:contentDescription="@string/todo"
                 android:onClick="rateApp"
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
@@ -210,7 +211,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/circle_button_vector"
-                android:contentDescription="TODO"
+                android:contentDescription="@string/todo"
                 android:onClick="goToSettings"
                 app:srcCompat="@drawable/settings_icon_vector" />
         </LinearLayout>
@@ -246,7 +247,6 @@
 
     <ImageButton
         android:id="@+id/noAdsButton"
-        android:onClick="buyNoAds"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -255,6 +255,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="6dp"
         android:background="@drawable/no_ads_icon"
+        android:onClick="buyNoAds"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.19"

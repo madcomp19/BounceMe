@@ -59,5 +59,6 @@
     <string name="selected_ball_label">SelectedBallLabel</string>
     <string name="owned_balls">OwnedBalls</string>
     <string name="owned_balls_labels">OwnedBallsLabels</string>
+    <string name="todo">TODO</string>
 
 </resources>
