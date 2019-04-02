@@ -200,7 +200,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -213,7 +213,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -226,7 +226,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -239,7 +239,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -252,7 +252,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -345,7 +345,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -358,7 +358,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -371,7 +371,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -384,7 +384,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -397,7 +397,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -490,7 +490,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -503,7 +503,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -516,7 +516,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -529,7 +529,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -542,7 +542,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -635,7 +635,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -648,7 +648,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -661,7 +661,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -674,7 +674,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -923,7 +923,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -936,7 +936,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -949,7 +949,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -962,7 +962,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -975,7 +975,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1067,7 +1067,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1080,7 +1080,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1093,7 +1093,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1106,7 +1106,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1119,7 +1119,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 

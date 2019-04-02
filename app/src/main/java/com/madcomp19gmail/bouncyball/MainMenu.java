@@ -334,12 +334,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         startActivityForResult(intent, 2);
     }
 
-    public void goFacebookPage(View view) {
-        changingActivity = true;
-        Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/francisco.teixeira.507"));
-        startActivity(goFacebook);
-    }
-
     public void achievementButton(View view) {
         changingActivity = true;
         Intent goAchievements = new Intent(this, AchievementsMenu.class);

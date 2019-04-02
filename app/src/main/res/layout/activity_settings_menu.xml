@@ -100,18 +100,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-    <ImageButton
-        android:layout_width="40dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/facebook_icon"
-        app:layout_constraintBottom_toTopOf="@+id/bannerAdBoostShop"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bannerAdSettings"
+        app:layout_constraintTop_toBottomOf="@+id/gameVolumeBar"
+        app:layout_constraintVertical_bias="0.819"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/facebook_icon"
+            android:onClick="goToFacebook"
+            app:layout_constraintBottom_toTopOf="@+id/bannerAdBoostShop"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/email_icon"
+            android:onClick="sendFeedback"
+            app:layout_constraintBottom_toTopOf="@+id/bannerAdBoostShop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.005"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/bannerAdBoostShop"
+        android:id="@+id/bannerAdSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
