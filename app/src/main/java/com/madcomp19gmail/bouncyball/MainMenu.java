@@ -59,6 +59,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private DisplayMetrics metrics;
     private int width, height;
 
+    private final String default_ball = "3_2_3_4";
+    private final int default_ball_label = R.id.b_3_2_3_4_Label;
     private final int default_skin = R.drawable.emoji_0;
     private final int default_skin_label = R.id.emoji_0_Label;
     private final int default_sound = 0;
@@ -94,13 +96,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         gems = findViewById(R.id.gems);
         adButton = findViewById(R.id.adButton);
         adsLeftToday = findViewById(R.id.adsLeftToday);
-        //touches = StorageManager.getInstance().getTotalBounces();*/
-
-        /*mediaPlayer = MediaPlayer.create(this, R.raw.background_music_2);
-        mediaPlayer.setLooping(true);
-
-        if(storage.getMenuMusicSetting())
-            mediaPlayer.start();*/
 
         changingActivity = false;
 
@@ -143,6 +138,14 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     private void initializeShops() {
+        if(storage.getSelectedBall() == "0_0_0_0")
+        {
+            storage.addOwnedBall(default_ball);
+            storage.addOwnedBallLabel(default_ball_label);
+            storage.setSelectedBall(default_ball);
+            storage.setSelectedBallLabel(default_ball_label);
+        }
+
         if (storage.getSelectedSkin() == 0) {
             storage.addOwnedSkin(default_skin);
             storage.addOwnedSkinLabel(default_skin_label);
@@ -493,6 +496,24 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     private void buyAllBalls() {
 
+        Field[] drawableFields = R.drawable.class.getFields();
+
+        for (Field field : drawableFields) {
+            try {
+                String name = field.getName();
+
+                if(!name.startsWith("b_"))
+                    continue;
+
+                int id_label = this.getResources().getIdentifier(name + "_Label", "id", getPackageName());
+                storage.addOwnedBallLabel(id_label);
+
+                name = name.substring(2);
+                storage.addOwnedBall(name);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void buyAllSkins() {

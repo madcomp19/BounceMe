@@ -9,14 +9,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -115,7 +112,7 @@ public class GameView extends View
         else
             ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
 
-        BallAttributes attributes = new BallAttributes(storageManager.getBallAttributes());
+        BallAttributes attributes = new BallAttributes(storageManager.getSelectedBall());
 
         ball_img = getResizedBitmap(ball_img, (int) attributes.radius * 2, (int) attributes.radius * 2);
 

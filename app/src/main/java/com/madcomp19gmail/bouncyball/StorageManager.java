@@ -528,15 +528,76 @@ public class StorageManager {
         return prefs.getInt(context.getString(R.string.selected_boost_label), 0);
     }
 
-    public void setBallAttributes(String attributes)
+    public void setSelectedBall(String ball)
     {
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(context.getString(R.string.ball_attributes), attributes);
+        editor.putString(context.getString(R.string.selected_ball), ball);
         editor.commit();
     }
 
-    public String getBallAttributes()
+    public void setSelectedBallLabel(int label)
     {
-        return prefs.getString(context.getString(R.string.ball_attributes), "3_2_2_4");
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(context.getString(R.string.selected_ball_label), label);
+        editor.commit();
+    }
+
+    public String getSelectedBall()
+    {
+        return prefs.getString(context.getString(R.string.selected_ball), "0_0_0_0");
+    }
+
+    public int getSelectedBallLabel()
+    {
+        return prefs.getInt(context.getString(R.string.selected_ball_label), 0);
+    }
+
+    public void addOwnedBall(String ball) {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_balls), new HashSet<String>());
+
+        if (set.contains(ball))
+            return;
+
+        set.add(ball);
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_balls), set);
+        editor.commit();
+    }
+
+    public void addOwnedBallLabel(int label)
+    {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_balls_labels), new HashSet<String>());
+
+        if (set.contains(Integer.toString(label)))
+            return;
+
+        set.add(label + "");
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putStringSet(context.getString(R.string.owned_balls_labels), set);
+        editor.commit();
+    }
+
+    public ArrayList<String> getOwnedBalls() {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_balls), new HashSet<String>());
+
+        ArrayList<String> owned_balls = new ArrayList<>();
+
+        for (String s : set)
+            owned_balls.add(s);
+
+        return owned_balls;
+    }
+
+    public ArrayList<Integer> getOwnedBallsLabels() {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_balls_labels), new HashSet<String>());
+
+        ArrayList<Integer> owned_balls_labels = new ArrayList<>();
+
+        for (String s : set)
+            owned_balls_labels.add(Integer.parseInt(s));
+
+        return owned_balls_labels;
     }
 }

@@ -55,6 +55,9 @@
     <string name="complete_for_a_chance">Complete for a chance at a prize!</string>
     <string name="spin">Spin</string>
     <string name="win_a_big_prize">Spin to win!</string>
-    <string name="ball_attributes">BallAttributes</string>
+    <string name="selected_ball">SelectedBall</string>
+    <string name="selected_ball_label">SelectedBallLabel</string>
+    <string name="owned_balls">OwnedBalls</string>
+    <string name="owned_balls_labels">OwnedBallsLabels</string>
 
 </resources>

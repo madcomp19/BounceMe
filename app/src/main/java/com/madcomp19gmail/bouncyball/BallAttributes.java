@@ -15,7 +15,7 @@ public class BallAttributes
     private final float MAX_FRICTION = 1/20f;
 
     // Vertical acceleration towards the ground
-    private final float MIN_GRAVITY = 1f;
+    private final float MIN_GRAVITY = 1/10f;
     private final float MAX_GRAVITY = 15f;
 
     // Ball radius
