@@ -32,7 +32,7 @@ public class GameView extends View
     Bitmap coin_50x_img;
     Bitmap gem_img;
     Bitmap gem_icon;
-
+    Bitmap boost_2x_img, boost_5x_img, boost_10x_img, boost_50x_img;
 
     private DisplayMetrics displayMetrics = new DisplayMetrics();
     public static int width;
@@ -98,6 +98,18 @@ public class GameView extends View
 
         gem_icon = BitmapFactory.decodeResource(res, R.drawable.gem_icon);
         gem_icon = getResizedBitmap(gem_icon, (int) coin_radius * 2, (int) coin_radius * 2);
+
+        boost_2x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_2x_icon);
+        //boost_2x_img = getResizedBitmap(boost_2x_img, 50, 48);
+
+        boost_5x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_5x_icon);
+        //boost_5x_img = getResizedBitmap(boost_5x_img, 25, 24);
+
+        boost_10x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_10x_icon);
+        //boost_10x_img = getResizedBitmap(boost_10x_img, 39, 24);
+
+        boost_50x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_50x_icon);
+        //boost_50x_img = getResizedBitmap(boost_50x_img, 42, 24);
 
         p = new Paint();
 
@@ -318,8 +330,8 @@ public class GameView extends View
         canvas.drawText(GameWorld.getTouches() - MainMenu.getPrevTouches() + "", width - 80, 50, p);
         canvas.drawBitmap(coin_img, width - 60, 5, null);
 
-        int gems = GameWorld.getGems() - MainMenu.getPrevGems();
-        if(gems > 0)
+        int gems = GameWorld.getGems();
+        if(gems >= 0)
         {
             canvas.drawText(gems + "", width - 80, 130, p);
             canvas.drawBitmap(gem_icon, width - 60, 85, null);
@@ -330,14 +342,6 @@ public class GameView extends View
         if(boost_time >= 0)
         {
             int boost = storageManager.getActiveBoost();
-
-            switch (boost)
-            {
-                case 2: p.setColor(Color.argb(255, 255, 255, 0)); break;
-                case 5: p.setColor(Color.argb(255, 255, 165, 0)); break;
-                case 10: p.setColor(Color.argb(255, 255, 0, 0)); break;
-                case 50: p.setColor(Color.argb(255, 204, 0, 197)); break;
-            }
 
             p.setTextAlign(Paint.Align.LEFT);
             p.setTextSize(56);
@@ -353,7 +357,31 @@ public class GameView extends View
             else if(millisecond.length() == 2)
                 millisecond = "0" + millisecond;
 
-            canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 50, 50, p);
+            //canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 150, 90, p);
+
+            switch (boost)
+            {
+                case 2:
+                    p.setColor(Color.argb(255, 255, 255, 0));
+                    canvas.drawBitmap(boost_2x_img, 5, 5, null);
+                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 150, 90, p);
+                    break;
+                case 5:
+                    p.setColor(Color.argb(255, 255, 165, 0));
+                    canvas.drawBitmap(boost_5x_img, 5, 5, null);
+                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 150, 90, p);
+                    break;
+                case 10:
+                    p.setColor(Color.argb(255, 255, 0, 0));
+                    canvas.drawBitmap(boost_10x_img, 5, 5, null);
+                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 230, 90, p);
+                    break;
+                case 50:
+                    p.setColor(Color.argb(255, 204, 0, 197));
+                    canvas.drawBitmap(boost_50x_img, 5, 5, null);
+                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 230, 90, p);
+                    break;
+            }
         }
 
 

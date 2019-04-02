@@ -68,7 +68,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         //storageManager = StorageManager.getInstance();
         touches = storageManager.getTotalBounces();
         total_bounces_ever = storageManager.getTotalBouncesEver();
-        gems  = storageManager.getTotalGems();
+        gems  = 0;
 
         // Set up game world music
         if(storageManager.getGameMusicSetting() != 0)
@@ -106,7 +106,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onStop();
         storageManager.setTotalBounces(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
-        storageManager.setTotalGems(gems);
+        storageManager.addGems(gems);
     }
 
     @Override
@@ -115,7 +115,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         super.onPause();
         storageManager.setTotalBounces(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
-        storageManager.setTotalGems(gems);
+        storageManager.addGems(gems);
 
 
         MainMenu.prev_act_GameWorld = true;
@@ -137,7 +137,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         SoundPoolManager.getInstance().release();
         storageManager.setTotalBounces(touches);
         storageManager.setTotalBouncesEver(total_bounces_ever);
-        storageManager.setTotalGems(gems);
+        storageManager.addGems(gems);
     }
 
     public static void addTouches(int t)

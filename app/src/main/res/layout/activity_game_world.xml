@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".GameWorld">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:alpha="0.35"
+        android:background="#000"
+        android:translationZ="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/game_view" />
 
     <ImageView
         android:id="@+id/game_background"
@@ -16,7 +25,8 @@
         android:id="@+id/game_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent" />
+        android:background="@android:color/transparent"
+        android:translationZ="100dp"/>
 
 
 </android.support.constraint.ConstraintLayout>

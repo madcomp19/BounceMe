@@ -190,19 +190,10 @@
                 android:id="@+id/achievementButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginRight="0dp"
                 android:background="@drawable/achievements_icon"
                 android:contentDescription="TODO"
                 android:onClick="achievementButton" />
-
-            <ImageButton
-                android:id="@+id/soundButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/circle_button_vector"
-                android:contentDescription="TODO"
-                android:onClick="goToSettings"
-                app:srcCompat="@drawable/settings_icon_vector" />
 
             <ImageButton
                 android:id="@+id/rateButton"
@@ -215,12 +206,13 @@
                 app:srcCompat="@android:drawable/btn_star_big_on" />
 
             <ImageButton
-                android:id="@+id/facebookButton"
+                android:id="@+id/soundButton"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/facebook_icon"
-                android:onClick="goFacebookPage" />
-
+                android:background="@drawable/circle_button_vector"
+                android:contentDescription="TODO"
+                android:onClick="goToSettings"
+                app:srcCompat="@drawable/settings_icon_vector" />
         </LinearLayout>
     </LinearLayout>
 
