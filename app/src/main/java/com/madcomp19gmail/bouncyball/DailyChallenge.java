@@ -82,17 +82,6 @@ public class DailyChallenge extends AppCompatActivity {
         if(prefs.getConsecutiveDays() == 7){
             showFinalPrizeDialog();
         }
-
-        //REMOVE THIS LATER*********************************************
-        //testing roulette mini game
-        ImageView title = (ImageView) findViewById(R.id.title);
-        title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showFinalPrizeDialog();
-            }
-        });
-        //REMOVE THIS LATER*********************************************
     }
 
     //return a list with every sound file name
@@ -383,19 +372,19 @@ public class DailyChallenge extends AppCompatActivity {
                     setCoins(1000);
                     break;
                 case 2:
-                    setCoins(1000);
+                    setGems(2);
                     break;
                 case 3:
-                    setCoins(1000);
+                    setCoins(2000);
                     break;
                 case 4:
-                    setCoins(1000);
+                    setGems(3);
                     break;
                 case 5:
-                    setCoins(1000);
+                    setCoins(5000);
                     break;
                 case 6:
-                    setCoins(1000);
+                    setGems(5);
                     break;
                 default:
                     setCoins(1000);
