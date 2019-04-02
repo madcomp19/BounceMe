@@ -73,9 +73,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private final int default_background = R.drawable.background_1;
     private final int default_background_label = R.id.background_1_Label;
 
-
     BillingProcessor bp;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
