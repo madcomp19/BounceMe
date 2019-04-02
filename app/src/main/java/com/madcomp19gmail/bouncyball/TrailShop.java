@@ -54,8 +54,6 @@ public class TrailShop extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-
-        // Arranjar o onClickTrail primeiro como nas skins
         initializeImageButtons(findViewById(R.id.trail_shop_ConstraintLayout));
     }
 
@@ -71,6 +69,9 @@ public class TrailShop extends AppCompatActivity {
 
             if(v instanceof ImageButton)
             {
+                if(v.getId() == R.id.play_icon_vector)
+                    continue;
+
                 ImageButton imageButton = (ImageButton) v;
 
                 String id = getResources().getResourceName(imageButton.getId()).split("/")[1].replace("_Button", "");

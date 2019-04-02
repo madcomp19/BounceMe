@@ -69,6 +69,10 @@ public class BallShop extends AppCompatActivity {
             View v = viewGroup.getChildAt(i);
 
             if (v instanceof ImageButton) {
+
+                if(v.getId() == R.id.play_icon_vector)
+                    continue;
+
                 ImageButton imageButton = (ImageButton) v;
 
                 String id = getResources().getResourceName(imageButton.getId()).split("/")[1].replace("_Button", "");

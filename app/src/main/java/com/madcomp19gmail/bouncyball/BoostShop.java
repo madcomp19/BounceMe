@@ -69,6 +69,10 @@ public class BoostShop extends AppCompatActivity {
             View v = viewGroup.getChildAt(i);
 
             if (v instanceof ImageButton) {
+
+                if(v.getId() == R.id.play_icon_vector)
+                    continue;
+
                 ImageButton imageButton = (ImageButton) v;
 
                 int image_id = getResources().getIdentifier("boosts_" + number, "drawable", getPackageName());
