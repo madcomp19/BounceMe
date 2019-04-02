@@ -157,39 +157,13 @@ public class ShopMenu extends AppCompatActivity {
 
     public void buyCoins(View view)
     {
-        TextView txtClose;
-
-        coinDialog.setContentView(R.layout.buy_coins_popup);
-
-        txtClose = (TextView) coinDialog.findViewById(R.id.closeButtonCoinsPopup);
-
-        txtClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                coinDialog.dismiss();
-            }
-        });
-
-        coinDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        coinDialog.show();
+        BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+        dialog.Show();
     }
 
     public void buyGems(View view)
     {
-        TextView txtClose;
-
-        gemDialog.setContentView(R.layout.buy_gems_popup);
-
-        txtClose = (TextView) gemDialog.findViewById(R.id.closeButtonGemsPopup);
-
-        txtClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gemDialog.dismiss();
-            }
-        });
-
-        gemDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        gemDialog.show();
+        BuyGemsDialog dialog = new BuyGemsDialog(this);
+        dialog.Show();
     }
 }
