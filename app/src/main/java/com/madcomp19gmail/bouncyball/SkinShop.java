@@ -163,8 +163,24 @@ public class SkinShop extends FragmentActivity {
 
                 SoundPoolManager.getInstance().playSound();
             } else
-                Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
+            {
+                BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+                dialog.Show();
+            }
+                //Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void buyCoins(View view)
+    {
+        BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+        dialog.Show();
+    }
+
+    public void buyGems(View view)
+    {
+        BuyGemsDialog dialog = new BuyGemsDialog(this);
+        dialog.Show();
     }
 }
 

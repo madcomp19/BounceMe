@@ -87,7 +87,7 @@ public class BackgroundShop extends AppCompatActivity {
 
                 String id = getResources().getResourceName(imageView.getId()).split("/")[1];
 
-                if(id == "gem_icon")
+                if(id == "gem_icon" || id == "add_gems" || id == "add_coins")
                     continue;
 
                 int image_id = getResources().getIdentifier(id, "drawable", getPackageName());
@@ -193,7 +193,11 @@ public class BackgroundShop extends AppCompatActivity {
 
                     SoundPoolManager.getInstance().playSound();
                 } else
-                    Toast.makeText(this, "You need " + (price - total_gems) + " more Gems", Toast.LENGTH_SHORT).show();
+                {
+                    BuyGemsDialog dialog = new BuyGemsDialog(this);
+                    dialog.Show();
+                }
+                    //Toast.makeText(this, "You need " + (price - total_gems) + " more Gems", Toast.LENGTH_SHORT).show();
             }
             else
             {
@@ -221,7 +225,11 @@ public class BackgroundShop extends AppCompatActivity {
 
                     SoundPoolManager.getInstance().playSound();
                 } else
-                    Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_LONG).show();
+                {
+                    BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+                    dialog.Show();
+                }
+                    //Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -259,5 +267,17 @@ public class BackgroundShop extends AppCompatActivity {
             else if(v instanceof ViewGroup)
                 setOwnedBackgroundsPage(v);
         }
+    }
+
+    public void buyCoins(View view)
+    {
+        BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+        dialog.Show();
+    }
+
+    public void buyGems(View view)
+    {
+        BuyGemsDialog dialog = new BuyGemsDialog(this);
+        dialog.Show();
     }
 }
