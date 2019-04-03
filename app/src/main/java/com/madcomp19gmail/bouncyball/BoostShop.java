@@ -51,9 +51,11 @@ public class BoostShop extends AppCompatActivity {
         coins.setText(storageManager.getTotalBounces() + "");
         gems.setText(storageManager.getTotalGems() + "");
 
-        mAdView = findViewById(R.id.bannerAdBoostShop);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storageManager.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdBoostShop);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
 
         initializeImageButtons(findViewById(R.id.boostShopLinearLayout));
 

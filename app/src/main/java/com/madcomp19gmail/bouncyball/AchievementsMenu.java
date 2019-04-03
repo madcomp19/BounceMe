@@ -68,9 +68,11 @@ public class AchievementsMenu extends AppCompatActivity {
 
         updateRewardText();
 
-        mAdView = findViewById(R.id.bannerAdTrailShop);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storage.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdTrailShop);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
     }
 
     @Override

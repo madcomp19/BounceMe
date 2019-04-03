@@ -50,9 +50,11 @@ public class TrailShop extends AppCompatActivity {
             mediaPlayerManager.play();
         }*/
 
-        mAdView = findViewById(R.id.bannerAdTrailShop);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storage.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdTrailShop);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
 
         initializeImageButtons(findViewById(R.id.trail_shop_ConstraintLayout));
     }

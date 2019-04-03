@@ -600,4 +600,19 @@ public class StorageManager {
 
         return owned_balls_labels;
     }
+
+    //No Ads
+    //region
+    public void setNoAds(boolean bool)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("NoAds", bool);
+        editor.commit();
+    }
+
+    public boolean getNoAds()
+    {
+        return prefs.getBoolean("NoAds", false);
+    }
+    //endregion
 }

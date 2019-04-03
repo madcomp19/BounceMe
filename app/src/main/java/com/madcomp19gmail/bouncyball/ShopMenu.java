@@ -55,9 +55,11 @@ public class ShopMenu extends AppCompatActivity {
 
         SoundPoolManager.getInstance().loadSound(R.raw.cash);
 
-        mAdView = findViewById(R.id.bannerAdTrailShop);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storage.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdTrailShop);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
 
         coinDialog = new Dialog(this);
         gemDialog = new Dialog(this);

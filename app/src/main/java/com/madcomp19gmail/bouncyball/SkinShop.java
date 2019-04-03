@@ -48,8 +48,10 @@ public class SkinShop extends FragmentActivity {
             mediaPlayerManager.play();
         }*/
 
-        AdRequest adRequest = new AdRequest.Builder().build();
-        ((AdView)findViewById(R.id.bannerAdTrailShop)).loadAd(adRequest);
+        if(!storageManager.getNoAds()) {
+            AdRequest adRequest = new AdRequest.Builder().build();
+            ((AdView) findViewById(R.id.bannerAdTrailShop)).loadAd(adRequest);
+        }
     }
 
     public void onClickPlay(View view) {

@@ -89,9 +89,11 @@ public class SettingsMenu extends AppCompatActivity {
             mediaPlayerManager.play();
         }
 
-        mAdView = findViewById(R.id.bannerAdSettings);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storageManager.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdSettings);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
     }
 
     @Override

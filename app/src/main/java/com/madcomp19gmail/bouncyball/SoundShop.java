@@ -58,9 +58,11 @@ public class SoundShop extends AppCompatActivity {
         //if(id != 0)
             //soundPool.loadSound(id);
 
-        mAdView = findViewById(R.id.bannerAdTrailShop);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storage.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdTrailShop);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
 
         initializeImageButtons(this.findViewById(R.id.sound_shop_ConstraintLayout));
     }

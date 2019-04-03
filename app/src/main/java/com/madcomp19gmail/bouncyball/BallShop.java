@@ -52,9 +52,11 @@ public class BallShop extends AppCompatActivity {
         //if(id != 0)
             //soundPool.loadSound(id);
 
-        mAdView = findViewById(R.id.bannerAdBallShop);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        if(!storage.getNoAds()) {
+            mAdView = findViewById(R.id.bannerAdBallShop);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
 
         initializeImageButtons(this.findViewById(R.id.ball_shop_ConstraintLayout));
     }

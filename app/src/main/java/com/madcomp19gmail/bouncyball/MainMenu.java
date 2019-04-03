@@ -139,11 +139,11 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         bp.initialize();
 
         AppRate.with(this)
-                .setInstallDays(5) // default 10, 0 means install day.
+                .setInstallDays(3) // default 10, 0 means install day.
                 .setLaunchTimes(5) // default 10
                 .setRemindInterval(2) // default 1
                 .setShowLaterButton(true) // default true
-                .setDebug(true) // default false
+                .setDebug(false) // default false
                 .monitor();
 
         AppRate.showRateDialogIfMeetsConditions(this);
@@ -273,15 +273,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     public static int getPrevGems() {
         return prev_gems;
     }
-
-    /*public static void addTouch() {
-        touches++;
-        storage.setTotalBounces(touches);
-    }
-
-    public static int getTouches() {
-        return touches;
-    }*/
 
     public void playGame(View view) {
         changingActivity = true;
@@ -689,10 +680,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     public void onProductPurchased(String productId, TransactionDetails details) {
         Toast.makeText(this, "Purchase successful", Toast.LENGTH_LONG).show();
-        bp.consumePurchase("android.test.purchased");
 
-        storage.addGems(50);
-        gems.setText(storage.getTotalGems() + "");
+        //if(productId == noAds)
+        storage.setNoAds(true);
     }
 
     @Override
