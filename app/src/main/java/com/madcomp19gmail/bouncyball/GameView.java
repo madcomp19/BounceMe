@@ -13,6 +13,7 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,6 +38,8 @@ public class GameView extends View
     private DisplayMetrics displayMetrics = new DisplayMetrics();
     public static int width;
     public static int height;
+
+    //private TextView coins_label;
 
 
     private final int TICKS_PER_SECOND = 50;
@@ -129,6 +132,8 @@ public class GameView extends View
         ball_img = getResizedBitmap(ball_img, (int) attributes.radius * 2, (int) attributes.radius * 2);
 
         balls.add(new Ball(width / 2, height / 2, attributes, ball_img, selected_trail, selected_sound));
+
+        //coins_label = (TextView) findViewById(R.id.coins_score_label);
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
@@ -298,10 +303,14 @@ public class GameView extends View
                     //if(boost == 10 || boost == 50)
                         //boost /= 2;
 
-                    if (drop.type == 1)
+                    if (drop.type == 1) {
                         GameWorld.addTouches(drop.value);
-                    else if (drop.type == 0)
+                        GameWorld.updateCoinsLabel(GameWorld.getTouches() - MainMenu.getPrevTouches());
+                    }
+                    else if (drop.type == 0) {
                         GameWorld.addGems(drop.value);
+                        GameWorld.updateGemsLabel(GameWorld.getGems());
+                    }
 
                     drops.remove(drop);
                 }
@@ -324,27 +333,12 @@ public class GameView extends View
         for(Ball ball : balls)
             ball.display(canvas);
 
-        p.setColor(Color.WHITE);
-        p.setTextAlign(Paint.Align.RIGHT);
-        p.setTextSize(56);
-        canvas.drawText(GameWorld.getTouches() - MainMenu.getPrevTouches() + "", width - 80, 50, p);
-        canvas.drawBitmap(coin_img, width - 60, 5, null);
-
-        int gems = GameWorld.getGems();
-        if(gems >= 0)
-        {
-            canvas.drawText(gems + "", width - 80, 130, p);
-            canvas.drawBitmap(gem_icon, width - 60, 85, null);
-        }
-
         long boost_time = storageManager.getActiveBoostTime() - Calendar.getInstance().getTimeInMillis();
 
         if(boost_time >= 0)
         {
             int boost = storageManager.getActiveBoost();
 
-            p.setTextAlign(Paint.Align.LEFT);
-            p.setTextSize(56);
             Calendar time = Calendar.getInstance();
             time.setTimeInMillis(boost_time);
 
@@ -357,43 +351,9 @@ public class GameView extends View
             else if(millisecond.length() == 2)
                 millisecond = "0" + millisecond;
 
-            //canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 150, 90, p);
-
-            switch (boost)
-            {
-                case 2:
-                    p.setColor(Color.argb(255, 255, 255, 0));
-                    canvas.drawBitmap(boost_2x_img, 5, 5, null);
-                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 150, 90, p);
-                    break;
-                case 5:
-                    p.setColor(Color.argb(255, 255, 165, 0));
-                    canvas.drawBitmap(boost_5x_img, 5, 5, null);
-                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 150, 90, p);
-                    break;
-                case 10:
-                    p.setColor(Color.argb(255, 255, 0, 0));
-                    canvas.drawBitmap(boost_10x_img, 5, 5, null);
-                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 230, 90, p);
-                    break;
-                case 50:
-                    p.setColor(Color.argb(255, 204, 0, 197));
-                    canvas.drawBitmap(boost_50x_img, 5, 5, null);
-                    canvas.drawText(time.get(Calendar.MINUTE) + ":" + second + "." + millisecond, 230, 90, p);
-                    break;
-            }
-        }
-
-
-        /*long timePassed = System.currentTimeMillis() - previous_display_tick;
-        previous_display_tick = System.currentTimeMillis();
-
-        if(randomWithRange(0, 101) < 10 || fps == -1)
-        {
-            fps = (int) Math.floor(1000 / timePassed);
-            canvas.drawText(fps + "", width - 100, 50, p);
+            GameWorld.updateActiveBoost(boost, time.get(Calendar.MINUTE) + ":" + second + "." + millisecond);
         }
         else
-            canvas.drawText(fps + "", width - 100, 50, p);*/
+            GameWorld.updateActiveBoost(1, null);
     }
 }

@@ -1,11 +1,12 @@
 package com.madcomp19gmail.bouncyball;
 
+import android.graphics.Color;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.squareup.seismic.ShakeDetector;
@@ -29,6 +30,13 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     private static int total_bounces_ever;
     private static int gems;
 
+    private static TextView coins_label;
+    private static TextView gems_label;
+    private static TextView timer_label;
+    private static ImageView coins_image;
+    private static ImageView gems_image;
+    private static ImageView active_boost;
+
     ImageView game_background;
 
     @Override
@@ -43,6 +51,26 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         // Get the game background image view
         game_background = findViewById(R.id.game_background);
         gameView = findViewById(R.id.game_view);
+
+        //Get the drops labels
+        coins_label = (TextView) findViewById(R.id.coins_label);
+        gems_label = (TextView) findViewById(R.id.gems_label);
+        timer_label = (TextView) findViewById(R.id.timer_label);
+        coins_image = (ImageView) findViewById(R.id.coins_image);
+        gems_image = (ImageView) findViewById(R.id.gems_image);
+        active_boost = (ImageView) findViewById(R.id.active_boost);
+
+        coins_label.getBackground().setAlpha(150);
+        gems_label.getBackground().setAlpha(150);
+        timer_label.getBackground().setAlpha(150);
+        active_boost.getBackground().setAlpha(150);
+
+        coins_label.bringToFront();
+        gems_label.bringToFront();
+        timer_label.bringToFront();
+        coins_image.bringToFront();
+        gems_image.bringToFront();
+        active_boost.bringToFront();
 
         // Load the background into that view
         int selected_background = storageManager.getSelectedBackground();
@@ -140,6 +168,59 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         storageManager.addGems(gems);
     }
 
+    public static void updateCoinsLabel(int coins)
+    {
+        coins_label.setText(coins + "");
+    }
+
+    public static void updateGemsLabel(int gems)
+    {
+        gems_label.setAlpha(1f);
+        gems_label.setText(gems + "");
+        gems_image.setAlpha(1f);
+    }
+
+    public static void updateActiveBoost(int boost, String timer)
+    {
+        active_boost.setAlpha(1f);
+        active_boost.getBackground().setAlpha(150);
+
+        switch (boost)
+        {
+            case 1:
+                active_boost.setAlpha(0);
+                active_boost.getBackground().setAlpha(0);
+                timer_label.setTextColor(Color.argb(255, 255, 255, 255));
+                break;
+            case 2:
+                active_boost.setImageResource(R.drawable.boosts_2x_icon);
+                timer_label.setTextColor(Color.argb(255, 255, 255, 0));
+                break;
+            case 5:
+                active_boost.setImageResource(R.drawable.boosts_5x_icon);
+                timer_label.setTextColor(Color.argb(255, 255, 165, 0));
+                break;
+            case 10:
+                active_boost.setImageResource(R.drawable.boosts_10x_icon);
+                timer_label.setTextColor(Color.argb(255, 255, 0, 0));
+                break;
+            case 50:
+                active_boost.setImageResource(R.drawable.boosts_50x_icon);
+                timer_label.setTextColor(Color.argb(255, 204, 0, 197));
+                break;
+            default:
+                break;
+        }
+
+        if(timer == null) {
+            timer_label.setAlpha(0f);
+            return;
+        }
+
+        timer_label.setAlpha(1f);
+        timer_label.setText(timer);
+    }
+
     public static void addTouches(int t)
     {
         touches += t;
@@ -181,10 +262,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
             else
                 gameView.spawnCoin(position, value);
         }
-//        if(Math.random() * 100 < 1)
-//            gameView.addGems(position);
-//        else
-//            gameView.spawnCoin(position);
     }
 
     public static int getTouches()
