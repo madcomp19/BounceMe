@@ -166,7 +166,11 @@ public class BoostShop extends AppCompatActivity {
 
             }, 0, 1000);
         } else
-            Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();
+        {
+            BuyGemsDialog dialog = new BuyGemsDialog(this);
+            dialog.Show();
+        }
+            //Toast.makeText(this, "You need " + (price - total_gems) + " more Gems!", Toast.LENGTH_LONG).show();
     }
 
     public void updateLabel() {
@@ -219,5 +223,17 @@ public class BoostShop extends AppCompatActivity {
             }
 
         }, 0, 1000);
+    }
+
+    public void buyCoins(View view)
+    {
+        BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+        dialog.Show();
+    }
+
+    public void buyGems(View view)
+    {
+        BuyGemsDialog dialog = new BuyGemsDialog(this);
+        dialog.Show();
     }
 }
