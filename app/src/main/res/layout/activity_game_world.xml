@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/coins_image"
+        android:id="@+id/coin_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -31,7 +31,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/coin_icon"
         app:layout_constraintBottom_toBottomOf="@+id/coins_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -55,13 +54,13 @@
         app:layout_constraintTop_toBottomOf="@+id/coins_label" />
 
     <ImageView
-        android:id="@+id/gems_image"
+        android:id="@+id/gem_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:background="@drawable/gem_icon"
         android:alpha="0"
+        android:background="@drawable/gem_icon"
         app:layout_constraintBottom_toBottomOf="@+id/gems_label"
         app:layout_constraintStart_toEndOf="@+id/gems_label"
         app:layout_constraintTop_toTopOf="@+id/gems_label" />
@@ -74,7 +73,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:alpha="0"
-        android:src="@drawable/boosts_2x_icon"
         android:background="@drawable/rounded_button6_vector"
         android:paddingTop="5dp"
         android:paddingLeft="8dp"

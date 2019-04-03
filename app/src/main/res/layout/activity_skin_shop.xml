@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/coins" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/gem_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -96,7 +96,7 @@
         android:background="@drawable/add_icon_vector"
         android:onClick="buyGems"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="@+id/gem_icon" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
