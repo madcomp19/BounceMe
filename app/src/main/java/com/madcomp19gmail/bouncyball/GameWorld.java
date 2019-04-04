@@ -19,10 +19,6 @@ import java.util.Calendar;
 public class GameWorld extends AppCompatActivity implements ShakeDetector.Listener {
 
     static GameView gameView;
-    //public static MediaPlayer mediaPlayer;
-    /*SoundPool soundPool;
-    HashMap<Integer, Integer> soundPoolMap;
-    int soundID = 1;*/
 
     private static final int background_music_id = R.raw.background_music_2;
 
@@ -58,7 +54,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         game_background = findViewById(R.id.game_background);
         gameView = findViewById(R.id.game_view);
 
-        //Get the drops labels
+        // Get the UI labels
         coins_label = (TextView) findViewById(R.id.coins_label);
         gems_label = (TextView) findViewById(R.id.gems_label);
         timer_label = (TextView) findViewById(R.id.timer_label);
@@ -66,13 +62,16 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         gems_image = (ImageView) findViewById(R.id.gem_icon);
         active_boost = (ImageView) findViewById(R.id.active_boost);
 
+        // Set the backgrounds transparency
         coins_label.getBackground().setAlpha(150);
         gems_label.getBackground().setAlpha(150);
         timer_label.getBackground().setAlpha(150);
         active_boost.getBackground().setAlpha(150);
 
+        // Load the coin image into the view
         Glide.with(this).load(R.drawable.coin_icon).into(coins_image);
 
+        // Bring all the UI elements to the front (get drawn after the GameView)
         coins_label.bringToFront();
         gems_label.bringToFront();
         timer_label.bringToFront();
@@ -82,11 +81,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
         // Load the background into that view
         int selected_background = storageManager.getSelectedBackground();
-        //selected_background = R.drawable.background_40;
-
-
-        //gameView.setBackgroundResource(selected_background);
-
         Glide.with(this).load(selected_background).centerCrop().into(game_background);
 
         // Make it fullscreen
@@ -99,9 +93,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         sd.start(sensorManager);
         sd.setSensitivity(11);
 
-
-        //StorageManager.initialize(this);
-        //storageManager = StorageManager.getInstance();
+        // Get the bounces count from storage
         touches = storageManager.getTotalBounces();
         total_bounces_ever = storageManager.getTotalBouncesEver();
         gems  = 0;
@@ -120,13 +112,11 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
     protected void onResume() {
         super.onResume();
 
+        // Load the background (might be different - player might have gone to the background shop)
         int selected_background = storageManager.getSelectedBackground();
-        //int selected_background = R.drawable.background_22;
-
-        //gameView.setBackgroundResource(selected_background);
-
         Glide.with(this).load(selected_background).centerCrop().into(game_background);
 
+        // Setup audio
         if(storageManager.getGameMusicSetting() != 0)
         {
             mediaPlayerManager.pause();
@@ -190,8 +180,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
     public static void updateActiveBoost(int boost, String timer)
     {
-        int a = 1;
-
         if(boost == 1)
         {
             if(active_boost.getAlpha() == 1f)
@@ -218,22 +206,18 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
                 switch (boost) {
                     case 2:
                         Glide.with(context).load(R.drawable.boosts_2x_icon).into(active_boost);
-                        //active_boost.setImageResource(R.drawable.boosts_2x_icon);
                         timer_label.setTextColor(Color.argb(255, 255, 255, 0));
                         break;
                     case 5:
                         Glide.with(context).load(R.drawable.boosts_5x_icon).into(active_boost);
-                        //active_boost.setImageResource(R.drawable.boosts_5x_icon);
                         timer_label.setTextColor(Color.argb(255, 255, 165, 0));
                         break;
                     case 10:
                         Glide.with(context).load(R.drawable.boosts_10x_icon).into(active_boost);
-                        //active_boost.setImageResource(R.drawable.boosts_10x_icon);
                         timer_label.setTextColor(Color.argb(255, 255, 0, 0));
                         break;
                     case 50:
                         Glide.with(context).load(R.drawable.boosts_50x_icon).into(active_boost);
-                        //active_boost.setImageResource(R.drawable.boosts_50x_icon);
                         timer_label.setTextColor(Color.argb(255, 204, 0, 197));
                         break;
                     default:
@@ -245,54 +229,6 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
             else
                 timer_label.setText(timer);
         }
-        /*switch (boost)
-        {
-            //case 1:
-                //active_boost.setAlpha(0);
-                //active_boost.setVisibility(View.INVISIBLE);
-                //active_boost.getBackground().setAlpha(0);
-                //timer_label.setTextColor(Color.argb(255, 255, 255, 255));
-                //break;
-            case 2:
-                active_boost.setImageResource(R.drawable.boosts_2x_icon);
-                active_boost.setVisibility(View.VISIBLE);
-                //active_boost.getBackground().setAlpha(150);
-
-                timer_label.setTextColor(Color.argb(255, 255, 255, 0));
-
-                timer_label.setVisibility(View.VISIBLE);
-                timer_label.setText(timer);
-                break;
-            case 5:
-                active_boost.setImageResource(R.drawable.boosts_5x_icon);
-                timer_label.setTextColor(Color.argb(255, 255, 165, 0));
-                active_boost.setVisibility(View.VISIBLE);
-                //active_boost.getBackground().setAlpha(150);
-
-                timer_label.setVisibility(View.VISIBLE);
-                timer_label.setText(timer);
-                break;
-            case 10:
-                active_boost.setImageResource(R.drawable.boosts_10x_icon);
-                timer_label.setTextColor(Color.argb(255, 255, 0, 0));
-                active_boost.setVisibility(View.VISIBLE);
-                //active_boost.getBackground().setAlpha(150);
-
-                timer_label.setVisibility(View.VISIBLE);
-                timer_label.setText(timer);
-                break;
-            case 50:
-                active_boost.setImageResource(R.drawable.boosts_50x_icon);
-                timer_label.setTextColor(Color.argb(255, 204, 0, 197));
-                active_boost.setVisibility(View.VISIBLE);
-                //active_boost.getBackground().setAlpha(150);
-
-                timer_label.setVisibility(View.VISIBLE);
-                timer_label.setText(timer);
-                break;
-            default:
-                break;
-        }*/
     }
 
     public static void addTouches(int t)

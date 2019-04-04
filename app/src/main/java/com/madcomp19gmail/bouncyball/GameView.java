@@ -21,7 +21,6 @@ import java.util.Calendar;
 public class GameView extends View
 {
     ArrayList<Ball> balls;
-    //float ball_radius;
 
     static ArrayList<Drop> drops;
     float coin_radius;
@@ -33,28 +32,19 @@ public class GameView extends View
     Bitmap coin_50x_img;
     Bitmap gem_img;
     Bitmap gem_icon;
-    Bitmap boost_2x_img, boost_5x_img, boost_10x_img, boost_50x_img;
 
     private DisplayMetrics displayMetrics = new DisplayMetrics();
     public static int width;
     public static int height;
 
-    //private TextView coins_label;
-
 
     private final int TICKS_PER_SECOND = 50;
     private final int SKIP_TICKS = 1000 / TICKS_PER_SECOND;
     private final int MAX_FRAMESKIP = 5;
-    private int fps = -1;
 
     private long next_game_tick = System.currentTimeMillis();
-    private long previous_display_tick = System.currentTimeMillis();
     int loops;
     float interpolation;
-
-    boolean isRunning = true;
-
-    Paint p;
 
     StorageManager storageManager;
 
@@ -71,7 +61,6 @@ public class GameView extends View
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
 
-        //ball_radius = 50;
         // Outer min's should take effect in high resolution screens - values not tested
         coin_radius = Math.min(Math.max(width * 0.025f, 5f), 40f);
         gem_radius = Math.min(Math.max(width * 0.05f, 10f), 80f);
@@ -103,20 +92,6 @@ public class GameView extends View
         gem_icon = BitmapFactory.decodeResource(res, R.drawable.gem_icon);
         gem_icon = getResizedBitmap(gem_icon, (int) coin_radius * 2, (int) coin_radius * 2);
 
-        boost_2x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_2x_icon);
-        //boost_2x_img = getResizedBitmap(boost_2x_img, 50, 48);
-
-        boost_5x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_5x_icon);
-        //boost_5x_img = getResizedBitmap(boost_5x_img, 25, 24);
-
-        boost_10x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_10x_icon);
-        //boost_10x_img = getResizedBitmap(boost_10x_img, 39, 24);
-
-        boost_50x_img = BitmapFactory.decodeResource(res, R.drawable.boosts_50x_icon);
-        //boost_50x_img = getResizedBitmap(boost_50x_img, 42, 24);
-
-        p = new Paint();
-
         int selected_skin = StorageManager.getInstance().getSelectedSkin();
         int selected_trail = StorageManager.getInstance().getSelectedTrail();
         int selected_sound = StorageManager.getInstance().getSelectedSound();
@@ -128,13 +103,11 @@ public class GameView extends View
         else
             ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
 
-        BallAttributes attributes = new BallAttributes(storageManager.getSelectedBall(), width, height);
+        BallAttributes attributes = new BallAttributes(storageManager.getSelectedBall(), width);
 
         ball_img = getResizedBitmap(ball_img, (int) attributes.radius * 2, (int) attributes.radius * 2);
 
         balls.add(new Ball(width / 2, height / 2, attributes, ball_img, selected_trail, selected_sound));
-
-        //coins_label = (TextView) findViewById(R.id.coins_score_label);
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
@@ -241,27 +214,6 @@ public class GameView extends View
 
     protected void onDraw(Canvas c)
     {
-        /*for(Ball ball : balls)
-        {
-            ball.move();
-            ball.display(c);
-        }
-
-        Paint p = new Paint();
-        p.setColor(Color.WHITE);
-        p.setTextAlign(Paint.Align.CENTER);
-        p.setTextSize(64);
-        c.drawText(GameWorld.getTouches() - MainMenu.getPrevTouches() + "", width / 2, 50, p);
-
-
-
-        postInvalidateDelayed(1000/90);*/
-
-        //while(isRunning)
-        //{
-
-
-
         loops = 0;
 
         while (System.currentTimeMillis() > next_game_tick && loops < MAX_FRAMESKIP)
@@ -275,7 +227,6 @@ public class GameView extends View
         interpolation = ((float) System.currentTimeMillis() + SKIP_TICKS - next_game_tick) / (float) SKIP_TICKS;
 
         displayGame(c, interpolation);
-        //}
 
         postInvalidate();
     }
@@ -297,13 +248,6 @@ public class GameView extends View
 
                 if(dist <= ball.attributes.radius + drop.radius && drop.health < 1)
                 {
-                    //drops.remove(drop);
-
-                    //int boost = storageManager.getActiveBoost();
-
-                    //if(boost == 10 || boost == 50)
-                        //boost /= 2;
-
                     if (drop.type == 1) {
                         GameWorld.addTouches(drop.value);
                         GameWorld.updateCoinsLabel(GameWorld.getTouches() - MainMenu.getPrevTouches());

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bouncy Ball</string>
+    <string name="app_name">Bounce It Up</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="shared_prefs_filename">MyFile</string>
     <string name="consecutive_days_daily_challenge">ConsecutiveDays</string>

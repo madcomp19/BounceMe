@@ -61,8 +61,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private DisplayMetrics metrics;
     private int width, height;
 
-    private final String default_ball = "3_2_3_4";
-    private final int default_ball_label = R.id.b_3_2_3_4_Label;
+    private final String default_ball = "3_1_3_3";
+    private final int default_ball_label = R.id.b_3_1_3_3_Label;
     private final int default_skin = R.drawable.emoji_0;
     private final int default_skin_label = R.id.emoji_0_Label;
     private final int default_sound = 0;
