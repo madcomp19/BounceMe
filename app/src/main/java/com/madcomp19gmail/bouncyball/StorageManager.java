@@ -488,6 +488,16 @@ public class StorageManager {
         editor.commit();
     }
 
+    public int getBallPageNumber() {
+        return prefs.getInt("BallPageNumber", 0);
+    }
+
+    public void setBallPageNumber(int n) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("BallPageNumber", n);
+        editor.commit();
+    }
+
     public int getSkinPageNumber() {
         return prefs.getInt("SkinPageNumber", 0);
     }
@@ -528,27 +538,23 @@ public class StorageManager {
         return prefs.getInt(context.getString(R.string.selected_boost_label), 0);
     }
 
-    public void setSelectedBall(String ball)
-    {
+    public void setSelectedBall(String ball) {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(context.getString(R.string.selected_ball), ball);
         editor.commit();
     }
 
-    public void setSelectedBallLabel(int label)
-    {
+    public void setSelectedBallLabel(int label) {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(context.getString(R.string.selected_ball_label), label);
         editor.commit();
     }
 
-    public String getSelectedBall()
-    {
+    public String getSelectedBall() {
         return prefs.getString(context.getString(R.string.selected_ball), "0_0_0_0");
     }
 
-    public int getSelectedBallLabel()
-    {
+    public int getSelectedBallLabel() {
         return prefs.getInt(context.getString(R.string.selected_ball_label), 0);
     }
 
@@ -565,8 +571,7 @@ public class StorageManager {
         editor.commit();
     }
 
-    public void addOwnedBallLabel(int label)
-    {
+    public void addOwnedBallLabel(int label) {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_balls_labels), new HashSet<String>());
 
         if (set.contains(Integer.toString(label)))
@@ -603,15 +608,13 @@ public class StorageManager {
 
     //No Ads
     //region
-    public void setNoAds(boolean bool)
-    {
+    public void setNoAds(boolean bool) {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean("NoAds", bool);
         editor.commit();
     }
 
-    public boolean getNoAds()
-    {
+    public boolean getNoAds() {
         return prefs.getBoolean("NoAds", false);
     }
     //endregion

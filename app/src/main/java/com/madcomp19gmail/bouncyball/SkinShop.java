@@ -32,7 +32,7 @@ public class SkinShop extends FragmentActivity {
         storageManager = StorageManager.getInstance();
         ViewPager viewPager = findViewById(R.id.pager);
         viewPager.setOffscreenPageLimit(2);
-        SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
+        SwipeAdapterSkins swipeAdapter = new SwipeAdapterSkins(getSupportFragmentManager());
         viewPager.setAdapter(swipeAdapter);
         viewPager.setCurrentItem(storageManager.getSkinPageNumber());
 
@@ -48,7 +48,7 @@ public class SkinShop extends FragmentActivity {
             mediaPlayerManager.play();
         }*/
 
-        if(!storageManager.getNoAds()) {
+        if (!storageManager.getNoAds()) {
             AdRequest adRequest = new AdRequest.Builder().build();
             ((AdView) findViewById(R.id.bannerAdTrailShop)).loadAd(adRequest);
         }
@@ -89,7 +89,6 @@ public class SkinShop extends FragmentActivity {
     public void onClickSkin(View view) {
         String view_id = view.getResources().getResourceEntryName(view.getId());
         view_id = view_id.split("_Label")[0].split("_Button")[0];
-        //Log.i("TEST", view_id);
 
         int skin_id = this.getResources().getIdentifier(view_id, "drawable", getPackageName());
         int label_id = this.getResources().getIdentifier(view_id + "_Label", "id", getPackageName());
@@ -97,20 +96,10 @@ public class SkinShop extends FragmentActivity {
         String temp_string = view.getResources().getResourceEntryName(temp_id);
         int pageNumber_temp = Integer.parseInt(temp_string.split("_")[0].split("linearLayoutSkins")[1]);
 
-
-        //region
-        /*Log.i("skin", view_id);
-        Log.i("label", view_id + "_Label");
-        Log.i("skin_id", Integer.toString(skin_id));
-        Log.i("label_id", Integer.toString(label_id));
-        Log.i("res_id", Integer.toString(view.getId()));*/
-        //endregion
-
         buyOrSetSkin(skin_id, label_id, pageNumber_temp - 1);
     }
 
     public void buyOrSetSkin(int skin_id, int label_id, int pageNumber) {
-        StorageManager storageManager = StorageManager.getInstance();
         int selectedLabelId = storageManager.getSelectedSkinLabel();
         TextView new_label = findViewById(label_id);
         TextView old_label = findViewById(selectedLabelId);
@@ -164,23 +153,20 @@ public class SkinShop extends FragmentActivity {
                 coins.setText(storageManager.getTotalBounces() + "");
 
                 SoundPoolManager.getInstance().playSound();
-            } else
-            {
+            } else {
                 BuyCoinsDialog dialog = new BuyCoinsDialog(this);
                 dialog.Show();
             }
-                //Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void buyCoins(View view)
-    {
+    public void buyCoins(View view) {
         BuyCoinsDialog dialog = new BuyCoinsDialog(this);
         dialog.Show();
     }
 
-    public void buyGems(View view)
-    {
+    public void buyGems(View view) {
         BuyGemsDialog dialog = new BuyGemsDialog(this);
         dialog.Show();
     }

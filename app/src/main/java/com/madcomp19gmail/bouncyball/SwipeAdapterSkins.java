@@ -5,9 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class SwipeAdapter extends FragmentStatePagerAdapter {
+public class SwipeAdapterSkins extends FragmentStatePagerAdapter {
 
-    public SwipeAdapter(FragmentManager fm) {
+    public SwipeAdapterSkins(FragmentManager fm) {
         super(fm);
     }
 
