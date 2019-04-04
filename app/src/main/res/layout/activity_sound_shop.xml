@@ -616,7 +616,7 @@
                     android:onClick="onClickSound" />
 
                 <ImageButton
-                    android:id="@+id/coin_icon_Button"
+                    android:id="@+id/trigger_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -691,7 +691,7 @@
                     android:textColor="#FFF" />
 
                 <TextView
-                    android:id="@+id/coin_icon_Label"
+                    android:id="@+id/trigger_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -880,7 +880,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
 
                 <ImageButton
-                    android:id="@+id/hagay_Button"
+                    android:id="@+id/ha_gay_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -940,7 +940,7 @@
 
 
                 <TextView
-                    android:id="@+id/hagay_Label"
+                    android:id="@+id/ha_gay_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -1168,7 +1168,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
 
                 <ImageButton
-                    android:id="@+id/trigger_Button"
+                    android:id="@+id/coin_icon_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -1228,7 +1228,7 @@
 
 
                 <TextView
-                    android:id="@+id/trigger_Label"
+                    android:id="@+id/coin_icon_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -68,7 +68,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
         timer_label.getBackground().setAlpha(150);
         active_boost.getBackground().setAlpha(150);
 
-        // Load the coin image into the view
+        // Load the coin_icon image into the view
         Glide.with(this).load(R.drawable.coin_icon).into(coins_image);
 
         // Bring all the UI elements to the front (get drawn after the GameView)

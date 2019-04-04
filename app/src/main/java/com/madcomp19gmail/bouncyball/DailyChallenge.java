@@ -171,8 +171,12 @@ public class DailyChallenge extends AppCompatActivity {
         soundId = soundId_temp;
     }
 
-    //turns a string from "sound_name.wav" to "Sound Name"
+    //turns a string from "sound_name" to "Sound Name"
     private String formatStringUnderscore(String str) {
+
+        if(str == "coin_icon")
+            str = "coin";
+
         String[] temp_1 = str.split("\\.")[0].split("_");
         String temp_2 = "";
 

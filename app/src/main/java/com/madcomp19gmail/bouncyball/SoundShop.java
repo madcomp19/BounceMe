@@ -192,7 +192,7 @@ public class SoundShop extends AppCompatActivity {
                     || aSound == R.id.pew_Button || label_id == R.id.pew_Label
                     || aSound == R.id.ricochet_Button || label_id == R.id.ricochet_Label
                     || aSound == R.id.gun_Button || label_id == R.id.gun_Label
-                    || aSound == R.id.trigger_Button || label_id == R.id.trigger_Label)
+                    || aSound == R.id.coin_icon_Button || label_id == R.id.coin_icon_Label)
             {
                 if (total_gems >= price) {
                     storageManager.takeGems(price);
