@@ -19,8 +19,8 @@ public class BallAttributes
     private final float MAX_GRAVITY = 15f;
 
     // Ball radius
-    private final float MIN_RADIUS = 25f;
-    private final float MAX_RADIUS = 50f;
+    private final float MIN_RADIUS;// = 25f;
+    private final float MAX_RADIUS;// = 50f;
 
     float bounce;
     float friction;
@@ -28,8 +28,11 @@ public class BallAttributes
     float radius;
 
 
-    BallAttributes(String attributes)
+    BallAttributes(String attributes, int width, int height)
     {
+        MIN_RADIUS = Math.max(width * 0.025f, 10f);
+        MAX_RADIUS = Math.min(width * 0.05f, 50f);
+
         String[] splits = attributes.split("_");
 
         bounce = map(Integer.parseInt(splits[0]), 1, 4, MIN_BOUNCE, MAX_BOUNCE);

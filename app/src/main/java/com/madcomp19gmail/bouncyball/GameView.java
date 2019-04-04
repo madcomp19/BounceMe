@@ -63,10 +63,6 @@ public class GameView extends View
 
         storageManager = StorageManager.getInstance();
 
-        //ball_radius = 50;
-        coin_radius = 25;
-        gem_radius = 50;
-
         ((Activity) getContext()).getWindowManager()
                 .getDefaultDisplay()
                 .getMetrics(displayMetrics);
@@ -74,6 +70,11 @@ public class GameView extends View
 
         height = displayMetrics.heightPixels;
         width = displayMetrics.widthPixels;
+
+        //ball_radius = 50;
+        // Outer min's should take effect in high resolution screens - values not tested
+        coin_radius = Math.min(Math.max(width * 0.025f, 5f), 40f);
+        gem_radius = Math.min(Math.max(width * 0.05f, 10f), 80f);
 
         balls = new ArrayList<>();
 
@@ -127,7 +128,7 @@ public class GameView extends View
         else
             ball_img = BitmapFactory.decodeResource(res, R.drawable.eye);
 
-        BallAttributes attributes = new BallAttributes(storageManager.getSelectedBall());
+        BallAttributes attributes = new BallAttributes(storageManager.getSelectedBall(), width, height);
 
         ball_img = getResizedBitmap(ball_img, (int) attributes.radius * 2, (int) attributes.radius * 2);
 
