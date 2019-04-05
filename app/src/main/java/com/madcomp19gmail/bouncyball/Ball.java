@@ -93,7 +93,12 @@ public class Ball
 
         if (position.x >= rightLimit) {
             position.x = rightLimit - 1;
-            applyForce(new Vector2(velocity.x * attributes.bounce, 0));
+
+            if(attributes.type != 2)
+                applyForce(new Vector2(velocity.x * attributes.bounce, 0));
+            else
+                applyForce(new Vector2(- velocity.x * attributes.bounce, 0));
+
             velocity.x *= -1;
             playSound();
 
@@ -104,7 +109,12 @@ public class Ball
         }
         if (position.x <= attributes.radius) {
             position.x = attributes.radius + 1;
-            applyForce(new Vector2(velocity.x * attributes.bounce, 0));
+
+            if(attributes.type != 2)
+                applyForce(new Vector2(velocity.x * attributes.bounce, 0));
+            else
+                applyForce(new Vector2(- velocity.x * attributes.bounce, 0));
+
             velocity.x *= -1;
             playSound();
 
@@ -115,7 +125,12 @@ public class Ball
         }
         if (position.y >= bottomLimit) {
             position.y = bottomLimit;
-            applyForce(new Vector2(0,velocity.y * attributes.bounce));
+
+            if(attributes.type != 2)
+                applyForce(new Vector2(0,velocity.y * attributes.bounce));
+            else
+                applyForce(new Vector2(0,- velocity.y * attributes.bounce));
+
             velocity.y *= -1;
 
             if(Math.abs(prev_velY - velocity.y) > 50f)
@@ -134,7 +149,12 @@ public class Ball
         }
         if (position.y <= attributes.radius) {
             position.y = attributes.radius + 1;
-            applyForce(new Vector2(0,velocity.y * attributes.bounce));
+
+            if(attributes.type != 2)
+                applyForce(new Vector2(0,velocity.y * attributes.bounce));
+            else
+                applyForce(new Vector2(0,- velocity.y * attributes.bounce));
+
             velocity.y *= -1;
             playSound();
 
@@ -142,6 +162,24 @@ public class Ball
 
             if(reactive)
                 trail = new Random().nextInt(361);
+        }
+
+        // If there is a max velocity set and the ball would be travelling faster than that then clip it
+        if(attributes.MAX_VELOCITY > 0)
+        {
+            if(velocity.x > attributes.MAX_VELOCITY || velocity.y > attributes.MAX_VELOCITY)
+            {
+                if (velocity.x > velocity.y)
+                {
+                    velocity.y = (velocity.y * attributes.MAX_VELOCITY) / velocity.x;
+                    velocity.x = attributes.MAX_VELOCITY;
+                }
+                else if (velocity.y > velocity.x)
+                {
+                    velocity.x = (velocity.x * attributes.MAX_VELOCITY) / velocity.y;
+                    velocity.y = attributes.MAX_VELOCITY;
+                }
+            }
         }
 
         // Trail -1 --> clear (no trail)
@@ -190,13 +228,13 @@ public class Ball
 
         if(image != null)
         {
-            if(trail != -1) // clear == -1
+            Paint p = new Paint();
+
+            if(trail != -1 && attributes.type != 3) // clear == -1
             {
                 if(trail == -2) // rainbow
                 {
                     int size = trailPositions.size();
-
-                    Paint p = new Paint();
 
                     for(int i = 0; i < size; i++)
                     {
@@ -224,14 +262,75 @@ public class Ball
                     drawTrail(canvas, trail, 1, 1);
             }
 
+            if(attributes.type == 0)
+            {
+                canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
 
-            canvas.save(); //Saving the canvas and later restoring it so only this image will be rotated.
+                canvas.rotate(angle, position.x, position.y);
 
-            canvas.rotate(angle, position.x, position.y);
+                canvas.drawBitmap(image, position.x - attributes.radius, position.y - attributes.radius, null);
 
-            canvas.drawBitmap(image, position.x - attributes.radius, position.y - attributes.radius, null);
+                canvas.restore();
+            }
+            else if(attributes.type == 1)
+            {
+                float[] values = {iteration, 1, 1}; // hue (0-360) ; saturation (0-1) ; value (0-1)
+                p.setColor(Color.HSVToColor(255, values));
 
-            canvas.restore();
+                canvas.drawCircle(position.x, position.y, attributes.radius, p);
+            }
+            else if(attributes.type == 2)
+            {
+                float[] values = {trail, 1, 1}; // hue (0-360) ; saturation (0-1) ; value (0-1)
+
+                if(values[0] < 0)
+                {
+                    values[0] = 115f;
+                    values[1] = 0.44f;
+                }
+
+                p.setColor(Color.HSVToColor(255, values));
+
+                canvas.drawCircle(position.x, position.y, attributes.radius, p);
+            }
+            else if(attributes.type == 3)
+            {
+                int shades = 10;
+                float[] values = {0, 0, 0};
+
+                for(int i = 0; i < shades; i++)
+                {
+                    p.setColor(Color.HSVToColor(i * 20, values));
+                    canvas.drawCircle(position.x, position.y, attributes.radius - i, p);
+                }
+
+                switch (StorageManager.getInstance().getActiveBoost())
+                {
+                    case 1:
+                        p.setColor(Color.argb(255, 219, 141, 33));
+                        break;
+                    case 2:
+                        p.setColor(Color.argb(255, 255, 218, 0));
+                        break;
+                    case 5:
+                        p.setColor(Color.argb(255, 255, 114, 0));
+                        break;
+                    case 10:
+                        p.setColor(Color.argb(255, 251, 31, 16));
+                        break;
+                    case 50:
+                        p.setColor(Color.argb(255, 185, 0, 112));
+                        break;
+                    default:
+                        break;
+                }
+
+                canvas.drawCircle(position.x, position.y, attributes.radius - shades, p);
+
+                p.setColor(Color.argb(255, 0, 0, 0));
+                canvas.drawCircle(position.x, position.y, attributes.radius - shades - GameView.getDropCount() / 12, p);
+                //canvas.drawCircle(position.x, position.y, attributes.radius - shades - (float) (Math.random() * 10f), p);
+            }
         }
     }
 }

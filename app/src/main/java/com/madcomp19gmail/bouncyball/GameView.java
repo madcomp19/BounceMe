@@ -212,6 +212,11 @@ public class GameView extends View
         drops.add(drop);
     }
 
+    public static int getDropCount()
+    {
+        return drops.size();
+    }
+
     protected void onDraw(Canvas c)
     {
         loops = 0;
@@ -234,7 +239,26 @@ public class GameView extends View
     private void updateGame()
     {
         for(Ball ball : balls)
+        {
             ball.move();
+
+            if(ball.attributes.type == 3 && Math.random() < 0.2f)
+            {
+                Vector2 pos = new Vector2((float) Math.random() * GameView.width, (float) Math.random() * GameView.height);
+
+                if(pos.x <= 50)
+                    pos.x += 50 - pos.x;
+                else if(pos.x >= GameView.width - 50)
+                    pos.x -= pos.x - GameView.width - 50;
+
+                if(pos.y <= 50)
+                    pos.y += 50 - pos.y;
+                else if(pos.y >= GameView.height - 50)
+                    pos.y -= pos.y - GameView.height - 50;
+
+                GameWorld.addDrop(pos);
+            }
+        }
 
         for(int i = drops.size() - 1; i >= 0; i--) {
 
@@ -246,7 +270,7 @@ public class GameView extends View
             {
                 float dist = Vector2.dist(ball.position, drop.position);
 
-                if(dist <= ball.attributes.radius + drop.radius && drop.health < 1)
+                if(dist <= ball.attributes.radius + drop.radius && (drop.health < 1 || ball.attributes.type == 3))
                 {
                     if (drop.type == 1) {
                         GameWorld.addTouches(drop.value);
@@ -259,11 +283,15 @@ public class GameView extends View
 
                     drops.remove(drop);
                 }
-                else if(dist < ball.attributes.radius + drop.radius + 300 && drop.health < 1)
+                else if(dist < ball.attributes.radius + drop.radius + ball.attributes.gravitational_force && (drop.health < 1 || ball.attributes.type == 3))
                 {
                     Vector2 force = Vector2.sub(ball.position, drop.position);
                     force.mult(4f / dist);
                     force.y -= 9.8f;
+
+                    if(ball.attributes.type == 3)
+                        drop.resetVelocity();
+
                     drop.applyForce(force);
                 }
             }

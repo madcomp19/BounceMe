@@ -23,6 +23,6 @@ public class SwipeAdapterBalls extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 9;
+        return 10;
     }
 }

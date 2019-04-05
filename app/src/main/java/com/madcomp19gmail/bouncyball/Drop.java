@@ -121,6 +121,11 @@ public class Drop
         acceleration.add(force);
     }
 
+    public void resetVelocity()
+    {
+        velocity.mult(0);
+    }
+
     public void display(Canvas canvas)
     {
         if(image != null)
