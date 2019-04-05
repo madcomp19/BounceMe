@@ -20,7 +20,7 @@
     <string name="total_gems">TotalGems</string>
     <string name="total_bounces_ever">TotalBouncesEver</string>
     <string name="owned_skins">OwnedSkins</string>
-    <string name="collected_achievements">OwnedSkins</string>
+    <string name="collected_achievements">CollectedAchievements</string>
     <string name="owned_skins_labels">OwnedSkinsLabels</string>
     <string name="owned_trails">OwnedTrails</string>
     <string name="owned_trails_labels">OwnedTrailsLabels</string>

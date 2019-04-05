@@ -106,6 +106,8 @@ public class StorageManager {
         editor.commit();
     }
 
+    //Achievements
+    //region
     public void addCollectedAchievement(int achievement) {
         Set<String> set = prefs.getStringSet(context.getString(R.string.collected_achievements), new HashSet<String>());
 
@@ -115,7 +117,7 @@ public class StorageManager {
         set.add(achievement + "");
 
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putStringSet(context.getString(R.string.owned_skins), set);
+        editor.putStringSet(context.getString(R.string.collected_achievements), set);
         editor.commit();
     }
 
@@ -129,6 +131,13 @@ public class StorageManager {
 
         return collected_achievements;
     }
+
+    public int getNumberOfCollectedAchievements() {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.collected_achievements), new HashSet<String>());
+
+        return set.size();
+    }
+    //endregion
 
     public ArrayList<Integer> getOwnedSkins() {
         Set<String> set = prefs.getStringSet(context.getString(R.string.owned_skins), new HashSet<String>());
@@ -538,6 +547,8 @@ public class StorageManager {
         return prefs.getInt(context.getString(R.string.selected_boost_label), 0);
     }
 
+    //Balls
+    //region
     public void setSelectedBall(String ball) {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(context.getString(R.string.selected_ball), ball);
@@ -605,6 +616,13 @@ public class StorageManager {
 
         return owned_balls_labels;
     }
+
+    public int getNumberOfOwnedBalls() {
+        Set<String> set = prefs.getStringSet(context.getString(R.string.owned_balls), new HashSet<String>());
+
+        return set.size();
+    }
+    //endregion
 
     //No Ads
     //region

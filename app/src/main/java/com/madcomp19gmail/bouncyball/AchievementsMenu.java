@@ -40,7 +40,7 @@ public class AchievementsMenu extends AppCompatActivity {
         bars = new ArrayList<>();
         rewards = new ArrayList<>();
 
-        for(int i=1; i<=24; i++)
+        for(int i=1; i<=28; i++)
         {
             String text = "textView" + i;
             texts.add((TextView) findViewById(getResources().getIdentifier(text, "id", getPackageName())));
@@ -122,6 +122,16 @@ public class AchievementsMenu extends AppCompatActivity {
             bars.get(i).setProgress(storage.getNumberOfOwnedBackgrounds());
         }
 
+        for(int i = 24; i < 27; i++)
+        {
+            bars.get(i).setProgress(storage.getNumberOfOwnedBalls());
+        }
+
+        for(int i = 27; i < 28; i++)
+        {
+            bars.get(i).setProgress(storage.getNumberOfCollectedAchievements());
+        }
+
         int i = 0;
 
         for(TextView text : texts)
@@ -140,6 +150,12 @@ public class AchievementsMenu extends AppCompatActivity {
 
             if(text.getText().toString().contains("Backgrounds"))
                 text.setText(bars.get(i).getProgress() + "/" + bars.get(i).getMax() + " Backgrounds");
+
+            if(text.getText().toString().contains("Balls"))
+                text.setText(bars.get(i).getProgress() + "/" + bars.get(i).getMax() + " Balls");
+
+            if(text.getText().toString().contains("Achievements"))
+                text.setText(bars.get(i).getProgress() + "/" + bars.get(i).getMax() + " Achievements");
 
             i++;
         }
@@ -200,6 +216,7 @@ public class AchievementsMenu extends AppCompatActivity {
             case "reward16":
             case "reward19":
             case "reward22":
+            case "reward25":
                 gems = 5;
                 break;
             case "reward7":
@@ -209,6 +226,7 @@ public class AchievementsMenu extends AppCompatActivity {
                 break;
             case "reward20":
             case "reward23":
+            case "reward26":
                 gems = 20;
                 break;
             case "reward18":
@@ -218,11 +236,13 @@ public class AchievementsMenu extends AppCompatActivity {
             case "reward15":
             case "reward21":
             case "reward24":
+            case "reward27":
                 gems = 50;
                 break;
             case "reward9":
                 gems = 100;
                 break;
+            //case "reward28": Easter egg?
             default:
                 gems = 0;
                  break;
@@ -231,12 +251,15 @@ public class AchievementsMenu extends AppCompatActivity {
 
         if (reward.getText() == "COLLECT")
         {
+            storage.addCollectedAchievement(reward.getId());
             storage.addGems(gems);
             Toast.makeText(this, "You won " + gems + " Gems", Toast.LENGTH_LONG).show();
             reward.setText("COLLECTED");
             reward.setBackgroundResource(R.drawable.rounded_corners3_vector);
             reward.setTextColor(Color.WHITE);
-            storage.addCollectedAchievement(reward.getId());
+            
+            updateProgressBars();
+            updateRewardText();
             return;
         }
 
