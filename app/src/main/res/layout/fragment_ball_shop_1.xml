@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
@@ -51,15 +51,15 @@
             <LinearLayout
                 android:id="@+id/linearLayoutBalls1_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/b_1_1_1_1_Label"
                     android:layout_width="0dp"
@@ -103,12 +103,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/b_1_1_2_1_Button"
                     android:layout_width="50dp"
@@ -134,15 +134,15 @@
             <LinearLayout
                 android:id="@+id/linearLayoutBalls1_4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/b_1_1_2_1_Label"
                     android:layout_width="0dp"
@@ -186,12 +186,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <ImageButton
                     android:id="@+id/b_1_1_3_1_Button"
                     android:layout_width="50dp"
@@ -217,15 +217,15 @@
             <LinearLayout
                 android:id="@+id/linearLayoutBalls1_6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp" > 
+                android:padding="0dp" >
                 <TextView
                     android:id="@+id/b_1_1_3_1_Label"
                     android:layout_width="0dp"

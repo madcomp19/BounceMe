@@ -563,7 +563,7 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="5"
+                        android:max="10"
                         android:progress="1"
                         android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
@@ -573,7 +573,7 @@
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="1/5 Skins"
+                        android:text="1/10 Skins"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
@@ -611,7 +611,7 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="10"
+                        android:max="25"
                         android:progress="6"
                         android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
@@ -621,7 +621,7 @@
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="6/10 Skins"
+                        android:text="6/25 Skins"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
@@ -658,17 +658,17 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="25"
+                        android:max="50"
                         android:progress="10"
                         android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView12"
-                        android:layout_width="55dp"
+                        android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="10/25 Skins"
+                        android:text="10/50 Skins"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
@@ -689,7 +689,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
                         android:onClick="rewardClick"
-                        android:text="5 Gems"
+                        android:text="10 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -724,17 +724,17 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="50"
+                        android:max="100"
                         android:progress="35"
                         android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
                     <TextView
                         android:id="@+id/textView13"
-                        android:layout_width="55dp"
+                        android:layout_width="60dp"
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="35/50 Skins"
+                        android:text="35/100 Skins"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
@@ -755,7 +755,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
                         android:onClick="rewardClick"
-                        android:text="5 Gems"
+                        android:text="15 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
 
@@ -773,7 +773,7 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="100"
+                        android:max="250"
                         android:progress="70"
                         android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
@@ -783,7 +783,7 @@
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="70/100 Skins"
+                        android:text="70/250 Skins"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
@@ -804,7 +804,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/rounded_corners_vector"
                         android:onClick="rewardClick"
-                        android:text="10 Gems"
+                        android:text="20 Gems"
                         android:textAlignment="center"
                         android:textColor="#FFF" />
                 </RelativeLayout>
@@ -820,7 +820,7 @@
                         android:layout_height="110dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
-                        android:max="250"
+                        android:max="502"
                         android:progress="100"
                         android:progressDrawable="@drawable/ring_progress_bar_vector" />
 
@@ -830,7 +830,7 @@
                         android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="100/250 Skins"
+                        android:text="100/502 Skins"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
