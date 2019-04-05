@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -78,12 +79,12 @@ public class SoundShop extends AppCompatActivity {
 
             if (v instanceof ImageButton) {
 
-                if(v.getId() == R.id.play_icon_vector)
-                    continue;
-
                 ImageButton imageButton = (ImageButton) v;
 
                 String id = getResources().getResourceName(imageButton.getId()).split("/")[1].replace("_Button", "");
+
+                if(id.equals("play_icon_vector"))
+                    continue;
 
                 int image_id = getResources().getIdentifier(id, "drawable", getPackageName());
 
