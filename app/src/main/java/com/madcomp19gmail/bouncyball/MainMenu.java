@@ -206,7 +206,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     protected void onResume() {
         super.onResume();
-        //StorageManager.getInstance().setTotalBounces(touches);
+
         mediaPlayerManager.changeVolume(1.0f);
 
         if (prev_act_GameWorld) {
@@ -634,6 +634,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     //region
     public void buyCoins(View view) {
 
+        SoundPoolManager.getInstance().loadSound(R.raw.cash);
         BuyCoinsDialog dialog = new BuyCoinsDialog(this);
         dialog.Show();
     }
