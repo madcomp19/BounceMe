@@ -22,6 +22,8 @@ public class ShopMenu extends AppCompatActivity {
 
     private AdView mAdView;
 
+    private View view;
+
     private StorageManager storage;
     private MediaPlayerManager mediaPlayerManager;
     TextView coins;
@@ -81,6 +83,9 @@ public class ShopMenu extends AppCompatActivity {
             mediaPlayerManager.pause();
 
         SoundPoolManager.getInstance().loadSound(R.raw.cash);
+
+        if(view != null)
+            view.setEnabled(true);
     }
 
     @Override
@@ -102,6 +107,9 @@ public class ShopMenu extends AppCompatActivity {
     }
 
     public void onShopMenuButtonClick(View view) {
+
+        view.setEnabled(false);
+        this.view = view;
 
         if (view.getId() == R.id.ballsButton) {
             changingActivity = true;
