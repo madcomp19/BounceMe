@@ -72,6 +72,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private final int default_background = R.drawable.background_1;
     private final int default_background_label = R.id.background_1_Label;
 
+    private View view;
+
     BillingProcessor bp;
 
     @Override
@@ -204,7 +206,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     @Override
     protected void onResume() {
         super.onResume();
-        //StorageManager.getInstance().setTotalBounces(touches);
+
         mediaPlayerManager.changeVolume(1.0f);
 
         if (prev_act_GameWorld) {
@@ -242,6 +244,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             mediaPlayerManager.pause();
 
         //SoundPoolManager.getInstance().loadSound(R.raw.cash);
+
+        if(view != null)
+            view.setEnabled(true);
     }
 
     @Override
@@ -275,6 +280,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void playGame(View view) {
+        view.setEnabled(false);
+        this.view = view;
         changingActivity = true;
         Intent intent = new Intent(this, GameWorld.class);
         startActivity(intent);
@@ -307,6 +314,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void onClickDailyChallenge(View view) {
+        view.setEnabled(false);
+        this.view = view;
         changingActivity = true;
         Intent intent = new Intent(this, DailyChallenge.class);
         startActivity(intent);
@@ -320,24 +329,32 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void startShop(View view) {
+        view.setEnabled(false);
+        this.view = view;
         changingActivity = true;
         Intent intent = new Intent(this, ShopMenu.class);
         startActivityForResult(intent, 2);
     }
 
     public void achievementButton(View view) {
+        view.setEnabled(false);
+        this.view = view;
         changingActivity = true;
         Intent goAchievements = new Intent(this, AchievementsMenu.class);
         startActivity(goAchievements);
     }
 
     public void goToSettings(View view) {
+        view.setEnabled(false);
+        this.view = view;
         changingActivity = true;
         Intent goSettings = new Intent(this, SettingsMenu.class);
         startActivity(goSettings);
     }
 
     public void rateApp(View view) {
+        view.setEnabled(false);
+        this.view = view;
         changingActivity = true;
         Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
@@ -617,6 +634,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     //region
     public void buyCoins(View view) {
 
+        SoundPoolManager.getInstance().loadSound(R.raw.cash);
         BuyCoinsDialog dialog = new BuyCoinsDialog(this);
         dialog.Show();
     }

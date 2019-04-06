@@ -136,35 +136,69 @@ public class BallShop extends AppCompatActivity {
         } else { //if the ball is not owned
             int price = Integer.parseInt(new_label.getText() + ""); //get price
             int total_touches = storage.getTotalBounces(); //get money
+            int total_gems = storage.getTotalGems();
 
-            if (total_touches >= price) {
-                storage.setTotalBounces(total_touches - price);
-                storage.addOwnedBall(ball_id);
-                storage.addOwnedBallLabel(label_id);
-                storage.setSelectedBall(ball_id);
-                storage.setSelectedBallLabel(label_id);
+            if(ball_id.contains("special"))
+            {
+                if (total_gems >= price) {
+                    storage.takeGems(price);
+                    storage.addOwnedBall(ball_id);
+                    storage.addOwnedBallLabel(label_id);
+                    storage.setSelectedBall(ball_id);
+                    storage.setSelectedBallLabel(label_id);
 
-                //if (storageManager.getSelectedBallLabel() != 0)
-                //  ((TextView) findViewById(storageManager.getSelectedBallLabel())).setText("Owned");
-                if (old_label != null) {
-                    old_label.setText("Owned");
-                    old_label.setCompoundDrawables(null, null, null, null);
-                    old_label.setPadding(0, 0, 0, 0);
+                    //if (storageManager.getSelectedBallLabel() != 0)
+                    //  ((TextView) findViewById(storageManager.getSelectedBallLabel())).setText("Owned");
+                    if (old_label != null) {
+                        old_label.setText("Owned");
+                        old_label.setCompoundDrawables(null, null, null, null);
+                        old_label.setPadding(0, 0, 0, 0);
+                    }
+
+                    //new_label.setText("Selected");
+                    new_label.setText("");
+                    new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
+                    new_label.setPadding(0, 10, 0, 0);
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
+                    gems.setText(storage.getTotalGems() + "");
+
+                    SoundPoolManager.getInstance().playSound();
+                } else {
+                    BuyGemsDialog dialog = new BuyGemsDialog(this);
+                    dialog.Show();
                 }
-
-                //new_label.setText("Selected");
-                new_label.setText("");
-                new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
-                new_label.setPadding(0, 10, 0, 0);
-                Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
-                coins.setText(storage.getTotalBounces() + "");
-
-                SoundPoolManager.getInstance().playSound();
-            } else {
-                BuyCoinsDialog dialog = new BuyCoinsDialog(this);
-                dialog.Show();
             }
-            //Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
+            else
+            {
+                if (total_touches >= price) {
+                    storage.setTotalBounces(total_touches - price);
+                    storage.addOwnedBall(ball_id);
+                    storage.addOwnedBallLabel(label_id);
+                    storage.setSelectedBall(ball_id);
+                    storage.setSelectedBallLabel(label_id);
+
+                    //if (storageManager.getSelectedBallLabel() != 0)
+                    //  ((TextView) findViewById(storageManager.getSelectedBallLabel())).setText("Owned");
+                    if (old_label != null) {
+                        old_label.setText("Owned");
+                        old_label.setCompoundDrawables(null, null, null, null);
+                        old_label.setPadding(0, 0, 0, 0);
+                    }
+
+                    //new_label.setText("Selected");
+                    new_label.setText("");
+                    new_label.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.selected_icon_vector, 0, 0);
+                    new_label.setPadding(0, 10, 0, 0);
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
+                    coins.setText(storage.getTotalBounces() + "");
+
+                    SoundPoolManager.getInstance().playSound();
+                } else {
+                    BuyCoinsDialog dialog = new BuyCoinsDialog(this);
+                    dialog.Show();
+                }
+                //Toast.makeText(this, "You need " + (price - total_touches) + " more Bounces", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

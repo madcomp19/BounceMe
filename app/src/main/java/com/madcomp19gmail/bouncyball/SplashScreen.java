@@ -37,6 +37,7 @@ public class SplashScreen extends AppCompatActivity {
     }
 
     public void skip(View view) {
+        view.setEnabled(false);
         timer.cancel();
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
