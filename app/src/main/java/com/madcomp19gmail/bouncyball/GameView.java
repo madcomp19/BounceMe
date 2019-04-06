@@ -107,7 +107,7 @@ public class GameView extends View
 
         ball_img = getResizedBitmap(ball_img, (int) attributes.radius * 2, (int) attributes.radius * 2);
 
-        balls.add(new Ball(width / 2, height / 2, attributes, ball_img, selected_trail, selected_sound));
+        balls.add(new Ball(width / 2, height - attributes.radius - 1, attributes, ball_img, selected_trail, selected_sound));
     }
 
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {

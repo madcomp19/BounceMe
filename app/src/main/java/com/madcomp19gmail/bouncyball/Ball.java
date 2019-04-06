@@ -133,7 +133,7 @@ public class Ball
 
             velocity.y *= -1;
 
-            if(Math.abs(prev_velY - velocity.y) > 50f)
+            if(Math.abs(prev_velY - velocity.y) > 20f)
             {
                 playSound();
 
@@ -142,7 +142,7 @@ public class Ball
                 if(reactive)
                     trail = new Random().nextInt(361);
             }
-            else if(Math.abs(prev_velY - velocity.y) > 10f)
+            else if(Math.abs(prev_velY - velocity.y) > 5f)
                 playSound();
             else if(Math.abs(prev_velY - velocity.y) < 1f)
                 applyForce(new Vector2(-velocity.x * attributes.friction, 0));
