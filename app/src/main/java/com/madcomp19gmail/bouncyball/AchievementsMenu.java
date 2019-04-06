@@ -211,8 +211,6 @@ public class AchievementsMenu extends AppCompatActivity {
             case "reward5":
             case "reward6":
             case "reward11":
-            case "reward12":
-            case "reward13":
             case "reward16":
             case "reward19":
             case "reward22":
@@ -220,10 +218,14 @@ public class AchievementsMenu extends AppCompatActivity {
                 gems = 5;
                 break;
             case "reward7":
-            case "reward14":
             case "reward17":
+            case "reward12":
                 gems = 10;
                 break;
+            case "reward13":
+                gems = 15;
+                break;
+            case "reward14":
             case "reward20":
             case "reward23":
             case "reward26":
@@ -257,7 +259,7 @@ public class AchievementsMenu extends AppCompatActivity {
             reward.setText("COLLECTED");
             reward.setBackgroundResource(R.drawable.rounded_corners3_vector);
             reward.setTextColor(Color.WHITE);
-            
+
             updateProgressBars();
             updateRewardText();
             return;
