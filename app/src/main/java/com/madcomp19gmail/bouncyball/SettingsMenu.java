@@ -8,10 +8,13 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -94,6 +97,19 @@ public class SettingsMenu extends AppCompatActivity {
             AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
         }
+
+        initializeImages();
+    }
+
+    public void initializeImages()
+    {
+        ImageView facebook = findViewById(R.id.facebook_Button);
+        ImageView instagram = findViewById(R.id.instagram_Button);
+        ImageView email = findViewById(R.id.email_icon);
+
+        Glide.with(this).load(R.drawable.facebook_icon).fitCenter().into(facebook);
+        Glide.with(this).load(R.drawable.instagram_icon).fitCenter().into(instagram);
+        Glide.with(this).load(R.drawable.email_icon).fitCenter().into(email);
     }
 
     @Override
@@ -136,5 +152,11 @@ public class SettingsMenu extends AppCompatActivity {
         {
             Toast.makeText(this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void goToInstagram(View view) {
+        //changingActivity = true;
+        Intent goInstagram = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com"));
+        startActivity(goInstagram);
     }
 }

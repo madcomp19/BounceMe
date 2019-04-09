@@ -129,26 +129,41 @@
         app:layout_constraintVertical_bias="0.925"
         tools:layout_editor_absoluteX="0dp">
 
-        <ImageButton
+        <ImageView
+            android:id="@+id/facebook_Button"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginBottom="0dp"
-            android:background="@drawable/facebook_icon"
             android:onClick="goToFacebook"
             app:layout_constraintBottom_toTopOf="@+id/bannerAdBoostShop"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
+        <ImageView
+            android:id="@+id/instagram_Button"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
             android:layout_marginBottom="0dp"
-            android:background="@drawable/email_icon"
+            android:onClick="goToInstagram"
+            app:layout_constraintBottom_toTopOf="@+id/bannerAdBoostShop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.005"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/email_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
             android:onClick="sendFeedback"
             app:layout_constraintBottom_toTopOf="@+id/bannerAdBoostShop"
             app:layout_constraintEnd_toEndOf="parent"
