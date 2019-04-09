@@ -189,8 +189,8 @@
 
             <ImageButton
                 android:id="@+id/achievementButton"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="left"
                 android:background="@drawable/achievements_icon"
                 android:contentDescription="@string/todo"
@@ -202,7 +202,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="40dp"
-                android:layout_marginRight="45dp"
+                android:layout_marginRight="40dp"
                 android:background="@drawable/circle_button2_vector"
                 android:contentDescription="@string/todo"
                 android:onClick="rateApp"
