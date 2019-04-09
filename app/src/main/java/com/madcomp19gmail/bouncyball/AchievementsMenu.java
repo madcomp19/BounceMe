@@ -244,7 +244,9 @@ public class AchievementsMenu extends AppCompatActivity {
             case "reward9":
                 gems = 100;
                 break;
-            //case "reward28": Easter egg?
+            case "reward28":
+                gems = 1000;
+                break;
             default:
                 gems = 0;
                  break;

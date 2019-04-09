@@ -46,8 +46,6 @@ public class BackgroundShop extends AppCompatActivity {
 
         soundPool = SoundPoolManager.getInstance();
         int id = this.getResources().getIdentifier("cash", "raw", getPackageName());
-        //if(id != 0)
-            //soundPool.loadSound(id);
 
         if(!storage.getNoAds()) {
             mAdView = findViewById(R.id.bannerAdTrailShop);

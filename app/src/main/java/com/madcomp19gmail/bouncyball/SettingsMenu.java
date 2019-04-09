@@ -133,7 +133,7 @@ public class SettingsMenu extends AppCompatActivity {
 
     public void goToFacebook(View view) {
         //changingActivity = true;
-        Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/francisco.teixeira.507"));
+        Intent goFacebook = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com"));
         startActivity(goFacebook);
     }
 

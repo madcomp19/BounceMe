@@ -54,8 +54,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     private boolean adsLeft = true;
     private boolean isWatchingDoublePointsAd = false;
 
-    private Dialog coinDialog;
-    private Dialog gemDialog;
+    private Dialog tutorialDialog;
     private Dialog doublePointsDialog;
 
     private DisplayMetrics metrics;
@@ -122,8 +121,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         initializeShops();
 
-        coinDialog = new Dialog(this);
-        gemDialog = new Dialog(this);
+        tutorialDialog = new Dialog(this);
         doublePointsDialog = new Dialog(this);
 
         metrics = getResources().getDisplayMetrics();
@@ -149,6 +147,11 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 .monitor();
 
         AppRate.showRateDialogIfMeetsConditions(this);
+
+        if(storage.firstTimeLaunch())
+        {
+            showTutorial();
+        }
     }
 
     private void initializeShops() {
@@ -273,10 +276,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     public static int getPrevTouches() {
         return prev_touches;
-    }
-
-    public static int getPrevGems() {
-        return prev_gems;
     }
 
     public void playGame(View view) {
@@ -485,10 +484,15 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
-
     // buy everything
     //region
-    public void buyEverything(View v) {
+
+    public void buyEverything(View view)
+    {
+        bp.purchase(MainMenu.this, "android.test.purchased");
+    }
+
+    public void unlockEverything() {
 
         SoundPoolManager.getInstance().playSound();
 
@@ -681,6 +685,26 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         doublePointsDialog.show();
     }
 
+    public void showTutorial()
+    {
+        tutorialDialog.setContentView(R.layout.dialog_tutorial);
+
+        Button okButton = (Button) tutorialDialog.findViewById(R.id.closeDialogButton);
+
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tutorialDialog.dismiss();
+                storage.appLaunchedFirstTime();
+            }
+        });
+
+        tutorialDialog.getWindow().setLayout(width, height);
+        tutorialDialog.setCancelable(false);
+        tutorialDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        tutorialDialog.show();
+    }
+
     public void buyNoAds(View v) {
         bp.purchase(MainMenu.this, "android.test.purchased");
     }
@@ -701,6 +725,9 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
         //if(productId == noAds)
         storage.setNoAds(true);
+
+        //if(productId == buyEverything)
+        unlockEverything();
     }
 
     @Override

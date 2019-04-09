@@ -636,4 +636,19 @@ public class StorageManager {
         return prefs.getBoolean("NoAds", false);
     }
     //endregion
+
+    //First Time Launch
+    //region
+    public boolean firstTimeLaunch()
+    {
+        return prefs.getBoolean("FirstTimeLaunch", true);
+    }
+
+    public void appLaunchedFirstTime()
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("FirstTimeLaunch", false);
+        editor.commit();
+    }
+    //endregion
 }
