@@ -60,5 +60,10 @@
     <string name="owned_balls">OwnedBalls</string>
     <string name="owned_balls_labels">OwnedBallsLabels</string>
     <string name="todo">TODO</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="customize_your_ball">- Customize your ball</string>
+    <string name="pick_up_the_coins">- Pick up the coins</string>
+    <string name="shake_the_phone">- Shake the phone</string>
+    <string name="flick_the_ball_around">- Flick the ball around</string>
 
 </resources>
