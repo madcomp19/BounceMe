@@ -69,7 +69,7 @@
                     android:onClick="onClickBall"
                     android:paddingLeft="28dp"
                     android:paddingRight="28dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF"/> 
                 <TextView
@@ -81,7 +81,7 @@
                     android:onClick="onClickBall"
                     android:paddingLeft="28dp"
                     android:paddingRight="28dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF"/> 
                 <TextView
@@ -93,7 +93,7 @@
                     android:onClick="onClickBall"
                     android:paddingLeft="28dp"
                     android:paddingRight="28dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF"/> 
             </LinearLayout>

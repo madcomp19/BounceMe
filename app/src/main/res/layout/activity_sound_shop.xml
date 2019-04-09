@@ -111,8 +111,7 @@
         app:layout_constraintTop_toTopOf="@+id/gem_icon" />
 
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -660,7 +659,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -673,7 +672,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -686,7 +685,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -699,7 +698,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -712,7 +711,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -804,7 +803,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -817,7 +816,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -830,7 +829,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -843,7 +842,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -856,7 +855,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="2500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -948,7 +947,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -961,7 +960,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -974,7 +973,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -987,7 +986,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1000,7 +999,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1092,7 +1091,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1105,7 +1104,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1118,7 +1117,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1131,7 +1130,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1144,7 +1143,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
-                    android:text="1000"
+                    android:text="5000"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1168,6 +1167,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutTrails8">
 
                 <ImageButton
+                    android:id="@+id/gun_Button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#424242"
+                    android:onClick="onClickSound" />
+
+                <ImageButton
                     android:id="@+id/coin_icon_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -1177,14 +1184,6 @@
 
                 <ImageButton
                     android:id="@+id/laser_Button"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="#424242"
-                    android:onClick="onClickSound" />
-
-                <ImageButton
-                    android:id="@+id/gun_Button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -1228,6 +1227,19 @@
 
 
                 <TextView
+                    android:id="@+id/gun_Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/gem_icon_small"
+                    android:onClick="onClickSound"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:text="20"
+                    android:textAlignment="center"
+                    android:textColor="#FFF" />
+
+                <TextView
                     android:id="@+id/coin_icon_Label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -1236,7 +1248,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="40"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1249,20 +1261,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
-                    android:textAlignment="center"
-                    android:textColor="#FFF" />
-
-                <TextView
-                    android:id="@+id/gun_Label"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableRight="@drawable/gem_icon_small"
-                    android:onClick="onClickSound"
-                    android:paddingLeft="9dp"
-                    android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="60"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1275,7 +1274,7 @@
                     android:onClick="onClickSound"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="80"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 

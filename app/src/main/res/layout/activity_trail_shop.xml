@@ -817,7 +817,7 @@
                     android:onClick="onClickTrail"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="50"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -830,7 +830,7 @@
                     android:onClick="onClickTrail"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="50"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -843,7 +843,7 @@
                     android:onClick="onClickTrail"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="50"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 

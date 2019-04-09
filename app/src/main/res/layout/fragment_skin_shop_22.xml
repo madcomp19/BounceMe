@@ -78,7 +78,7 @@
                     android:onClick="onClickSkin"
                     android:paddingLeft="7dp"
                     android:paddingRight="7dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -91,7 +91,7 @@
                     android:onClick="onClickSkin"
                     android:paddingLeft="7dp"
                     android:paddingRight="7dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -104,7 +104,7 @@
                     android:onClick="onClickSkin"
                     android:paddingLeft="7dp"
                     android:paddingRight="7dp"
-                    android:text="1000"
+                    android:text="500"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
             </LinearLayout>

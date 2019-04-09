@@ -267,7 +267,7 @@ public class GameWorld extends AppCompatActivity implements ShakeDetector.Listen
 
         for(int i = 0; i < boost; i++)
         {
-            if(Math.random() * 100 < 1)
+            if(Math.random() * 5000 < 1)
                 gameView.spawnGem(position, 1);
             else
                 gameView.spawnCoin(position, value);

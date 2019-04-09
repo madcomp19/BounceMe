@@ -67,9 +67,9 @@
                     android:layout_weight="1"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBall"
-                    android:paddingLeft="28dp"
-                    android:paddingRight="28dp"
-                    android:text="1000"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="100"
                     android:textAlignment="center"
                     android:textColor="#FFF"/> 
                 <TextView
@@ -79,9 +79,9 @@
                     android:layout_weight="1"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBall"
-                    android:paddingLeft="28dp"
-                    android:paddingRight="28dp"
-                    android:text="1000"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="150"
                     android:textAlignment="center"
                     android:textColor="#FFF"/> 
                 <TextView
@@ -91,9 +91,9 @@
                     android:layout_weight="1"
                     android:drawableRight="@drawable/gem_icon_small"
                     android:onClick="onClickBall"
-                    android:paddingLeft="28dp"
-                    android:paddingRight="28dp"
-                    android:text="1000"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="200"
                     android:textAlignment="center"
                     android:textColor="#FFF"/> 
             </LinearLayout>

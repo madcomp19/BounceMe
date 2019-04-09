@@ -1236,7 +1236,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="20"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1249,7 +1249,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="40"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1262,7 +1262,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="60"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
@@ -1275,7 +1275,7 @@
                     android:onClick="onClickBackground"
                     android:paddingLeft="9dp"
                     android:paddingRight="9dp"
-                    android:text="100"
+                    android:text="80"
                     android:textAlignment="center"
                     android:textColor="#FFF" />
 
