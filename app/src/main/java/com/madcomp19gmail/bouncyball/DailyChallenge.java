@@ -464,7 +464,7 @@ public class DailyChallenge extends AppCompatActivity {
             }
 
             prefs.setTotalGems(prefs.getTotalGems() + gems);
-            Toast.makeText(this, "There is an active boost. You have received " + gems + " gems instead.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "There is an active boost. You have received " + gems + " gems instead.", Toast.LENGTH_SHORT).show();
         } else { //activate the boost
 
             int time = 10;
@@ -477,18 +477,18 @@ public class DailyChallenge extends AppCompatActivity {
             prefs.setActiveBoostLabel(label_id);
             prefs.setActiveBoostTime(Calendar.getInstance().getTimeInMillis() + time * 60000);
 
-            Toast.makeText(this, "Boost is now active", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Boost is now active", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void setCoins(int coins) {
         prefs.setTotalBounces(prefs.getTotalBounces() + coins);
-        Toast.makeText(this, "You have won " + coins + " coins", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You have won " + coins + " coins", Toast.LENGTH_SHORT).show();
     }
 
     private void setGems(int gems) {
         prefs.setTotalGems(prefs.getTotalGems() + gems);
-        Toast.makeText(this, "You have won " + gems + " gems", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You have won " + gems + " gems", Toast.LENGTH_SHORT).show();
     }
     //endregion
 

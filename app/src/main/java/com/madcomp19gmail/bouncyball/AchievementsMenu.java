@@ -257,7 +257,7 @@ public class AchievementsMenu extends AppCompatActivity {
         {
             storage.addCollectedAchievement(reward.getId());
             storage.addGems(gems);
-            Toast.makeText(this, "You won " + gems + " Gems", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You won " + gems + " Gems", Toast.LENGTH_SHORT).show();
             reward.setText("COLLECTED");
             reward.setBackgroundResource(R.drawable.rounded_corners3_vector);
             reward.setTextColor(Color.WHITE);

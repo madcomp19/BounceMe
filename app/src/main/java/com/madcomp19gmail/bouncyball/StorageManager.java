@@ -651,4 +651,19 @@ public class StorageManager {
         editor.commit();
     }
     //endregion
+
+    //Buy Everything restore
+    //region
+    public boolean hasBoughtEverything()
+    {
+        return prefs.getBoolean("HasBoughtEverything", false);
+    }
+
+    public void BoughtEverything()
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("HasBoughtEverything", true);
+        editor.commit();
+    }
+    //endregion
 }

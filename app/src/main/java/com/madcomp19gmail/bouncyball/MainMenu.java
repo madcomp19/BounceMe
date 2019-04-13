@@ -34,6 +34,8 @@ import hotchemi.android.rate.AppRate;
 
 public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener, BillingProcessor.IBillingHandler {
 
+    private final String KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjh3EhNjyRn3NsOk/3u9cpIlQpbJP6V1Mo+Y21Q8enUPgTu1Mfc2Y0aIpLXjlgIOcrGXndLgj7kj2jZTjVzlWv3I3V58pORyaqFrWZIYYvIJV9imlH4Omi7N0UDsW49Ghebzp3oE8TH1oCHkWb9xdRov7OdjhcwBUm/EyehZLpueZ6K4pAsd700S/paW6Kx2j2+UOgO1P+nFlbLRKHw8X27ItoT3JtxDEFCksy9fHs9GSKMGA9CS++nHoCJcurgZE0gVetDAEa38mazreemealoV7ScRSE8jHTf7CKUYuFALIDBvDs7pyOb5B3WDG/kkHeLhaBP7/dVcXiHm6JEEh5QIDAQAB";
+
     //private static int touches;
     private StorageManager storage;
     private MediaPlayerManager mediaPlayerManager;
@@ -135,7 +137,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         }
         Glide.with(this).load(R.drawable.bounce).into(iv);
 
-        bp = new BillingProcessor(this, null, this);
+        bp = new BillingProcessor(this, KEY, this);
         bp.initialize();
 
         AppRate.with(this)
@@ -152,6 +154,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         {
             showTutorial();
         }
+
+        retrievePurchases();
     }
 
     private void initializeShops() {
@@ -320,12 +324,12 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         startActivity(intent);
     }
 
-    public void resetStorage(View view) {
-        storage.resetStorage();
-        coins.setText(storage.getTotalBounces() + "");
-        gems.setText(storage.getTotalGems() + "");
-        initializeShops(); //set defaults
-    }
+//    public void resetStorage(View view) {
+//        storage.resetStorage();
+//        coins.setText(storage.getTotalBounces() + "");
+//        gems.setText(storage.getTotalGems() + "");
+//        initializeShops(); //set defaults
+//    }
 
     public void startShop(View view) {
         view.setEnabled(false);
@@ -448,39 +452,14 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     // endregion
 
-
-    /*private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener(){
-
-        public void onAudioFocusChange(int focusChange)
-        {
-            if(focusChange <= 0)
-                mediaPlayerManager.pause(); //LOSS -> PAUSE
-            else
-                mediaPlayerManager.play(); //GAIN -> PLAY
-        }
-    };
-    AudioManager audioManager = (AudioManager)getApplicationContext(). getSystemService(this.AUDIO_SERVICE);
-
-    int result = audioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC,
-            AudioManager.AUDIOFOCUS_GAIN);
-    @Override
-    public void onAudioFocusChange(int focusChange)
-    {
-        if(focusChange <= 0)
-            mediaPlayerManager.pause(); //LOSS -> PAUSE
-        else
-            mediaPlayerManager.play(); //GAIN -> PLAY
-    }*/
-
-
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void godMode(View v) {
-        storage.setTotalBounces(100000);
-        storage.addGems(100000);
-        coins.setText(storage.getTotalBounces() + "");
-        gems.setText(storage.getTotalGems() + "");
-    }
+//    public void godMode(View v) {
+//        storage.setTotalBounces(100000);
+//        storage.addGems(100000);
+//        coins.setText(storage.getTotalBounces() + "");
+//        gems.setText(storage.getTotalGems() + "");
+//    }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -489,12 +468,12 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     public void buyEverything(View view)
     {
-        bp.purchase(MainMenu.this, "android.test.purchased");
+        bp.purchase(MainMenu.this, "buy_everything_bundle");
     }
 
     public void unlockEverything() {
 
-        SoundPoolManager.getInstance().playSound();
+        //SoundPoolManager.getInstance().playSound();
 
         Thread t = new Thread(new Runnable() {
             public void run() {
@@ -504,6 +483,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
                 buyAllTrails();
                 buyAllBackgrounds();
                 buyAllSounds();
+                storage.BoughtEverything();
 
             }
         });
@@ -706,7 +686,7 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     public void buyNoAds(View v) {
-        bp.purchase(MainMenu.this, "android.test.purchased");
+        bp.purchase(MainMenu.this, "buy_no_ads");
     }
 
     // In app purchases
@@ -721,18 +701,19 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
 
     @Override
     public void onProductPurchased(String productId, TransactionDetails details) {
-        Toast.makeText(this, "Purchase successful", Toast.LENGTH_LONG).show();
 
-        //if(productId == noAds)
-        storage.setNoAds(true);
+        if(productId.equals("buy_no_ads"))
+            storage.setNoAds(true);
 
-        //if(productId == buyEverything)
-        unlockEverything();
+        if(productId.equals("buy_everything_bundle"))
+            unlockEverything();
+
+        Toast.makeText(this, "Purchase successful", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onBillingError(int errorCode, Throwable error) {
-        Toast.makeText(this, "Something went wrong with the purchase", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Something went wrong with the purchase", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -743,5 +724,13 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
          */
     }
 
+    public void retrievePurchases()
+    {
+        if(bp.isPurchased("buy_no_ads"))
+            storage.setNoAds(true);
+
+        if(!storage.hasBoughtEverything() && bp.isPurchased("buy_everything_bundle"))
+            unlockEverything();
+    }
     // endregion
 }

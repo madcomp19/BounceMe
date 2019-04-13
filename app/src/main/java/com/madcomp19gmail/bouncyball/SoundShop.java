@@ -213,7 +213,7 @@ public class SoundShop extends AppCompatActivity {
                     label_text.setText("");
                     label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label_text.setPadding(0,10,0,0);
-                    Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
                     gems.setText(storageManager.getTotalGems() + "");
 
                     SoundPoolManager.getInstance().playSound();
@@ -245,7 +245,7 @@ public class SoundShop extends AppCompatActivity {
                     label_text.setText("");
                     label_text.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.selected_icon_vector, 0, 0);
                     label_text.setPadding(0,10,0,0);
-                    Toast.makeText(this, "Unlocked", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Unlocked", Toast.LENGTH_SHORT).show();
                     coins.setText(storageManager.getTotalBounces() + "");
 
                     SoundPoolManager.getInstance().playSound();
