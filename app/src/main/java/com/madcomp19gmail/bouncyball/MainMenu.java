@@ -192,8 +192,8 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     }
 
     private void loadRewardedVideoAd() {
-        //LEMBRAR MUDAR O ID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
+
+        mRewardedVideoAd.loadAd("ca-app-pub-5557351606937995/3648754486",
                 new AdRequest.Builder().build());
 
         adButton.setEnabled(false);
