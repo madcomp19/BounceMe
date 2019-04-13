@@ -5,12 +5,17 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public class BuyGemsDialog {
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
+
+public class BuyGemsDialog implements BillingProcessor.IBillingHandler {
 
     private Dialog gemDialog;
 
@@ -40,7 +45,20 @@ public class BuyGemsDialog {
         buyGemPack1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //bp.purchase(MainMenu.this, "android.test.purchased");
+                //bp.consumePurchase("android.test.purchased");
+            }
+        });
+
+        buyGemPack2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //bp.consumePurchase("android.test.purchased");
+            }
+        });
+
+        buyGemPack3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 //bp.consumePurchase("android.test.purchased");
             }
         });
@@ -54,4 +72,29 @@ public class BuyGemsDialog {
         Window window = gemDialog.getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
     }
+
+    //Purchases
+    //region
+    @Override
+    public void onProductPurchased(@NonNull String productId, @Nullable TransactionDetails details) {
+
+        //storage.addGems(xxx);
+        gems.setText(storage.getTotalGems() + "");
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+
+    }
+
+    @Override
+    public void onBillingError(int errorCode, @Nullable Throwable error) {
+
+    }
+
+    @Override
+    public void onBillingInitialized() {
+
+    }
+    //endregion
 }
