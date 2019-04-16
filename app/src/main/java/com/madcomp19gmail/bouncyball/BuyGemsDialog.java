@@ -30,9 +30,14 @@ public class BuyGemsDialog implements BillingProcessor.IBillingHandler {
 
     Context mContext;
 
+    Activity activity;
+
     public BuyGemsDialog(Context context)
     {
         mContext = context;
+        activity = (Activity) mContext;
+
+        storage = StorageManager.getInstance();
 
         bp = new BillingProcessor(context, KEY, this);
         bp.initialize();
@@ -58,6 +63,7 @@ public class BuyGemsDialog implements BillingProcessor.IBillingHandler {
             @Override
             public void onClick(View v) {
                 bp.consumePurchase("gem_pack_1");
+                bp.purchase(activity, "gem_pack_1");
             }
         });
 
@@ -65,6 +71,7 @@ public class BuyGemsDialog implements BillingProcessor.IBillingHandler {
             @Override
             public void onClick(View v) {
                 bp.consumePurchase("gem_pack_2");
+                bp.purchase(activity, "gem_pack_2");
             }
         });
 
@@ -72,6 +79,7 @@ public class BuyGemsDialog implements BillingProcessor.IBillingHandler {
             @Override
             public void onClick(View v) {
                 bp.consumePurchase("gem_pack_3");
+                bp.purchase(activity, "gem_pack_3");
             }
         });
     }

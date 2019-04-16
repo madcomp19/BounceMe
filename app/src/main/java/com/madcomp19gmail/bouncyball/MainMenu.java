@@ -708,7 +708,16 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
         if(productId.equals("buy_everything_bundle"))
             unlockEverything();
 
-        Toast.makeText(this, "Purchase successful", Toast.LENGTH_SHORT).show();
+        if(productId.equals("gem_pack_1"))
+            storage.addGems(50);
+
+        if(productId.equals("gem_pack_2"))
+            storage.addGems(200);
+
+        if(productId.equals("gem_pack_3"))
+            storage.addGems(500);
+
+        Toast.makeText(this, "Purchase Successful", Toast.LENGTH_SHORT).show();
     }
 
     @Override
