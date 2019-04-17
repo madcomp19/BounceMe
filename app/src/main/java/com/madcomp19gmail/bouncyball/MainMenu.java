@@ -3,11 +3,13 @@ package com.madcomp19gmail.bouncyball;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -34,8 +36,9 @@ import hotchemi.android.rate.AppRate;
 
 public class MainMenu extends AppCompatActivity implements RewardedVideoAdListener, BillingProcessor.IBillingHandler {
 
-    private final String KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjh3EhNjyRn3NsOk/3u9cpIlQpbJP6V1Mo+Y21Q8enUPgTu1Mfc2Y0aIpLXjlgIOcrGXndLgj7kj2jZTjVzlWv3I3V58pORyaqFrWZIYYvIJV9imlH4Omi7N0UDsW49Ghebzp3oE8TH1oCHkWb9xdRov7OdjhcwBUm/EyehZLpueZ6K4pAsd700S/paW6Kx2j2+UOgO1P+nFlbLRKHw8X27ItoT3JtxDEFCksy9fHs9GSKMGA9CS++nHoCJcurgZE0gVetDAEa38mazreemealoV7ScRSE8jHTf7CKUYuFALIDBvDs7pyOb5B3WDG/kkHeLhaBP7/dVcXiHm6JEEh5QIDAQAB";
+    public static final String KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjh3EhNjyRn3NsOk/3u9cpIlQpbJP6V1Mo+Y21Q8enUPgTu1Mfc2Y0aIpLXjlgIOcrGXndLgj7kj2jZTjVzlWv3I3V58pORyaqFrWZIYYvIJV9imlH4Omi7N0UDsW49Ghebzp3oE8TH1oCHkWb9xdRov7OdjhcwBUm/EyehZLpueZ6K4pAsd700S/paW6Kx2j2+UOgO1P+nFlbLRKHw8X27ItoT3JtxDEFCksy9fHs9GSKMGA9CS++nHoCJcurgZE0gVetDAEa38mazreemealoV7ScRSE8jHTf7CKUYuFALIDBvDs7pyOb5B3WDG/kkHeLhaBP7/dVcXiHm6JEEh5QIDAQAB";
 
+    private CountDownTimer timer;
     //private static int touches;
     private StorageManager storage;
     private MediaPlayerManager mediaPlayerManager;
@@ -273,9 +276,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
             bp.release();
         }
         super.onDestroy();
-
-        //if(storage.getMenuMusicSetting())
-        //mediaPlayerManager.pause();
     }
 
     public static int getPrevTouches() {
@@ -732,14 +732,39 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
          * was loaded from Google Play
          */
     }
+    // endregion
 
     public void retrievePurchases()
     {
-        if(bp.isPurchased("buy_no_ads"))
-            storage.setNoAds(true);
+        final Context context = this;
 
-        if(!storage.hasBoughtEverything() && bp.isPurchased("buy_everything_bundle"))
-            unlockEverything();
+        timer = new CountDownTimer(500, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                //empty
+            }
+
+            public void onFinish() {
+                bp.loadOwnedPurchasesFromGoogle();
+
+                if(bp.isPurchased("buy_no_ads"))
+                    storage.setNoAds(true);
+
+                if(!storage.hasBoughtEverything() && bp.isPurchased("buy_everything_bundle")) {
+                    unlockEverything();
+                    Toast.makeText(context, "Purchase retrieved", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }.start();
+
+//        bp.loadOwnedPurchasesFromGoogle();
+//
+//        if(bp.isPurchased("buy_no_ads"))
+//            storage.setNoAds(true);
+//
+//        if(!storage.hasBoughtEverything() && bp.isPurchased("buy_everything_bundle"))
+//            unlockEverything();
+//
+//        Toast.makeText(this, bp.isPurchased("buy_everything_bundle") + "", Toast.LENGTH_SHORT).show();
     }
-    // endregion
 }

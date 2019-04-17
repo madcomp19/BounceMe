@@ -11,10 +11,12 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-public class BallShop extends AppCompatActivity {
+public class BallShop extends AppCompatActivity implements BillingProcessor.IBillingHandler{
 
     private final int background_music_id = R.raw.background_music_1;
 
@@ -27,6 +29,7 @@ public class BallShop extends AppCompatActivity {
 
     private AdView mAdView;
 
+    BillingProcessor bp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,9 @@ public class BallShop extends AppCompatActivity {
             AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
         }
+
+        bp = new BillingProcessor(this, MainMenu.KEY, this);
+        bp.initialize();
     }
 
     @Override
@@ -77,6 +83,22 @@ public class BallShop extends AppCompatActivity {
         if (storage.getShopMusicSetting()) {
             mediaPlayerManager.loadSound(background_music_id, "Shop");
             mediaPlayerManager.play();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        if (bp != null) {
+            bp.release();
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!bp.handleActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
@@ -211,4 +233,43 @@ public class BallShop extends AppCompatActivity {
         BuyGemsDialog dialog = new BuyGemsDialog(this);
         dialog.Show();
     }
+
+    // In app purchases
+    // region
+
+    @Override
+    public void onBillingInitialized() {
+        /*
+         * Called when BillingProcessor was initialized and it's ready to purchase
+         */
+    }
+
+    @Override
+    public void onProductPurchased(String productId, TransactionDetails details) {
+
+        if(productId.equals("gem_pack_1"))
+            storage.addGems(50);
+
+        if(productId.equals("gem_pack_2"))
+            storage.addGems(200);
+
+        if(productId.equals("gem_pack_3"))
+            storage.addGems(500);
+
+        Toast.makeText(this, "Purchase Successful", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBillingError(int errorCode, Throwable error) {
+        Toast.makeText(this, "Something went wrong with the purchase", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+        /*
+         * Called when purchase history was restored and the list of all owned PRODUCT ID's
+         * was loaded from Google Play
+         */
+    }
+    // endregion
 }

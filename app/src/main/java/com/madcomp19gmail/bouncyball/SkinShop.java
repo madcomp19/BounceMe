@@ -11,15 +11,19 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-public class SkinShop extends FragmentActivity {
+public class SkinShop extends FragmentActivity implements BillingProcessor.IBillingHandler{
 
     private TextView coins;
     private TextView gems;
     private StorageManager storageManager;
     private MediaPlayerManager mediaPlayerManager;
+
+    BillingProcessor bp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,9 @@ public class SkinShop extends FragmentActivity {
             AdRequest adRequest = new AdRequest.Builder().build();
             ((AdView) findViewById(R.id.bannerAdTrailShop)).loadAd(adRequest);
         }
+
+        bp = new BillingProcessor(this, MainMenu.KEY, this);
+        bp.initialize();
     }
 
     public void onClickPlay(View view) {
@@ -79,11 +86,27 @@ public class SkinShop extends FragmentActivity {
     }
 
     @Override
+    protected void onDestroy() {
+
+        if (bp != null) {
+            bp.release();
+        }
+        super.onDestroy();
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
 
         if (!this.isFinishing() && storageManager.getShopMusicSetting())
             mediaPlayerManager.pause();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!bp.handleActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     public void onClickSkin(View view) {
@@ -170,5 +193,44 @@ public class SkinShop extends FragmentActivity {
         BuyGemsDialog dialog = new BuyGemsDialog(this);
         dialog.Show();
     }
+
+    // In app purchases
+    // region
+
+    @Override
+    public void onBillingInitialized() {
+        /*
+         * Called when BillingProcessor was initialized and it's ready to purchase
+         */
+    }
+
+    @Override
+    public void onProductPurchased(String productId, TransactionDetails details) {
+
+        if(productId.equals("gem_pack_1"))
+            storageManager.addGems(50);
+
+        if(productId.equals("gem_pack_2"))
+            storageManager.addGems(200);
+
+        if(productId.equals("gem_pack_3"))
+            storageManager.addGems(500);
+
+        Toast.makeText(this, "Purchase Successful", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBillingError(int errorCode, Throwable error) {
+        Toast.makeText(this, "Something went wrong with the purchase", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+        /*
+         * Called when purchase history was restored and the list of all owned PRODUCT ID's
+         * was loaded from Google Play
+         */
+    }
+    // endregion
 }
 

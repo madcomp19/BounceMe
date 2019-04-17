@@ -49,7 +49,7 @@ public class BuyCoinsDialog {
                 int price = Integer.valueOf(buyCoinPack1.getText().toString());
                 int total_gems = storage.getTotalGems();
 
-                if (total_gems > price) {
+                if (total_gems >= price) {
                     buyCoinPack1.setEnabled(false);
                     buyCoinPack1.setCompoundDrawables(null, null, null, null);
                     buyCoinPack1.setPadding(0, 0, 0, 0);
@@ -85,7 +85,7 @@ public class BuyCoinsDialog {
                 int price = Integer.valueOf(buyCoinPack2.getText().toString());
                 int total_gems = storage.getTotalGems();
 
-                if (total_gems > price) {
+                if (total_gems >= price) {
                     buyCoinPack2.setEnabled(false);
                     buyCoinPack2.setCompoundDrawables(null, null, null, null);
                     buyCoinPack2.setPadding(0, 0, 0, 0);
@@ -121,7 +121,7 @@ public class BuyCoinsDialog {
                 int price = Integer.valueOf(buyCoinPack3.getText().toString());
                 int total_gems = storage.getTotalGems();
 
-                if (total_gems > price) {
+                if (total_gems >= price) {
                     buyCoinPack3.setEnabled(false);
                     buyCoinPack3.setCompoundDrawables(null, null, null, null);
                     buyCoinPack3.setPadding(0, 0, 0, 0);

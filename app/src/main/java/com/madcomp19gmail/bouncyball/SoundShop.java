@@ -13,13 +13,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
-public class SoundShop extends AppCompatActivity {
+public class SoundShop extends AppCompatActivity implements BillingProcessor.IBillingHandler{
 
     private final int background_music_id = R.raw.background_music_1;
 
@@ -32,6 +34,7 @@ public class SoundShop extends AppCompatActivity {
 
     private AdView mAdView;
 
+    BillingProcessor bp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,9 @@ public class SoundShop extends AppCompatActivity {
         }
 
         initializeImageButtons(this.findViewById(R.id.sound_shop_ConstraintLayout));
+
+        bp = new BillingProcessor(this, MainMenu.KEY, this);
+        bp.initialize();
     }
 
     private void initializeImageButtons(View view)
@@ -96,7 +102,7 @@ public class SoundShop extends AppCompatActivity {
 
                 String id = getResources().getResourceName(imageView.getId()).split("/")[1];
 
-                if(id == "gem_icon" || id == "add_gems" || id == "add_coins")
+                if(id.equals("gem_icon") || id.equals("add_gems") || id.equals("add_coins"))
                     continue;
 
                 int image_id = getResources().getIdentifier(id, "drawable", getPackageName());
@@ -128,6 +134,22 @@ public class SoundShop extends AppCompatActivity {
 
         if(!this.isFinishing() && storage.getShopMusicSetting())
             mediaPlayerManager.pause();
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        if (bp != null) {
+            bp.release();
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!bp.handleActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     public void onClickPlay(View view){
@@ -305,4 +327,43 @@ public class SoundShop extends AppCompatActivity {
         BuyGemsDialog dialog = new BuyGemsDialog(this);
         dialog.Show();
     }
+
+    // In app purchases
+    // region
+
+    @Override
+    public void onBillingInitialized() {
+        /*
+         * Called when BillingProcessor was initialized and it's ready to purchase
+         */
+    }
+
+    @Override
+    public void onProductPurchased(String productId, TransactionDetails details) {
+
+        if(productId.equals("gem_pack_1"))
+            storage.addGems(50);
+
+        if(productId.equals("gem_pack_2"))
+            storage.addGems(200);
+
+        if(productId.equals("gem_pack_3"))
+            storage.addGems(500);
+
+        Toast.makeText(this, "Purchase Successful", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBillingError(int errorCode, Throwable error) {
+        Toast.makeText(this, "Something went wrong with the purchase", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+        /*
+         * Called when purchase history was restored and the list of all owned PRODUCT ID's
+         * was loaded from Google Play
+         */
+    }
+    // endregion
 }
