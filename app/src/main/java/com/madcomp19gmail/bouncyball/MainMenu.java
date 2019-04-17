@@ -358,7 +358,6 @@ public class MainMenu extends AppCompatActivity implements RewardedVideoAdListen
     public void rateApp(View view) {
         view.setEnabled(false);
         this.view = view;
-        changingActivity = true;
         Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
         goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
